@@ -36,7 +36,7 @@ def main():
         for fmt in ("%d %B %Y","%d %b %Y","%d %B","%d %b"):
             try:
                 dt=datetime.datetime.strptime(value,fmt)
-                return dt.replace(year=year).date().isoformat()
+                return dt.replace(year=year if "%Y" not in fmt else dt.year).date().isoformat()
             except ValueError:pass
         return None
     def row(day,name,venue,url,tickets=None):
