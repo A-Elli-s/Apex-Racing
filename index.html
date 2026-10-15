@@ -75,6 +75,12 @@ updateRaceTicker();
 
 const photoSearch={
 'F1':'Formula One racing car','F2':'Formula 2 racing car','F3':'Formula 3 race car','IndyCar':'IndyCar racing car','NASCAR Cup':'NASCAR stock car racing','NASCAR O’Reilly':'NASCAR racing stock car','WEC':'Le Mans prototype racing car','IMSA':'IMSA sports car racing','Formula E':'Formula E electric racing car','WRC':'World Rally Championship rally car','Supercars':'Supercars Championship racing car','NHRA':'Top Fuel dragster racing','MotoGP':'MotoGP motorcycle racing','Moto2':'Grand Prix motorcycle racing','Moto3':'motorcycle road racing','WorldSBK':'Superbike World Championship motorcycle','Supercross':'Supercross motorcycle racing','Pro Motocross':'Motocross racing motorcycle','MXGP':'Motocross Grand Prix','NASCAR Trucks':'NASCAR truck racing','Dakar Rally':'Dakar Rally racing vehicle','Off-road racing':'off-road desert racing truck','Monster Jam':'monster truck jumping'};
+const fixedPhotos={
+'F1':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Alonso_2014_Monaco_Grand_Prix_2.jpg/960px-Alonso_2014_Monaco_Grand_Prix_2.jpg',
+'F2':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Fernando_Alonso_2014_British_GP_002_%28cropped%29.jpg/1280px-Fernando_Alonso_2014_British_GP_002_%28cropped%29.jpg',
+'F3':'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Alonso_2014_Monaco_Grand_Prix_2.jpg/960px-Alonso_2014_Monaco_Grand_Prix_2.jpg',
+'NASCAR Cup':'https://statesymbolsusa.org/sites/default/files/primary-images/race-g6a34266bc_1920.jpg'
+};
 const photoCache={};
 const seriesPhotoTerms={'F1':'Formula One racing car track','NASCAR Cup':'NASCAR Cup Series stock car racing','IndyCar':'IndyCar Series race car','MotoGP':'MotoGP motorcycle racing','WEC':'24 Hours of Le Mans prototype racing','IMSA':'IMSA sports car racing','NHRA':'NHRA Top Fuel dragster','Supercross':'AMA Supercross motorcycle jump','Pro Motocross':'motocross motorcycle jump','MXGP':'motocross race'};
 const shopPhotoTerms={'Team Merchandise & Apparel':'racing team merchandise shirts caps','Sim Racing & Gaming':'sim racing steering wheel cockpit','Performance Car Parts':'car engine performance parts brakes','Racing Safety Equipment':'motorsport racing helmet','Motorcycle & Motocross':'motocross motorcycle equipment','Race-Day Fan Essentials':'motorsport fans grandstand','Collectibles & Merchandise':'diecast model race cars','Track-Day Tech & Cameras':'action camera race car','Garage Tools & Maintenance':'automotive mechanic garage tools'};
@@ -85,9 +91,9 @@ return 'data:image/svg+xml;charset=utf-8,'+encodeURIComponent('<svg xmlns="http:
 }
 async function loadSeriesPhotos(){
 const cards=[...document.querySelectorAll('.series-card')];
-for(const card of cards){card.querySelector('.series-photo').style.backgroundImage='url("'+raceFallback(card.dataset.category)+'")';}
+for(const card of cards){const bg=card.querySelector('.series-photo');bg.style.backgroundImage='url("'+raceFallback(card.dataset.category)+'")';const src=fixedPhotos[card.dataset.series];if(src){const img=new Image();img.onload=()=>{bg.style.backgroundImage='url("'+src+'")';bg.style.opacity='1';};img.src=src;}}
 const groups=new Map();
-for(const card of cards){const term=seriesPhotoTerms[card.dataset.series]||photoSearch[card.dataset.series]||card.dataset.series;if(!groups.has(term))groups.set(term,[]);groups.get(term).push(card)}
+for(const card of cards){if(fixedPhotos[card.dataset.series])continue;const term=seriesPhotoTerms[card.dataset.series]||photoSearch[card.dataset.series]||card.dataset.series;if(!groups.has(term))groups.set(term,[]);groups.get(term).push(card)}
 await Promise.all([...groups.entries()].map(async ([term,els])=>{
 try{
 const api='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent('filetype:bitmap '+term)+'&gsrnamespace=6&gsrlimit=12&prop=imageinfo&iiprop=url|mime&iiurlwidth=700&format=json&origin=*';
