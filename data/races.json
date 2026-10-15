@@ -1,4 +1,1341 @@
 {
-  "updated": null,
-  "series": {}
+  "updated": "2026-10-15T13:25:31.788Z",
+  "series": {
+    "Formula 2": [
+      {
+        "date": "2026-03-08",
+        "name": "Australian Grand Prix",
+        "venue": "Albert Park Grand Prix Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-04-12",
+        "name": "Bahrain Grand Prix",
+        "venue": "Bahrain International Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "Saudi Arabian Grand Prix",
+        "venue": "Jeddah Corniche Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-06-07",
+        "name": "Monaco Grand Prix",
+        "venue": "Circuit de Monaco",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-06-14",
+        "name": "Spanish Grand Prix",
+        "venue": "Circuit de Barcelona-Catalunya",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-06-28",
+        "name": "Austrian Grand Prix",
+        "venue": "Red Bull Ring",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-07-05",
+        "name": "British Grand Prix",
+        "venue": "Silverstone Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-07-19",
+        "name": "Belgian Grand Prix",
+        "venue": "Circuit de Spa-Francorchamps",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-07-26",
+        "name": "Hungarian Grand Prix",
+        "venue": "Hungaroring",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-09-06",
+        "name": "Italian Grand Prix",
+        "venue": "Autodromo Nazionale di Monza",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-09-13",
+        "name": "Madrid Grand Prix",
+        "venue": "Madrid Street Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-09-27",
+        "name": "Azerbaijan Grand Prix",
+        "venue": "Baku City Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-11-29",
+        "name": "Qatar Grand Prix",
+        "venue": "Lusail International Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      },
+      {
+        "date": "2026-12-06",
+        "name": "Abu Dhabi Grand Prix",
+        "venue": "Yas Marina Circuit",
+        "url": "https://www.fiaformula2.com/Calendar"
+      }
+    ],
+    "Formula 3": [
+      {
+        "date": "2001-03-07",
+        "name": "Round 1",
+        "venue": "Albert Park Circuit, Melbourne",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-06-06",
+        "name": "Round 2",
+        "venue": "Circuit de Monaco, Monaco",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-06-13",
+        "name": "Round 3",
+        "venue": "Circuit de Barcelona-Catalunya, Montmeló",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-06-27",
+        "name": "Round 4",
+        "venue": "Red Bull Ring, Spielberg",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-07-04",
+        "name": "Round 5",
+        "venue": "Silverstone Circuit, Silverstone",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-07-18",
+        "name": "Round 6",
+        "venue": "Circuit de Spa-Francorchamps, Stavelot",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-07-25",
+        "name": "Round 7",
+        "venue": "Hungaroring, Mogyoród",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-09-05",
+        "name": "Round 8",
+        "venue": "Monza Circuit, Monza",
+        "url": "https://www.fiaformula3.com/Calendar"
+      },
+      {
+        "date": "2001-09-12",
+        "name": "Round 9",
+        "venue": "Madring, Madrid",
+        "url": "https://www.fiaformula3.com/Calendar"
+      }
+    ],
+    "MotoGP / Moto2 / Moto3": [
+      {
+        "date": "2026-03-01",
+        "name": "PT Grand Prix of Thailand",
+        "venue": "Chang International Circuit",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-03-22",
+        "name": "Estrella Galicia 0,0 Grand Prix of Brazil",
+        "venue": "Autódromo Internacional de Goiânia - Ayrton Senna",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-03-29",
+        "name": "Red Bull Grand Prix of The United States",
+        "venue": "Circuit Of The Americas",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-04-26",
+        "name": "Estrella Galicia 0,0 Grand Prix of Spain",
+        "venue": "Circuito de Jerez - Ángel Nieto",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-05-10",
+        "name": "Michelin Grand Prix of France",
+        "venue": "Le Mans",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-05-17",
+        "name": "Monster Energy Grand Prix of Catalonia",
+        "venue": "Circuit de Barcelona-Catalunya",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-05-31",
+        "name": "BREMBO GRAND PRIX OF ITALY ",
+        "venue": "Autodromo Internazionale del Mugello",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-06-07",
+        "name": "GRAND PRIX OF HUNGARY ",
+        "venue": "Balaton Park Circuit",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-06-21",
+        "name": "MONSTER ENERGY GRAND PRIX OF CZECHIA ",
+        "venue": "CREDITAS Autodrom Brno",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-06-28",
+        "name": "TISSOT GRAND PRIX OF THE NETHERLANDS ",
+        "venue": "TT Circuit Assen",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-07-12",
+        "name": "LIQUI MOLY GRAND PRIX OF GERMANY ",
+        "venue": "Sachsenring",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-08-09",
+        "name": "QATAR AIRWAYS GRAND PRIX OF GREAT BRITAIN ",
+        "venue": "Silverstone Circuit",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-08-30",
+        "name": "MICHELIN® GRAND PRIX OF ARAGON ",
+        "venue": "MotorLand Aragón",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-09-13",
+        "name": "RED BULL GRAND PRIX OF SAN MARINO AND THE RIMINI RIVIERA ",
+        "venue": "Misano World Circuit Marco Simoncelli",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-09-20",
+        "name": "QATAR AIRWAYS GRAND PRIX OF AUSTRIA ",
+        "venue": "Red Bull Ring - Spielberg",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-10-04",
+        "name": "MOTUL GRAND PRIX OF JAPAN ",
+        "venue": "Mobility Resort Motegi",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-10-11",
+        "name": "PERTAMINA GRAND PRIX OF INDONESIA ",
+        "venue": "Pertamina Mandalika Circuit",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-10-25",
+        "name": "GRAND PRIX OF AUSTRALIA ",
+        "venue": "Phillip Island",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-11-01",
+        "name": "Petronas Grand Prix of Malaysia",
+        "venue": "Petronas Sepang International Circuit",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-11-08",
+        "name": "Qatar Airways Grand Prix of Qatar",
+        "venue": "Lusail International Circuit",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-11-22",
+        "name": "Repsol Grand Prix of Portugal",
+        "venue": "Autódromo Internacional do Algarve",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      },
+      {
+        "date": "2026-11-29",
+        "name": "Motul Grand Prix of Valencia",
+        "venue": "Circuit Ricardo Tormo",
+        "url": "https://www.motogp.com/en/calendar",
+        "tickets": "https://tickets.motogp.com/"
+      }
+    ],
+    "NASCAR Cup / O’Reilly / Trucks": [
+      {
+        "date": "2026-02-01",
+        "name": "CUP — Cook Out Clash at Bowman Gray",
+        "venue": "Bowman Gray Stadium",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-12",
+        "name": "CUP — America 250 Florida Duel at DAYTONA",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-12",
+        "name": "CUP — America 250 Florida Duel at DAYTONA",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-13",
+        "name": "TRUCK — Fresh From Florida 250",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-14",
+        "name": "XFINITY — United Rentals 300",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-15",
+        "name": "CUP — DAYTONA 500",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-21",
+        "name": "XFINITY — Bennett Transportation & Logistics 250",
+        "venue": "Atlanta Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-21",
+        "name": "TRUCK — Fr8 Racing 208",
+        "venue": "Atlanta Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-22",
+        "name": "CUP — Autotrader 400",
+        "venue": "Atlanta Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-28",
+        "name": "XFINITY — Focused Health 250",
+        "venue": "Circuit of The Americas",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-02-28",
+        "name": "TRUCK — OnlyBulls Green Flag 150 at St. Petersburg",
+        "venue": "Grand Prix of St. Petersburg",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-01",
+        "name": "CUP — DuraMAX Texas Grand Prix Powered by RelaDyne",
+        "venue": "Circuit of The Americas",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-07",
+        "name": "XFINITY — GOVX 200",
+        "venue": "Phoenix Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-08",
+        "name": "CUP — Straight Talk Wireless 500",
+        "venue": "Phoenix Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-14",
+        "name": "XFINITY — The LiUNA",
+        "venue": "Las Vegas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-15",
+        "name": "CUP — Pennzoil 400 presented by Jiffy Lube",
+        "venue": "Las Vegas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-20",
+        "name": "TRUCK — Buckle Up South Carolina 200",
+        "venue": "Darlington Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "XFINITY — Sport Clips Haircuts VFW Help a Hero 200",
+        "venue": "Darlington Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-22",
+        "name": "CUP — Goodyear 400",
+        "venue": "Darlington Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-28",
+        "name": "XFINITY — NFPA 250",
+        "venue": "Martinsville Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-03-29",
+        "name": "CUP — Cook Out 400",
+        "venue": "Martinsville Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-03",
+        "name": "TRUCK — Black's Tire 200",
+        "venue": "Rockingham Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-04",
+        "name": "XFINITY — North Carolina Education Lottery 250 Presented by Black's Tire",
+        "venue": "Rockingham Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-10",
+        "name": "TRUCK — Tennessee Army National Guard 250",
+        "venue": "Bristol Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-11",
+        "name": "XFINITY — Suburban Propane 300",
+        "venue": "Bristol Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-12",
+        "name": "CUP — Food City 500",
+        "venue": "Bristol Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "XFINITY — Kansas Lottery 300",
+        "venue": "Kansas Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "CUP — AdventHealth 400",
+        "venue": "Kansas Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-25",
+        "name": "XFINITY — AG-PRO 300",
+        "venue": "Talladega Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-04-26",
+        "name": "CUP — Jack Link's 500",
+        "venue": "Talladega Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-01",
+        "name": "TRUCK — SpeedyCash.com 250",
+        "venue": "Texas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-02",
+        "name": "XFINITY — Andy's Frozen Custard 340",
+        "venue": "Texas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-03",
+        "name": "CUP — Würth 400 presented by LIQUI MOLY",
+        "venue": "Texas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-08",
+        "name": "TRUCK — Bully Hill Vineyards 176 at The Glen",
+        "venue": "Watkins Glen International",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-09",
+        "name": "XFINITY — Mission 200 at The Glen",
+        "venue": "Watkins Glen International",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-10",
+        "name": "CUP — Go Bowling at The Glen",
+        "venue": "Watkins Glen International",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-15",
+        "name": "TRUCK — ECOSAVE 200",
+        "venue": "Dover Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-16",
+        "name": "XFINITY — BetRivers 200",
+        "venue": "Dover Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-17",
+        "name": "CUP — NASCAR All-Star Race",
+        "venue": "Dover Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-22",
+        "name": "TRUCK — North Carolina Education Lottery 200",
+        "venue": "Charlotte Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-23",
+        "name": "XFINITY — Charbroil 300",
+        "venue": "Charlotte Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-24",
+        "name": "CUP — Coca-Cola 600",
+        "venue": "Charlotte Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-29",
+        "name": "TRUCK — Allegiance 200",
+        "venue": "Nashville Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-30",
+        "name": "XFINITY — Sports Illustrated Resorts 250",
+        "venue": "Nashville Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-05-31",
+        "name": "CUP — Cracker Barrel 400",
+        "venue": "Nashville Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-06",
+        "name": "TRUCK — DQS Solutions & Staffing 250 powered by Precision Vehicle Logistics",
+        "venue": "Michigan International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-07",
+        "name": "CUP — FireKeepers Casino 400",
+        "venue": "Michigan International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-13",
+        "name": "XFINITY — MillerTech Battery 250 presented by KOA",
+        "venue": "Pocono Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-14",
+        "name": "CUP — Great American Getaway 400 presented by VISITPA",
+        "venue": "Pocono Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-19",
+        "name": "TRUCK — Navy 250",
+        "venue": "San Diego Street Course",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-20",
+        "name": "XFINITY — United Rentals Driven to Serve 250",
+        "venue": "San Diego Street Course",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-21",
+        "name": "CUP — Anduril 250",
+        "venue": "San Diego Street Course",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-27",
+        "name": "XFINITY — Pit Boss/FoodMaxx 250",
+        "venue": "Sonoma Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-06-28",
+        "name": "CUP — Toyota / Save Mart 350",
+        "venue": "Sonoma Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "XFINITY — Cuervo 300",
+        "venue": "Chicagoland Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-05",
+        "name": "CUP — eero 400",
+        "venue": "Chicagoland Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-11",
+        "name": "XFINITY — Focused Health 250",
+        "venue": "Atlanta Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-11",
+        "name": "TRUCK — Liuna 150 at Lime Rock Park",
+        "venue": "Lime Rock Park",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-12",
+        "name": "CUP — Quaker State 400 Available at Walmart",
+        "venue": "Atlanta Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-18",
+        "name": "TRUCK — FaithFest 250 presented by Mercer Transportation",
+        "venue": "North Wilkesboro Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-19",
+        "name": "CUP — Window World 450",
+        "venue": "North Wilkesboro Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-24",
+        "name": "TRUCK — TSport 200 presented by Warn Industries",
+        "venue": "Lucas Oil Indianapolis Raceway Park",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-25",
+        "name": "XFINITY — Pennzoil 250 presented by Take 5 Oil Change",
+        "venue": "Indianapolis Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-07-26",
+        "name": "CUP — Brickyard 400 presented by PPG",
+        "venue": "Indianapolis Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-08",
+        "name": "XFINITY — HyVee Perks 250",
+        "venue": "Iowa Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-09",
+        "name": "CUP — Iowa Corn 350 Powered by Ethanol",
+        "venue": "Iowa Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-14",
+        "name": "TRUCK — Black's Tire 250 presented by BTS Rewards",
+        "venue": "Richmond Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-15",
+        "name": "CUP — Cook Out 400",
+        "venue": "Richmond Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-22",
+        "name": "TRUCK — Team EJP 175",
+        "venue": "New Hampshire Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "CUP — Dollar Tree 301",
+        "venue": "New Hampshire Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-28",
+        "name": "XFINITY — Winn-Dixie 250 Powered by Coca-Cola ",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-08-29",
+        "name": "CUP — Coke Zero Sugar 400",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-05",
+        "name": "XFINITY — Fleetio 200",
+        "venue": "Darlington Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-06",
+        "name": "CUP — Cook Out Southern 500",
+        "venue": "Darlington Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-12",
+        "name": "XFINITY — Nu Way 225 Powered by Bobcat and Sauced by Blues Hog",
+        "venue": "World Wide Technology Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-13",
+        "name": "CUP — Enjoy Illinois 300",
+        "venue": "World Wide Technology Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-17",
+        "name": "TRUCK — UNOH 250 presented by Ohio Logistics",
+        "venue": "Bristol Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-18",
+        "name": "XFINITY — Food City 300",
+        "venue": "Bristol Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-19",
+        "name": "CUP — Bass Pro Shops Night Race",
+        "venue": "Bristol Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-26",
+        "name": "TRUCK — Race to Stop Suicide 200",
+        "venue": "Kansas Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-09-27",
+        "name": "CUP — Hollywood Casino 400 ",
+        "venue": "Kansas Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-03",
+        "name": "XFINITY — Focused Health 302",
+        "venue": "Las Vegas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-04",
+        "name": "CUP — South Point 400",
+        "venue": "Las Vegas Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-09",
+        "name": "TRUCK — Ecosave 200",
+        "venue": "Charlotte Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-10",
+        "name": "XFINITY — Blue Cross NC 300",
+        "venue": "Charlotte Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-11",
+        "name": "CUP — Bank of America 400",
+        "venue": "Charlotte Motor Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-16",
+        "name": "TRUCK — NASCAR CRAFTSMAN Truck Series Race at Phoenix",
+        "venue": "Phoenix Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-17",
+        "name": "XFINITY — Timberland PRO 200",
+        "venue": "Phoenix Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-18",
+        "name": "CUP — Freeway Insurance 500",
+        "venue": "Phoenix Raceway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-23",
+        "name": "TRUCK — Love's RV Stop 225",
+        "venue": "Talladega Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-24",
+        "name": "XFINITY — The Progress Group 250",
+        "venue": "Talladega Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-25",
+        "name": "CUP — YellaWood 500",
+        "venue": "Talladega Superspeedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-30",
+        "name": "TRUCK — NASCAR CRAFTSMAN Truck Series Race at Martinsville",
+        "venue": "Martinsville Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-10-31",
+        "name": "XFINITY — NASCAR O'Reilly Auto Parts Series Race at Martinsville",
+        "venue": "Martinsville Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-11-01",
+        "name": "CUP — Xfinity 500",
+        "venue": "Martinsville Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-11-06",
+        "name": "TRUCK — NASCAR CRAFTSMAN Truck Series Championship Race",
+        "venue": "Homestead-Miami Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-11-07",
+        "name": "XFINITY — NASCAR O'Reilly Auto Parts Series Championship Race",
+        "venue": "Homestead-Miami Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      },
+      {
+        "date": "2026-11-08",
+        "name": "CUP — NASCAR Championship Race",
+        "venue": "Homestead-Miami Speedway",
+        "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
+        "tickets": "https://www.nascar.com/tickets/"
+      }
+    ],
+    "IndyCar": [
+      {
+        "date": "2026-03-01",
+        "name": "Grand Prix of St. Petersburg",
+        "venue": "Grand Prix of St. Petersburg",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-03-07",
+        "name": "Grand Prix of Phoenix",
+        "venue": "Grand Prix of Phoenix",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-03-15",
+        "name": "Grand Prix of Arlington",
+        "venue": "Grand Prix of Arlington",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-03-29",
+        "name": "Grand Prix of Alabama",
+        "venue": "Grand Prix of Alabama",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "Grand Prix of Long Beach",
+        "venue": "Grand Prix of Long Beach",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-05-09",
+        "name": "Grand Prix of Indianapolis (Road Course)",
+        "venue": "Grand Prix of Indianapolis (Road Course)",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-05-24",
+        "name": "Indianapolis 500",
+        "venue": "Indianapolis 500",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-05-31",
+        "name": "Grand Prix of Detroit",
+        "venue": "Grand Prix of Detroit",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-06-08",
+        "name": "Grand Prix of Illinois",
+        "venue": "Grand Prix of Illinois",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-06-21",
+        "name": "Grand Prix of Road America",
+        "venue": "Grand Prix of Road America",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-07-05",
+        "name": "Grand Prix of Mid-Ohio",
+        "venue": "Grand Prix of Mid-Ohio",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-07-20",
+        "name": "Grand Prix of Nashville",
+        "venue": "Grand Prix of Nashville",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-08-09",
+        "name": "Grand Prix of Portland",
+        "venue": "Grand Prix of Portland",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-08-16",
+        "name": "Grand Prix of Ontario",
+        "venue": "Grand Prix of Ontario",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "Grand Prix of Washington, D.C.",
+        "venue": "Grand Prix of Washington, D.C.",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-08-29",
+        "name": "Grand Prix of Milwaukee Race 1",
+        "venue": "Grand Prix of Milwaukee Race 1",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-08-30",
+        "name": "Grand Prix of Milwaukee Race 2",
+        "venue": "Grand Prix of Milwaukee Race 2",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-09-06",
+        "name": "Grand Prix of Monterey",
+        "venue": "Grand Prix of Monterey",
+        "url": "https://www.indycar.com/Schedule"
+      }
+    ],
+    "WEC": [
+      {
+        "date": "2026-04-14",
+        "name": "WEC Official Prologue - IMOLA 2026",
+        "venue": "Imola",
+        "url": "https://www.fiawec.com/en/race/official-prologue-imola-2026"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "WEC 6 Hours of Imola 2026",
+        "venue": "Imola",
+        "url": "https://www.fiawec.com/en/race/6-hours-of-imola-2026"
+      },
+      {
+        "date": "2026-05-09",
+        "name": "WEC TotalEnergies 6 Hours of Spa-Francorchamps 2026",
+        "venue": "Spa-Francorchamps",
+        "url": "https://www.fiawec.com/en/race/totalenergies-6-hours-of-spa-francorchamps-2026"
+      },
+      {
+        "date": "2026-06-13",
+        "name": "WEC 24 Hours of Le Mans 2026",
+        "venue": "24 Heures du Mans",
+        "url": "https://www.fiawec.com/en/race/24-hours-of-le-mans-2026"
+      },
+      {
+        "date": "2026-07-12",
+        "name": "WEC ROLEX 6 Hours of São Paulo 2026",
+        "venue": "Interlagos",
+        "url": "https://www.fiawec.com/en/race/rolex-6-hours-of-sao-paulo-2026"
+      },
+      {
+        "date": "2026-09-06",
+        "name": "WEC Lone Star Le Mans 2026",
+        "venue": "Circuit des Amériques",
+        "url": "https://www.fiawec.com/en/race/lone-star-le-mans-2026"
+      },
+      {
+        "date": "2026-09-27",
+        "name": "WEC 6 Hours of Fuji 2026",
+        "venue": "Fuji Speedway",
+        "url": "https://www.fiawec.com/en/race/6-hours-of-fuji-2026"
+      },
+      {
+        "date": "2026-10-18",
+        "name": "WEC 6 Hours of Barcelona 2026",
+        "venue": "Barcelona",
+        "url": "https://www.fiawec.com/en/race/6-hours-of-barcelona-2026"
+      },
+      {
+        "date": "2026-11-08",
+        "name": "WEC 6 Hours of Monza 2026",
+        "venue": "Monza",
+        "url": "https://www.fiawec.com/en/race/6-hours-of-monza-2026"
+      }
+    ],
+    "Formula E": [
+      {
+        "date": "2025-12-06",
+        "name": "São Paulo ePrix",
+        "venue": "São Paulo Street Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-01-10",
+        "name": "Mexico City ePrix",
+        "venue": "Autódromo Hermanos Rodríguez",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "Miami ePrix",
+        "venue": "Miami International Autodrome",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-02-13",
+        "name": "Jeddah ePrix",
+        "venue": "Jeddah Corniche Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-02-14",
+        "name": "Jeddah ePrix",
+        "venue": "Jeddah Corniche Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "Madrid ePrix",
+        "venue": "Circuito del Jarama",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-05-02",
+        "name": "Berlin ePrix",
+        "venue": "Tempelhof Airport Street Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-05-03",
+        "name": "Berlin ePrix",
+        "venue": "Tempelhof Airport Street Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-05-16",
+        "name": "Monaco ePrix",
+        "venue": "Circuit de Monaco",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-05-17",
+        "name": "Monaco ePrix",
+        "venue": "Circuit de Monaco",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-06-20",
+        "name": "Sanya ePrix",
+        "venue": "Sanya Street Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "Shanghai ePrix",
+        "venue": "4 July 2026",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-07-05",
+        "name": "Shanghai ePrix",
+        "venue": "4 July 2026",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-07-25",
+        "name": "Tokyo ePrix",
+        "venue": "Tokyo Street Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-07-26",
+        "name": "Tokyo ePrix",
+        "venue": "Tokyo Street Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-08-15",
+        "name": "London ePrix",
+        "venue": "ExCeL London Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-08-16",
+        "name": "London ePrix",
+        "venue": "ExCeL London Circuit",
+        "url": "https://www.fiaformulae.com/en/calendar"
+      }
+    ],
+    "WRC": [
+      {
+        "date": "2001-01-25",
+        "name": "Rallye Automobile Monte Carlo",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-02-15",
+        "name": "Rally Sweden",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-03-15",
+        "name": "Safari Rally Kenya",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-04-12",
+        "name": "Croatia Rally",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-04-26",
+        "name": "Rally Islas Canarias",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-05-10",
+        "name": "Rally de Portugal",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-05-31",
+        "name": "Rally Japan",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-06-28",
+        "name": "Acropolis Rally Greece",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-07-19",
+        "name": "Rally Estonia",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-08-02",
+        "name": "Rally Finland",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-08-30",
+        "name": "Rally del Paraguay",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-09-13",
+        "name": "Rally Chile",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2001-10-04",
+        "name": "Rally Italia Sardegna",
+        "venue": "See official rally calendar",
+        "url": "https://www.wrc.com/en/calendar"
+      }
+    ]
+  }
 }
