@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T15:39:23.746614+00:00",
+  "updated": "2026-10-16T17:25:19.697877+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -27,11 +27,13 @@
     },
     "F3": {
       "official_url": "https://www.fiaformula3.com/Standings/Driver",
-      "provider": "MotoDB community dataset (not official)",
-      "seasons": {
-        "2026": "/data/standings/f3-2026.json",
-        "2025": "/data/standings/f3-2025.json"
-      }
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "F2": {
+      "official_url": "https://www.fiaformula2.com/",
+      "provider": "Official championship website",
+      "seasons": {}
     },
     "IndyCar": {
       "official_url": "https://www.indycar.com/Standings",
@@ -53,6 +55,73 @@
     },
     "Moto3": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/TeamsChampionship",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "NASCAR Cup": {
+      "official_url": "https://www.nascar.com/standings/nascar-cup-series/",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "NASCAR O’Reilly": {
+      "official_url": "https://www.nascar.com/standings/nascar-xfinity-series/",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "NASCAR Trucks": {
+      "official_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "IMSA": {
+      "official_url": "https://www.imsa.com/standings/",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Supercars": {
+      "official_url": "https://www.supercars.com/standings",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "NHRA": {
+      "official_url": "https://www.nhra.com/standings",
+      "provider": "Official championship website",
+      "seasons": {
+        "2026": "/data/standings/nhra-2026.json"
+      }
+    },
+    "WorldSBK": {
+      "official_url": "https://www.worldsbk.com/en/results%20statistics",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Supercross": {
+      "official_url": "https://www.supercrosslive.com/standings/",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Pro Motocross": {
+      "official_url": "https://promotocross.com/standings",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "MXGP": {
+      "official_url": "https://www.mxgp.com/standings",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Dakar Rally": {
+      "official_url": "https://www.dakar.com/en/rankings",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Off-road racing": {
+      "official_url": "https://score-international.com/",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Monster Jam": {
+      "official_url": "https://www.monsterjam.com/en-us/standings/",
       "provider": "Official championship website",
       "seasons": {}
     }

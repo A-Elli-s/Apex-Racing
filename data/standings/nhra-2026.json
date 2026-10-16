@@ -1,0 +1,263 @@
+{
+  "series": "NHRA",
+  "season": 2026,
+  "source_url": "https://www.nhra.com/standings",
+  "official_url": "https://www.nhra.com/standings",
+  "retrieved_at": "2026-10-16T17:25:19.697877+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points",
+      "Points Behind Leader",
+      "Vehicle"
+    ],
+    "rows": [
+      [
+        "01",
+        "Shawn Langdon",
+        "2459",
+        "0",
+        "Kalitta Air Careers"
+      ],
+      [
+        "02",
+        "Doug Kalitta",
+        "2343",
+        "-116",
+        "Mac Tools Dragster"
+      ],
+      [
+        "03",
+        "Tony Stewart",
+        "2234",
+        "-225",
+        "R+L Carriers"
+      ],
+      [
+        "04",
+        "Leah Pruett",
+        "2224",
+        "-235",
+        "TSR Dodge//SRT Direct Connection Top Fuel Dragster"
+      ],
+      [
+        "05",
+        "Will Smith",
+        "2209",
+        "-250",
+        "Bluebird Turf/Scag Racing dragster"
+      ],
+      [
+        "06",
+        "Antron Brown",
+        "2207",
+        "-252",
+        "Matco Tools/FVP/Hangsterfers Top Fuel dragster"
+      ],
+      [
+        "07",
+        "Billy Torrence",
+        "2166",
+        "-293",
+        "Capco Racing/Torrence Motorsports Dragster"
+      ],
+      [
+        "08",
+        "Maddi Gordon",
+        "2165",
+        "-294",
+        "Carlyle Tools/Ron Capps Motorsports dragster"
+      ],
+      [
+        "09",
+        "Josh Hart",
+        "2164",
+        "-295",
+        "Speedmaster dragster"
+      ],
+      [
+        "10",
+        "Justin Ashley",
+        "2154",
+        "-305",
+        "SCAG Power Equipment Top Fuel Dragster"
+      ],
+      [
+        "11",
+        "Clay Millican",
+        "2119",
+        "-340",
+        "Parts Plus dragster"
+      ],
+      [
+        "12",
+        "Tony Schumacher",
+        "2077",
+        "-382",
+        "American Communications Construction"
+      ],
+      [
+        "13",
+        "Shawn Reed",
+        "663",
+        "-1796",
+        "Shawn Reed Racing"
+      ],
+      [
+        "14",
+        "Jasmine Salinas",
+        "352",
+        "-2107",
+        "Scrappers Racing dragster"
+      ],
+      [
+        "15",
+        "Spencer Massey",
+        "243",
+        "-2216",
+        ""
+      ],
+      [
+        "16",
+        "Cameron Ferre",
+        "175",
+        "-2284",
+        "Jerry Freeman Racing"
+      ],
+      [
+        "17",
+        "Dan Mercier",
+        "140",
+        "-2319",
+        "Mercier Racing"
+      ],
+      [
+        "18",
+        "Tripp Tatum III",
+        "135",
+        "-2324",
+        ""
+      ],
+      [
+        "19",
+        "Scott Farley",
+        "82",
+        "-2377",
+        ""
+      ],
+      [
+        "20",
+        "Keith Murt",
+        "82",
+        "-2377",
+        ""
+      ],
+      [
+        "21",
+        "Ida Zetterström",
+        "81",
+        "-2378",
+        "GlobalSKU"
+      ],
+      [
+        "22",
+        "TJ Zizzo",
+        "78",
+        "-2381",
+        "Rustoleum Dragster"
+      ],
+      [
+        "23",
+        "Krista Baldwin",
+        "77",
+        "-2382",
+        "McLeod Racing Dragster"
+      ],
+      [
+        "24",
+        "Kyle Wurtzel",
+        "64",
+        "-2395",
+        "Heartwood Planning Group"
+      ],
+      [
+        "25",
+        "Rit Pustari",
+        "62",
+        "-2397",
+        ""
+      ],
+      [
+        "26",
+        "Scott Palmer",
+        "41",
+        "-2418",
+        "PBR Dragster"
+      ],
+      [
+        "27",
+        "Lex Joon",
+        "36",
+        "-2423",
+        "Hot Wheels Premium Car Care/Lex Joon Racing"
+      ],
+      [
+        "28",
+        "Ron August Jr",
+        "31",
+        "-2428",
+        ""
+      ],
+      [
+        "29",
+        "Kyle Satenstein",
+        "31",
+        "-2428",
+        ""
+      ],
+      [
+        "30",
+        "Gary Pritchett",
+        "27",
+        "-2432",
+        ""
+      ],
+      [
+        "31",
+        "Jaren Mott",
+        "21",
+        "-2438",
+        ""
+      ],
+      [
+        "32",
+        "Jake Sanders",
+        "15",
+        "-2444",
+        ""
+      ],
+      [
+        "33",
+        "Jacob Opatrny",
+        "15",
+        "-2444",
+        ""
+      ],
+      [
+        "34",
+        "Brian Inouye",
+        "10",
+        "-2449",
+        ""
+      ],
+      [
+        "35",
+        "Charles Loftin",
+        "10",
+        "-2449",
+        ""
+      ]
+    ]
+  }
+}
