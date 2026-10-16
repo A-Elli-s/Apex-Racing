@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T15:27:30.313987+00:00",
+  "updated": "2026-10-16T15:39:23.746614+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -32,6 +32,29 @@
         "2026": "/data/standings/f3-2026.json",
         "2025": "/data/standings/f3-2025.json"
       }
+    },
+    "IndyCar": {
+      "official_url": "https://www.indycar.com/Standings",
+      "provider": "Official championship website",
+      "seasons": {
+        "2026": "/data/standings/indycar-2026.json",
+        "2025": "/data/standings/indycar-2025.json"
+      }
+    },
+    "MotoGP": {
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/TeamsChampionship",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Moto2": {
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/TeamsChampionship",
+      "provider": "Official championship website",
+      "seasons": {}
+    },
+    "Moto3": {
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/TeamsChampionship",
+      "provider": "Official championship website",
+      "seasons": {}
     }
   }
 }
