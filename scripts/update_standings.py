@@ -71,7 +71,7 @@ def format_standings(collected,series):
     for item in collected:
         headers,rows=item['headers'],item['rows']
         norm=[h.lower().strip() for h in headers]
-        points_idx=next((i for i,h in enumerate(norm) if 'point' in h or h in ('pts','pt')),None)
+        points_idx=next((i for i,h in enumerate(norm) if 'point' in h or h in ('pts','pt') or (series=='IMSA' and h=='total')),None)
         if points_idx is None:continue
         identity_idx=next((i for i,h in enumerate(norm) if any(t in h for t in ('driver','rider','team','competitor','name','entrant','athlete'))),None)
         if identity_idx is None:continue
@@ -83,6 +83,7 @@ def format_standings(collected,series):
             valid_rows.append(row)
         if len(valid_rows)<3:continue
         score=len(valid_rows)+(10 if any('driver' in h or 'rider' in h for h in norm) else 0)
+        if series=='IMSA' and 'total' in norm:score+=5
         candidates.append((score,headers,valid_rows))
     if not candidates:raise ValueError('No validated points standings found among '+str(len(collected))+' extracted HTML tables; headers='+repr([t['headers'] for t in collected[:5]]))
     _,headers,rows=max(candidates,key=lambda x:x[0])
