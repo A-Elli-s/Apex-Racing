@@ -1,0 +1,37 @@
+{
+  "updated": "2026-10-16T15:27:30.313987+00:00",
+  "series": {
+    "WEC": {
+      "official_url": "https://www.fiawec.com/",
+      "provider": "MotoDB community dataset (not official)",
+      "seasons": {
+        "2026": "/data/standings/wec-2026.json",
+        "2025": "/data/standings/wec-2025.json"
+      }
+    },
+    "Formula E": {
+      "official_url": "https://www.fiaformulae.com/en/standings",
+      "provider": "MotoDB community dataset (not official)",
+      "seasons": {
+        "2026": "/data/standings/formula_e-2026.json",
+        "2025": "/data/standings/formula_e-2025.json"
+      }
+    },
+    "WRC": {
+      "official_url": "https://www.wrc.com/",
+      "provider": "MotoDB community dataset (not official)",
+      "seasons": {
+        "2026": "/data/standings/wrc-2026.json",
+        "2025": "/data/standings/wrc-2025.json"
+      }
+    },
+    "F3": {
+      "official_url": "https://www.fiaformula3.com/Standings/Driver",
+      "provider": "MotoDB community dataset (not official)",
+      "seasons": {
+        "2026": "/data/standings/f3-2026.json",
+        "2025": "/data/standings/f3-2025.json"
+      }
+    }
+  }
+}

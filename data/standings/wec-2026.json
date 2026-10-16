@@ -1,0 +1,140 @@
+{
+  "series": "WEC",
+  "season": 2026,
+  "source_url": "https://raw.githubusercontent.com/vishwapramuditha/moto-db/main/data/wec/2026/standings.json",
+  "official_url": "https://www.fiawec.com/",
+  "retrieved_at": "2026-10-16T15:27:30.313987+00:00",
+  "data": {
+    "season": "2026",
+    "hypercarDriverStandings": [
+      {
+        "position": 1,
+        "wins": 2,
+        "driver_name": "Sébastien Buemi Brendon Hartley Ryō Hirakawa",
+        "team_name": "No. 8 Toyota Racing"
+      },
+      {
+        "position": 2,
+        "wins": 1,
+        "driver_name": "René Rast Robin Frijns Sheldon van der Linde",
+        "team_name": "No. 20 BMW M Team WRT"
+      },
+      {
+        "position": 3,
+        "wins": 1,
+        "driver_name": "Mike Conway Kamui Kobayashi Nyck de Vries",
+        "team_name": "No. 7 Toyota Racing"
+      },
+      {
+        "position": 4,
+        "wins": 1,
+        "driver_name": "Kevin Magnussen Raffaele Marciello Dries Vanthoor",
+        "team_name": "No. 15 BMW M Team WRT"
+      },
+      {
+        "position": 5,
+        "wins": 1,
+        "driver_name": "Antonio Fuoco Miguel Molina Nicklas Nielsen",
+        "team_name": "No. 50 Ferrari AF Corse"
+      }
+    ],
+    "hypercarTeamStandings": [
+      {
+        "position": 1,
+        "wins": 2,
+        "team_name": "No. 8 Toyota Racing"
+      },
+      {
+        "position": 2,
+        "wins": 1,
+        "team_name": "No. 20 BMW M Team WRT"
+      },
+      {
+        "position": 3,
+        "wins": 1,
+        "team_name": "No. 7 Toyota Racing"
+      },
+      {
+        "position": 4,
+        "wins": 1,
+        "team_name": "No. 15 BMW M Team WRT"
+      },
+      {
+        "position": 5,
+        "wins": 1,
+        "team_name": "No. 50 Ferrari AF Corse"
+      }
+    ],
+    "lmgt3DriverStandings": [
+      {
+        "position": 1,
+        "wins": 1,
+        "driver_name": "Dan Harper Anthony McIntosh Parker Thompson",
+        "team_name": "No. 69 Team WRT"
+      },
+      {
+        "position": 2,
+        "wins": 1,
+        "driver_name": "Antares Au Tom Fleming Marvin Kirchhöfer",
+        "team_name": "No. 10 Garage 59"
+      },
+      {
+        "position": 3,
+        "wins": 1,
+        "driver_name": "Nicky Catsburg Jonny Edgar Ben Keating",
+        "team_name": "No. 33 TF Sport"
+      },
+      {
+        "position": 4,
+        "wins": 1,
+        "driver_name": "Peter Dempsey Charlie Eastwood Salih Yoluç",
+        "team_name": "No. 34 Racing Team Turkey by TF"
+      },
+      {
+        "position": 5,
+        "wins": 1,
+        "driver_name": "Mattia Drudi Ian James Zacharie Robichon",
+        "team_name": "No. 27 Heart of Racing Team"
+      },
+      {
+        "position": 6,
+        "wins": 1,
+        "driver_name": "Augusto Farfus Sean Gelael Darren Leung",
+        "team_name": "No. 32 Team WRT"
+      }
+    ],
+    "lmgt3TeamStandings": [
+      {
+        "position": 1,
+        "wins": 1,
+        "team_name": "No. 69 Team WRT"
+      },
+      {
+        "position": 2,
+        "wins": 1,
+        "team_name": "No. 10 Garage 59"
+      },
+      {
+        "position": 3,
+        "wins": 1,
+        "team_name": "No. 33 TF Sport"
+      },
+      {
+        "position": 4,
+        "wins": 1,
+        "team_name": "No. 34 Racing Team Turkey by TF"
+      },
+      {
+        "position": 5,
+        "wins": 1,
+        "team_name": "No. 27 Heart of Racing Team"
+      },
+      {
+        "position": 6,
+        "wins": 1,
+        "team_name": "No. 32 Team WRT"
+      }
+    ],
+    "updated_at": "2026-10-12T16:26:29.084877+00:00"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "series": "Formula E",
+  "season": 2025,
+  "source_url": "https://raw.githubusercontent.com/vishwapramuditha/moto-db/main/data/formula_e/2025/results.json",
+  "official_url": "https://www.fiaformulae.com/en/standings",
+  "retrieved_at": "2026-10-16T15:27:30.313987+00:00",
+  "data": [
+    {
+      "round": "1",
+      "eprix": "São Paulo",
+      "pole_position": "Pascal Wehrlein",
+      "winning_driver": "Mitch Evans",
+      "winning_team": "Jaguar TCS Racing"
+    },
+    {
+      "round": "2",
+      "eprix": "Mexico City",
+      "pole_position": "Pascal Wehrlein",
+      "winning_driver": "Oliver Rowland",
+      "winning_team": "Nissan Formula E Team"
+    },
+    {
+      "round": "3",
+      "eprix": "Jeddah",
+      "pole_position": "Maximilian Günther",
+      "winning_driver": "Maximilian Günther",
+      "winning_team": "DS Penske"
+    },
+    {
+      "round": "4",
+      "eprix": "Jeddah",
+      "pole_position": "Taylor Barnard",
+      "winning_driver": "Oliver Rowland",
+      "winning_team": "Nissan Formula E Team"
+    },
+    {
+      "round": "5",
+      "eprix": "Miami",
+      "pole_position": "Norman Nato",
+      "winning_driver": "Pascal Wehrlein",
+      "winning_team": "TAG Heuer Porsche Formula E Team"
+    },
+    {
+      "round": "6",
+      "eprix": "Monaco",
+      "pole_position": "Taylor Barnard",
+      "winning_driver": "Oliver Rowland",
+      "winning_team": "Nissan Formula E Team"
+    },
+    {
+      "round": "7",
+      "eprix": "Monaco",
+      "pole_position": "Oliver Rowland",
+      "winning_driver": "Sébastien Buemi",
+      "winning_team": "Envision Racing"
+    },
+    {
+      "round": "8",
+      "eprix": "Tokyo",
+      "pole_position": "Oliver Rowland",
+      "winning_driver": "Stoffel Vandoorne",
+      "winning_team": "Maserati MSG Racing"
+    },
+    {
+      "round": "9",
+      "eprix": "Tokyo",
+      "pole_position": "Oliver Rowland",
+      "winning_driver": "Oliver Rowland",
+      "winning_team": "Nissan Formula E Team"
+    },
+    {
+      "round": "10",
+      "eprix": "Shanghai",
+      "pole_position": "Maximilian Günther",
+      "winning_driver": "Maximilian Günther",
+      "winning_team": "DS Penske"
+    },
+    {
+      "round": "11",
+      "eprix": "Shanghai",
+      "pole_position": "Nick Cassidy",
+      "winning_driver": "Nick Cassidy",
+      "winning_team": "Jaguar TCS Racing"
+    },
+    {
+      "round": "12",
+      "eprix": "Jakarta",
+      "pole_position": "Jake Dennis",
+      "winning_driver": "Dan Ticktum",
+      "winning_team": "Cupra Kiro"
+    },
+    {
+      "round": "13",
+      "eprix": "Berlin",
+      "pole_position": "Mitch Evans",
+      "winning_driver": "Mitch Evans",
+      "winning_team": "Jaguar TCS Racing"
+    },
+    {
+      "round": "14",
+      "eprix": "Berlin",
+      "pole_position": "Pascal Wehrlein",
+      "winning_driver": "Nick Cassidy",
+      "winning_team": "Jaguar TCS Racing"
+    },
+    {
+      "round": "15",
+      "eprix": "London",
+      "pole_position": "Mitch Evans",
+      "winning_driver": "Nick Cassidy",
+      "winning_team": "Jaguar TCS Racing"
+    },
+    {
+      "round": "16",
+      "eprix": "London",
+      "pole_position": "Dan Ticktum",
+      "winning_driver": "Nick Cassidy",
+      "winning_team": "Jaguar TCS Racing"
+    }
+  ]
+}
