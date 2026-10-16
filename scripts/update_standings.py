@@ -25,6 +25,20 @@ OFFICIAL={
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/TeamsChampionship','motogp'),
  'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
  'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/TeamsChampionship','moto3'),
+ 'F3':('https://www.fiaformula3.com/Standings/Driver','f3-official'),
+ 'NASCAR Cup':('https://www.nascar.com/standings/nascar-cup-series/','nascar-cup'),
+ 'NASCAR O’Reilly':('https://www.nascar.com/standings/nascar-xfinity-series/','nascar-oreilly'),
+ 'NASCAR Trucks':('https://www.nascar.com/standings/nascar-craftsman-truck-series/','nascar-trucks'),
+ 'IMSA':('https://www.imsa.com/standings/','imsa'),
+ 'Supercars':('https://www.supercars.com/standings','supercars'),
+ 'NHRA':('https://www.nhra.com/standings','nhra'),
+ 'WorldSBK':('https://www.worldsbk.com/en/results%20statistics','worldsbk'),
+ 'Supercross':('https://www.supercrosslive.com/standings/','supercross'),
+ 'Pro Motocross':('https://promotocross.com/standings','pro-motocross'),
+ 'MXGP':('https://www.mxgp.com/standings','mxgp'),
+ 'Dakar Rally':('https://www.dakar.com/en/rankings','dakar'),
+ 'Off-road racing':('https://score-international.com/','off-road'),
+ 'Monster Jam':('https://www.monsterjam.com/en-us/standings/','monster-jam'),
 }
 def fetch_html(url):
     from bs4 import BeautifulSoup
@@ -35,7 +49,7 @@ def fetch_html(url):
         if len(content)>3_000_000:raise ValueError('oversize page')
     return BeautifulSoup(content,'html.parser')
 def official_table(soup,series):
-    expected='Driver' if series in ('IndyCar','F2') else 'Team'
+    expected='Driver' if series in ('IndyCar','F2','F3','NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','NHRA','Supercars','WorldSBK','Supercross','Pro Motocross','MXGP') else 'Team'
     candidates=[]
     for table in soup.select('table'):
         headers=[' '.join(th.stripped_strings).strip() for th in table.select('thead th')]
@@ -62,7 +76,7 @@ def refresh_official(now,manifest):
             url=template.replace('{year}',str(year))
             # IndyCar's unversioned page is current-season only.
             if series=='IndyCar':url='https://www.indycar.com/standings/'+str(year)
-            if series=='F2' and year!=now.year:continue
+            if '{year}' not in template and series not in ('IndyCar',) and year!=now.year:continue
             try:
                 soup=fetch_html(url)
                 headers,rows=official_table(soup,series)
