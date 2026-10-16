@@ -141,6 +141,34 @@ async function loadStandings(){
 const request=++standingsRequest,selected=standingsSelect.value,year=standingsSeason.value,type=standingsType.value;
 standingsGrid.replaceChildren();
 if(selected!=='F1'){
+const available={'WEC':'wec','Formula E':'formula_e','WRC':'wrc','F3':'f3'};
+if(available[selected]){
+standingsStatus.textContent='Loading '+selected+' '+year+' data…';
+const sport=available[selected],filename=selected==='WEC'?'standings.json':'results.json';
+const url='https://cdn.jsdelivr.net/gh/vishwapramuditha/moto-db@main/data/'+sport+'/'+year+'/'+filename;
+try{
+const response=await fetch(url);if(!response.ok)throw Error('Dataset unavailable');
+const data=await response.json();if(request!==standingsRequest)return;
+let headers,rows;
+if(selected==='WEC'){
+const key=type==='constructors'?'hypercarTeamStandings':'hypercarDriverStandings';
+const records=data[key]||[];
+headers=type==='constructors'?['Position','Team','Wins']:['Position','Drivers','Team','Wins'];
+rows=records.map(x=>type==='constructors'?[x.position,x.team_name||x.manufacturer_name,x.wins]:[x.position,x.driver_name,x.team_name,x.wins]);
+if(type==='races'){standingsStatus.textContent='WEC race-by-race results are not yet connected; displaying championship standings.'}
+}else{
+const records=Array.isArray(data)?data:(data.results||[]);
+headers=selected==='WRC'?['Round','Rally','Winning driver','Co-driver','Team']:selected==='Formula E'?['Round','E-Prix','Winning driver','Team','Pole position']:['Round','Race','Circuit','Winning driver','Team'];
+rows=records.map(x=>selected==='WRC'?[x.round,x.event,x.winning_driver,x.winning_co_driver,x.winning_entrant]:selected==='Formula E'?[x.round,x.eprix,x.winning_driver,x.winning_team,x.pole_position]:[x.round,x.race_type,x.circuit,x.winning_driver,x.winning_team]);
+if(type!=='races')standingsStatus.textContent='Championship points tables are not available from this feed; showing verified event winners instead.';
+}
+if(!rows.length)throw Error('No rows');
+standingsGrid.append(standingsTable(headers,rows));
+if(standingsStatus.textContent.startsWith('Loading'))standingsStatus.textContent=selected+' · '+year+' · '+rows.length+' records · Community dataset (MotoDB)';
+const credit=document.createElement('p');credit.className='sub';credit.textContent='Source: MotoDB community motorsport dataset. Unofficial; may be delayed or incomplete.';standingsGrid.append(credit);
+return;
+}catch(err){if(request!==standingsRequest)return;standingsStatus.textContent='No usable '+year+' data available for '+selected+' from the connected feed.';}
+}
 standingsStatus.textContent=selected+' · '+year;
 const panel=document.createElement('article');panel.className='card';
 const title=document.createElement('h3');title.textContent='Verified standings integration pending';
