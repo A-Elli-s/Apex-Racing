@@ -58,7 +58,7 @@ def official_table(soup,series):
             headers=[' '.join(c.stripped_strings).strip() for c in first.select('th,td')] if first else []
         norm=[h.lower() for h in headers]
         if not any('point' in x or x=='pts' for x in norm):continue
-        if not any(expected.lower() in x for x in norm):continue
+        if not any(expected.lower() in x or 'rider' in x or 'competitor' in x or 'name' in x for x in norm):continue
         rows=[]
         for tr in table.select('tbody tr') or table.select('tr')[1:]:
             cells=[' '.join(td.stripped_strings).strip() for td in tr.select('td,th')]
@@ -66,7 +66,12 @@ def official_table(soup,series):
             if not any(c.isdigit() for c in cells):continue
             rows.append(cells)
         if len(rows)>=3:candidates.append((headers,rows))
-    if not candidates:raise ValueError('No validated official standings table')
+    if not candidates:
+        tables=soup.select('table')
+        examples=[]
+        for t in tables[:3]:
+            examples.append(' '.join(t.stripped_strings)[:110])
+        raise ValueError('No validated official standings table; HTML tables='+str(len(tables))+'; samples='+repr(examples))
     return max(candidates,key=lambda x:len(x[1]))
 def refresh_official(now,manifest):
     for series,(template,slug) in OFFICIAL.items():
