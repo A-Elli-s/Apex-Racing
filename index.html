@@ -147,8 +147,28 @@ standingsStatus.textContent='Loading '+selected+' '+year+' data…';
 const sport=available[selected],filename=selected==='WEC'?'standings.json':'results.json';
 const url='https://cdn.jsdelivr.net/gh/vishwapramuditha/moto-db@main/data/'+sport+'/'+year+'/'+filename;
 try{
+let data=null,sourceLabel='MotoDB community dataset';
+try{
+const manifestResponse=await fetch('/data/standings/manifest.json',{cache:'no-store'});
+if(manifestResponse.ok){
+const manifest=await manifestResponse.json();
+const snapshotPath=manifest.series?.[selected]?.seasons?.[year];
+if(snapshotPath){
+const snapshotResponse=await fetch(snapshotPath,{cache:'no-store'});
+if(snapshotResponse.ok){
+const snapshot=await snapshotResponse.json();
+if(snapshot.series===selected&&String(snapshot.season)===String(year)&&snapshot.data){
+data=snapshot.data;sourceLabel='Weekly snapshot · '+new Date(snapshot.retrieved_at).toLocaleDateString();
+}
+}
+}
+}
+}catch(snapshotError){}
+if(!data){
 const response=await fetch(url);if(!response.ok)throw Error('Dataset unavailable');
-const data=await response.json();if(request!==standingsRequest)return;
+data=await response.json();
+}
+if(request!==standingsRequest)return;
 let headers,rows;
 if(selected==='WEC'){
 const key=type==='constructors'?'hypercarTeamStandings':'hypercarDriverStandings';
@@ -164,7 +184,7 @@ if(type!=='races')standingsStatus.textContent='Championship points tables are no
 }
 if(!rows.length)throw Error('No rows');
 standingsGrid.append(standingsTable(headers,rows));
-if(standingsStatus.textContent.startsWith('Loading'))standingsStatus.textContent=selected+' · '+year+' · '+rows.length+' records · Community dataset (MotoDB)';
+if(standingsStatus.textContent.startsWith('Loading'))standingsStatus.textContent=selected+' · '+year+' · '+rows.length+' records · '+sourceLabel;
 const credit=document.createElement('p');credit.className='sub';credit.textContent='Source: MotoDB community motorsport dataset. Unofficial; may be delayed or incomplete.';standingsGrid.append(credit);
 return;
 }catch(err){if(request!==standingsRequest)return;standingsStatus.textContent='No usable '+year+' data available for '+selected+' from the connected feed.';}
