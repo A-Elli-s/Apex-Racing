@@ -20,7 +20,7 @@ def valid(series,data):
 
 # Official championship pages. HTML tables are parsed conservatively; never publish unverified rows.
 OFFICIAL={
- 'F2':('https://www.fiaformula2.com/','f2'),
+ 'F2':('https://www.fiaformula2.com/Standings/Driver','f2'),
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/TeamsChampionship','motogp'),
  'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
@@ -70,7 +70,8 @@ def official_table(soup,series):
     return max(candidates,key=lambda x:len(x[1]))
 def refresh_official(now,manifest):
     for series,(template,slug) in OFFICIAL.items():
-        manifest['series'][series]={'official_url':template.replace('{year}',str(now.year)),'provider':'Official championship website','seasons':{}}
+        previous=manifest['series'].get(series,{'seasons':{}})
+        manifest['series'][series]={'official_url':template.replace('{year}',str(now.year)),'provider':previous.get('provider','Official championship website'),'seasons':dict(previous.get('seasons',{}))}
         for year in (now.year,now.year-1):
             path=OUT/(slug+'-'+str(year)+'.json')
             url=template.replace('{year}',str(year))
@@ -84,7 +85,9 @@ def refresh_official(now,manifest):
                 path.write_text(json.dumps({'series':series,'season':year,'source_url':url,'official_url':url,'retrieved_at':now.isoformat(),'data':data},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
                 print('Official standings refreshed',series,year,len(rows))
             except Exception as e:print('Official source not parsed; preserving last snapshot:',series,year,str(e))
-            if path.exists():manifest['series'][series]['seasons'][str(year)]='/data/standings/'+path.name
+            if path.exists():
+                manifest['series'][series]['seasons'][str(year)]='/data/standings/'+path.name
+                manifest['series'][series]['provider']='Official championship website'
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
