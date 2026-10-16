@@ -141,6 +141,22 @@ async function loadStandings(){
 const request=++standingsRequest,selected=standingsSelect.value,year=standingsSeason.value,type=standingsType.value;
 standingsGrid.replaceChildren();
 if(selected!=='F1'){
+if(['IndyCar','MotoGP','Moto2','Moto3'].includes(selected)){
+standingsStatus.textContent='Loading official '+selected+' standings…';
+try{
+const manifestResponse=await fetch('/data/standings/manifest.json',{cache:'no-store'});
+if(!manifestResponse.ok)throw Error('No official snapshots published');
+const manifest=await manifestResponse.json(),path=manifest.series?.[selected]?.seasons?.[year];
+if(!path)throw Error('No standings for this season');
+const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw Error('Snapshot unavailable');
+const snapshot=await response.json();if(request!==standingsRequest)return;
+if(snapshot.series!==selected||String(snapshot.season)!==String(year)||!Array.isArray(snapshot.data?.rows)||snapshot.data.rows.length<3)throw Error('Invalid snapshot');
+standingsGrid.append(standingsTable(snapshot.data.headers,snapshot.data.rows));
+standingsStatus.textContent=selected+' · '+year+' · Official championship table · Updated '+new Date(snapshot.retrieved_at).toLocaleDateString();
+if(type==='races'){const note=document.createElement('p');note.className='sub';note.textContent='Race-by-race results are not yet available in this official standings snapshot.';standingsGrid.append(note);}
+return;
+}catch(err){if(request!==standingsRequest)return;standingsStatus.textContent='Official '+selected+' standings have not been successfully collected yet.';}
+}
 const available={'WEC':'wec','Formula E':'formula_e','WRC':'wrc','F3':'f3'};
 if(available[selected]){
 standingsStatus.textContent='Loading '+selected+' '+year+' data…';
