@@ -325,6 +325,23 @@ el.style.animation='';
 raceDetails.clear();
 const items=chosen.map((e,i)=>{const key='ticker-'+i;raceDetails.set(key,e);return '<a href="#race-detail" data-race-key="'+key+'">🏁 '+esc(e.series)+' · '+esc(e.name)+' · '+e.date.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' →</a>'});
 el.innerHTML=items.concat(items).join('<span aria-hidden="true"> ◆ </span>');
+// Keep a consistent horizontal speed regardless of the number or length of race names.
+// Use the MotoGP ticker's existing 65-second cycle as the reference.
+const motogp=tickerEntries.filter(e=>e.series==='MotoGP').slice(0,16);
+if(motogp.length){
+const sample=document.createElement('div');sample.className='ticker-track';sample.style.cssText='position:absolute;visibility:hidden;animation:none;pointer-events:none';
+const sampleItems=motogp.map(e=>'<span>🏁 '+esc(e.series)+' · '+esc(e.name)+' · '+e.date.toLocaleDateString(undefined,{month:'short',day:'numeric'})+' →</span>');
+sample.innerHTML=sampleItems.concat(sampleItems).join('<span aria-hidden="true"> ◆ </span>');
+// Match link typography and spacing in the offscreen measurement.
+sample.querySelectorAll('span').forEach(s=>{if(s.textContent.includes('🏁'))s.style.cssText='white-space:nowrap;font-size:.84rem'});
+el.parentElement.append(sample);
+const referenceWidth=sample.scrollWidth;sample.remove();
+if(referenceWidth>0){const duration=65*el.scrollWidth/referenceWidth;el.style.animationDuration=Math.max(8,duration).toFixed(2)+'s';}
+else el.style.animationDuration='65s';
+}else{
+const pixelsPerSecond=25;
+el.style.animationDuration=Math.max(8,el.scrollWidth/pixelsPerSecond).toFixed(2)+'s';
+}
 }
 tickerFilter.addEventListener('change',renderRaceTicker);
 async function updateRaceTicker(){
