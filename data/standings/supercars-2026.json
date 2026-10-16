@@ -1,0 +1,309 @@
+{
+  "series": "Supercars",
+  "season": 2026,
+  "source_url": "https://www.supercars.com/standings",
+  "official_url": "https://www.supercars.com/standings",
+  "retrieved_at": "2026-10-16T18:22:38.036150+00:00",
+  "data": {
+    "headers": [
+      "Pos",
+      "Driver",
+      "Teams",
+      "Wins",
+      "Poles",
+      "Pts",
+      "Gap"
+    ],
+    "rows": [
+      [
+        "1",
+        "19 Matthew Payne",
+        "Penrite Racing",
+        "5",
+        "7",
+        "3150",
+        "+102"
+      ],
+      [
+        "2",
+        "88 Broc Feeney SC",
+        "Red Bull Ampol Racing",
+        "6",
+        "4",
+        "3145",
+        "+97"
+      ],
+      [
+        "3",
+        "888 Will Brown EC",
+        "Red Bull Ampol Racing",
+        "1",
+        "2",
+        "3103",
+        "+55"
+      ],
+      [
+        "4",
+        "17 Brodie Kostecki",
+        "Shell V-Power Racing Team",
+        "8",
+        "7",
+        "3096",
+        "+48"
+      ],
+      [
+        "5",
+        "26 Kai Allen",
+        "Penrite Racing",
+        "2",
+        "0",
+        "3066",
+        "+18"
+      ],
+      [
+        "6",
+        "06 Cam Waters",
+        "Monster Castrol Racing",
+        "2",
+        "3",
+        "3057",
+        "+9"
+      ],
+      [
+        "7",
+        "18 Anton De Pasquale",
+        "DEWALT Racing",
+        "2",
+        "1",
+        "3048",
+        "0"
+      ],
+      [
+        "8",
+        "01 Chaz Mostert",
+        "Mobil1 Optus Racing",
+        "2",
+        "1",
+        "3039",
+        "-9"
+      ],
+      [
+        "9",
+        "02 Ryan Wood",
+        "Mobil1 Truck Assist Racing",
+        "1",
+        "2",
+        "3030",
+        "-18"
+      ],
+      [
+        "10",
+        "04 Jack Le Brocq",
+        "Sherrin Rentals Racing",
+        "0",
+        "0",
+        "3021",
+        "-27"
+      ],
+      [
+        "11",
+        "08 Andre Heimgartner",
+        "R&J Batteries Racing",
+        "1",
+        "1",
+        "1433",
+        "-1615"
+      ],
+      [
+        "12",
+        "55 Thomas Randle",
+        "Monster Castrol Racing",
+        "0",
+        "0",
+        "1404",
+        "-1644"
+      ],
+      [
+        "13",
+        "07 James Golding",
+        "CoolDrive Racing",
+        "0",
+        "1",
+        "1393",
+        "-1655"
+      ],
+      [
+        "14",
+        "31 Jayden Ojeda",
+        "PremiAir Racing",
+        "0",
+        "0",
+        "1363",
+        "-1685"
+      ],
+      [
+        "15",
+        "48 David Reynolds",
+        "Snowy River Caravans Racing",
+        "0",
+        "0",
+        "1114",
+        "-1934"
+      ],
+      [
+        "16",
+        "10 Zach Bates",
+        "Bendix Racing",
+        "0",
+        "1",
+        "1069",
+        "-1979"
+      ],
+      [
+        "17",
+        "14 Cameron Hill",
+        "Brad Jones Racing",
+        "0",
+        "0",
+        "1045",
+        "-2003"
+      ],
+      [
+        "18",
+        "99 Cooper Murray",
+        "Erebus Motorsport",
+        "0",
+        "0",
+        "972",
+        "-2076"
+      ],
+      [
+        "19",
+        "38 Rylan Gray",
+        "Shell V-Power Racing Team",
+        "0",
+        "0",
+        "968",
+        "-2080"
+      ],
+      [
+        "20",
+        "03 Aaron Cameron",
+        "LIQUI MOLY BLAHST Racing",
+        "0",
+        "0",
+        "873",
+        "-2175"
+      ],
+      [
+        "21",
+        "777 Declan Fraser",
+        "PremiAir Racing",
+        "0",
+        "0",
+        "788",
+        "-2260"
+      ],
+      [
+        "22",
+        "96 Macauley Jones",
+        "Brad Jones Racing",
+        "0",
+        "0",
+        "767",
+        "-2281"
+      ],
+      [
+        "23",
+        "09 Jobe Stewart",
+        "Erebus Motorsport",
+        "0",
+        "0",
+        "725",
+        "-2323"
+      ],
+      [
+        "24",
+        "11 Jackson Walls",
+        "Objective Racing",
+        "0",
+        "0",
+        "711",
+        "-2337"
+      ],
+      [
+        "25",
+        "17 Todd Hazelwood",
+        "Shell V-Power Racing Team",
+        "1",
+        "0",
+        "441",
+        "-2607"
+      ],
+      [
+        "26",
+        "10 Aaron Seton",
+        "Bendix Racing",
+        "0",
+        "0",
+        "438",
+        "-2610"
+      ],
+      [
+        "27",
+        "55 Reuben Goodall",
+        "Monster Castrol Racing",
+        "0",
+        "0",
+        "328",
+        "-2720"
+      ],
+      [
+        "28",
+        "15 Bayley Hall",
+        "Supercheap Auto Racing",
+        "0",
+        "0",
+        "309",
+        "-2739"
+      ],
+      [
+        "29",
+        "15 Craig Lowndes",
+        "Supercheap Auto Racing",
+        "0",
+        "0",
+        "262",
+        "-2786"
+      ],
+      [
+        "30",
+        "06 Mark Winterbottom",
+        "Monster Castrol Racing",
+        "0",
+        "0",
+        "224",
+        "-2824"
+      ],
+      [
+        "31",
+        "05 Ben Gomersall",
+        "Tickford Autosport",
+        "0",
+        "0",
+        "105",
+        "-2943"
+      ],
+      [
+        "32",
+        "34 James Moffat",
+        "Garry Rogers Motorsport",
+        "0",
+        "0",
+        "67",
+        "-2981"
+      ]
+    ]
+  },
+  "collection_method": "rendered public page"
+}

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T18:14:14.698875+00:00",
+  "updated": "2026-10-16T18:22:38.036150+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -79,12 +79,16 @@
     "IMSA": {
       "official_url": "https://www.imsa.com/standings/",
       "provider": "Official championship website",
-      "seasons": {}
+      "seasons": {
+        "2026": "/data/standings/imsa-2026.json"
+      }
     },
     "Supercars": {
       "official_url": "https://www.supercars.com/standings",
       "provider": "Official championship website",
-      "seasons": {}
+      "seasons": {
+        "2026": "/data/standings/supercars-2026.json"
+      }
     },
     "NHRA": {
       "official_url": "https://www.nhra.com/standings",
