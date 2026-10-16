@@ -270,7 +270,7 @@ document.querySelector('#race-detail-series').textContent=e.series;
 document.querySelector('#race-detail-title').textContent=e.name;
 document.querySelector('#race-detail-meta').textContent=(e.date?e.date.toLocaleString(undefined,{dateStyle:'full',timeStyle:e.hasTime?'short':undefined}):'Date to be confirmed')+(e.venue?' · '+e.venue:'');
 const dir=ticketWatchDirectory[e.series]||ticketWatchDirectory['F1'];
-const makeLink=(container,url,label)=>{const el=document.querySelector(container);el.replaceChildren();if(!url||!/^https:\/\//.test(url)){el.textContent='Official information not yet available';return}const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label+' ↗';a.className='btn alt';el.append(a)};
+const makeLink=(container,url,label)=>{const el=document.querySelector(container);if(container!=='#race-detail-results')el.replaceChildren();if(!url||!/^https:\/\//.test(url)){el.textContent='Official information not yet available';return}const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label+' ↗';a.className='btn alt';el.append(a)};
 makeLink('#race-detail-tickets',e.tickets||dir?.[0],'Official tickets / event');
 makeLink('#race-detail-watch',dir?.[1],'Official viewing information');
 const status=document.querySelector('#race-detail-results-status');const results=document.querySelector('#race-detail-results');results.replaceChildren();
@@ -286,7 +286,7 @@ status.textContent='Official finishing classification';
 const table=document.createElement('ol');table.style.paddingLeft='20px';
 rows.slice(0,10).forEach(r=>{const li=document.createElement('li');li.textContent=(r.Driver?.givenName||'')+' '+(r.Driver?.familyName||'')+' — '+(r.Constructor?.name||'')+(r.status?' ('+r.status+')':'');table.append(li)});results.append(table);
 }).catch(()=>{if(raceDetailSection.dataset.key===expectedKey)status.textContent='Results could not be loaded. Use the official classification link below.'});
-makeLink('#race-detail-results', 'https://www.formula1.com/en/results/'+e.season+'/races/'+e.round,'Official F1 results');
+makeLink('#race-detail-results', 'https://www.formula1.com/en/results/'+e.season+'/races','Official F1 results');
 }else if(completed){status.textContent='Race-specific results are not yet connected for this championship. Check the organizer’s official results.';makeLink('#race-detail-results',e.results||e.url,'Official race information')}
 else{makeLink('#race-detail-results',e.url,'Official event information')}
 raceDetailSection.dataset.key=key;history.replaceState(null,'','#race-detail');raceDetailSection.scrollIntoView({behavior:'smooth',block:'start'});
