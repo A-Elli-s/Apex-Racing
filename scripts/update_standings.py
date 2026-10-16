@@ -20,6 +20,7 @@ def valid(series,data):
 
 # Official championship pages. HTML tables are parsed conservatively; never publish unverified rows.
 OFFICIAL={
+ 'F2':('https://www.fiaformula2.com/','f2'),
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/TeamsChampionship','motogp'),
  'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
@@ -34,7 +35,7 @@ def fetch_html(url):
         if len(content)>3_000_000:raise ValueError('oversize page')
     return BeautifulSoup(content,'html.parser')
 def official_table(soup,series):
-    expected='Driver' if series=='IndyCar' else 'Team'
+    expected='Driver' if series in ('IndyCar','F2') else 'Team'
     candidates=[]
     for table in soup.select('table'):
         headers=[' '.join(th.stripped_strings).strip() for th in table.select('thead th')]
@@ -61,6 +62,7 @@ def refresh_official(now,manifest):
             url=template.replace('{year}',str(year))
             # IndyCar's unversioned page is current-season only.
             if series=='IndyCar':url='https://www.indycar.com/standings/'+str(year)
+            if series=='F2' and year!=now.year:continue
             try:
                 soup=fetch_html(url)
                 headers,rows=official_table(soup,series)
