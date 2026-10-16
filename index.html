@@ -344,7 +344,7 @@ if(!Array.isArray(rows))continue;
 const series=normalizeTickerSeries(rawSeries);
 if(series==='F1'&&f1Result.status==='fulfilled')continue;
 for(const r of rows){
-if(!/^\\d{4}-\\d{2}-\\d{2}$/.test(r.date||''))continue;
+if(!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(r.date||''))continue;
 const date=new Date(r.date+'T12:00:00');
 if(date.getTime()<Date.now()-86400000)continue;
 combined.push({series,name:r.name||'Race',date,venue:r.venue||'',url:r.url||'',tickets:r.tickets||''});
