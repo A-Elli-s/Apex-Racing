@@ -141,7 +141,7 @@ async function loadStandings(){
 const request=++standingsRequest,selected=standingsSelect.value,year=standingsSeason.value,type=standingsType.value;
 standingsGrid.replaceChildren();
 if(selected!=='F1'){
-if(['IndyCar','MotoGP','Moto2','Moto3'].includes(selected)){
+if(['F2','IndyCar','MotoGP','Moto2','Moto3'].includes(selected)){
 standingsStatus.textContent='Loading official '+selected+' standings…';
 try{
 const manifestResponse=await fetch('/data/standings/manifest.json',{cache:'no-store'});
