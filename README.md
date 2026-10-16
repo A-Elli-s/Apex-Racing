@@ -1,4 +1,4 @@
-# Apex Racing Hub
+# Apex Racing World
 
 Original static motorsport affiliate starter website inspired by the general feature set of racing-fans.pages.dev. It does not copy the reference site's proprietary source, branding or editorial text.
 
