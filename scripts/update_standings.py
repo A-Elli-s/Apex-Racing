@@ -48,31 +48,49 @@ def fetch_html(url):
         content=response.read(3_000_001)
         if len(content)>3_000_000:raise ValueError('oversize page')
     return BeautifulSoup(content,'html.parser')
-def official_table(soup,series):
-    expected='Driver' if series in ('IndyCar','F2','F3','NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','NHRA','Supercars','WorldSBK','Supercross','Pro Motocross','MXGP') else 'Team'
-    candidates=[]
+def collect_tables(soup):
+    """Collect table contents first, without assuming a championship's column names."""
+    collected=[]
     for table in soup.select('table'):
-        headers=[' '.join(th.stripped_strings).strip() for th in table.select('thead th')]
-        if not headers:
-            first=table.select_one('tr')
-            headers=[' '.join(c.stripped_strings).strip() for c in first.select('th,td')] if first else []
-        norm=[h.lower() for h in headers]
-        if not any('point' in x or x=='pts' for x in norm):continue
-        if not any(expected.lower() in x or 'rider' in x or 'competitor' in x or 'name' in x for x in norm):continue
+        trs=table.select('tr')
+        if not trs:continue
+        header_tr=table.select_one('thead tr') or trs[0]
+        headers=[' '.join(cell.stripped_strings).strip() for cell in header_tr.find_all(['th','td'],recursive=False)]
+        if not headers:continue
         rows=[]
-        for tr in table.select('tbody tr') or table.select('tr')[1:]:
-            cells=[' '.join(td.stripped_strings).strip() for td in tr.select('td,th')]
-            if len(cells)<3 or len(cells)!=len(headers):continue
-            if not any(c.isdigit() for c in cells):continue
-            rows.append(cells)
-        if len(rows)>=3:candidates.append((headers,rows))
-    if not candidates:
-        tables=soup.select('table')
-        examples=[]
-        for t in tables[:3]:
-            examples.append(' '.join(t.stripped_strings)[:110])
-        raise ValueError('No validated official standings table; HTML tables='+str(len(tables))+'; samples='+repr(examples))
-    return max(candidates,key=lambda x:len(x[1]))
+        for tr in trs:
+            if tr is header_tr:continue
+            cells=[' '.join(cell.stripped_strings).strip() for cell in tr.find_all(['td','th'],recursive=False)]
+            if len(cells)==len(headers) and any(cells):rows.append(cells)
+        if rows:collected.append({'headers':headers,'rows':rows})
+    return collected
+
+def format_standings(collected,series):
+    """Only publish a table after checking its structure and championship points."""
+    candidates=[]
+    for item in collected:
+        headers,rows=item['headers'],item['rows']
+        norm=[h.lower().strip() for h in headers]
+        points_idx=next((i for i,h in enumerate(norm) if 'point' in h or h in ('pts','pt')),None)
+        if points_idx is None:continue
+        identity_idx=next((i for i,h in enumerate(norm) if any(t in h for t in ('driver','rider','team','competitor','name','entrant','athlete'))),None)
+        if identity_idx is None:continue
+        valid_rows=[]
+        for row in rows:
+            points=row[points_idx].replace(',','').replace(' ','')
+            if not points.replace('.','',1).isdigit():continue
+            if not row[identity_idx].strip():continue
+            valid_rows.append(row)
+        if len(valid_rows)<3:continue
+        score=len(valid_rows)+(10 if any('driver' in h or 'rider' in h for h in norm) else 0)
+        candidates.append((score,headers,valid_rows))
+    if not candidates:raise ValueError('No validated points standings found among '+str(len(collected))+' extracted HTML tables; headers='+repr([t['headers'] for t in collected[:5]]))
+    _,headers,rows=max(candidates,key=lambda x:x[0])
+    return headers,rows
+
+def official_table(soup,series):
+    return format_standings(collect_tables(soup),series)
+
 def refresh_official(now,manifest):
     for series,(template,slug) in OFFICIAL.items():
         previous=manifest['series'].get(series,{'seasons':{}})
