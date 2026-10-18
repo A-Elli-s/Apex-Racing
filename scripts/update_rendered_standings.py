@@ -17,6 +17,32 @@ from update_standings import OFFICIAL, collect_tables, format_standings, OUT
 SKIP_BLOCKED={'NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','Monster Jam'}
 MAX_PAGES=20
 
+def extract_ranked_cards(soup,series):
+    """Fallback for standings displayed as repeated cards instead of HTML tables.
+
+    Accept only short ranked records with explicit point markers, not race summaries.
+    """
+    import re
+    matches=[]
+    for el in soup.select('tr, li, [class*="standing"], [class*="Standing"], [class*="ranking"], [class*="Ranking"]'):
+        raw=' '.join(el.stripped_strings)
+        if not 4<=len(raw)<=180:continue
+        point=re.search(r'(?i)(?:^|\\s)(\\d+(?:\\.\\d+)?)\\s*(?:pts|points)\\b',raw)
+        if not point:continue
+        rank=re.match(r'^\\s*(\\d{1,2})(?:st|nd|rd|th)?\\b',raw,re.I)
+        if not rank:continue
+        name=raw[rank.end():point.start()].strip(' -|')
+        if not name or len(name)>90:continue
+        matches.append((int(rank.group(1)),name,point.group(1)))
+    unique={}
+    for rank,name,points in matches:
+        if rank not in unique or len(name)<len(unique[rank][1]):
+            unique[rank]=(rank,name,points)
+    rows=[list(v) for k,v in sorted(unique.items())]
+    if len(rows)<5 or rows[0][0]!=1 or any(rows[i][0]!=i+1 for i in range(min(5,len(rows)))):
+        raise ValueError('No validated ranked points cards; candidates='+str(len(rows)))
+    return ['Position','Competitor / team','Points'],rows
+
 def main():
     manifest_path=OUT/'manifest.json'
     manifest=json.loads(manifest_path.read_text(encoding='utf-8'))
@@ -28,7 +54,7 @@ def main():
         context=browser.new_context(user_agent='ApexRacingWorld/1.0 (+https://apexracingworld.com)', viewport={'width':1440,'height':900})
         for series,(template,slug) in list(OFFICIAL.items())[:MAX_PAGES]:
             existing=manifest.get('series',{}).get(series,{}).get('seasons',{}).get(str(year))
-            if existing:
+            if existing and series!='F3':
                 outcomes[series]='already published'
                 continue
             if series in SKIP_BLOCKED:
@@ -50,7 +76,12 @@ def main():
                 page.wait_for_timeout(1200)
                 soup=BeautifulSoup(page.content(),'html.parser')
                 tables=collect_tables(soup)
-                headers,rows=format_standings(tables,series)
+                try:
+                    headers,rows=format_standings(tables,series)
+                except ValueError:
+                    if series not in ('F2','F3','MotoGP','Moto2','Moto3'):
+                        raise
+                    headers,rows=extract_ranked_cards(soup,series)
                 if len(rows)<3:raise ValueError('too few standings rows')
                 snapshot={'series':series,'season':year,'source_url':url,'official_url':url,
                           'retrieved_at':now.isoformat(),'data':{'headers':headers,'rows':rows},
