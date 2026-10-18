@@ -20,12 +20,12 @@ def valid(series,data):
 
 # Official championship pages. HTML tables are parsed conservatively; never publish unverified rows.
 OFFICIAL={
- 'F2':('https://www.fiaformula2.com/Standings/Driver','f2'),
+ 'F2':('https://www.fiaformula2.com/en/standings/{year}/drivers','f2'),
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
- 'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/TeamsChampionship','motogp'),
+ 'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/RidersChampionship','motogp'),
  'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
  'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/TeamsChampionship','moto3'),
- 'F3':('https://www.fiaformula3.com/Standings/Driver','f3-official'),
+ 'F3':('https://www.fiaformula3.com/en/standings/{year}/drivers','f3-official'),
  'NASCAR Cup':('https://www.nascar.com/standings/nascar-cup-series/','nascar-cup'),
  'NASCAR O’Reilly':('https://www.nascar.com/standings/nascar-xfinity-series/','nascar-oreilly'),
  'NASCAR Trucks':('https://www.nascar.com/standings/nascar-craftsman-truck-series/','nascar-trucks'),
