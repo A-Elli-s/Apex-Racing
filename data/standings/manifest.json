@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T18:22:38.036150+00:00",
+  "updated": "2026-10-18T11:41:20.040735+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -26,7 +26,7 @@
       }
     },
     "F3": {
-      "official_url": "https://www.fiaformula3.com/Standings/Driver",
+      "official_url": "https://www.fiaformula3.com/en/standings/2026/drivers",
       "provider": "MotoDB community dataset (not official)",
       "seasons": {
         "2026": "/data/standings/f3-2026.json",
@@ -34,7 +34,7 @@
       }
     },
     "F2": {
-      "official_url": "https://www.fiaformula2.com/Standings/Driver",
+      "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
       "provider": "Official championship website",
       "seasons": {}
     },
@@ -47,7 +47,7 @@
       }
     },
     "MotoGP": {
-      "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/TeamsChampionship",
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/RidersChampionship",
       "provider": "Official championship website",
       "seasons": {}
     },
