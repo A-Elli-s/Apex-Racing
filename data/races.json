@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T22:25:12.339906+00:00",
+  "updated": "2026-10-19T15:35:28.849566+00:00",
   "series": {
     "Formula 2": [
       {
@@ -265,7 +265,7 @@
       },
       {
         "date": "2026-10-25",
-        "name": "GRAND PRIX OF AUSTRALIA ",
+        "name": "RED BULL GRAND PRIX OF AUSTRALIA",
         "venue": "Phillip Island",
         "url": "https://www.motogp.com/en/calendar",
         "tickets": "https://tickets.motogp.com/"
@@ -904,7 +904,7 @@
       },
       {
         "date": "2026-10-16",
-        "name": "TRUCK — NASCAR CRAFTSMAN Truck Series Race at Phoenix",
+        "name": "TRUCK — Zero Carbon Bioethanol 150 Powered by POET ",
         "venue": "Phoenix Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -946,14 +946,14 @@
       },
       {
         "date": "2026-10-30",
-        "name": "TRUCK — NASCAR CRAFTSMAN Truck Series Race at Martinsville",
+        "name": "TRUCK — Black's Tire 200 presented by Down East Heating & Air Conditioning",
         "venue": "Martinsville Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
       },
       {
         "date": "2026-10-31",
-        "name": "XFINITY — NASCAR O'Reilly Auto Parts Series Race at Martinsville",
+        "name": "XFINITY — National Debt Relief 250",
         "venue": "Martinsville Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
