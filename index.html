@@ -230,7 +230,8 @@ standingsStatus.textContent=year+' F1 race classifications · '+races.length+' r
 }
 }catch(e){if(request===standingsRequest)standingsStatus.textContent='Unable to load verified F1 results right now. Please try again later.'}
 }
-[standingsSelect,standingsSeason,standingsType].forEach(el=>el.addEventListener('change',loadStandings));
+standingsSelect.addEventListener('change',()=>{if(['F3','Formula E','WRC'].includes(standingsSelect.value))standingsType.value='races';loadStandings();});
+[standingsSeason,standingsType].forEach(el=>el.addEventListener('change',loadStandings));
 loadStandings();
 const guides=[['F1 gifts','Books, models and collectibles for Formula 1 fans.','formula 1 gifts'],['NASCAR fan essentials','Diecast cars, apparel and race-day accessories.','nascar fan gifts'],['Sim racing starter kit','Wheels, pedals and rigs for your first setup.','sim racing steering wheel pedals'],['Motocross gear','Protective equipment and accessories to research.','motocross riding gear'],['Racing diecast collecting','Model cars, displays and storage.','racing diecast cars'],['Race-day comfort','Ear protection, seating and bags.','race day hearing protection']];
 const shop=[['Sim racing wheels','sim racing steering wheel'],['Racing scanners','racing scanner nascar'],['F1 diecast models','formula 1 diecast model'],['NASCAR diecast','nascar diecast 1 24'],['Hearing protection','race hearing protection earmuffs'],['Racing books','formula 1 racing books'],['LEGO race cars','lego speed champions race car'],['Racing posters','vintage racing poster'],['Motocross accessories','motocross accessories'],['Karting gear','kart racing gear'],['RC race cars','remote control race car'],['Race-day bags','race day clear bag']];
