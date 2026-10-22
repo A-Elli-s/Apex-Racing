@@ -169,6 +169,25 @@ const snapshot=await response.json();if(request!==standingsRequest)return;
 if(snapshot.series!==selected||String(snapshot.season)!==String(year))throw Error('Snapshot mismatch');
 const data=snapshot.data;
 const headers=data?.headers,rows=data?.rows;
+// Some series publish verified race classifications before championship points.
+const raceItems=Array.isArray(data)?data:(Array.isArray(data?.results)?data.results:null);
+if(type==='races'&&Array.isArray(raceItems)&&raceItems.length){
+const schemas={
+'Formula E':[['round','Round'],['eprix','E-Prix'],['winning_driver','Winner'],['winning_team','Team']],
+'WRC':[['round','Round'],['event','Rally'],['winning_driver','Winner'],['winning_entrant','Team']],
+'F3':[['round','Round'],['race_type','Race'],['circuit','Circuit'],['winning_driver','Winner']]
+};
+const fields=schemas[selected];
+if(fields&&raceItems.some(item=>item&&item.winning_driver)){
+const validated=raceItems.filter(item=>item&&typeof item==='object'&&item.winning_driver&&fields.some(([key])=>item[key]));
+if(validated.length){
+standingsGrid.append(standingsTable(fields.map(([,label])=>label),validated.map(item=>fields.map(([key])=>String(item[key]??'—')))));
+standingsStatus.textContent=selected+' · '+year+' · Race results · Source snapshot '+new Date(snapshot.retrieved_at).toLocaleDateString();
+const source=document.createElement('a');source.href=snapshot.source_url;source.target='_blank';source.rel='noopener noreferrer';source.textContent='View data source ↗';standingsGrid.append(source);
+return;
+}
+}
+}
 const pointHeader=Array.isArray(headers)&&headers.some(h=>/points?|pts|total/i.test(String(h)));
 if(!pointHeader||!Array.isArray(rows)||rows.length<3)throw Error('Not a verified points table');
 standingsGrid.append(standingsTable(headers,rows));
