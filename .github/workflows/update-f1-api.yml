@@ -1,6 +1,10 @@
 name: Refresh F1 API snapshots (development)
 on:
   workflow_dispatch:
+  push:
+    branches: [dev]
+    paths:
+      - 'scripts/update_f1_api.py'
 permissions:
   contents: write
 jobs:
