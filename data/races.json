@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T13:33:21.396659+00:00",
+  "updated": "2026-10-22T15:27:37.127236+00:00",
   "series": {
     "Formula 2": [
       {
@@ -1342,162 +1342,139 @@
         "date": "2026-03-08",
         "name": "Australian Grand Prix",
         "venue": "Albert Park Grand Prix Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-03-15",
         "name": "Chinese Grand Prix",
         "venue": "Shanghai International Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-03-29",
         "name": "Japanese Grand Prix",
         "venue": "Suzuka Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-05-03",
         "name": "Miami Grand Prix",
         "venue": "Miami International Autodrome",
-        "url": "https://en.wikipedia.org/wiki/2026_Miami_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-05-24",
         "name": "Canadian Grand Prix",
         "venue": "Circuit Gilles Villeneuve",
-        "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-06-07",
         "name": "Monaco Grand Prix",
         "venue": "Circuit de Monaco",
-        "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-06-14",
         "name": "Barcelona Grand Prix",
         "venue": "Circuit de Barcelona-Catalunya",
-        "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-06-28",
         "name": "Austrian Grand Prix",
         "venue": "Red Bull Ring",
-        "url": "https://en.wikipedia.org/wiki/2026_Austrian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-07-05",
         "name": "British Grand Prix",
         "venue": "Silverstone Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-07-19",
         "name": "Belgian Grand Prix",
         "venue": "Circuit de Spa-Francorchamps",
-        "url": "https://en.wikipedia.org/wiki/2026_Belgian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-07-26",
         "name": "Hungarian Grand Prix",
         "venue": "Hungaroring",
-        "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-08-23",
         "name": "Dutch Grand Prix",
         "venue": "Circuit Park Zandvoort",
-        "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-09-06",
         "name": "Italian Grand Prix",
         "venue": "Autodromo Nazionale di Monza",
-        "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-09-13",
         "name": "Spanish Grand Prix",
         "venue": "Madring",
-        "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-09-26",
         "name": "Azerbaijan Grand Prix",
         "venue": "Baku City Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-10-04",
         "name": "Bahrain Grand Prix in Malaysia",
         "venue": "Sepang International Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-10-11",
         "name": "Singapore Grand Prix",
         "venue": "Marina Bay Street Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Singapore_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-10-25",
         "name": "United States Grand Prix",
         "venue": "Circuit of the Americas",
-        "url": "https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-11-01",
         "name": "Mexico City Grand Prix",
         "venue": "Autódromo Hermanos Rodríguez",
-        "url": "https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-11-08",
         "name": "Brazilian Grand Prix",
         "venue": "Autódromo José Carlos Pace",
-        "url": "https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-11-22",
         "name": "Las Vegas Grand Prix",
         "venue": "Las Vegas Strip Street Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Las_Vegas_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-11-29",
         "name": "Qatar Grand Prix",
         "venue": "Lusail International Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Qatar_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       },
       {
         "date": "2026-12-06",
         "name": "Abu Dhabi Grand Prix",
         "venue": "Yas Marina Circuit",
-        "url": "https://en.wikipedia.org/wiki/2026_Abu_Dhabi_Grand_Prix",
-        "tickets": "https://tickets.formula1.com/"
+        "url": "https://www.formula1.com/en/racing/2026"
       }
     ]
   }

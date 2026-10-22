@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-18T11:41:20.040735+00:00",
+  "updated": "2026-10-22T15:27:37.127236+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -131,6 +131,20 @@
       "official_url": "https://www.monsterjam.com/en-us/standings/",
       "provider": "Official championship website",
       "seasons": {}
+    },
+    "F1": {
+      "official_url": "https://www.formula1.com/en/racing/2026",
+      "provider": "Jolpica-F1",
+      "seasons": {
+        "2026": "/data/standings/f1-2026.json"
+      }
+    },
+    "F1 Constructors": {
+      "official_url": "https://www.formula1.com/en/racing/2026",
+      "provider": "Jolpica-F1",
+      "seasons": {
+        "2026": "/data/standings/f1-constructors-2026.json"
+      }
     }
   }
 }
