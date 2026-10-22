@@ -129,6 +129,7 @@ const standingsType=document.querySelector('#standingsType');
 const standingsGrid=document.querySelector('#standingsGrid');
 const standingsStatus=document.querySelector('#standingsStatus');
 const currentStandingsYear=new Date().getFullYear();
+// Default every championship to the active season; never silently show a past year.
 standingsSelect.innerHTML=series.map(s=>'<option value="'+esc(s[0])+'">'+esc(s[0])+'</option>').join('');
 standingsSeason.innerHTML=Array.from({length:5},(_,i)=>currentStandingsYear-i).map(y=>'<option value="'+y+'">'+y+'</option>').join('');
 let standingsRequest=0;
@@ -188,10 +189,28 @@ return;
 }
 }
 }
+// Standings and results are distinct: WEC community data currently supplies wins, not points.
+if(selected==='WEC'&&data&&typeof data==='object'){
+const key=type==='constructors'?'hypercarTeamStandings':'hypercarDriverStandings';
+const records=data[key];
+if(Array.isArray(records)&&records.length>=3){
+const names=type==='constructors'?['Position','Team','Wins']:['Position','Drivers','Team','Wins'];
+const rows=records.filter(x=>x&&Number.isFinite(Number(x.position))&&Number.isFinite(Number(x.wins))).map(x=>type==='constructors'?[x.position,x.team_name,x.wins]:[x.position,x.driver_name,x.team_name,x.wins]);
+if(rows.length>=3){
+standingsGrid.append(standingsTable(names,rows));
+standingsStatus.textContent='WEC · '+year+' · Race wins summary (NOT championship points) · Updated '+new Date(snapshot.retrieved_at).toLocaleDateString();
+const note=document.createElement('p');note.className='sub';note.textContent='Championship points have not been verified in this source. Positions shown are source-provided, not independently confirmed official standings.';standingsGrid.append(note);
+return;
+}
+}
+}
 const pointHeader=Array.isArray(headers)&&headers.some(h=>/points?|pts|total/i.test(String(h)));
 if(!pointHeader||!Array.isArray(rows)||rows.length<3)throw Error('Not a verified points table');
 standingsGrid.append(standingsTable(headers,rows));
 standingsStatus.textContent=selected+' · '+year+' · Championship points table · Snapshot updated '+new Date(snapshot.retrieved_at).toLocaleDateString();
+const source=document.createElement('p');source.className='sub';
+const origin=document.createElement('a');origin.href=snapshot.source_url||manifest.series?.[selected]?.official_url||'#standings';origin.target='_blank';origin.rel='noopener noreferrer';origin.textContent='Data source ↗';
+source.append('Source: ',origin);standingsGrid.append(source);
 if(type==='races'){const note=document.createElement('p');note.className='sub';note.textContent='This is a championship points snapshot, not race-by-race classifications.';standingsGrid.append(note);}
 return;
 }catch(err){if(request!==standingsRequest)return;showOfficialCalendarFallback();return;}
