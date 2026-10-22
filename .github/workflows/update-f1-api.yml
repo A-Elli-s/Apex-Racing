@@ -1,8 +1,6 @@
 name: Refresh F1 API snapshots (development)
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '23 6,18 * * *'
 permissions:
   contents: write
 jobs:
