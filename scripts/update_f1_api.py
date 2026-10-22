@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh validated F1 calendar and points standings; preserve all other series.
+"""Refresh validated F1 calendar and points standings for staging preview; preserve all other series.
 Jolpica public API is rate-limited; confirm commercial redistribution permission
 before publishing generated snapshots on a monetized website.
 """
