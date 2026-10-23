@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
   "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
-  "retrieved_at": "2026-10-23T15:24:12.368108+00:00",
+  "retrieved_at": "2026-10-23T15:26:56.900474+00:00",
   "data": {
     "headers": [
       "Position",
@@ -71,5 +71,13 @@
   "provider": "Wikipedia community standings (not official)",
   "attribution": "Wikipedia contributors",
   "license": "CC BY-SA 4.0",
-  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "points_audit": {
+    "status": "verified_against_published_team_points",
+    "method": "sum of championship points for all rostered drivers, including substitutes",
+    "roster_source": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
+    "roster_verified": "2026-10-23",
+    "rows_checked": 11,
+    "checked_at": "2026-10-23T15:26:59.082953+00:00"
+  }
 }
