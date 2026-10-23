@@ -1,0 +1,75 @@
+{
+  "series": "F2 Teams",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
+  "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
+  "retrieved_at": "2026-10-23T15:20:07.249856+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Team",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Campos Racing",
+        "333"
+      ],
+      [
+        "2",
+        "Invicta Racing",
+        "297"
+      ],
+      [
+        "3",
+        "Rodin Motorsport",
+        "296"
+      ],
+      [
+        "4",
+        "MP Motorsport",
+        "200"
+      ],
+      [
+        "5",
+        "DAMS Lucas Oil",
+        "173"
+      ],
+      [
+        "6",
+        "ART Grand Prix",
+        "161"
+      ],
+      [
+        "7",
+        "Trident",
+        "128"
+      ],
+      [
+        "8",
+        "Hitech",
+        "96"
+      ],
+      [
+        "9",
+        "Van Amersfoort Racing",
+        "59"
+      ],
+      [
+        "10",
+        "Prema Racing",
+        "51"
+      ],
+      [
+        "11",
+        "AIX Racing",
+        "38"
+      ]
+    ]
+  },
+  "provider": "Wikipedia community standings (not official)",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

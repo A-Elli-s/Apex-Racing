@@ -1,0 +1,135 @@
+{
+  "series": "F2",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
+  "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
+  "retrieved_at": "2026-10-23T15:20:07.249856+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Rafael Câmara",
+        "207"
+      ],
+      [
+        "2",
+        "Nikola Tsolov",
+        "200"
+      ],
+      [
+        "3",
+        "Alex Dunne",
+        "189"
+      ],
+      [
+        "4",
+        "Gabriele Minì",
+        "163"
+      ],
+      [
+        "5",
+        "Dino Beganovic",
+        "137"
+      ],
+      [
+        "6",
+        "Noel León",
+        "133"
+      ],
+      [
+        "7",
+        "Martinius Stenshorne",
+        "107"
+      ],
+      [
+        "8",
+        "Joshua Dürksen",
+        "90"
+      ],
+      [
+        "9",
+        "Kush Maini",
+        "90"
+      ],
+      [
+        "10",
+        "Laurens van Hoepen",
+        "90"
+      ],
+      [
+        "11",
+        "Tasanapol Inthraphuvasak",
+        "71"
+      ],
+      [
+        "12",
+        "Ritomo Miyata",
+        "70"
+      ],
+      [
+        "13",
+        "Rafael Villagómez",
+        "42"
+      ],
+      [
+        "14",
+        "John Bennett",
+        "38"
+      ],
+      [
+        "15",
+        "Oliver Goethe",
+        "37"
+      ],
+      [
+        "16",
+        "Roman Bilinski",
+        "36"
+      ],
+      [
+        "17",
+        "Sebastián Montoya",
+        "30"
+      ],
+      [
+        "18",
+        "Emerson Fittipaldi Jr.",
+        "28"
+      ],
+      [
+        "19",
+        "Colton Herta",
+        "26"
+      ],
+      [
+        "20",
+        "Mari Boya",
+        "21"
+      ],
+      [
+        "21",
+        "Nico Varrone",
+        "15"
+      ],
+      [
+        "22",
+        "Cian Shields",
+        "10"
+      ],
+      [
+        "23",
+        "Hiyu Yamakoshi",
+        "2"
+      ]
+    ]
+  },
+  "provider": "Wikipedia community standings (not official)",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

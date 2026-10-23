@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T15:27:37.127236+00:00",
+  "updated": "2026-10-23T15:20:07.249856+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -27,16 +27,25 @@
     },
     "F3": {
       "official_url": "https://www.fiaformula3.com/en/standings/2026/drivers",
-      "provider": "MotoDB community dataset (not official)",
+      "provider": "Wikipedia community standings (not official)",
       "seasons": {
-        "2026": "/data/standings/f3-2026.json",
+        "2026": "/data/standings/f3-standings-2026.json",
         "2025": "/data/standings/f3-2025.json"
-      }
+      },
+      "race_results_seasons": {
+        "2026": "/data/standings/f3-2026.json"
+      },
+      "attribution": "Wikipedia contributors",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     "F2": {
       "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Wikipedia community standings (not official)",
+      "seasons": {
+        "2026": "/data/standings/f2-standings-2026.json"
+      },
+      "attribution": "Wikipedia contributors",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     "IndyCar": {
       "official_url": "https://www.indycar.com/Standings",
@@ -145,6 +154,15 @@
       "seasons": {
         "2026": "/data/standings/f1-constructors-2026.json"
       }
+    },
+    "F2 Teams": {
+      "seasons": {
+        "2026": "/data/standings/f2-teams-2026.json"
+      },
+      "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
+      "provider": "Wikipedia community standings (not official)",
+      "attribution": "Wikipedia contributors",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
     }
   }
 }
