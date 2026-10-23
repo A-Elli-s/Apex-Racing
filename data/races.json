@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T15:27:37.127236+00:00",
+  "updated": "2026-10-23T15:30:00+00:00",
   "series": {
     "Formula 2": [
       {
@@ -89,58 +89,85 @@
     ],
     "Formula 3": [
       {
-        "date": "2026-03-07",
-        "name": "Round 1",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-03-08",
+        "name": "Australian Grand Prix",
+        "venue": "Albert Park Circuit",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 1
       },
       {
-        "date": "2026-06-06",
-        "name": "Round 2",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-06-07",
+        "name": "Monaco Grand Prix",
+        "venue": "Circuit de Monaco",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 2
       },
       {
-        "date": "2026-06-13",
-        "name": "Round 3",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-06-14",
+        "name": "Barcelona Grand Prix",
+        "venue": "Circuit de Barcelona-Catalunya",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 3
       },
       {
-        "date": "2026-06-27",
-        "name": "Round 4",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-06-28",
+        "name": "Austrian Grand Prix",
+        "venue": "Red Bull Ring",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 4
       },
       {
-        "date": "2026-07-04",
-        "name": "Round 5",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-07-05",
+        "name": "British Grand Prix",
+        "venue": "Silverstone Circuit",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 5
       },
       {
-        "date": "2026-07-18",
-        "name": "Round 6",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-07-19",
+        "name": "Belgian Grand Prix",
+        "venue": "Circuit de Spa-Francorchamps",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 6
       },
       {
-        "date": "2026-07-25",
-        "name": "Round 7",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-07-26",
+        "name": "Hungarian Grand Prix",
+        "venue": "Hungaroring",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 7
       },
       {
-        "date": "2026-09-05",
-        "name": "Round 8",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-09-06",
+        "name": "Italian Grand Prix",
+        "venue": "Monza Circuit",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 8
       },
       {
-        "date": "2026-09-12",
-        "name": "Round 9",
-        "venue": "Venue TBA",
-        "url": "https://www.fiaformula3.com/Calendar"
+        "date": "2026-09-13",
+        "name": "Madrid Grand Prix",
+        "venue": "Madring",
+        "url": "https://www.fiaformula3.com/Calendar",
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "source_license": "CC BY-SA 4.0",
+        "round": 9
       }
     ],
     "MotoGP / Moto2 / Moto3": [
