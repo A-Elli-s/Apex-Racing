@@ -214,6 +214,8 @@ if(!pointHeader||!Array.isArray(rows)||rows.length<3)throw Error('Not a verified
 standingsGrid.append(standingsTable(headers,rows));
 const pointsStatus=snapshot.points_audit?.status==='calculated_and_cross_checked'
 ?'Calculated team points · cross-checked'
+:snapshot.points_audit?.status==='verified_against_published_team_points'
+?'Team points · driver totals independently checked'
 :snapshot.points_audit?.status==='verified_against_published_total'
 ?'Championship points · race-by-race totals audited'
 :'Championship points table';
