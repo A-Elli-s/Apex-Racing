@@ -1,0 +1,54 @@
+{
+  "series": "F2",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
+  "verification_date": "2026-10-23",
+  "points_rule": "Teams earn the sum of their rostered drivers' awarded championship points, including replacement drivers.",
+  "teams": {
+    "Campos Racing": [
+      "Nikola Tsolov",
+      "Noel León"
+    ],
+    "Invicta Racing": [
+      "Rafael Câmara",
+      "Joshua Dürksen"
+    ],
+    "Rodin Motorsport": [
+      "Alex Dunne",
+      "Martinius Stenshorne"
+    ],
+    "MP Motorsport": [
+      "Gabriele Minì",
+      "Oliver Goethe"
+    ],
+    "DAMS Lucas Oil": [
+      "Dino Beganovic",
+      "Roman Bilinski"
+    ],
+    "ART Grand Prix": [
+      "Kush Maini",
+      "Tasanapol Inthraphuvasak"
+    ],
+    "Trident": [
+      "Laurens van Hoepen",
+      "John Bennett"
+    ],
+    "Hitech": [
+      "Ritomo Miyata",
+      "Colton Herta"
+    ],
+    "Van Amersfoort Racing": [
+      "Rafael Villagómez",
+      "Nico Varrone",
+      "Hiyu Yamakoshi"
+    ],
+    "Prema Racing": [
+      "Sebastián Montoya",
+      "Mari Boya"
+    ],
+    "AIX Racing": [
+      "Emerson Fittipaldi Jr.",
+      "Cian Shields"
+    ]
+  }
+}
