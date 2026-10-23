@@ -581,5 +581,22 @@
         "231"
       ]
     ]
+  },
+  "points_audit": {
+    "status": "verified_against_published_total",
+    "method": "sum of already-awarded event points; not finishing positions",
+    "event_columns": [
+      "Daytona Intl",
+      "Sebring",
+      "Long Beach",
+      "WeatherTech Raceway",
+      "Detroit Grand Prix",
+      "Watkins Glen",
+      "Road America",
+      "Indy",
+      "Road Atlanta"
+    ],
+    "rows_checked": 40,
+    "checked_at": "2026-10-23T15:16:26.572791+00:00"
   }
 }
