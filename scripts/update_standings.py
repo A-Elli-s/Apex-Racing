@@ -20,12 +20,10 @@ def valid(series,data):
 
 # Official championship pages. HTML tables are parsed conservatively; never publish unverified rows.
 OFFICIAL={
- 'F2':('https://www.fiaformula2.com/en/standings/{year}/drivers','f2'),
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/RidersChampionship','motogp'),
  'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
  'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/TeamsChampionship','moto3'),
- 'F3':('https://www.fiaformula3.com/en/standings/{year}/drivers','f3-official'),
  'NASCAR Cup':('https://www.nascar.com/standings/nascar-cup-series/','nascar-cup'),
  'NASCAR O’Reilly':('https://www.nascar.com/standings/nascar-xfinity-series/','nascar-oreilly'),
  'NASCAR Trucks':('https://www.nascar.com/standings/nascar-craftsman-truck-series/','nascar-trucks'),
@@ -110,15 +108,22 @@ def refresh_official(now,manifest):
                 print('Official standings refreshed',series,year,len(rows))
             except Exception as e:print('Official source not parsed; preserving last snapshot:',series,year,str(e))
             if path.exists():
-                manifest['series'][series]['seasons'][str(year)]='/data/standings/'+path.name
+                field='race_results_seasons' if series=='F3' and entry.get('provider','').startswith('Wikipedia') else 'seasons'
+                entry.setdefault(field,{})[str(year)]='/data/standings/'+path.name
                 manifest['series'][series]['provider']='Official championship website'
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     now=datetime.datetime.now(datetime.timezone.utc)
-    manifest={'updated':now.isoformat(),'series':{}}
+    manifest_path=OUT/'manifest.json'
+    manifest=json.loads(manifest_path.read_text(encoding='utf-8')) if manifest_path.exists() else {'series':{}}
+    manifest.setdefault('series',{})
+    manifest['updated']=now.isoformat()
     for series,(slug,filename,official) in SOURCES.items():
-        manifest['series'][series]={'official_url':official,'provider':'MotoDB community dataset (not official)','seasons':{}}
+        entry=manifest['series'].setdefault(series,{'seasons':{}})
+        if not (series=='F3' and entry.get('provider','').startswith('Wikipedia')):
+            entry.update({'official_url':official,'provider':'MotoDB community dataset (not official)'})
+        entry.setdefault('seasons',{})
         for year in (now.year,now.year-1):
             path=OUT/(slug+'-'+str(year)+'.json')
             url=f'https://raw.githubusercontent.com/vishwapramuditha/moto-db/main/data/{slug}/{year}/{filename}'
