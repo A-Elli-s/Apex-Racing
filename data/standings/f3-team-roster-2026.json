@@ -1,0 +1,65 @@
+{
+  "season": 2026,
+  "series": "F3",
+  "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+  "verification_source_url": "https://www.fia.com/events/fia-formula-3-championship/season-2026/2026-standings",
+  "verification_date": "2026-10-23",
+  "points_rule": "Team points are the sum of all championship points awarded to drivers who raced for the team during the season; includes substitute drivers and race bonuses already included in driver totals.",
+  "teams": {
+    "Campos Racing": [
+      "Ugo Ugochukwu",
+      "Théophile Naël",
+      "Ernesto Rivera",
+      "Patrick Heuzenroeder"
+    ],
+    "Trident": [
+      "Freddie Slater",
+      "Noah Strømsted",
+      "Matteo De Palo"
+    ],
+    "MP Motorsport": [
+      "Tuukka Taponen",
+      "Mattia Colnaghi",
+      "Alessandro Giusti"
+    ],
+    "ART Grand Prix": [
+      "Taito Kato",
+      "Maciej Gładysz",
+      "Kanato Le"
+    ],
+    "Van Amersfoort Racing": [
+      "Hiyu Yamakoshi",
+      "Enzo Deligny",
+      "Bruno del Pino"
+    ],
+    "Rodin Motorsport": [
+      "Pedro Clerot",
+      "Brando Badoer",
+      "Christian Ho",
+      "Niccolò Maccagnani"
+    ],
+    "Prema Racing": [
+      "Louis Sharp",
+      "James Wharton",
+      "José Garfias",
+      "Alex Powell"
+    ],
+    "Hitech": [
+      "Jin Nakamura",
+      "Fionn McLaughlin",
+      "Michael Shin"
+    ],
+    "DAMS Lucas Oil": [
+      "Gerrard Xie",
+      "Nicola Lacorte",
+      "Nandhavud Bhirombhakdi"
+    ],
+    "AIX Racing": [
+      "Yevan David",
+      "Fernando Barrichello",
+      "Brad Benavides",
+      "Ricardo Escotto",
+      "Salim Hanna"
+    ]
+  }
+}
