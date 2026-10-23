@@ -27,9 +27,9 @@ def extract_ranked_cards(soup,series):
     for el in soup.select('tr, li, [class*="standing"], [class*="Standing"], [class*="ranking"], [class*="Ranking"]'):
         raw=' '.join(el.stripped_strings)
         if not 4<=len(raw)<=180:continue
-        point=re.search(r'(?i)(?:^|\\s)(\\d+(?:\\.\\d+)?)\\s*(?:pts|points)\\b',raw)
+        point=re.search(r'(?i)(?:^|\s)(\d+(?:\.\d+)?)\s*(?:pts|points)\b',raw)
         if not point:continue
-        rank=re.match(r'^\\s*(\\d{1,2})(?:st|nd|rd|th)?\\b',raw,re.I)
+        rank=re.match(r'^\s*(\d{1,2})(?:st|nd|rd|th)?\b',raw,re.I)
         if not rank:continue
         name=raw[rank.end():point.start()].strip(' -|')
         if not name or len(name)>90:continue
