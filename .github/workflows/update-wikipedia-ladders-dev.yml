@@ -8,6 +8,9 @@ on:
       - 'tests/test_wikipedia_ladders.py'
       - 'scripts/calculate_f3_teams.py'
       - 'tests/test_f3_teams.py'
+      - 'scripts/audit_f2_teams.py'
+      - 'tests/test_f2_teams.py'
+      - 'data/standings/f2-team-roster-2026.json'
       - 'data/standings/f3-team-roster-2026.json'
       - '.github/workflows/update-wikipedia-ladders-dev.yml'
 permissions:
@@ -33,6 +36,10 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_f3_teams.py' -v
       - name: Calculate verified F3 team totals
         run: python scripts/calculate_f3_teams.py
+      - name: Test F2 team audit
+        run: python -m unittest discover -s tests -p 'test_f2_teams.py' -v
+      - name: Cross-check F2 team totals against driver points
+        run: python scripts/audit_f2_teams.py
       - name: Commit only validated development snapshots
         run: |
           git config user.name "github-actions[bot]"
