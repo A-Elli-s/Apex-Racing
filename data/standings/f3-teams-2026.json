@@ -1,0 +1,78 @@
+{
+  "series": "F3 Teams",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+  "official_url": "https://www.fiaformula3.com/en/standings/2026/teams",
+  "retrieved_at": "2026-10-23T15:24:13.508104+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Team",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Campos Racing",
+        "334"
+      ],
+      [
+        "2",
+        "Trident",
+        "217"
+      ],
+      [
+        "3",
+        "MP Motorsport",
+        "208"
+      ],
+      [
+        "4",
+        "ART Grand Prix",
+        "189"
+      ],
+      [
+        "5",
+        "Van Amersfoort Racing",
+        "168"
+      ],
+      [
+        "6",
+        "Rodin Motorsport",
+        "161"
+      ],
+      [
+        "7",
+        "Prema Racing",
+        "75"
+      ],
+      [
+        "8",
+        "Hitech",
+        "55"
+      ],
+      [
+        "9",
+        "DAMS Lucas Oil",
+        "53"
+      ],
+      [
+        "10",
+        "AIX Racing",
+        "43"
+      ]
+    ]
+  },
+  "provider": "Calculated from community driver championship points and verified season roster",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "points_audit": {
+    "status": "calculated_and_cross_checked",
+    "method": "sum of each rostered driver championship points including substitutes",
+    "roster_source": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+    "verification_source": "https://www.fia.com/events/fia-formula-3-championship/season-2026/2026-standings",
+    "verification_date": "2026-10-23",
+    "rows_checked": 10
+  }
+}

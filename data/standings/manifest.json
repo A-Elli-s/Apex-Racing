@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T15:20:07.249856+00:00",
+  "updated": "2026-10-23T15:24:13.508104+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fiawec.com/",
@@ -161,6 +161,15 @@
       },
       "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
       "provider": "Wikipedia community standings (not official)",
+      "attribution": "Wikipedia contributors",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "F3 Teams": {
+      "seasons": {
+        "2026": "/data/standings/f3-teams-2026.json"
+      },
+      "official_url": "https://www.fiaformula3.com/en/standings/2026/teams",
+      "provider": "Calculated from community driver championship points and verified season roster",
       "attribution": "Wikipedia contributors",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
     }
