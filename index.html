@@ -163,11 +163,16 @@ standingsStatus.textContent='Checking '+selected+' standings…';
 try{
 const manifestResponse=await fetch('/data/standings/manifest.json',{cache:'no-store'});
 if(!manifestResponse.ok)throw Error('No snapshots published');
-const manifest=await manifestResponse.json(),path=manifest.series?.[selected]?.seasons?.[year];
+const manifest=await manifestResponse.json();
+const entry=manifest.series?.[selected],teamSeries=selected+' Teams';
+const targetSeries=type==='constructors'&&selected!=='WEC'?teamSeries:selected;
+const path=type==='constructors'&&selected!=='WEC'
+?manifest.series?.[teamSeries]?.seasons?.[year]
+:(type==='races'&&entry?.race_results_seasons?.[year])||entry?.seasons?.[year];
 if(!path)throw Error('No snapshot for this season');
 const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw Error('Snapshot unavailable');
 const snapshot=await response.json();if(request!==standingsRequest)return;
-if(snapshot.series!==selected||String(snapshot.season)!==String(year))throw Error('Snapshot mismatch');
+if(snapshot.series!==targetSeries||String(snapshot.season)!==String(year))throw Error('Snapshot mismatch');
 const data=snapshot.data;
 const headers=data?.headers,rows=data?.rows;
 // Some series publish verified race classifications before championship points.
@@ -210,7 +215,13 @@ standingsGrid.append(standingsTable(headers,rows));
 standingsStatus.textContent=selected+' · '+year+' · Championship points table · Snapshot updated '+new Date(snapshot.retrieved_at).toLocaleDateString();
 const source=document.createElement('p');source.className='sub';
 const origin=document.createElement('a');origin.href=snapshot.source_url||manifest.series?.[selected]?.official_url||'#standings';origin.target='_blank';origin.rel='noopener noreferrer';origin.textContent='Data source ↗';
-source.append('Source: ',origin);standingsGrid.append(source);
+source.append('Source: ',origin);
+if(snapshot.attribution&&snapshot.license_url){
+const attribution=document.createElement('span');
+attribution.textContent=' · Community data: '+snapshot.attribution+' ('+(snapshot.license||'source license')+'), not official';
+source.append(attribution);
+}
+standingsGrid.append(source);
 if(type==='races'){const note=document.createElement('p');note.className='sub';note.textContent='This is a championship points snapshot, not race-by-race classifications.';standingsGrid.append(note);}
 return;
 }catch(err){if(request!==standingsRequest)return;showOfficialCalendarFallback();return;}
@@ -249,7 +260,7 @@ standingsStatus.textContent=year+' F1 race classifications · '+races.length+' r
 }
 }catch(e){if(request===standingsRequest)standingsStatus.textContent='Unable to load verified F1 results right now. Please try again later.'}
 }
-standingsSelect.addEventListener('change',()=>{if(['F3','Formula E','WRC'].includes(standingsSelect.value))standingsType.value='races';loadStandings();});
+standingsSelect.addEventListener('change',()=>{standingsType.value=['Formula E','WRC'].includes(standingsSelect.value)?'races':'drivers';loadStandings();});
 [standingsSeason,standingsType].forEach(el=>el.addEventListener('change',loadStandings));
 loadStandings();
 const guides=[['F1 gifts','Books, models and collectibles for Formula 1 fans.','formula 1 gifts'],['NASCAR fan essentials','Diecast cars, apparel and race-day accessories.','nascar fan gifts'],['Sim racing starter kit','Wheels, pedals and rigs for your first setup.','sim racing steering wheel pedals'],['Motocross gear','Protective equipment and accessories to research.','motocross riding gear'],['Racing diecast collecting','Model cars, displays and storage.','racing diecast cars'],['Race-day comfort','Ear protection, seating and bags.','race day hearing protection']];
