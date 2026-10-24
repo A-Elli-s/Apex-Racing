@@ -22,8 +22,8 @@ def valid(series,data):
 OFFICIAL={
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/RidersChampionship','motogp'),
- 'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
- 'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/TeamsChampionship','moto3'),
+ 'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/RidersChampionship','moto2'),
+ 'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/RidersChampionship','moto3'),
  'NASCAR Cup':('https://www.nascar.com/standings/nascar-cup-series/','nascar-cup'),
  'NASCAR O’Reilly':('https://www.nascar.com/standings/nascar-xfinity-series/','nascar-oreilly'),
  'NASCAR Trucks':('https://www.nascar.com/standings/nascar-craftsman-truck-series/','nascar-trucks'),
