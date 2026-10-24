@@ -1,0 +1,37 @@
+name: Audit development championship coverage
+on:
+  workflow_dispatch:
+  push:
+    branches: [dev]
+    paths:
+      - 'data/races.json'
+      - 'data/standings/**'
+      - 'scripts/audit_championship_coverage.py'
+permissions:
+  contents: write
+concurrency:
+  group: coverage-audit-dev
+  cancel-in-progress: false
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit all 23 championships
+        run: python scripts/audit_championship_coverage.py
+      - name: Commit audit report to development only
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/coverage.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh development championship coverage audit"
+            git pull --rebase origin dev
+            git push origin HEAD:dev
+          fi
