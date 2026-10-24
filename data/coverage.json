@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T15:26:22.496318+00:00",
+  "generated_at": "2026-10-24T15:27:14.611739+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 7,
@@ -7,7 +7,7 @@
   "race_winner_feeds_present": 3,
   "fully_verified_championships": 0,
   "complete": false,
-  "note": "Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions remain required.",
+  "note": "Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.",
   "championships": {
     "F1": {
       "calendar": {
@@ -23,7 +23,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "F2": {
       "calendar": {
@@ -39,7 +40,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "F3": {
       "calendar": {
@@ -56,7 +58,8 @@
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
         "count": 19
-      }
+      },
+      "fully_verified": false
     },
     "IndyCar": {
       "calendar": {
@@ -72,7 +75,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "NASCAR Cup": {
       "calendar": {
@@ -85,7 +89,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "NASCAR O’Reilly": {
       "calendar": {
@@ -98,7 +103,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "WEC": {
       "calendar": {
@@ -111,7 +117,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "IMSA": {
       "calendar": {
@@ -143,7 +150,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Formula E": {
       "calendar": {
@@ -157,7 +165,8 @@
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
         "count": 17
-      }
+      },
+      "fully_verified": false
     },
     "WRC": {
       "calendar": {
@@ -171,7 +180,8 @@
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
         "count": 14
-      }
+      },
+      "fully_verified": false
     },
     "Supercars": {
       "calendar": {
@@ -187,7 +197,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "NHRA": {
       "calendar": {
@@ -203,7 +214,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "MotoGP": {
       "calendar": {
@@ -216,7 +228,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Moto2": {
       "calendar": {
@@ -229,7 +242,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Moto3": {
       "calendar": {
@@ -242,7 +256,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "WorldSBK": {
       "calendar": {
@@ -255,7 +270,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Supercross": {
       "calendar": {
@@ -268,7 +284,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Pro Motocross": {
       "calendar": {
@@ -281,7 +298,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "MXGP": {
       "calendar": {
@@ -294,7 +312,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "NASCAR Trucks": {
       "calendar": {
@@ -307,7 +326,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Dakar Rally": {
       "calendar": {
@@ -320,7 +340,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Off-road racing": {
       "calendar": {
@@ -333,7 +354,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     },
     "Monster Jam": {
       "calendar": {
@@ -346,7 +368,8 @@
       },
       "individual_race_results": {
         "status": "missing"
-      }
+      },
+      "fully_verified": false
     }
   }
 }
