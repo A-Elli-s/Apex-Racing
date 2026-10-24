@@ -151,10 +151,10 @@ const officialCalendarUrls={
 'WorldSBK':'https://www.worldsbk.com/en/calendar','Supercross':'https://www.supercrosslive.com/','Pro Motocross':'https://promotocross.com/','MXGP':'https://www.mxgp.com/calendar',
 'Dakar Rally':'https://www.dakar.com/','Off-road racing':'https://score-international.com/','Monster Jam':'https://www.monsterjam.com/en-us/events/'};
 function showOfficialCalendarFallback(){
-standingsStatus.textContent=selected+' · '+year+' · Championship standings unavailable on Apex Racing World';
+standingsStatus.textContent=selected+' · '+year+' · '+(type==='races'?'Individual race results':'Championship standings')+' unavailable on Apex Racing World';
 const panel=document.createElement('article');panel.className='card';
-const title=document.createElement('h3');title.textContent='See the official racing calendar';
-const info=document.createElement('p');info.textContent='We cannot currently display a validated '+selected+' championship points table for this season. Visit the organizer for its event calendar and official championship information.';
+const title=document.createElement('h3');title.textContent=type==='races'?'View official race classifications':'View official championship information';
+const info=document.createElement('p');info.textContent=type==='races'?'We do not yet have a validated individual race results feed for this season. The organizer may publish race classifications.':'We do not yet have a validated championship points table for this season. The organizer may publish current standings.';
 const url=officialCalendarUrls[selected]||series.find(s=>s[0]===selected)?.[2];
 const a=document.createElement('a');a.className='go';a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent='Open '+selected+' official calendar / organizer ↗';
 panel.append(title,info,a);standingsGrid.append(panel);
@@ -168,7 +168,8 @@ const entry=manifest.series?.[selected],teamSeries=selected+' Teams';
 const targetSeries=type==='constructors'&&selected!=='WEC'?teamSeries:selected;
 const path=type==='constructors'&&selected!=='WEC'
 ?manifest.series?.[teamSeries]?.seasons?.[year]
-:(type==='races'&&entry?.race_results_seasons?.[year])||entry?.seasons?.[year];
+:type==='races'?(entry?.race_results_seasons?.[year]||(['Formula E','WRC'].includes(selected)?entry?.seasons?.[year]:null))
+:entry?.seasons?.[year];
 if(!path)throw Error('No snapshot for this season');
 const response=await fetch(path,{cache:'no-store'});if(!response.ok)throw Error('Snapshot unavailable');
 const snapshot=await response.json();if(request!==standingsRequest)return;
@@ -195,7 +196,7 @@ return;
 }
 }
 // Standings and results are distinct: WEC community data currently supplies wins, not points.
-if(selected==='WEC'&&data&&typeof data==='object'){
+if(selected==='WEC'&&type!=='races'&&data&&typeof data==='object'){
 const key=type==='constructors'?'hypercarTeamStandings':'hypercarDriverStandings';
 const records=data[key];
 if(Array.isArray(records)&&records.length>=3){
@@ -209,8 +210,11 @@ return;
 }
 }
 }
+if(type==='races')throw Error('No validated individual race results in snapshot');
 const pointHeader=Array.isArray(headers)&&headers.some(h=>/points?|pts|total/i.test(String(h)));
 if(!pointHeader||!Array.isArray(rows)||rows.length<3)throw Error('Not a verified points table');
+const pointsColumn=headers.findIndex(h=>/^(points?|pts|total)$/i.test(String(h).trim()));
+if(pointsColumn<0||rows.filter(row=>Array.isArray(row)&&Number.isFinite(Number(String(row[pointsColumn]).replaceAll(',','')))&&Number(String(row[pointsColumn]).replaceAll(',',''))>=0).length<3)throw Error('No validated numeric points totals');
 standingsGrid.append(standingsTable(headers,rows));
 const pointsStatus=snapshot.points_audit?.status==='calculated_and_cross_checked'
 ?'Calculated team points · cross-checked'
