@@ -3,6 +3,7 @@
 
 A snapshot's presence is not proof of accuracy, licensing or completeness.
 This report deliberately distinguishes available data from independently verified data.
+Run after every dev-branch calendar or standings refresh.
 """
 import datetime as dt
 import json
