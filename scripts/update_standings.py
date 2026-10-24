@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Weekly snapshot of permitted public motorsport data. Preserve last valid snapshots."""
+"""Conservative dev snapshot of public motorsport data. Preserve last valid snapshots.
+Never treat an unavailable official page as permission to bypass access controls.
+"""
 import datetime,json,pathlib,urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'standings'
