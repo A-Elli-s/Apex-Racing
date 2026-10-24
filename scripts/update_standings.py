@@ -108,8 +108,7 @@ def refresh_official(now,manifest):
                 print('Official standings refreshed',series,year,len(rows))
             except Exception as e:print('Official source not parsed; preserving last snapshot:',series,year,str(e))
             if path.exists():
-                field='race_results_seasons' if series=='F3' and entry.get('provider','').startswith('Wikipedia') else 'seasons'
-                entry.setdefault(field,{})[str(year)]='/data/standings/'+path.name
+                manifest['series'][series].setdefault('seasons',{})[str(year)]='/data/standings/'+path.name
                 manifest['series'][series]['provider']='Official championship website'
 
 def main():
