@@ -129,17 +129,37 @@ def main():
             'championship_points':points_audit(series,entry),
             'individual_race_results':race_audit(series,entry),
         }
-    # Completion requires a future, explicit independent verification step for
-    # classification completeness, scoring adjustments and publication rights.
+    # A source cannot become "verified" merely because a JSON file exists.
+    # Independent reviews must be recorded explicitly in the manifest entry.
+    verified_count=0
+    for series in SERIES:
+        review=entries.get(series,{}).get('verification',{})
+        present=coverage[series]
+        reviewed=(
+            review.get('season')==YEAR
+            and review.get('points')=='cross_checked'
+            and review.get('calendar')=='cross_checked'
+            and review.get('race_results')=='complete_classifications_checked'
+            and review.get('rights')=='approved'
+        )
+        available=(
+            present['championship_points']['status']=='points_available_not_independently_verified'
+            and present['calendar']['status']=='calendar_entries_present_not_independently_verified'
+            and present['individual_race_results']['status']!='missing'
+        )
+        verified=bool(reviewed and available)
+        coverage[series]['fully_verified']=verified
+        if verified:
+            verified_count+=1
     report={
         'generated_at':dt.datetime.now(dt.timezone.utc).isoformat(),
         'season':YEAR,'target_championships':len(SERIES),
         'points_tables_available':sum(v['championship_points']['status']=='points_available_not_independently_verified' for v in coverage.values()),
         'calendar_feeds_present':sum(v['calendar']['status']!='missing' for v in coverage.values()),
         'race_winner_feeds_present':sum(v['individual_race_results']['status']!='missing' for v in coverage.values()),
-        'fully_verified_championships':0,
-        'complete':False,
-        'note':'Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions remain required.',
+        'fully_verified_championships':verified_count,
+        'complete':verified_count==len(SERIES),
+        'note':'Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.',
         'championships':coverage,
     }
     out=ROOT/'data'/'coverage.json'
