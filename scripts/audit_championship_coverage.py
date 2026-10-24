@@ -88,6 +88,19 @@ def race_audit(series,entry):
     items=data if isinstance(data,list) else (data.get('results') if isinstance(data,dict) else None)
     if not isinstance(items,list):
         return {'status':'missing'}
+    # Full classifications must list multiple ranked competitors for each race;
+    # a winner-only summary is not enough to calculate championship points.
+    classified=0
+    for event in items:
+        if not isinstance(event,dict):
+            continue
+        competitors=event.get('classification') or event.get('results')
+        if not isinstance(competitors,list) or len(competitors)<3:
+            continue
+        if all(isinstance(x,dict) and (x.get('position') is not None or x.get('rank') is not None) for x in competitors):
+            classified+=1
+    if classified>=3:
+        return {'status':'full_classifications_available','events':classified}
     count=sum(isinstance(x,dict) and bool(x.get('winning_driver')) for x in items)
     return {'status':'winner_summaries_available_not_full_classifications' if count else 'missing','count':count}
 
@@ -145,7 +158,7 @@ def main():
         available=(
             present['championship_points']['status']=='points_available_not_independently_verified'
             and present['calendar']['status']=='calendar_entries_present_not_independently_verified'
-            and present['individual_race_results']['status']!='missing'
+            and present['individual_race_results']['status']=='full_classifications_available'
         )
         verified=bool(reviewed and available)
         coverage[series]['fully_verified']=verified
