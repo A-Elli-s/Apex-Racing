@@ -136,7 +136,29 @@ def main():
                 print('Updated',series,year)
             except Exception as e:print('Preserving previous snapshot for',series,year,':',e)
             if path.exists():
-                manifest['series'][series]['seasons'][str(year)]='/data/standings/'+path.name
+                # Community F3 feed contains individual race results, NOT driver points.
+                # Keep the separately validated F3 championship standings snapshot.
+                if series=='F3':
+                    entry.setdefault('race_results_seasons',{})[str(year)]='/data/standings/'+path.name
+                    standings_path=OUT/('f3-standings-'+str(year)+'.json')
+                    if standings_path.exists():
+                        try:
+                            points=json.loads(standings_path.read_text(encoding='utf-8'))
+                            hdr=points.get('data',{}).get('headers',[])
+                            rows=points.get('data',{}).get('rows',[])
+                            if points.get('series')=='F3' and points.get('season')==year and any(str(h).lower() in ('points','pts') for h in hdr) and len(rows)>=3:
+                                entry['seasons'][str(year)]='/data/standings/'+standings_path.name
+                                entry['provider']='Wikipedia community standings (not official)'
+                        except (ValueError,KeyError,TypeError) as error:
+                            print('F3 points snapshot invalid; preserving prior manifest:',error)
+                    elif entry.get('seasons',{}).get(str(year))=='/data/standings/'+path.name:
+                        entry['seasons'].pop(str(year),None)
+                elif series in ('Formula E','WRC'):
+                    entry.setdefault('race_results_seasons',{})[str(year)]='/data/standings/'+path.name
+                    if entry.get('seasons',{}).get(str(year))=='/data/standings/'+path.name:
+                        entry['seasons'].pop(str(year),None)
+                else:
+                    entry['seasons'][str(year)]='/data/standings/'+path.name
     refresh_official(now,manifest)
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 if __name__=='__main__':main()
