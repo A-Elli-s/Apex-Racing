@@ -122,7 +122,10 @@ def main():
     manifest['updated']=now.isoformat()
     for series,(slug,filename,official) in SOURCES.items():
         entry=manifest['series'].setdefault(series,{'seasons':{}})
-        if not (series=='F3' and entry.get('provider','').startswith('Wikipedia')):
+        # Community race-results refresh must not downgrade provenance of a
+        # separately verified FIA/Wikipedia championship points snapshot.
+        provider=entry.get('provider','')
+        if not (provider.startswith('FIA official') or (series=='F3' and provider.startswith('Wikipedia'))):
             entry.update({'official_url':official,'provider':'MotoDB community dataset (not official)'})
         entry.setdefault('seasons',{})
         for year in (now.year,now.year-1):
