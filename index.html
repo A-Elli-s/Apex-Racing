@@ -165,8 +165,8 @@ const manifestResponse=await fetch('/data/standings/manifest.json',{cache:'no-st
 if(!manifestResponse.ok)throw Error('No snapshots published');
 const manifest=await manifestResponse.json();
 const entry=manifest.series?.[selected],teamSeries=selected+' Teams';
-const targetSeries=type==='constructors'&&selected!=='WEC'?teamSeries:selected;
-const path=type==='constructors'&&selected!=='WEC'
+const targetSeries=type==='constructors'?teamSeries:selected;
+const path=type==='constructors'
 ?manifest.series?.[teamSeries]?.seasons?.[year]
 :type==='races'?(entry?.race_results_seasons?.[year]||(['Formula E','WRC'].includes(selected)?entry?.seasons?.[year]:null))
 :entry?.seasons?.[year];
