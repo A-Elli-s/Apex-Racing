@@ -106,5 +106,6 @@ def main():
     manifest["updated"] = now
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
+# Development-only source refresh; preserve snapshots on source failure.
 if __name__ == "__main__":
     main()
