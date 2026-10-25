@@ -160,6 +160,14 @@ def main():
                     entry.setdefault('race_results_seasons',{})[str(year)]='/data/standings/'+path.name
                     if entry.get('seasons',{}).get(str(year))=='/data/standings/'+path.name:
                         entry['seasons'].pop(str(year),None)
+                elif series=='WEC':
+                    entry.setdefault('wins_summary_seasons',{})[str(year)]='/data/standings/'+path.name
+                    points_path=OUT/('wec-points-'+str(year)+'.json')
+                    if points_path.exists():
+                        entry['seasons'][str(year)]='/data/standings/'+points_path.name
+                    elif str(year) not in entry['seasons']:
+                        # Legacy summary remains clearly labelled as wins in the UI.
+                        entry['seasons'][str(year)]='/data/standings/'+path.name
                 else:
                     entry['seasons'][str(year)]='/data/standings/'+path.name
     refresh_official(now,manifest)
