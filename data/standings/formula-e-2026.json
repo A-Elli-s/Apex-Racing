@@ -3,7 +3,9 @@
   "season": 2026,
   "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
   "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
-  "retrieved_at": "2026-10-25T16:05:00+00:00",
+  "retrieved_at": "2026-10-25T16:13:54.168863+00:00",
+  "provider": "FIA public championship standings",
+  "reuse_review_required": true,
   "data": {
     "headers": [
       "Position",
@@ -13,112 +15,111 @@
     "rows": [
       [
         "1",
-        "Pascal Wehrlein",
+        "Pascal WEHRLEIN GER",
         "169"
       ],
       [
         "2",
-        "Jake Dennis",
+        "Jake DENNIS GBR",
         "164"
       ],
       [
         "3",
-        "Mitch Evans",
+        "Mitch EVANS NZL",
         "160"
       ],
       [
         "4",
-        "Oliver Rowland",
+        "Oliver ROWLAND GBR",
         "137"
       ],
       [
         "5",
-        "Edoardo Mortara",
+        "Edoardo MORTARA SUI",
         "137"
       ],
       [
         "6",
-        "António Félix da Costa",
+        "António Félix DA COSTA POR",
         "128"
       ],
       [
         "7",
-        "Nyck de Vries",
+        "Nyck DE VRIES NED",
         "115"
       ],
       [
         "8",
-        "Nick Cassidy",
+        "Nick CASSIDY NZL",
         "114"
       ],
       [
         "9",
-        "Nico Müller",
+        "Nico MÜLLER SUI",
         "102"
       ],
       [
         "10",
-        "Sébastien Buemi",
+        "Sébastien BUEMI SUI",
         "97"
       ],
       [
         "11",
-        "Taylor Barnard",
+        "Taylor BARNARD GBR",
         "68"
       ],
       [
         "12",
-        "Jean-Éric Vergne",
+        "Jean-Éric VERGNE FRA",
         "68"
       ],
       [
         "13",
-        "Josep Maria Martí",
+        "Josep Maria MARTÍ ESP",
         "66"
       ],
       [
         "14",
-        "Felipe Drugovich",
+        "Felipe DRUGOVICH BRA",
         "65"
       ],
       [
         "15",
-        "Dan Ticktum",
+        "Dan TICKTUM GBR",
         "62"
       ],
       [
         "16",
-        "Joel Eriksson",
+        "Joel ERIKSSON SWE",
         "55"
       ],
       [
         "17",
-        "Lucas di Grassi",
+        "Lucas DI GRASSI BRA",
         "32"
       ],
       [
         "18",
-        "Maximilian Günther",
+        "Maximilian GÜNTHER GER",
         "23"
       ],
       [
         "19",
-        "Norman Nato",
+        "Norman NATO FRA",
         "20"
       ],
       [
         "20",
-        "Zane Maloney",
+        "Zane MALONEY BAR",
         "3"
       ]
     ]
   },
-  "provider": "FIA official 2025–2026 Formula E standings (manually captured development snapshot)",
   "points_audit": {
     "status": "officially_verified",
-    "method": "transcribed from published FIA championship points; not independently recalculated from race classifications",
+    "method": "FIA published championship points; per-event totals may include adjustments",
+    "rows_checked": 20,
     "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
     "verification_date": "2026-10-25"
-  },
-  "reuse_review_required": true
+  }
 }

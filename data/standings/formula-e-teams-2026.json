@@ -3,7 +3,9 @@
   "season": 2026,
   "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
   "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
-  "retrieved_at": "2026-10-25T16:05:00+00:00",
+  "retrieved_at": "2026-10-25T16:13:54.168863+00:00",
+  "provider": "FIA public championship standings",
+  "reuse_review_required": true,
   "data": {
     "headers": [
       "Position",
@@ -23,7 +25,7 @@
       ],
       [
         "3",
-        "Mahindra Racing",
+        "MAHINDRA RACING",
         "252"
       ],
       [
@@ -53,22 +55,21 @@
       ],
       [
         "9",
-        "DS Penske",
+        "DS PENSKE",
         "91"
       ],
       [
         "10",
-        "Lola Yamaha ABT Formula E Team",
+        "LOLA YAMAHA ABT FORMULA E TEAM",
         "35"
       ]
     ]
   },
-  "provider": "FIA official 2025–2026 Formula E standings (manually captured development snapshot)",
   "points_audit": {
     "status": "officially_verified",
-    "method": "transcribed from published FIA championship points; not independently recalculated from race classifications",
+    "method": "FIA published championship points; per-event totals may include adjustments",
+    "rows_checked": 10,
     "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
     "verification_date": "2026-10-25"
-  },
-  "reuse_review_required": true
+  }
 }

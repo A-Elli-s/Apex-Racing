@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T16:12:50.085670+00:00",
+  "updated": "2026-10-25T16:13:54.168863+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
@@ -12,7 +12,7 @@
     },
     "Formula E": {
       "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
-      "provider": "FIA official standings (dev snapshot; reuse review required)",
+      "provider": "FIA public standings (reuse review required)",
       "seasons": {
         "2026": "/data/standings/formula-e-2026.json"
       },
@@ -184,7 +184,7 @@
     },
     "Formula E Teams": {
       "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
-      "provider": "FIA official standings (dev snapshot; reuse review required)",
+      "provider": "FIA public standings (reuse review required)",
       "seasons": {
         "2026": "/data/standings/formula-e-teams-2026.json"
       },
