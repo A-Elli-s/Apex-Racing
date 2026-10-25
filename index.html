@@ -271,7 +271,7 @@ standingsStatus.textContent=year+' F1 race classifications · '+races.length+' r
 }
 }catch(e){if(request===standingsRequest)standingsStatus.textContent='Unable to load verified F1 results right now. Please try again later.'}
 }
-standingsSelect.addEventListener('change',()=>{standingsType.value=['Formula E','WRC'].includes(standingsSelect.value)?'races':'drivers';loadStandings();});
+standingsSelect.addEventListener('change',()=>{standingsType.value='drivers';loadStandings();});
 [standingsSeason,standingsType].forEach(el=>el.addEventListener('change',loadStandings));
 loadStandings();
 const guides=[['F1 gifts','Books, models and collectibles for Formula 1 fans.','formula 1 gifts'],['NASCAR fan essentials','Diecast cars, apparel and race-day accessories.','nascar fan gifts'],['Sim racing starter kit','Wheels, pedals and rigs for your first setup.','sim racing steering wheel pedals'],['Motocross gear','Protective equipment and accessories to research.','motocross riding gear'],['Racing diecast collecting','Model cars, displays and storage.','racing diecast cars'],['Race-day comfort','Ear protection, seating and bags.','race day hearing protection']];
