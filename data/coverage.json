@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-24T15:27:34.760225+00:00",
+  "generated_at": "2026-10-25T16:08:05.911303+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 7,
@@ -70,7 +70,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 33,
         "source_url": "https://www.indycar.com/standings/2026",
-        "retrieved_at": "2026-10-18T11:40:58.159061+00:00",
+        "retrieved_at": "2026-10-24T15:29:07.522341+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
@@ -129,24 +129,8 @@
         "status": "points_available_not_independently_verified",
         "rows": 40,
         "source_url": "https://www.imsa.com/standings/",
-        "retrieved_at": "2026-10-18T11:40:58.159061+00:00",
-        "calculation_audit": {
-          "status": "verified_against_published_total",
-          "method": "sum of already-awarded event points; not finishing positions",
-          "event_columns": [
-            "Daytona Intl",
-            "Sebring",
-            "Long Beach",
-            "WeatherTech Raceway",
-            "Detroit Grand Prix",
-            "Watkins Glen",
-            "Road America",
-            "Indy",
-            "Road Atlanta"
-          ],
-          "rows_checked": 40,
-          "checked_at": "2026-10-23T15:16:26.572791+00:00"
-        }
+        "retrieved_at": "2026-10-24T15:29:07.522341+00:00",
+        "calculation_audit": null
       },
       "individual_race_results": {
         "status": "missing"
@@ -159,8 +143,8 @@
         "events": 17
       },
       "championship_points": {
-        "status": "not_points",
-        "reason": "Snapshot contains no championship points table"
+        "status": "missing",
+        "reason": "No current-season points snapshot"
       },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
@@ -174,8 +158,8 @@
         "events": 13
       },
       "championship_points": {
-        "status": "not_points",
-        "reason": "Snapshot contains no championship points table"
+        "status": "missing",
+        "reason": "No current-season points snapshot"
       },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
@@ -207,9 +191,9 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 35,
+        "rows": 36,
         "source_url": "https://www.nhra.com/standings",
-        "retrieved_at": "2026-10-18T11:40:58.159061+00:00",
+        "retrieved_at": "2026-10-24T15:29:07.522341+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
