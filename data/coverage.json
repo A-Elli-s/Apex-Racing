@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-25T16:10:09.871470+00:00",
+  "generated_at": "2026-10-25T16:10:17.828865+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -78,11 +78,11 @@
     "Formula E": {
       "calendar_events": 16,
       "calendar_available": true,
-      "points_table_available": false,
+      "points_table_available": true,
       "race_results_snapshot_available": true,
-      "points_source": null,
-      "provider": "MotoDB community dataset (not official)",
-      "officially_cross_checked": false
+      "points_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+      "provider": "FIA official standings (dev snapshot; reuse review required)",
+      "officially_cross_checked": true
     },
     "WRC": {
       "calendar_events": 13,
@@ -220,8 +220,8 @@
   "summary": {
     "total_championships": 23,
     "calendars_with_events": 12,
-    "points_tables_with_numeric_totals": 7,
+    "points_tables_with_numeric_totals": 8,
     "race_results_snapshots": 3,
-    "complete_and_officially_cross_checked": 0
+    "complete_and_officially_cross_checked": 1
   }
 }
