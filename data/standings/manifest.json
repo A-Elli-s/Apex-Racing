@@ -10,13 +10,16 @@
       }
     },
     "Formula E": {
-      "official_url": "https://www.fiaformulae.com/en/standings",
-      "provider": "MotoDB community dataset (not official)",
-      "seasons": {},
+      "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+      "provider": "FIA official standings (dev snapshot; reuse review required)",
+      "seasons": {
+        "2026": "/data/standings/formula-e-2026.json"
+      },
       "race_results_seasons": {
         "2025": "/data/standings/formula_e-2025.json",
         "2026": "/data/standings/formula_e-2026.json"
-      }
+      },
+      "reuse_review_required": true
     },
     "WRC": {
       "official_url": "https://www.wrc.com/",
@@ -174,6 +177,14 @@
       "provider": "Calculated from community driver championship points and verified season roster",
       "attribution": "Wikipedia contributors",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "Formula E Teams": {
+      "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+      "provider": "FIA official standings (dev snapshot; reuse review required)",
+      "seasons": {
+        "2026": "/data/standings/formula-e-teams-2026.json"
+      },
+      "reuse_review_required": true
     }
   }
 }
