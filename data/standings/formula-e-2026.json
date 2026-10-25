@@ -1,0 +1,124 @@
+{
+  "series": "Formula E",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+  "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+  "retrieved_at": "2026-10-25T16:05:00+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Pascal Wehrlein",
+        "169"
+      ],
+      [
+        "2",
+        "Jake Dennis",
+        "164"
+      ],
+      [
+        "3",
+        "Mitch Evans",
+        "160"
+      ],
+      [
+        "4",
+        "Oliver Rowland",
+        "137"
+      ],
+      [
+        "5",
+        "Edoardo Mortara",
+        "137"
+      ],
+      [
+        "6",
+        "António Félix da Costa",
+        "128"
+      ],
+      [
+        "7",
+        "Nyck de Vries",
+        "115"
+      ],
+      [
+        "8",
+        "Nick Cassidy",
+        "114"
+      ],
+      [
+        "9",
+        "Nico Müller",
+        "102"
+      ],
+      [
+        "10",
+        "Sébastien Buemi",
+        "97"
+      ],
+      [
+        "11",
+        "Taylor Barnard",
+        "68"
+      ],
+      [
+        "12",
+        "Jean-Éric Vergne",
+        "68"
+      ],
+      [
+        "13",
+        "Josep Maria Martí",
+        "66"
+      ],
+      [
+        "14",
+        "Felipe Drugovich",
+        "65"
+      ],
+      [
+        "15",
+        "Dan Ticktum",
+        "62"
+      ],
+      [
+        "16",
+        "Joel Eriksson",
+        "55"
+      ],
+      [
+        "17",
+        "Lucas di Grassi",
+        "32"
+      ],
+      [
+        "18",
+        "Maximilian Günther",
+        "23"
+      ],
+      [
+        "19",
+        "Norman Nato",
+        "20"
+      ],
+      [
+        "20",
+        "Zane Maloney",
+        "3"
+      ]
+    ]
+  },
+  "provider": "FIA official 2025–2026 Formula E standings (manually captured development snapshot)",
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "transcribed from published FIA championship points; not independently recalculated from race classifications",
+    "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+    "verification_date": "2026-10-25"
+  },
+  "reuse_review_required": true
+}
