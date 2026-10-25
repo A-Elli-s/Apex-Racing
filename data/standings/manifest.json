@@ -1,13 +1,14 @@
 {
-  "updated": "2026-10-25T16:12:21.299607+00:00",
+  "updated": "2026-10-25T16:12:50.085670+00:00",
   "series": {
     "WEC": {
-      "official_url": "https://www.fiawec.com/",
-      "provider": "MotoDB community dataset (not official)",
+      "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
       "seasons": {
         "2025": "/data/standings/wec-2025.json",
-        "2026": "/data/standings/wec-2026.json"
-      }
+        "2026": "/data/standings/wec-points-2026.json"
+      },
+      "reuse_review_required": true
     },
     "Formula E": {
       "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
@@ -22,13 +23,16 @@
       "reuse_review_required": true
     },
     "WRC": {
-      "official_url": "https://www.wrc.com/",
-      "provider": "MotoDB community dataset (not official)",
-      "seasons": {},
+      "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
+      "seasons": {
+        "2026": "/data/standings/wrc-points-2026.json"
+      },
       "race_results_seasons": {
         "2025": "/data/standings/wrc-2025.json",
         "2026": "/data/standings/wrc-2026.json"
-      }
+      },
+      "reuse_review_required": true
     },
     "F3": {
       "official_url": "https://www.fiaformula3.com/en/standings/2026/drivers",
@@ -184,6 +188,22 @@
       "seasons": {
         "2026": "/data/standings/formula-e-teams-2026.json"
       },
+      "reuse_review_required": true
+    },
+    "WEC Teams": {
+      "seasons": {
+        "2026": "/data/standings/wec-manufacturers-2026.json"
+      },
+      "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
+      "reuse_review_required": true
+    },
+    "WRC Teams": {
+      "seasons": {
+        "2026": "/data/standings/wrc-manufacturers-2026.json"
+      },
+      "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
       "reuse_review_required": true
     }
   }

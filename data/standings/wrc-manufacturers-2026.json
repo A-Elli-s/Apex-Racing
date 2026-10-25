@@ -1,0 +1,45 @@
+{
+  "series": "WRC Teams",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+  "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+  "retrieved_at": "2026-10-25T16:12:50.085670+00:00",
+  "provider": "FIA official championship standings",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Manufacturer",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "TOYOTA GAZOO RACING WRT",
+        "662"
+      ],
+      [
+        "2",
+        "HYUNDAI SHELL MOBIS WORLD RALLY TEAM",
+        "440"
+      ],
+      [
+        "3",
+        "TOYOTA GAZOO RACING WRT2",
+        "251"
+      ],
+      [
+        "4",
+        "M-SPORT FORD WORLD RALLY TEAM",
+        "168"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "published FIA points total; rally bonus and eligibility rules not independently recalculated",
+    "rows_checked": 4,
+    "verification_source": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+    "verification_date": "2026-10-25"
+  }
+}

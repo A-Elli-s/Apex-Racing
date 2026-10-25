@@ -1,0 +1,270 @@
+{
+  "series": "WEC",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+  "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+  "retrieved_at": "2026-10-25T16:12:50.085670+00:00",
+  "provider": "FIA official championship standings",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Buemi Sébastien SUI",
+        "114"
+      ],
+      [
+        "1",
+        "Hartley Brendon NZL",
+        "114"
+      ],
+      [
+        "1",
+        "Hirakawa Ryō JPN",
+        "114"
+      ],
+      [
+        "2",
+        "Conway Mike GBR",
+        "97"
+      ],
+      [
+        "2",
+        "De Vries Nyck NED",
+        "97"
+      ],
+      [
+        "2",
+        "Kobayashi Kamui JPN",
+        "97"
+      ],
+      [
+        "3",
+        "Magnussen Kevin DEN",
+        "75"
+      ],
+      [
+        "3",
+        "Marciello Raffaele SUI",
+        "75"
+      ],
+      [
+        "4",
+        "Frijns Robin NED",
+        "75"
+      ],
+      [
+        "4",
+        "Rast René GER",
+        "75"
+      ],
+      [
+        "5",
+        "Vanthoor Dries BEL",
+        "69"
+      ],
+      [
+        "6",
+        "Fuoco Antonio ITA",
+        "69"
+      ],
+      [
+        "6",
+        "Molina Miguel ESP",
+        "69"
+      ],
+      [
+        "6",
+        "Nielsen Nicklas DEN",
+        "69"
+      ],
+      [
+        "7",
+        "Van Der Linde Sheldon RSA",
+        "65"
+      ],
+      [
+        "8",
+        "Calado James GBR",
+        "59"
+      ],
+      [
+        "8",
+        "Giovinazzi Antonio ITA",
+        "59"
+      ],
+      [
+        "8",
+        "Pier Guidi Alessandro ITA",
+        "59"
+      ],
+      [
+        "9",
+        "Nato Norman FRA",
+        "58"
+      ],
+      [
+        "9",
+        "Stevens Will GBR",
+        "58"
+      ],
+      [
+        "10",
+        "Habsburg Ferdinand AUT",
+        "57"
+      ],
+      [
+        "10",
+        "Milesi Charles FRA",
+        "57"
+      ],
+      [
+        "11",
+        "Bamber Earl NZL",
+        "56"
+      ],
+      [
+        "11",
+        "Bourdais Sébastien FRA",
+        "56"
+      ],
+      [
+        "12",
+        "Aitken Jack GBR",
+        "52"
+      ],
+      [
+        "13",
+        "Félix Da Costa António POR",
+        "44"
+      ],
+      [
+        "14",
+        "Gamble Tom GBR",
+        "42"
+      ],
+      [
+        "14",
+        "Tincknell Harry GBR",
+        "42"
+      ],
+      [
+        "15",
+        "Hanson Philip GBR",
+        "41"
+      ],
+      [
+        "15",
+        "Kubica Robert POL",
+        "41"
+      ],
+      [
+        "15",
+        "Ye Yifei CHN",
+        "41"
+      ],
+      [
+        "16",
+        "Gounon Jules FRA",
+        "36"
+      ],
+      [
+        "16",
+        "Martins Victor FRA",
+        "36"
+      ],
+      [
+        "17",
+        "Delétraz Louis SUI",
+        "26"
+      ],
+      [
+        "18",
+        "Makowiecki Frédéric FRA",
+        "14"
+      ],
+      [
+        "19",
+        "Duval Loïc FRA",
+        "12"
+      ],
+      [
+        "19",
+        "Jakobsen Malthe DEN",
+        "12"
+      ],
+      [
+        "19",
+        "Pourchaire Théo FRA",
+        "12"
+      ],
+      [
+        "20",
+        "Derani Luis Felipe BRA",
+        "11"
+      ],
+      [
+        "20",
+        "Jaubert Mathys FRA",
+        "11"
+      ],
+      [
+        "20",
+        "Lotterer André GER",
+        "11"
+      ],
+      [
+        "21",
+        "Lynn Alex GBR",
+        "8"
+      ],
+      [
+        "22",
+        "Gunn Ross GBR",
+        "8"
+      ],
+      [
+        "23",
+        "Cassidy Nick NZL",
+        "6"
+      ],
+      [
+        "23",
+        "Di Resta Paul GBR",
+        "6"
+      ],
+      [
+        "24",
+        "Vandoorne Stoffel BEL",
+        "6"
+      ],
+      [
+        "25",
+        "Riberas Alex ESP",
+        "6"
+      ],
+      [
+        "25",
+        "Sørensen Marco DEN",
+        "6"
+      ],
+      [
+        "26",
+        "Taylor Ricky USA",
+        "2"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "FIA per-round awarded points sum reconciled with FIA total",
+    "rows_checked": 49,
+    "verification_source": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+    "verification_date": "2026-10-25"
+  }
+}
