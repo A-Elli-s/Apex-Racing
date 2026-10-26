@@ -104,16 +104,19 @@ def refresh_official(now,manifest):
             # IndyCar's unversioned page is current-season only.
             if series=='IndyCar':url='https://www.indycar.com/standings/'+str(year)
             if '{year}' not in template and series not in ('IndyCar',) and year!=now.year:continue
+            published=False
             try:
                 soup=fetch_html(url)
                 headers,rows=official_table(soup,series)
                 data={'headers':headers,'rows':rows}
                 path.write_text(json.dumps({'series':series,'season':year,'source_url':url,'official_url':url,'retrieved_at':now.isoformat(),'data':data},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                published=True
                 print('Official standings refreshed',series,year,len(rows))
             except Exception as e:print('Official source not parsed; preserving last snapshot:',series,year,str(e))
             if path.exists():
                 manifest['series'][series].setdefault('seasons',{})[str(year)]='/data/standings/'+path.name
-                manifest['series'][series]['provider']='Official championship website'
+                if published:
+                    manifest['series'][series]['provider']='Official championship website'
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
