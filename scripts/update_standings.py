@@ -96,6 +96,11 @@ def official_table(soup,series):
 
 def refresh_official(now,manifest):
     for series,(template,slug) in OFFICIAL.items():
+        # WorldSBK official timing PDFs explicitly prohibit electronic republication
+        # without prior permission; leave a source link rather than ingesting rows.
+        if series=='WorldSBK':
+            print('WorldSBK: rights clearance required; no standings copied')
+            continue
         previous=manifest['series'].get(series,{'seasons':{}})
         manifest['series'][series]={'official_url':template.replace('{year}',str(now.year)),'provider':previous.get('provider','Official championship website'),'seasons':dict(previous.get('seasons',{}))}
         for year in (now.year,now.year-1):
