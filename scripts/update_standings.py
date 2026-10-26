@@ -22,6 +22,8 @@ def valid(series,data):
 
 # Official championship pages. HTML tables are parsed conservatively; never publish unverified rows.
 OFFICIAL={
+ 'F2':('https://www.fiaformula2.com/en/standings/{year}/drivers','f2-standings'),
+ 'F3':('https://www.fiaformula3.com/en/standings/{year}/drivers','f3-standings'),
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/RidersChampionship','motogp'),
  'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/RidersChampionship','moto2'),
