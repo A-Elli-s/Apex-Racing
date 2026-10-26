@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://www.imsa.com/standings/",
   "official_url": "https://www.imsa.com/standings/",
-  "retrieved_at": "2026-10-25T16:12:21.299607+00:00",
+  "retrieved_at": "2026-10-26T15:21:50.564646+00:00",
   "data": {
     "headers": [
       "Rank",
@@ -581,13 +581,5 @@
         "231"
       ]
     ]
-  },
-  "points_audit": {
-    "status": "verified_against_published_total",
-    "method": "Exact sum of all nine published per-round points columns equals published Total for every driver; no points invented",
-    "rows_checked": 40,
-    "rounds_checked": 9,
-    "checked_at": "2026-10-26",
-    "scoring_scope": "IMSA source table only; no other classes inferred"
   }
 }
