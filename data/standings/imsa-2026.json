@@ -581,5 +581,13 @@
         "231"
       ]
     ]
+  },
+  "points_audit": {
+    "status": "verified_against_published_total",
+    "method": "Exact sum of all nine published per-round points columns equals published Total for every driver; no points invented",
+    "rows_checked": 40,
+    "rounds_checked": 9,
+    "checked_at": "2026-10-26",
+    "scoring_scope": "IMSA source table only; no other classes inferred"
   }
 }
