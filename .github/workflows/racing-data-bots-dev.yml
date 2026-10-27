@@ -1,0 +1,81 @@
+name: Racing data bots (development only)
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Refresh regardless of race schedule'
+        type: boolean
+        default: true
+  schedule:
+    - cron: '35 11 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: racing-data-bots-dev
+  cancel-in-progress: false
+jobs:
+  refresh:
+    # Scheduled workflows only execute from GitHub's default branch.
+    # Do not copy this workflow to main without explicit approval.
+    if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Check out development branch only
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Determine race-day or weekly refresh
+        id: decide
+        env:
+          FORCE: ${{ inputs.force }}
+        run: |
+          python scripts/should_refresh_racing.py > /tmp/racing-refresh.json
+          cat /tmp/racing-refresh.json
+          python - <<'PY'
+          import json,os
+          decision=json.load(open('/tmp/racing-refresh.json'))
+          run=decision['run'] or os.environ.get('FORCE','').lower()=='true'
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('run='+str(run).lower()+'\n')
+          PY
+      - name: Install collector dependencies
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          python -m pip install beautifulsoup4==4.12.3 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: F1 API bot
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_f1_api.py
+      - name: Official and community standings bot
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_standings.py
+      - name: Rendered standings bot
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_rendered_standings.py
+      - name: Source quality audit
+        if: steps.decide.outputs.run == 'true'
+        run: python scripts/audit_standings_sources.py
+      - name: Check JSON integrity
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          python -m json.tool data/races.json > /dev/null
+          python -m json.tool data/standings/manifest.json > /dev/null
+      - name: Commit changes to dev only
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/races.json data/standings/ data/quality/
+          if ! git diff --cached --quiet; then
+            git commit -m "Bots: refresh motorsport schedules, standings and quality checks"
+            git pull --rebase origin dev
+            git push origin HEAD:dev
+          fi
