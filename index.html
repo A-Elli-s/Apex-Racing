@@ -330,6 +330,7 @@ async function filterStandingsChampionships(){
     if(!response.ok)throw Error('Manifest unavailable');
     const manifest=await response.json();
     const available=series.filter(([key])=>Boolean(manifest.series?.[key]?.seasons?.[year]));
+    if(manifest.series?.F1?.seasons?.[year]&&!available.some(([key])=>key==='F1'))available.unshift(['F1']);
     standingsSelect.replaceChildren();
     for(const [key] of available){
       const option=document.createElement('option');
@@ -664,6 +665,8 @@ async function activateChampionshipsWithData(){
     const manifest=await response.json();
     const year=String(new Date().getFullYear());
     const supported=new Set(series.filter(([name])=>Boolean(manifest.series?.[name]?.seasons?.[year])).map(([name])=>name));
+    // F1 is a core championship with its own verified 2026 points snapshot.
+    if(manifest.series?.F1?.seasons?.[year])supported.add('F1');
     for(let i=series.length-1;i>=0;i--)if(!supported.has(series[i][0]))series.splice(i,1);
     document.querySelector('#series .head .sub').textContent=series.length+' championships with data';
     document.querySelector('#series .sub')?.setAttribute('title','Only championships with current-season standings are listed');
