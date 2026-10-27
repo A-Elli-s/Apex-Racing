@@ -330,13 +330,15 @@ async function filterStandingsChampionships(){
     if(!response.ok)throw Error('Manifest unavailable');
     const manifest=await response.json();
     const available=series.filter(([key])=>Boolean(manifest.series?.[key]?.seasons?.[year]));
+    // Keep flagship MotoGP visible at the top whenever its points snapshot exists.
+    available.sort((a,b)=>a[0]==='MotoGP'?-1:b[0]==='MotoGP'?1:0);
     standingsSelect.replaceChildren();
     for(const [key] of available){
       const option=document.createElement('option');
       option.value=key;option.textContent=key;standingsSelect.append(option);
     }
     if(available.some(([key])=>key===previouslySelected))standingsSelect.value=previouslySelected;
-    else if(available.some(([key])=>key==='F1'))standingsSelect.value='F1';
+    else if(available.some(([key])=>key==='MotoGP'))standingsSelect.value='MotoGP';
     if(!available.length){
       standingsGrid.replaceChildren();
       standingsStatus.textContent='No championship standings available for '+year+'.';
