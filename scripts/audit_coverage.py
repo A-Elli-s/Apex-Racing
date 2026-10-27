@@ -136,7 +136,7 @@ def main():
         points = snapshot_for(manifest, name, "seasons")
         results = snapshot_for(manifest, name, "race_results_seasons")
         entry = manifest.get("series", {}).get(name, {})
-        provider = entry.get("provider", "")
+        provider = (points or {}).get("provider") or entry.get("provider", "")
         points_ok = points_valid(points)
         calendar_ok = len(valid_events) >= 3
         results_ok = results_valid(results)
