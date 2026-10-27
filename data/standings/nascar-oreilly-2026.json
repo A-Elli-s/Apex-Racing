@@ -1,0 +1,84 @@
+{
+  "series": "NASCAR O’Reilly",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "as_of": "2026-10-24",
+  "source_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+  "corroborating_sources": [
+    "https://nascar-reference.com/standings"
+  ],
+  "coverage_note": "Top ranked drivers only; not a full-field championship classification.",
+  "points_audit": {
+    "status": "partial_source_cross_check",
+    "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Jesse Love",
+        2401
+      ],
+      [
+        2,
+        "Justin Allgaier",
+        2382
+      ],
+      [
+        3,
+        "Corey Day",
+        2372
+      ],
+      [
+        4,
+        "Sheldon Creed",
+        2351
+      ],
+      [
+        5,
+        "Carson Kvapil",
+        2342
+      ],
+      [
+        6,
+        "Sam Mayer",
+        2305
+      ],
+      [
+        7,
+        "Sammy Smith",
+        2293
+      ],
+      [
+        8,
+        "Taylor Gray",
+        2246
+      ],
+      [
+        9,
+        "Austin Hill",
+        2233
+      ],
+      [
+        10,
+        "Brandon Jones",
+        2212
+      ],
+      [
+        11,
+        "Parker Retzlaff",
+        2200
+      ],
+      [
+        12,
+        "Rajah Caruth",
+        2183
+      ]
+    ]
+  }
+}

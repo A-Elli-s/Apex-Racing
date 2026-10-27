@@ -1,0 +1,205 @@
+{
+  "series": "WRC",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+  "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+  "retrieved_at": "2026-10-25T16:12:50.085670+00:00",
+  "provider": "FIA official championship standings",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Elfyn EVANS GBR",
+        "243"
+      ],
+      [
+        "2",
+        "Oliver SOLBERG SWE",
+        "238"
+      ],
+      [
+        "3",
+        "Sami PAJARI FIN",
+        "237"
+      ],
+      [
+        "4",
+        "Sébastien OGIER FRA",
+        "189"
+      ],
+      [
+        "5",
+        "Adrien FOURMAUX FRA",
+        "183"
+      ],
+      [
+        "6",
+        "Takamoto KATSUTA JPN",
+        "175"
+      ],
+      [
+        "7",
+        "Thierry NEUVILLE BEL",
+        "134"
+      ],
+      [
+        "8",
+        "Hayden PADDON NZL",
+        "38"
+      ],
+      [
+        "9",
+        "Joshua MCERLEAN IRL",
+        "35"
+      ],
+      [
+        "10",
+        "Esapekka LAPPI FIN",
+        "33"
+      ],
+      [
+        "11",
+        "Yohan ROSSEL FRA",
+        "24"
+      ],
+      [
+        "12",
+        "Jon ARMSTRONG IRL",
+        "22"
+      ],
+      [
+        "13",
+        "Robert VIRVES EST",
+        "19"
+      ],
+      [
+        "14",
+        "Léo ROSSEL FRA",
+        "18"
+      ],
+      [
+        "15",
+        "Gus GREENSMITH GBR",
+        "14"
+      ],
+      [
+        "16",
+        "Mārtinš SESKS LAT",
+        "12"
+      ],
+      [
+        "17",
+        "Nikolay GRYAZIN BUL",
+        "10"
+      ],
+      [
+        "18",
+        "Daniel SORDO ESP",
+        "10"
+      ],
+      [
+        "19",
+        "Roope KORHONEN FIN",
+        "9"
+      ],
+      [
+        "20",
+        "Diego DOMÍNGUEZ PAR",
+        "8"
+      ],
+      [
+        "21",
+        "Alejandro CACHÓN ESP",
+        "7"
+      ],
+      [
+        "22",
+        "Fabrizio ZALDIVAR PAR",
+        "6"
+      ],
+      [
+        "23",
+        "Roberto DAPRÀ ITA",
+        "6"
+      ],
+      [
+        "24",
+        "Andreas MIKKELSEN NOR",
+        "5"
+      ],
+      [
+        "25",
+        "Jari-Matti LATVALA FIN",
+        "4"
+      ],
+      [
+        "26",
+        "Alejandro GALANTI PAR",
+        "2"
+      ],
+      [
+        "27",
+        "Arthur PELAMOURGUES FRA",
+        "2"
+      ],
+      [
+        "28",
+        "Teemu SUNINEN FIN",
+        "2"
+      ],
+      [
+        "29",
+        "Matteo FONTANA ITA",
+        "2"
+      ],
+      [
+        "30",
+        "Eric CAMILLI FRA",
+        "1"
+      ],
+      [
+        "31",
+        "Emil LINDHOLM FIN",
+        "1"
+      ],
+      [
+        "32",
+        "Taylor GILL AUS",
+        "1"
+      ],
+      [
+        "33",
+        "Grégoire MUNSTER LUX",
+        "0"
+      ],
+      [
+        "34",
+        "Jourdan SERDERIDIS GRE",
+        "0"
+      ],
+      [
+        "35",
+        "Romet JÜRGENSON EST",
+        "0"
+      ],
+      [
+        "36",
+        "Lorenzo BERTELLI ITA",
+        "0"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "published FIA points total; rally bonus and eligibility rules not independently recalculated",
+    "rows_checked": 36,
+    "verification_source": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+    "verification_date": "2026-10-25"
+  }
+}

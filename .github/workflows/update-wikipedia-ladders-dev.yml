@@ -1,0 +1,51 @@
+name: Stage F2 and F3 community standings (development)
+on:
+  workflow_dispatch:
+  push:
+    branches: [dev]
+    paths:
+      - 'scripts/update_wikipedia_ladders.py'
+      - 'tests/test_wikipedia_ladders.py'
+      - 'scripts/calculate_f3_teams.py'
+      - 'tests/test_f3_teams.py'
+      - 'scripts/audit_f2_teams.py'
+      - 'tests/test_f2_teams.py'
+      - 'data/standings/f2-team-roster-2026.json'
+      - 'data/standings/f3-team-roster-2026.json'
+      - '.github/workflows/update-wikipedia-ladders-dev.yml'
+permissions:
+  contents: write
+jobs:
+  standings:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install parser
+        run: python -m pip install beautifulsoup4==4.12.3
+      - name: Test source validation
+        run: python -m unittest discover -s tests -p 'test_wikipedia_ladders.py' -v
+      - name: Stage licensed community standings
+        run: python scripts/update_wikipedia_ladders.py
+      - name: Test F3 team calculations
+        run: python -m unittest discover -s tests -p 'test_f3_teams.py' -v
+      - name: Calculate verified F3 team totals
+        run: python scripts/calculate_f3_teams.py
+      - name: Test F2 team audit
+        run: python -m unittest discover -s tests -p 'test_f2_teams.py' -v
+      - name: Cross-check F2 team totals against driver points
+        run: python scripts/audit_f2_teams.py
+      - name: Commit only validated development snapshots
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/standings/
+          if ! git diff --cached --quiet; then
+            git commit -m "Stage F2 and F3 community standings on dev"
+            git push origin HEAD:dev
+          fi

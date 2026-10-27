@@ -1,80 +1,118 @@
 {
-  "updated": "2026-10-18T11:41:20.040735+00:00",
+  "updated": "2026-10-27T18:18:00+00:00",
   "series": {
     "WEC": {
-      "official_url": "https://www.fiawec.com/",
-      "provider": "MotoDB community dataset (not official)",
+      "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
       "seasons": {
-        "2026": "/data/standings/wec-2026.json",
-        "2025": "/data/standings/wec-2025.json"
+        "2025": "/data/standings/wec-2025.json",
+        "2026": "/data/standings/wec-points-2026.json"
+      },
+      "reuse_review_required": true,
+      "wins_summary_seasons": {
+        "2025": "/data/standings/wec-2025.json",
+        "2026": "/data/standings/wec-2026.json"
       }
     },
     "Formula E": {
       "official_url": "https://www.fiaformulae.com/en/standings",
       "provider": "MotoDB community dataset (not official)",
       "seasons": {
-        "2026": "/data/standings/formula_e-2026.json",
-        "2025": "/data/standings/formula_e-2025.json"
-      }
+        "2026": "/data/standings/formula-e-2026.json"
+      },
+      "race_results_seasons": {
+        "2025": "/data/standings/formula_e-2025.json",
+        "2026": "/data/standings/formula_e-2026.json"
+      },
+      "reuse_review_required": true
     },
     "WRC": {
-      "official_url": "https://www.wrc.com/",
-      "provider": "MotoDB community dataset (not official)",
+      "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
       "seasons": {
-        "2026": "/data/standings/wrc-2026.json",
-        "2025": "/data/standings/wrc-2025.json"
-      }
+        "2026": "/data/standings/wrc-points-2026.json"
+      },
+      "race_results_seasons": {
+        "2025": "/data/standings/wrc-2025.json",
+        "2026": "/data/standings/wrc-2026.json"
+      },
+      "reuse_review_required": true
     },
     "F3": {
       "official_url": "https://www.fiaformula3.com/en/standings/2026/drivers",
-      "provider": "MotoDB community dataset (not official)",
+      "provider": "Wikipedia community standings (not official)",
       "seasons": {
-        "2026": "/data/standings/f3-2026.json",
-        "2025": "/data/standings/f3-2025.json"
+        "2026": "/data/standings/f3-standings-2026.json"
       }
     },
     "F2": {
       "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
       "provider": "Official championship website",
-      "seasons": {}
+      "seasons": {
+        "2026": "/data/standings/f2-standings-2026.json"
+      }
     },
     "IndyCar": {
       "official_url": "https://www.indycar.com/Standings",
       "provider": "Official championship website",
       "seasons": {
-        "2026": "/data/standings/indycar-2026.json",
-        "2025": "/data/standings/indycar-2025.json"
+        "2025": "/data/standings/indycar-2025.json",
+        "2026": "/data/standings/indycar-2026.json"
       }
     },
     "MotoGP": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/RidersChampionship",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/motogp-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Moto2": {
-      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/TeamsChampionship",
-      "provider": "Official championship website",
-      "seasons": {}
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/moto2-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Moto3": {
-      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/TeamsChampionship",
-      "provider": "Official championship website",
-      "seasons": {}
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/RidersChampionship",
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/moto3-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "NASCAR Cup": {
       "official_url": "https://www.nascar.com/standings/nascar-cup-series/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "NASCAR standings, cross-referenced with independent published rankings",
+      "seasons": {
+        "2026": "/data/standings/nascar-cup-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "NASCAR O’Reilly": {
-      "official_url": "https://www.nascar.com/standings/nascar-xfinity-series/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "official_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+      "provider": "NASCAR standings, cross-referenced with independent published rankings",
+      "seasons": {
+        "2026": "/data/standings/nascar-oreilly-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "NASCAR Trucks": {
       "official_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "NASCAR standings, cross-referenced with independent published rankings",
+      "seasons": {
+        "2026": "/data/standings/nascar-trucks-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "IMSA": {
       "official_url": "https://www.imsa.com/standings/",
@@ -99,23 +137,39 @@
     },
     "WorldSBK": {
       "official_url": "https://www.worldsbk.com/en/results%20statistics",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/worldsbk-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Supercross": {
       "official_url": "https://www.supercrosslive.com/standings/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/supercross-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Pro Motocross": {
       "official_url": "https://promotocross.com/standings",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/pro-motocross-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "MXGP": {
       "official_url": "https://www.mxgp.com/standings",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/mxgp-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Dakar Rally": {
       "official_url": "https://www.dakar.com/en/rankings",
@@ -129,8 +183,68 @@
     },
     "Monster Jam": {
       "official_url": "https://www.monsterjam.com/en-us/standings/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/monster-jam-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
+    },
+    "F1": {
+      "official_url": "https://www.formula1.com/en/racing/2026",
+      "provider": "Jolpica-F1",
+      "seasons": {
+        "2026": "/data/standings/f1-2026.json"
+      }
+    },
+    "F1 Constructors": {
+      "official_url": "https://www.formula1.com/en/racing/2026",
+      "provider": "Jolpica-F1",
+      "seasons": {
+        "2026": "/data/standings/f1-constructors-2026.json"
+      }
+    },
+    "F2 Teams": {
+      "seasons": {
+        "2026": "/data/standings/f2-teams-2026.json"
+      },
+      "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
+      "provider": "Wikipedia community standings (not official)",
+      "attribution": "Wikipedia contributors",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "F3 Teams": {
+      "seasons": {
+        "2026": "/data/standings/f3-teams-2026.json"
+      },
+      "official_url": "https://www.fiaformula3.com/en/standings/2026/teams",
+      "provider": "Calculated from community driver championship points and verified season roster",
+      "attribution": "Wikipedia contributors",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "Formula E Teams": {
+      "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+      "provider": "FIA public standings (reuse review required)",
+      "seasons": {
+        "2026": "/data/standings/formula-e-teams-2026.json"
+      },
+      "reuse_review_required": true
+    },
+    "WEC Teams": {
+      "seasons": {
+        "2026": "/data/standings/wec-manufacturers-2026.json"
+      },
+      "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
+      "reuse_review_required": true
+    },
+    "WRC Teams": {
+      "seasons": {
+        "2026": "/data/standings/wrc-manufacturers-2026.json"
+      },
+      "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+      "provider": "FIA official standings (reuse review required)",
+      "reuse_review_required": true
     }
   }
 }

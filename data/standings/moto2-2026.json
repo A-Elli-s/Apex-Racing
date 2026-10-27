@@ -1,0 +1,50 @@
+{
+  "series": "Moto2",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "source_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+  "coverage_note": "Top-ranked competitors only, not full-field classification.",
+  "points_audit": {
+    "status": "published_source_snapshot",
+    "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Manuel Gonzalez",
+        265.5
+      ],
+      [
+        2,
+        "Izan Guevara",
+        260
+      ],
+      [
+        3,
+        "Ivan Ortola",
+        191.5
+      ],
+      [
+        4,
+        "Daniel Holgado",
+        170
+      ],
+      [
+        5,
+        "David Alonso",
+        166
+      ],
+      [
+        6,
+        "Senna Agius",
+        165
+      ]
+    ]
+  }
+}

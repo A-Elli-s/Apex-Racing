@@ -1,0 +1,131 @@
+{
+  "series": "F1",
+  "season": 2026,
+  "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
+  "official_url": "https://www.formula1.com/en/racing/2026",
+  "retrieved_at": "2026-10-22T15:27:37.127236+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Andrea Kimi Antonelli",
+        "340"
+      ],
+      [
+        "2",
+        "George Russell",
+        "238"
+      ],
+      [
+        "3",
+        "Lewis Hamilton",
+        "229"
+      ],
+      [
+        "4",
+        "Max Verstappen",
+        "221"
+      ],
+      [
+        "5",
+        "Charles Leclerc",
+        "215"
+      ],
+      [
+        "6",
+        "Lando Norris",
+        "201"
+      ],
+      [
+        "7",
+        "Oscar Piastri",
+        "138"
+      ],
+      [
+        "8",
+        "Isack Hadjar",
+        "97"
+      ],
+      [
+        "9",
+        "Liam Lawson",
+        "75"
+      ],
+      [
+        "10",
+        "Pierre Gasly",
+        "41"
+      ],
+      [
+        "11",
+        "Arvid Lindblad",
+        "38"
+      ],
+      [
+        "12",
+        "Franco Colapinto",
+        "27"
+      ],
+      [
+        "13",
+        "Oliver Bearman",
+        "23"
+      ],
+      [
+        "14",
+        "Nico Hülkenberg",
+        "13"
+      ],
+      [
+        "15",
+        "Gabriel Bortoleto",
+        "10"
+      ],
+      [
+        "16",
+        "Esteban Ocon",
+        "7"
+      ],
+      [
+        "17",
+        "Fernando Alonso",
+        "7"
+      ],
+      [
+        "18",
+        "Carlos Sainz",
+        "7"
+      ],
+      [
+        "19",
+        "Alexander Albon",
+        "5"
+      ],
+      [
+        "20",
+        "Yuki Tsunoda",
+        "1"
+      ],
+      [
+        "21",
+        "Lance Stroll",
+        "0"
+      ],
+      [
+        "22",
+        "Valtteri Bottas",
+        "0"
+      ],
+      [
+        "23",
+        "Sergio Pérez",
+        "0"
+      ]
+    ]
+  }
+}

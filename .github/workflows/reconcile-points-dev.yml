@@ -1,0 +1,32 @@
+name: Validate calculated championship points (development)
+on:
+  workflow_dispatch:
+  push:
+    branches: [dev]
+    paths:
+      - 'scripts/reconcile_points.py'
+      - '.github/workflows/reconcile-points-dev.yml'
+permissions:
+  contents: write
+jobs:
+  audit:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify or derive totals from complete IMSA round points
+        run: python scripts/reconcile_points.py
+      - name: Commit audited development snapshot
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/standings/imsa-*.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Reconcile IMSA race points in development"
+            git push origin HEAD:dev
+          fi

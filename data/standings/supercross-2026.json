@@ -1,0 +1,70 @@
+{
+  "series": "Supercross",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "source_url": "https://www.supercrosslive.com/championship-standings/",
+  "coverage_note": "450SX class only; 250 East and West standings are separate.",
+  "points_audit": {
+    "status": "published_source_snapshot",
+    "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Ken Roczen",
+        349
+      ],
+      [
+        2,
+        "Hunter Lawrence",
+        346
+      ],
+      [
+        3,
+        "Cooper Webb",
+        315
+      ],
+      [
+        4,
+        "Eli Tomac",
+        275
+      ],
+      [
+        5,
+        "Justin Cooper",
+        273
+      ],
+      [
+        6,
+        "Chase Sexton",
+        237
+      ],
+      [
+        7,
+        "Malcolm Stewart",
+        204
+      ],
+      [
+        8,
+        "Joey Savatgy",
+        194
+      ],
+      [
+        9,
+        "Jorge Prado",
+        189
+      ],
+      [
+        10,
+        "Justin Hill",
+        188
+      ]
+    ]
+  }
+}

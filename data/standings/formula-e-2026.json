@@ -1,0 +1,125 @@
+{
+  "series": "Formula E",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+  "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+  "retrieved_at": "2026-10-25T16:13:54.168863+00:00",
+  "provider": "FIA public championship standings",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Pascal WEHRLEIN GER",
+        "169"
+      ],
+      [
+        "2",
+        "Jake DENNIS GBR",
+        "164"
+      ],
+      [
+        "3",
+        "Mitch EVANS NZL",
+        "160"
+      ],
+      [
+        "4",
+        "Oliver ROWLAND GBR",
+        "137"
+      ],
+      [
+        "5",
+        "Edoardo MORTARA SUI",
+        "137"
+      ],
+      [
+        "6",
+        "António Félix DA COSTA POR",
+        "128"
+      ],
+      [
+        "7",
+        "Nyck DE VRIES NED",
+        "115"
+      ],
+      [
+        "8",
+        "Nick CASSIDY NZL",
+        "114"
+      ],
+      [
+        "9",
+        "Nico MÜLLER SUI",
+        "102"
+      ],
+      [
+        "10",
+        "Sébastien BUEMI SUI",
+        "97"
+      ],
+      [
+        "11",
+        "Taylor BARNARD GBR",
+        "68"
+      ],
+      [
+        "12",
+        "Jean-Éric VERGNE FRA",
+        "68"
+      ],
+      [
+        "13",
+        "Josep Maria MARTÍ ESP",
+        "66"
+      ],
+      [
+        "14",
+        "Felipe DRUGOVICH BRA",
+        "65"
+      ],
+      [
+        "15",
+        "Dan TICKTUM GBR",
+        "62"
+      ],
+      [
+        "16",
+        "Joel ERIKSSON SWE",
+        "55"
+      ],
+      [
+        "17",
+        "Lucas DI GRASSI BRA",
+        "32"
+      ],
+      [
+        "18",
+        "Maximilian GÜNTHER GER",
+        "23"
+      ],
+      [
+        "19",
+        "Norman NATO FRA",
+        "20"
+      ],
+      [
+        "20",
+        "Zane MALONEY BAR",
+        "3"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "FIA published championship points; per-event totals may include adjustments",
+    "rows_checked": 20,
+    "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+    "verification_date": "2026-10-25"
+  }
+}

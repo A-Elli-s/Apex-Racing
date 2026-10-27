@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Weekly snapshot of permitted public motorsport data. Preserve last valid snapshots."""
+"""Conservative dev snapshot of public motorsport data. Preserve last valid snapshots.
+Never treat an unavailable official page as permission to bypass access controls.
+"""
 import datetime,json,pathlib,urllib.request
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 OUT=ROOT/'data'/'standings'
@@ -20,12 +22,12 @@ def valid(series,data):
 
 # Official championship pages. HTML tables are parsed conservatively; never publish unverified rows.
 OFFICIAL={
- 'F2':('https://www.fiaformula2.com/en/standings/{year}/drivers','f2'),
+ 'F2':('https://www.fiaformula2.com/en/standings/{year}/drivers','f2-standings'),
+ 'F3':('https://www.fiaformula3.com/en/standings/{year}/drivers','f3-standings'),
  'IndyCar':('https://www.indycar.com/Standings','indycar'),
  'MotoGP':('https://stats.motogp.com/en/world-standing/{year}/MotoGP/RidersChampionship','motogp'),
- 'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/TeamsChampionship','moto2'),
- 'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/TeamsChampionship','moto3'),
- 'F3':('https://www.fiaformula3.com/en/standings/{year}/drivers','f3-official'),
+ 'Moto2':('https://stats.motogp.com/en/world-standing/{year}/Moto2/RidersChampionship','moto2'),
+ 'Moto3':('https://stats.motogp.com/en/world-standing/{year}/Moto3/RidersChampionship','moto3'),
  'NASCAR Cup':('https://www.nascar.com/standings/nascar-cup-series/','nascar-cup'),
  'NASCAR O’Reilly':('https://www.nascar.com/standings/nascar-xfinity-series/','nascar-oreilly'),
  'NASCAR Trucks':('https://www.nascar.com/standings/nascar-craftsman-truck-series/','nascar-trucks'),
@@ -94,6 +96,11 @@ def official_table(soup,series):
 
 def refresh_official(now,manifest):
     for series,(template,slug) in OFFICIAL.items():
+        # WorldSBK official timing PDFs explicitly prohibit electronic republication
+        # without prior permission; leave a source link rather than ingesting rows.
+        if series=='WorldSBK':
+            print('WorldSBK: rights clearance required; no standings copied')
+            continue
         previous=manifest['series'].get(series,{'seasons':{}})
         manifest['series'][series]={'official_url':template.replace('{year}',str(now.year)),'provider':previous.get('provider','Official championship website'),'seasons':dict(previous.get('seasons',{}))}
         for year in (now.year,now.year-1):
@@ -102,23 +109,35 @@ def refresh_official(now,manifest):
             # IndyCar's unversioned page is current-season only.
             if series=='IndyCar':url='https://www.indycar.com/standings/'+str(year)
             if '{year}' not in template and series not in ('IndyCar',) and year!=now.year:continue
+            published=False
             try:
                 soup=fetch_html(url)
                 headers,rows=official_table(soup,series)
                 data={'headers':headers,'rows':rows}
                 path.write_text(json.dumps({'series':series,'season':year,'source_url':url,'official_url':url,'retrieved_at':now.isoformat(),'data':data},ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+                published=True
                 print('Official standings refreshed',series,year,len(rows))
             except Exception as e:print('Official source not parsed; preserving last snapshot:',series,year,str(e))
             if path.exists():
-                manifest['series'][series]['seasons'][str(year)]='/data/standings/'+path.name
-                manifest['series'][series]['provider']='Official championship website'
+                manifest['series'][series].setdefault('seasons',{})[str(year)]='/data/standings/'+path.name
+                if published:
+                    manifest['series'][series]['provider']='Official championship website'
 
 def main():
     OUT.mkdir(parents=True,exist_ok=True)
     now=datetime.datetime.now(datetime.timezone.utc)
-    manifest={'updated':now.isoformat(),'series':{}}
+    manifest_path=OUT/'manifest.json'
+    manifest=json.loads(manifest_path.read_text(encoding='utf-8')) if manifest_path.exists() else {'series':{}}
+    manifest.setdefault('series',{})
+    manifest['updated']=now.isoformat()
     for series,(slug,filename,official) in SOURCES.items():
-        manifest['series'][series]={'official_url':official,'provider':'MotoDB community dataset (not official)','seasons':{}}
+        entry=manifest['series'].setdefault(series,{'seasons':{}})
+        # Community race-results refresh must not downgrade provenance of a
+        # separately verified FIA/Wikipedia championship points snapshot.
+        provider=entry.get('provider','')
+        if not (provider.startswith('FIA official') or (series=='F3' and provider.startswith('Wikipedia'))):
+            entry.update({'official_url':official,'provider':'MotoDB community dataset (not official)'})
+        entry.setdefault('seasons',{})
         for year in (now.year,now.year-1):
             path=OUT/(slug+'-'+str(year)+'.json')
             url=f'https://raw.githubusercontent.com/vishwapramuditha/moto-db/main/data/{slug}/{year}/{filename}'
@@ -130,7 +149,37 @@ def main():
                 print('Updated',series,year)
             except Exception as e:print('Preserving previous snapshot for',series,year,':',e)
             if path.exists():
-                manifest['series'][series]['seasons'][str(year)]='/data/standings/'+path.name
+                # Community F3 feed contains individual race results, NOT driver points.
+                # Keep the separately validated F3 championship standings snapshot.
+                if series=='F3':
+                    entry.setdefault('race_results_seasons',{})[str(year)]='/data/standings/'+path.name
+                    standings_path=OUT/('f3-standings-'+str(year)+'.json')
+                    if standings_path.exists():
+                        try:
+                            points=json.loads(standings_path.read_text(encoding='utf-8'))
+                            hdr=points.get('data',{}).get('headers',[])
+                            rows=points.get('data',{}).get('rows',[])
+                            if points.get('series')=='F3' and points.get('season')==year and any(str(h).lower() in ('points','pts') for h in hdr) and len(rows)>=3:
+                                entry['seasons'][str(year)]='/data/standings/'+standings_path.name
+                                entry['provider']='Wikipedia community standings (not official)'
+                        except (ValueError,KeyError,TypeError) as error:
+                            print('F3 points snapshot invalid; preserving prior manifest:',error)
+                    elif entry.get('seasons',{}).get(str(year))=='/data/standings/'+path.name:
+                        entry['seasons'].pop(str(year),None)
+                elif series in ('Formula E','WRC'):
+                    entry.setdefault('race_results_seasons',{})[str(year)]='/data/standings/'+path.name
+                    if entry.get('seasons',{}).get(str(year))=='/data/standings/'+path.name:
+                        entry['seasons'].pop(str(year),None)
+                elif series=='WEC':
+                    entry.setdefault('wins_summary_seasons',{})[str(year)]='/data/standings/'+path.name
+                    points_path=OUT/('wec-points-'+str(year)+'.json')
+                    if points_path.exists():
+                        entry['seasons'][str(year)]='/data/standings/'+points_path.name
+                    elif str(year) not in entry['seasons']:
+                        # Legacy summary remains clearly labelled as wins in the UI.
+                        entry['seasons'][str(year)]='/data/standings/'+path.name
+                else:
+                    entry['seasons'][str(year)]='/data/standings/'+path.name
     refresh_official(now,manifest)
     (OUT/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 if __name__=='__main__':main()

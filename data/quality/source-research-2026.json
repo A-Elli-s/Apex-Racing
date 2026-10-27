@@ -1,0 +1,24 @@
+{
+  "checked_at": "2026-10-27",
+  "season": 2026,
+  "notes": "Research leads, not licensed redistribution feeds. Numbers must be rechecked at collection time. Conflicting timestamps are not independent agreement.",
+  "series": {
+    "F2": {
+      "primary": "https://www.fiaformula2.com/",
+      "secondary": "https://www.fia.com/events/formula-2-championship/season-2026/standings",
+      "check": "Current top-five points and identities; both sources showed 207,200,189,163,137 on 2026-10-27.",
+      "status": "two_independent_public_sources_agree_on_top_five; full standings and reuse permission pending"
+    },
+    "MotoGP": {
+      "primary": "https://stats.motogp.com/en/world-standing",
+      "secondary": "https://grandprixpass.com/en/motogp/standings/",
+      "check": "Editorial secondary was reviewed October 11 and is stale compared with current official; do not assert agreement.",
+      "status": "source_timestamp_mismatch; official preferred"
+    },
+    "NASCAR Cup": {
+      "primary": "https://www.nascar.com/standings/nascar-cup-series/",
+      "check": "Official 2026 Chase standings after Talladega October 25; scoring resets must not be inferred from race finishing positions alone.",
+      "status": "official_current_source_found; independent corroboration and reuse permission pending"
+    }
+  }
+}

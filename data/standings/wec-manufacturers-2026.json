@@ -1,0 +1,65 @@
+{
+  "series": "WEC Teams",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+  "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+  "retrieved_at": "2026-10-25T16:12:50.085670+00:00",
+  "provider": "FIA official championship standings",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Manufacturer",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "TOYOTA",
+        "212"
+      ],
+      [
+        "2",
+        "BMW",
+        "154"
+      ],
+      [
+        "3",
+        "FERRARI",
+        "130"
+      ],
+      [
+        "4",
+        "CADILLAC",
+        "118"
+      ],
+      [
+        "5",
+        "ALPINE",
+        "104"
+      ],
+      [
+        "6",
+        "ASTON MARTIN",
+        "58"
+      ],
+      [
+        "7",
+        "PEUGEOT",
+        "24"
+      ],
+      [
+        "8",
+        "GENESIS",
+        "14"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "FIA per-round awarded points sum reconciled with FIA total",
+    "rows_checked": 8,
+    "verification_source": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+    "verification_date": "2026-10-25"
+  }
+}

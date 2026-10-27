@@ -1,0 +1,235 @@
+{
+  "generated_at": "2026-10-27T18:26:45.774333+00:00",
+  "season": 2026,
+  "method": "structural validation; independent cross-source verification pending",
+  "summary": {
+    "missing": 2,
+    "invalid_snapshot": 0,
+    "not_a_points_table": 0,
+    "single_source_unverified": 21
+  },
+  "series": {
+    "F1": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.formula1.com/en/racing/2026",
+      "competitors": 23,
+      "leader_points": 340.0,
+      "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
+      "retrieved_at": "2026-10-22T15:27:37.127236+00:00"
+    },
+    "F2": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.fiaformula2.com/en/standings/2026/drivers",
+      "competitors": 23,
+      "leader_points": 207.0,
+      "source_url": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
+      "retrieved_at": "2026-10-23T15:26:56.900474+00:00"
+    },
+    "F3": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.fiaformula3.com/en/standings/2026/drivers",
+      "competitors": 35,
+      "leader_points": 159.0,
+      "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+      "retrieved_at": "2026-10-23T15:26:56.900474+00:00"
+    },
+    "IndyCar": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.indycar.com/Standings",
+      "competitors": 33,
+      "leader_points": 631.0,
+      "source_url": "https://www.indycar.com/standings/2026",
+      "retrieved_at": "2026-10-26T15:22:52.146142+00:00"
+    },
+    "NASCAR Cup": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.nascar.com/standings/nascar-cup-series/",
+      "competitors": 16,
+      "leader_points": 2441.0,
+      "source_url": "https://www.nascar.com/standings/nascar-cup-series/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "NASCAR O’Reilly": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+      "competitors": 12,
+      "leader_points": 2401.0,
+      "source_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "WEC": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+      "competitors": 49,
+      "leader_points": 114.0,
+      "source_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+      "retrieved_at": "2026-10-25T16:12:50.085670+00:00"
+    },
+    "IMSA": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.imsa.com/standings/",
+      "competitors": 40,
+      "leader_points": 3020.0,
+      "source_url": "https://www.imsa.com/standings/",
+      "retrieved_at": "2026-10-26T15:22:52.146142+00:00"
+    },
+    "Formula E": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.fiaformulae.com/en/standings",
+      "competitors": 20,
+      "leader_points": 169.0,
+      "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+      "retrieved_at": "2026-10-25T16:13:54.168863+00:00"
+    },
+    "WRC": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+      "competitors": 36,
+      "leader_points": 243.0,
+      "source_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+      "retrieved_at": "2026-10-25T16:12:50.085670+00:00"
+    },
+    "Supercars": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.supercars.com/standings",
+      "competitors": 32,
+      "leader_points": 3150.0,
+      "source_url": "https://www.supercars.com/standings",
+      "retrieved_at": "2026-10-16T18:22:38.036150+00:00"
+    },
+    "NHRA": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.nhra.com/standings",
+      "competitors": 36,
+      "leader_points": 2546.0,
+      "source_url": "https://www.nhra.com/standings",
+      "retrieved_at": "2026-10-26T15:22:52.146142+00:00"
+    },
+    "MotoGP": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/RidersChampionship",
+      "competitors": 5,
+      "leader_points": 365.0,
+      "source_url": "https://stats.motogp.com/en/world-standing",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "Moto2": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+      "competitors": 6,
+      "leader_points": 265.5,
+      "source_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "Moto3": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/RidersChampionship",
+      "competitors": 5,
+      "leader_points": 351.0,
+      "source_url": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "WorldSBK": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.worldsbk.com/en/results%20statistics",
+      "competitors": 10,
+      "leader_points": 726.0,
+      "source_url": "https://www.worldsbk.com/en/news/2026/05/31/classifica-finale-campionato-worldsbk-2026/1014570",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "Supercross": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.supercrosslive.com/standings/",
+      "competitors": 10,
+      "leader_points": 349.0,
+      "source_url": "https://www.supercrosslive.com/championship-standings/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "Pro Motocross": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://promotocross.com/standings",
+      "competitors": 8,
+      "leader_points": 474.0,
+      "source_url": "https://www.supercross.com/pages/standings",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "MXGP": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.mxgp.com/standings",
+      "competitors": 10,
+      "leader_points": 973.0,
+      "source_url": "https://mxgpresults.com/mxgp/standings",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "NASCAR Trucks": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
+      "competitors": 10,
+      "leader_points": 2371.0,
+      "source_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    },
+    "Dakar Rally": {
+      "status": "missing",
+      "source_count": 0,
+      "independently_verified": false,
+      "official_url": "https://www.dakar.com/en/rankings"
+    },
+    "Off-road racing": {
+      "status": "missing",
+      "source_count": 0,
+      "independently_verified": false,
+      "official_url": "https://score-international.com/"
+    },
+    "Monster Jam": {
+      "status": "single_source_unverified",
+      "source_count": 1,
+      "independently_verified": false,
+      "official_url": "https://www.monsterjam.com/en-us/standings/",
+      "competitors": 10,
+      "leader_points": 97.0,
+      "source_url": "https://www.monsterjam.com/en-us/points-standings/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
+    }
+  }
+}

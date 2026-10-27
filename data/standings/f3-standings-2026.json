@@ -1,0 +1,195 @@
+{
+  "series": "F3",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+  "official_url": "https://www.fiaformula3.com/en/standings/2026/drivers",
+  "retrieved_at": "2026-10-23T15:26:56.900474+00:00",
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Ugo Ugochukwu",
+        "159"
+      ],
+      [
+        "2",
+        "Freddie Slater",
+        "145"
+      ],
+      [
+        "3",
+        "Tuukka Taponen",
+        "109"
+      ],
+      [
+        "4",
+        "Taito Kato",
+        "105"
+      ],
+      [
+        "5",
+        "Théophile Naël",
+        "88"
+      ],
+      [
+        "6",
+        "Pedro Clerot",
+        "88"
+      ],
+      [
+        "7",
+        "Ernesto Rivera",
+        "87"
+      ],
+      [
+        "8",
+        "Brando Badoer",
+        "71"
+      ],
+      [
+        "9",
+        "Hiyu Yamakoshi",
+        "71"
+      ],
+      [
+        "10",
+        "Noah Strømsted",
+        "65"
+      ],
+      [
+        "11",
+        "Bruno del Pino",
+        "57"
+      ],
+      [
+        "12",
+        "Maciej Gładysz",
+        "54"
+      ],
+      [
+        "13",
+        "Mattia Colnaghi",
+        "54"
+      ],
+      [
+        "14",
+        "Jin Nakamura",
+        "53"
+      ],
+      [
+        "15",
+        "Alessandro Giusti",
+        "45"
+      ],
+      [
+        "16",
+        "Enzo Deligny",
+        "40"
+      ],
+      [
+        "17",
+        "James Wharton",
+        "39"
+      ],
+      [
+        "18",
+        "Yevan David",
+        "35"
+      ],
+      [
+        "19",
+        "Nicola Lacorte",
+        "33"
+      ],
+      [
+        "20",
+        "Kanato Le",
+        "30"
+      ],
+      [
+        "21",
+        "Louis Sharp",
+        "21"
+      ],
+      [
+        "22",
+        "Gerrard Xie",
+        "20"
+      ],
+      [
+        "23",
+        "Alex Powell",
+        "14"
+      ],
+      [
+        "24",
+        "Matteo De Palo",
+        "7"
+      ],
+      [
+        "25",
+        "Brad Benavides",
+        "6"
+      ],
+      [
+        "26",
+        "Christian Ho",
+        "2"
+      ],
+      [
+        "27",
+        "Fionn McLaughlin",
+        "2"
+      ],
+      [
+        "28",
+        "Fernando Barrichello",
+        "2"
+      ],
+      [
+        "29",
+        "José Garfias",
+        "1"
+      ],
+      [
+        "30",
+        "Nandhavud Bhirombhakdi",
+        "0"
+      ],
+      [
+        "31",
+        "Ricardo Escotto",
+        "0"
+      ],
+      [
+        "32",
+        "Patrick Heuzenroeder",
+        "0"
+      ],
+      [
+        "33",
+        "Michael Shin",
+        "0"
+      ],
+      [
+        "34",
+        "Niccolò Maccagnani",
+        "0"
+      ],
+      [
+        "35",
+        "Salim Hanna",
+        "0"
+      ]
+    ]
+  },
+  "provider": "Wikipedia community standings (not official)",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+}

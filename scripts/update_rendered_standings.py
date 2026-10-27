@@ -5,6 +5,7 @@ Runs after the fast HTML collector. Only publishes validated points tables.
 Does not attempt to circumvent 403s, logins, paywalls or anti-bot challenges.
 """
 import datetime
+import datetime as dt
 import json
 import pathlib
 import sys
@@ -14,7 +15,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as BrowserTimeout
 
 from update_standings import OFFICIAL, collect_tables, format_standings, OUT
 
-SKIP_BLOCKED={'NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','Monster Jam'}
+SKIP_BLOCKED={'NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','Monster Jam','WorldSBK'}
 MAX_PAGES=20
 
 def extract_ranked_cards(soup,series):
@@ -27,9 +28,9 @@ def extract_ranked_cards(soup,series):
     for el in soup.select('tr, li, [class*="standing"], [class*="Standing"], [class*="ranking"], [class*="Ranking"]'):
         raw=' '.join(el.stripped_strings)
         if not 4<=len(raw)<=180:continue
-        point=re.search(r'(?i)(?:^|\\s)(\\d+(?:\\.\\d+)?)\\s*(?:pts|points)\\b',raw)
+        point=re.search(r'(?i)(?:^|\s)(\d+(?:\.\d+)?)\s*(?:pts|points)\b',raw)
         if not point:continue
-        rank=re.match(r'^\\s*(\\d{1,2})(?:st|nd|rd|th)?\\b',raw,re.I)
+        rank=re.match(r'^\s*(\d{1,2})(?:st|nd|rd|th)?\b',raw,re.I)
         if not rank:continue
         name=raw[rank.end():point.start()].strip(' -|')
         if not name or len(name)>90:continue
@@ -54,9 +55,27 @@ def main():
         context=browser.new_context(user_agent='ApexRacingWorld/1.0 (+https://apexracingworld.com)', viewport={'width':1440,'height':900})
         for series,(template,slug) in list(OFFICIAL.items())[:MAX_PAGES]:
             existing=manifest.get('series',{}).get(series,{}).get('seasons',{}).get(str(year))
-            if existing and series!='F3':
-                outcomes[series]='already published'
+            # A published snapshot is not a reason to stop refreshing forever.
+            # Retry snapshots older than three days, but preserve them on any
+            # source/parse failure. Do not silently replace rights-pending FIA
+            # material with a differently sourced page.
+            entry=manifest.get('series',{}).get(series,{})
+            if entry.get('reuse_review_required'):
+                outcomes[series]='source reuse review pending; existing snapshot preserved'
                 continue
+            if existing:
+                try:
+                    current_path=OUT / pathlib.Path(existing).name
+                    previous=json.loads(current_path.read_text(encoding='utf-8'))
+                    stamp=dt.datetime.fromisoformat(previous['retrieved_at'].replace('Z','+00:00'))
+                    if stamp.tzinfo is None:
+                        raise ValueError('timestamp missing timezone')
+                    age=(now-stamp).total_seconds()
+                    if 0<=age<3*86400:
+                        outcomes[series]='snapshot refreshed within last three days'
+                        continue
+                except (OSError,ValueError,KeyError,TypeError,json.JSONDecodeError):
+                    pass
             if series in SKIP_BLOCKED:
                 outcomes[series]='blocked at source; browser bypass not attempted'
                 continue

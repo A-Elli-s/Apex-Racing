@@ -1,0 +1,75 @@
+{
+  "series": "Formula E Teams",
+  "season": 2026,
+  "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+  "official_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+  "retrieved_at": "2026-10-25T16:13:54.168863+00:00",
+  "provider": "FIA public championship standings",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Team",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Jaguar TCS Racing",
+        "288"
+      ],
+      [
+        "2",
+        "Porsche Formula E Team",
+        "271"
+      ],
+      [
+        "3",
+        "MAHINDRA RACING",
+        "252"
+      ],
+      [
+        "4",
+        "Andretti Formula E",
+        "229"
+      ],
+      [
+        "5",
+        "Citroën Racing",
+        "182"
+      ],
+      [
+        "6",
+        "Nissan Formula E Team",
+        "157"
+      ],
+      [
+        "7",
+        "Envision Racing",
+        "152"
+      ],
+      [
+        "8",
+        "Cupra Kiro",
+        "128"
+      ],
+      [
+        "9",
+        "DS PENSKE",
+        "91"
+      ],
+      [
+        "10",
+        "LOLA YAMAHA ABT FORMULA E TEAM",
+        "35"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "officially_verified",
+    "method": "FIA published championship points; per-event totals may include adjustments",
+    "rows_checked": 10,
+    "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+    "verification_date": "2026-10-25"
+  }
+}

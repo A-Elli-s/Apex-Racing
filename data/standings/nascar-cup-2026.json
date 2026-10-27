@@ -1,0 +1,104 @@
+{
+  "series": "NASCAR Cup",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "as_of": "2026-10-25",
+  "source_url": "https://www.nascar.com/standings/nascar-cup-series/",
+  "corroborating_sources": [
+    "https://www.frcs.pro/nascar/cup/drivers/point-standings/"
+  ],
+  "coverage_note": "Top ranked drivers only; not a full-field championship classification.",
+  "points_audit": {
+    "status": "partial_source_cross_check",
+    "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Driver",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Kyle Larson",
+        2441
+      ],
+      [
+        2,
+        "Denny Hamlin",
+        2368
+      ],
+      [
+        3,
+        "Christopher Bell",
+        2367
+      ],
+      [
+        4,
+        "Chase Briscoe",
+        2362
+      ],
+      [
+        5,
+        "Joey Logano",
+        2341
+      ],
+      [
+        6,
+        "Ryan Blaney",
+        2334
+      ],
+      [
+        7,
+        "Tyler Reddick",
+        2315
+      ],
+      [
+        8,
+        "Ty Gibbs",
+        2258
+      ],
+      [
+        9,
+        "Austin Cindric",
+        2258
+      ],
+      [
+        10,
+        "Carson Hocevar",
+        2243
+      ],
+      [
+        11,
+        "William Byron",
+        2227
+      ],
+      [
+        12,
+        "Chase Elliott",
+        2223
+      ],
+      [
+        13,
+        "Bubba Wallace",
+        2223
+      ],
+      [
+        14,
+        "Daniel Suárez",
+        2201
+      ],
+      [
+        15,
+        "Ryan Preece",
+        2192
+      ],
+      [
+        16,
+        "Chris Buescher",
+        2186
+      ]
+    ]
+  }
+}
