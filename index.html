@@ -128,6 +128,27 @@ const standingsSeason=document.querySelector('#standingsSeason');
 const standingsType=document.querySelector('#standingsType');
 const standingsGrid=document.querySelector('#standingsGrid');
 const standingsStatus=document.querySelector('#standingsStatus');
+// Data availability is derived from published snapshots, never guessed.
+const standingsAvailability=document.createElement('p');
+standingsAvailability.className='sub';
+standingsAvailability.style.fontSize='.83rem';
+standingsAvailability.setAttribute('aria-live','polite');
+standingsStatus.insertAdjacentElement('afterend',standingsAvailability);
+async function refreshStandingsAvailability(){
+  try{
+    const response=await fetch('/data/standings/manifest.json',{cache:'no-store'});
+    if(!response.ok)throw Error('Manifest unavailable');
+    const manifest=await response.json();
+    const keys=['F1','F2','F3','IndyCar','NASCAR Cup','NASCAR O’Reilly','WEC','IMSA','Formula E','WRC','Supercars','NHRA','MotoGP','Moto2','Moto3','WorldSBK','Supercross','Pro Motocross','MXGP','NASCAR Trucks','Dakar Rally','Off-road racing','Monster Jam'];
+    const year=String(new Date().getFullYear());
+    const available=keys.filter(key=>Boolean(manifest.series?.[key]?.seasons?.[year]));
+    standingsAvailability.textContent=available.length+' of '+keys.length+' championships have '+year+' standings snapshots. Select a championship to see points, source and snapshot date; unavailable series link to their organizers.';
+  }catch(error){
+    standingsAvailability.textContent='Standings coverage status unavailable; select a championship to check its data.';
+  }
+}
+refreshStandingsAvailability();
+
 const currentStandingsYear=new Date().getFullYear();
 // Default every championship to the active season; never silently show a past year.
 standingsSelect.innerHTML=series.map(s=>'<option value="'+esc(s[0])+'">'+esc(s[0])+'</option>').join('');
@@ -224,6 +245,7 @@ const pointsStatus=snapshot.points_audit?.status==='calculated_and_cross_checked
 ?'Championship points · race-by-race totals audited'
 :'Championship points table';
 standingsStatus.textContent=selected+' · '+year+' · '+pointsStatus+' · Snapshot updated '+new Date(snapshot.retrieved_at).toLocaleDateString();
+const quality=document.createElement('p');quality.className='sub';quality.style.fontSize='.82rem';quality.textContent='Snapshot is provided for reference; independent source agreement and republication rights may still require review. Confirm official standings before relying on final positions.';standingsGrid.append(quality);
 const source=document.createElement('p');source.className='sub';
 const origin=document.createElement('a');origin.href=snapshot.source_url||manifest.series?.[selected]?.official_url||'#standings';origin.target='_blank';origin.rel='noopener noreferrer';origin.textContent='Data source ↗';
 source.append('Source: ',origin);
