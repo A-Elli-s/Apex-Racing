@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T20:00:00+00:00",
+  "updated": "2026-10-27T23:45:58.794473+00:00",
   "series": {
     "Formula 2": [
       {
@@ -76,91 +76,71 @@
       },
       {
         "date": "2026-11-29",
-        "name": "Qatar Grand Prix (Nov 27–29)",
+        "name": "Qatar Grand Prix",
         "venue": "Lusail International Circuit",
-        "url": "https://www.fiaformula2.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "url": "https://www.fiaformula2.com/Calendar"
       },
       {
         "date": "2026-12-06",
-        "name": "Abu Dhabi Grand Prix (Dec 4–6)",
+        "name": "Abu Dhabi Grand Prix",
         "venue": "Yas Marina Circuit",
-        "url": "https://www.fiaformula2.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "url": "https://www.fiaformula2.com/Calendar"
       }
     ],
     "Formula 3": [
       {
-        "date": "2026-03-08",
-        "name": "Melbourne",
-        "venue": "Albert Park",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-03-07",
+        "name": "Round 1",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-06-07",
-        "name": "Monaco",
-        "venue": "Circuit de Monaco",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-06-06",
+        "name": "Round 2",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-06-14",
-        "name": "Barcelona",
-        "venue": "Circuit de Barcelona-Catalunya",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-06-13",
+        "name": "Round 3",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-06-28",
-        "name": "Austria",
-        "venue": "Red Bull Ring",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-06-27",
+        "name": "Round 4",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-07-05",
-        "name": "Great Britain",
-        "venue": "Silverstone",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-07-04",
+        "name": "Round 5",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-07-19",
-        "name": "Belgium",
-        "venue": "Spa-Francorchamps",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-07-18",
+        "name": "Round 6",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-07-26",
-        "name": "Hungary",
-        "venue": "Hungaroring",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-07-25",
+        "name": "Round 7",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-09-06",
-        "name": "Italy",
-        "venue": "Monza",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-09-05",
+        "name": "Round 8",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       },
       {
-        "date": "2026-09-13",
-        "name": "Madrid",
-        "venue": "Madring",
-        "url": "https://www.fiaformula3.com/en/racing/2026",
-        "source_url": "https://www.fiaformula3.com/en/racing/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-09-12",
+        "name": "Round 9",
+        "venue": "Venue TBA",
+        "url": "https://www.fiaformula3.com/Calendar"
       }
     ],
     "MotoGP / Moto2 / Moto3": [
@@ -350,7 +330,7 @@
       },
       {
         "date": "2026-02-14",
-        "name": "O’REILLY — United Rentals 300",
+        "name": "XFINITY — United Rentals 300",
         "venue": "Daytona International Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -364,7 +344,7 @@
       },
       {
         "date": "2026-02-21",
-        "name": "O’REILLY — Bennett Transportation & Logistics 250",
+        "name": "XFINITY — Bennett Transportation & Logistics 250",
         "venue": "Atlanta Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -385,7 +365,7 @@
       },
       {
         "date": "2026-02-28",
-        "name": "O’REILLY — Focused Health 250",
+        "name": "XFINITY — Focused Health 250",
         "venue": "Circuit of The Americas",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -406,7 +386,7 @@
       },
       {
         "date": "2026-03-07",
-        "name": "O’REILLY — GOVX 200",
+        "name": "XFINITY — GOVX 200",
         "venue": "Phoenix Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -420,7 +400,7 @@
       },
       {
         "date": "2026-03-14",
-        "name": "O’REILLY — The LiUNA",
+        "name": "XFINITY — The LiUNA",
         "venue": "Las Vegas Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -441,7 +421,7 @@
       },
       {
         "date": "2026-03-21",
-        "name": "O’REILLY — Sport Clips Haircuts VFW Help a Hero 200",
+        "name": "XFINITY — Sport Clips Haircuts VFW Help a Hero 200",
         "venue": "Darlington Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -455,7 +435,7 @@
       },
       {
         "date": "2026-03-28",
-        "name": "O’REILLY — NFPA 250",
+        "name": "XFINITY — NFPA 250",
         "venue": "Martinsville Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -476,7 +456,7 @@
       },
       {
         "date": "2026-04-04",
-        "name": "O’REILLY — North Carolina Education Lottery 250 Presented by Black's Tire",
+        "name": "XFINITY — North Carolina Education Lottery 250 Presented by Black's Tire",
         "venue": "Rockingham Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -490,7 +470,7 @@
       },
       {
         "date": "2026-04-11",
-        "name": "O’REILLY — Suburban Propane 300",
+        "name": "XFINITY — Suburban Propane 300",
         "venue": "Bristol Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -504,7 +484,7 @@
       },
       {
         "date": "2026-04-18",
-        "name": "O’REILLY — Kansas Lottery 300",
+        "name": "XFINITY — Kansas Lottery 300",
         "venue": "Kansas Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -518,7 +498,7 @@
       },
       {
         "date": "2026-04-25",
-        "name": "O’REILLY — AG-PRO 300",
+        "name": "XFINITY — AG-PRO 300",
         "venue": "Talladega Superspeedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -539,7 +519,7 @@
       },
       {
         "date": "2026-05-02",
-        "name": "O’REILLY — Andy's Frozen Custard 340",
+        "name": "XFINITY — Andy's Frozen Custard 340",
         "venue": "Texas Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -560,7 +540,7 @@
       },
       {
         "date": "2026-05-09",
-        "name": "O’REILLY — Mission 200 at The Glen",
+        "name": "XFINITY — Mission 200 at The Glen",
         "venue": "Watkins Glen International",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -581,7 +561,7 @@
       },
       {
         "date": "2026-05-16",
-        "name": "O’REILLY — BetRivers 200",
+        "name": "XFINITY — BetRivers 200",
         "venue": "Dover Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -602,7 +582,7 @@
       },
       {
         "date": "2026-05-23",
-        "name": "O’REILLY — Charbroil 300",
+        "name": "XFINITY — Charbroil 300",
         "venue": "Charlotte Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -623,7 +603,7 @@
       },
       {
         "date": "2026-05-30",
-        "name": "O’REILLY — Sports Illustrated Resorts 250",
+        "name": "XFINITY — Sports Illustrated Resorts 250",
         "venue": "Nashville Superspeedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -651,7 +631,7 @@
       },
       {
         "date": "2026-06-13",
-        "name": "O’REILLY — MillerTech Battery 250 presented by KOA",
+        "name": "XFINITY — MillerTech Battery 250 presented by KOA",
         "venue": "Pocono Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -672,7 +652,7 @@
       },
       {
         "date": "2026-06-20",
-        "name": "O’REILLY — United Rentals Driven to Serve 250",
+        "name": "XFINITY — United Rentals Driven to Serve 250",
         "venue": "San Diego Street Course",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -686,7 +666,7 @@
       },
       {
         "date": "2026-06-27",
-        "name": "O’REILLY — Pit Boss/FoodMaxx 250",
+        "name": "XFINITY — Pit Boss/FoodMaxx 250",
         "venue": "Sonoma Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -700,7 +680,7 @@
       },
       {
         "date": "2026-07-04",
-        "name": "O’REILLY — Cuervo 300",
+        "name": "XFINITY — Cuervo 300",
         "venue": "Chicagoland Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -714,7 +694,7 @@
       },
       {
         "date": "2026-07-11",
-        "name": "O’REILLY — Focused Health 250",
+        "name": "XFINITY — Focused Health 250",
         "venue": "Atlanta Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -756,7 +736,7 @@
       },
       {
         "date": "2026-07-25",
-        "name": "O’REILLY — Pennzoil 250 presented by Take 5 Oil Change",
+        "name": "XFINITY — Pennzoil 250 presented by Take 5 Oil Change",
         "venue": "Indianapolis Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -770,7 +750,7 @@
       },
       {
         "date": "2026-08-08",
-        "name": "O’REILLY — HyVee Perks 250",
+        "name": "XFINITY — HyVee Perks 250",
         "venue": "Iowa Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -812,7 +792,7 @@
       },
       {
         "date": "2026-08-28",
-        "name": "O’REILLY — Winn-Dixie 250 Powered by Coca-Cola ",
+        "name": "XFINITY — Winn-Dixie 250 Powered by Coca-Cola ",
         "venue": "Daytona International Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -826,7 +806,7 @@
       },
       {
         "date": "2026-09-05",
-        "name": "O’REILLY — Fleetio 200",
+        "name": "XFINITY — Fleetio 200",
         "venue": "Darlington Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -840,7 +820,7 @@
       },
       {
         "date": "2026-09-12",
-        "name": "O’REILLY — Nu Way 225 Powered by Bobcat and Sauced by Blues Hog",
+        "name": "XFINITY — Nu Way 225 Powered by Bobcat and Sauced by Blues Hog",
         "venue": "World Wide Technology Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -861,7 +841,7 @@
       },
       {
         "date": "2026-09-18",
-        "name": "O’REILLY — Food City 300",
+        "name": "XFINITY — Food City 300",
         "venue": "Bristol Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -889,7 +869,7 @@
       },
       {
         "date": "2026-10-03",
-        "name": "O’REILLY — Focused Health 302",
+        "name": "XFINITY — Focused Health 302",
         "venue": "Las Vegas Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -910,7 +890,7 @@
       },
       {
         "date": "2026-10-10",
-        "name": "O’REILLY — Blue Cross NC 300",
+        "name": "XFINITY — Blue Cross NC 300",
         "venue": "Charlotte Motor Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -931,7 +911,7 @@
       },
       {
         "date": "2026-10-17",
-        "name": "O’REILLY — Timberland PRO 200",
+        "name": "XFINITY — Timberland PRO 200",
         "venue": "Phoenix Raceway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -952,7 +932,7 @@
       },
       {
         "date": "2026-10-24",
-        "name": "O’REILLY — The Progress Group 250",
+        "name": "XFINITY — The Progress Group 250",
         "venue": "Talladega Superspeedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -973,7 +953,7 @@
       },
       {
         "date": "2026-10-31",
-        "name": "O’REILLY — National Debt Relief 250",
+        "name": "XFINITY — National Debt Relief 250",
         "venue": "Martinsville Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -994,7 +974,7 @@
       },
       {
         "date": "2026-11-07",
-        "name": "O’REILLY — NASCAR O'Reilly Auto Parts Series Championship Race",
+        "name": "XFINITY — NASCAR O'Reilly Auto Parts Series Championship Race",
         "venue": "Homestead-Miami Speedway",
         "url": "https://www.nascar.com/nascar-cup-series/2026/schedule/",
         "tickets": "https://www.nascar.com/tickets/"
@@ -1010,139 +990,111 @@
     "IndyCar": [
       {
         "date": "2026-03-01",
-        "name": "St. Petersburg",
-        "venue": "Streets of St. Petersburg",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of St. Petersburg",
+        "venue": "Grand Prix of St. Petersburg",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-03-07",
-        "name": "Phoenix",
-        "venue": "Phoenix Raceway",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Phoenix",
+        "venue": "Grand Prix of Phoenix",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-03-15",
-        "name": "Arlington",
-        "venue": "Streets of Arlington",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Arlington",
+        "venue": "Grand Prix of Arlington",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-03-29",
-        "name": "Barber",
-        "venue": "Barber Motorsports Park",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Alabama",
+        "venue": "Grand Prix of Alabama",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-04-19",
-        "name": "Long Beach",
-        "venue": "Streets of Long Beach",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Long Beach",
+        "venue": "Grand Prix of Long Beach",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-05-09",
-        "name": "Indianapolis GP",
-        "venue": "IMS Road Course",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Indianapolis (Road Course)",
+        "venue": "Grand Prix of Indianapolis (Road Course)",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-05-24",
         "name": "Indianapolis 500",
-        "venue": "Indianapolis Motor Speedway",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "venue": "Indianapolis 500",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-05-31",
-        "name": "Detroit",
-        "venue": "Streets of Detroit",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Detroit",
+        "venue": "Grand Prix of Detroit",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
-        "date": "2026-06-07",
-        "name": "Gateway",
-        "venue": "World Wide Technology Raceway",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-06-08",
+        "name": "Grand Prix of Illinois",
+        "venue": "Grand Prix of Illinois",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-06-21",
-        "name": "Road America",
-        "venue": "Road America",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Road America",
+        "venue": "Grand Prix of Road America",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-07-05",
-        "name": "Mid-Ohio",
-        "venue": "Mid-Ohio Sports Car Course",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Mid-Ohio",
+        "venue": "Grand Prix of Mid-Ohio",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
-        "date": "2026-07-19",
-        "name": "Nashville",
-        "venue": "Nashville Superspeedway",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "date": "2026-07-20",
+        "name": "Grand Prix of Nashville",
+        "venue": "Grand Prix of Nashville",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-08-09",
-        "name": "Portland",
-        "venue": "Portland International Raceway",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Portland",
+        "venue": "Grand Prix of Portland",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-08-16",
-        "name": "Markham",
-        "venue": "Streets of Markham",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Ontario",
+        "venue": "Grand Prix of Ontario",
+        "url": "https://www.indycar.com/Schedule"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "Grand Prix of Washington, D.C.",
+        "venue": "Grand Prix of Washington, D.C.",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-08-29",
-        "name": "Milwaukee Race 1",
-        "venue": "Milwaukee Mile",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Milwaukee Race 1",
+        "venue": "Grand Prix of Milwaukee Race 1",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-08-30",
-        "name": "Milwaukee Race 2",
-        "venue": "Milwaukee Mile",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Milwaukee Race 2",
+        "venue": "Grand Prix of Milwaukee Race 2",
+        "url": "https://www.indycar.com/Schedule"
       },
       {
         "date": "2026-09-06",
-        "name": "Monterey finale",
-        "venue": "Laguna Seca",
-        "url": "https://www.indycar.com/Schedule/2026",
-        "source_url": "https://www.indycar.com/Schedule/2026",
-        "verified_on": "2026-10-27"
+        "name": "Grand Prix of Monterey",
+        "venue": "Grand Prix of Monterey",
+        "url": "https://www.indycar.com/Schedule"
       }
     ],
     "WEC": [
@@ -1303,15 +1255,6 @@
         "name": "London ePrix",
         "venue": "ExCeL London Circuit",
         "url": "https://www.fiaformulae.com/en/calendar"
-      },
-      {
-        "date": "2026-12-18",
-        "name": "2026/27 Season 13 opener — Jeddah E-Prix",
-        "venue": "Jeddah, Saudi Arabia",
-        "url": "https://www.fiaformulae.com/en/calendar",
-        "source_url": "https://www.fiaformulae.com/en/news/races/season-13-calendar-where-will-formula-e-be-racing-in-202627",
-        "verified_on": "2026-10-27",
-        "season": "2026/27"
       }
     ],
     "WRC": [
@@ -1392,14 +1335,6 @@
         "name": "Rally Italia Sardegna",
         "venue": "Rally location: see official calendar",
         "url": "https://www.wrc.com/en/calendar"
-      },
-      {
-        "date": "2026-11-14",
-        "name": "Rally Saudi Arabia (Nov 11–14)",
-        "venue": "Saudi Arabia",
-        "url": "https://www.wrc.com/en/calendar/wrc-2026",
-        "source_url": "https://www.wrc.com/en/calendar/wrc-2026",
-        "verified_on": "2026-10-27"
       }
     ],
     "Formula 1": [
@@ -1407,154 +1342,162 @@
         "date": "2026-03-08",
         "name": "Australian Grand Prix",
         "venue": "Albert Park Grand Prix Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-03-15",
         "name": "Chinese Grand Prix",
         "venue": "Shanghai International Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-03-29",
         "name": "Japanese Grand Prix",
         "venue": "Suzuka Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-05-03",
         "name": "Miami Grand Prix",
         "venue": "Miami International Autodrome",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Miami_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-05-24",
         "name": "Canadian Grand Prix",
         "venue": "Circuit Gilles Villeneuve",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-06-07",
         "name": "Monaco Grand Prix",
         "venue": "Circuit de Monaco",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-06-14",
         "name": "Barcelona Grand Prix",
         "venue": "Circuit de Barcelona-Catalunya",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-06-28",
         "name": "Austrian Grand Prix",
         "venue": "Red Bull Ring",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Austrian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-07-05",
         "name": "British Grand Prix",
         "venue": "Silverstone Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-07-19",
         "name": "Belgian Grand Prix",
         "venue": "Circuit de Spa-Francorchamps",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Belgian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-07-26",
         "name": "Hungarian Grand Prix",
         "venue": "Hungaroring",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-08-23",
         "name": "Dutch Grand Prix",
         "venue": "Circuit Park Zandvoort",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-09-06",
         "name": "Italian Grand Prix",
         "venue": "Autodromo Nazionale di Monza",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-09-13",
         "name": "Spanish Grand Prix",
         "venue": "Madring",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-09-26",
         "name": "Azerbaijan Grand Prix",
         "venue": "Baku City Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-10-04",
         "name": "Bahrain Grand Prix in Malaysia",
         "venue": "Sepang International Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-10-11",
         "name": "Singapore Grand Prix",
         "venue": "Marina Bay Street Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_Singapore_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-10-25",
         "name": "United States Grand Prix",
         "venue": "Circuit of the Americas",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://en.wikipedia.org/wiki/2026_United_States_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-11-01",
         "name": "Mexico City Grand Prix",
         "venue": "Autódromo Hermanos Rodríguez",
-        "url": "https://www.formula1.com/en/racing/2026",
-        "tickets": "https://tickets.formula1.com/en",
-        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
-        "verified_on": "2026-10-27"
+        "url": "https://en.wikipedia.org/wiki/2026_Mexico_City_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-11-08",
-        "name": "São Paulo Grand Prix",
+        "name": "Brazilian Grand Prix",
         "venue": "Autódromo José Carlos Pace",
-        "url": "https://www.formula1.com/en/racing/2026",
-        "tickets": "https://tickets.formula1.com/en",
-        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
-        "verified_on": "2026-10-27"
+        "url": "https://en.wikipedia.org/wiki/2026_Brazilian_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
-        "date": "2026-11-21",
+        "date": "2026-11-22",
         "name": "Las Vegas Grand Prix",
-        "venue": "Las Vegas Strip Circuit",
-        "url": "https://www.formula1.com/en/racing/2026",
-        "tickets": "https://tickets.formula1.com/en",
-        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
-        "verified_on": "2026-10-27"
+        "venue": "Las Vegas Strip Street Circuit",
+        "url": "https://en.wikipedia.org/wiki/2026_Las_Vegas_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-11-29",
         "name": "Qatar Grand Prix",
         "venue": "Lusail International Circuit",
-        "url": "https://www.formula1.com/en/racing/2026",
-        "tickets": "https://tickets.formula1.com/en",
-        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
-        "verified_on": "2026-10-27"
+        "url": "https://en.wikipedia.org/wiki/2026_Qatar_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       },
       {
         "date": "2026-12-06",
         "name": "Abu Dhabi Grand Prix",
         "venue": "Yas Marina Circuit",
-        "url": "https://www.formula1.com/en/racing/2026",
-        "tickets": "https://tickets.formula1.com/en",
-        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
-        "verified_on": "2026-10-27"
+        "url": "https://en.wikipedia.org/wiki/2026_Abu_Dhabi_Grand_Prix",
+        "tickets": "https://tickets.formula1.com/"
       }
     ],
     "Supercars": [
