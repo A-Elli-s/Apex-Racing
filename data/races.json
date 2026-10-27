@@ -92,84 +92,75 @@
     "Formula 3": [
       {
         "date": "2026-03-08",
-        "name": "Australian Grand Prix",
-        "venue": "Albert Park Circuit",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 1
+        "name": "Melbourne",
+        "venue": "Albert Park",
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-06-07",
-        "name": "Monaco Grand Prix",
+        "name": "Monaco",
         "venue": "Circuit de Monaco",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 2
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-06-14",
-        "name": "Barcelona Grand Prix",
+        "name": "Barcelona",
         "venue": "Circuit de Barcelona-Catalunya",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 3
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-06-28",
-        "name": "Austrian Grand Prix",
+        "name": "Austria",
         "venue": "Red Bull Ring",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 4
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-07-05",
-        "name": "British Grand Prix",
-        "venue": "Silverstone Circuit",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 5
+        "name": "Great Britain",
+        "venue": "Silverstone",
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-07-19",
-        "name": "Belgian Grand Prix",
-        "venue": "Circuit de Spa-Francorchamps",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 6
+        "name": "Belgium",
+        "venue": "Spa-Francorchamps",
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-07-26",
-        "name": "Hungarian Grand Prix",
+        "name": "Hungary",
         "venue": "Hungaroring",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 7
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-09-06",
-        "name": "Italian Grand Prix",
-        "venue": "Monza Circuit",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 8
+        "name": "Italy",
+        "venue": "Monza",
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-09-13",
-        "name": "Madrid Grand Prix",
+        "name": "Madrid",
         "venue": "Madring",
-        "url": "https://www.fiaformula3.com/Calendar",
-        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
-        "source_license": "CC BY-SA 4.0",
-        "round": 9
+        "url": "https://www.fiaformula3.com/en/racing/2026",
+        "source_url": "https://www.fiaformula3.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       }
     ],
     "MotoGP / Moto2 / Moto3": [
@@ -1019,111 +1010,139 @@
     "IndyCar": [
       {
         "date": "2026-03-01",
-        "name": "Grand Prix of St. Petersburg",
-        "venue": "Grand Prix of St. Petersburg",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "St. Petersburg",
+        "venue": "Streets of St. Petersburg",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-03-07",
-        "name": "Grand Prix of Phoenix",
-        "venue": "Grand Prix of Phoenix",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Phoenix",
+        "venue": "Phoenix Raceway",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-03-15",
-        "name": "Grand Prix of Arlington",
-        "venue": "Grand Prix of Arlington",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Arlington",
+        "venue": "Streets of Arlington",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-03-29",
-        "name": "Grand Prix of Alabama",
-        "venue": "Grand Prix of Alabama",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Barber",
+        "venue": "Barber Motorsports Park",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-04-19",
-        "name": "Grand Prix of Long Beach",
-        "venue": "Grand Prix of Long Beach",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Long Beach",
+        "venue": "Streets of Long Beach",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-05-09",
-        "name": "Grand Prix of Indianapolis (Road Course)",
-        "venue": "Grand Prix of Indianapolis (Road Course)",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Indianapolis GP",
+        "venue": "IMS Road Course",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-05-24",
         "name": "Indianapolis 500",
-        "venue": "Indianapolis 500",
-        "url": "https://www.indycar.com/Schedule"
+        "venue": "Indianapolis Motor Speedway",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-05-31",
-        "name": "Grand Prix of Detroit",
-        "venue": "Grand Prix of Detroit",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Detroit",
+        "venue": "Streets of Detroit",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
-        "date": "2026-06-08",
-        "name": "Grand Prix of Illinois",
-        "venue": "Grand Prix of Illinois",
-        "url": "https://www.indycar.com/Schedule"
+        "date": "2026-06-07",
+        "name": "Gateway",
+        "venue": "World Wide Technology Raceway",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-06-21",
-        "name": "Grand Prix of Road America",
-        "venue": "Grand Prix of Road America",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Road America",
+        "venue": "Road America",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-07-05",
-        "name": "Grand Prix of Mid-Ohio",
-        "venue": "Grand Prix of Mid-Ohio",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Mid-Ohio",
+        "venue": "Mid-Ohio Sports Car Course",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
-        "date": "2026-07-20",
-        "name": "Grand Prix of Nashville",
-        "venue": "Grand Prix of Nashville",
-        "url": "https://www.indycar.com/Schedule"
+        "date": "2026-07-19",
+        "name": "Nashville",
+        "venue": "Nashville Superspeedway",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-08-09",
-        "name": "Grand Prix of Portland",
-        "venue": "Grand Prix of Portland",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Portland",
+        "venue": "Portland International Raceway",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-08-16",
-        "name": "Grand Prix of Ontario",
-        "venue": "Grand Prix of Ontario",
-        "url": "https://www.indycar.com/Schedule"
-      },
-      {
-        "date": "2026-08-23",
-        "name": "Grand Prix of Washington, D.C.",
-        "venue": "Grand Prix of Washington, D.C.",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Markham",
+        "venue": "Streets of Markham",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-08-29",
-        "name": "Grand Prix of Milwaukee Race 1",
-        "venue": "Grand Prix of Milwaukee Race 1",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Milwaukee Race 1",
+        "venue": "Milwaukee Mile",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-08-30",
-        "name": "Grand Prix of Milwaukee Race 2",
-        "venue": "Grand Prix of Milwaukee Race 2",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Milwaukee Race 2",
+        "venue": "Milwaukee Mile",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-09-06",
-        "name": "Grand Prix of Monterey",
-        "venue": "Grand Prix of Monterey",
-        "url": "https://www.indycar.com/Schedule"
+        "name": "Monterey finale",
+        "venue": "Laguna Seca",
+        "url": "https://www.indycar.com/Schedule/2026",
+        "source_url": "https://www.indycar.com/Schedule/2026",
+        "verified_on": "2026-10-27"
       }
     ],
     "WEC": [
@@ -1624,6 +1643,513 @@
         "url": "https://www.monsterjam.com/en-us/events/anaheim-ca/dec-19-2026-dec-20-2026/",
         "source_url": "https://www.monsterjam.com/en-us/tickets/",
         "verified_on": "2026-10-27"
+      }
+    ],
+    "IMSA": [
+      {
+        "date": "2026-01-25",
+        "name": "Rolex 24 at Daytona",
+        "venue": "Daytona International Speedway",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "12 Hours of Sebring",
+        "venue": "Sebring International Raceway",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "Long Beach",
+        "venue": "Streets of Long Beach",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-03",
+        "name": "Laguna Seca",
+        "venue": "WeatherTech Raceway Laguna Seca",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-30",
+        "name": "Detroit",
+        "venue": "Streets of Detroit",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-28",
+        "name": "6 Hours of The Glen",
+        "venue": "Watkins Glen International",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-12",
+        "name": "Canadian Tire Motorsport Park",
+        "venue": "CTMP",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-02",
+        "name": "Road America",
+        "venue": "Road America",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "VIR GT Challenge",
+        "venue": "VIRginia International Raceway",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-09-20",
+        "name": "Battle on the Bricks",
+        "venue": "Indianapolis Motor Speedway",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-10-03",
+        "name": "Petit Le Mans finale",
+        "venue": "Michelin Raceway Road Atlanta",
+        "url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "source_url": "https://www.imsa.com/weathertech/weathertech-2026-schedule/",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "WorldSBK": [
+      {
+        "date": "2026-02-22",
+        "name": "Australia",
+        "venue": "Phillip Island",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-29",
+        "name": "Portugal",
+        "venue": "Portimão",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "Netherlands",
+        "venue": "Assen",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-03",
+        "name": "Hungary",
+        "venue": "Balaton Park",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-17",
+        "name": "Czechia",
+        "venue": "Most",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-31",
+        "name": "Aragon",
+        "venue": "MotorLand Aragón",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-14",
+        "name": "Emilia-Romagna",
+        "venue": "Misano",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-12",
+        "name": "United Kingdom",
+        "venue": "Donington Park",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-09-06",
+        "name": "France",
+        "venue": "Magny-Cours",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-09-27",
+        "name": "Italy",
+        "venue": "Cremona",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-10-11",
+        "name": "Estoril",
+        "venue": "Circuito Estoril",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-10-18",
+        "name": "Spain finale",
+        "venue": "Jerez",
+        "url": "https://www.worldsbk.com/en/calendar",
+        "source_url": "https://www.worldsbk.com/en/calendar",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "Supercross": [
+      {
+        "date": "2026-01-10",
+        "name": "Anaheim 1",
+        "venue": "Angel Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-01-17",
+        "name": "San Diego",
+        "venue": "Snapdragon Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-01-24",
+        "name": "Anaheim 2",
+        "venue": "Angel Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-01-31",
+        "name": "Houston",
+        "venue": "NRG Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-02-07",
+        "name": "Glendale",
+        "venue": "State Farm Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-02-14",
+        "name": "Seattle",
+        "venue": "Lumen Field",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-02-21",
+        "name": "Arlington",
+        "venue": "AT&T Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-02-28",
+        "name": "Daytona",
+        "venue": "Daytona International Speedway",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-07",
+        "name": "Indianapolis",
+        "venue": "Lucas Oil Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-21",
+        "name": "Birmingham",
+        "venue": "Protective Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-28",
+        "name": "Detroit",
+        "venue": "Ford Field",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-04",
+        "name": "St. Louis",
+        "venue": "The Dome at America's Center",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-11",
+        "name": "Nashville",
+        "venue": "Nissan Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-18",
+        "name": "Cleveland",
+        "venue": "Huntington Bank Field",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-25",
+        "name": "Philadelphia",
+        "venue": "Lincoln Financial Field",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-02",
+        "name": "Denver",
+        "venue": "Empower Field at Mile High",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-09",
+        "name": "Salt Lake City finale",
+        "venue": "Rice-Eccles Stadium",
+        "url": "https://promotocross.com/schedule/sx",
+        "source_url": "https://promotocross.com/schedule/sx",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "MXGP": [
+      {
+        "date": "2026-03-08",
+        "name": "Argentina",
+        "venue": "Bariloche",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-22",
+        "name": "Andalucía",
+        "venue": "Almonte",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-03-29",
+        "name": "Switzerland",
+        "venue": "Frauenfeld",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-12",
+        "name": "Sardegna",
+        "venue": "Riola Sardo",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "Trentino",
+        "venue": "Pietramurata",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-24",
+        "name": "France",
+        "venue": "Lacapelle Marival",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-05-31",
+        "name": "Germany",
+        "venue": "Teutschenthal",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-07",
+        "name": "Latvia",
+        "venue": "Kegums",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-21",
+        "name": "Italy",
+        "venue": "Montevarchi",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-28",
+        "name": "Portugal",
+        "venue": "Águeda",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-05",
+        "name": "South Africa",
+        "venue": "Johannesburg",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-19",
+        "name": "Great Britain",
+        "venue": "Foxhills",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-26",
+        "name": "Czech Republic",
+        "venue": "Loket",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-02",
+        "name": "Flanders",
+        "venue": "Lommel",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-16",
+        "name": "Sweden",
+        "venue": "Uddevalla",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "Netherlands",
+        "venue": "Arnhem",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-09-06",
+        "name": "Türkiye",
+        "venue": "Afyonkarahisar",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-09-13",
+        "name": "China",
+        "venue": "Shanghai",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-09-20",
+        "name": "Australia finale",
+        "venue": "Darwin",
+        "url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "source_url": "https://docs2.mxgp.com/docs/INF-26-20336_MXGP_OFFICIAL_GUIDE_final_LD.pdf",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "Dakar Rally": [
+      {
+        "date": "2027-01-01",
+        "name": "Dakar 2027 prologue — venue to be announced",
+        "venue": "Host country to be announced (relocated from Saudi Arabia)",
+        "url": "https://www.dakar.com/en",
+        "source_url": "https://api.fia.com/news/dakar-2027-will-not-take-place-saudi-arabia-rally-will-return-kingdom-2028-its-50th-edition",
+        "verified_on": "2026-10-27",
+        "season": "2027"
+      },
+      {
+        "date": "2027-01-02",
+        "name": "Dakar 2027 Stage 1 — venue to be announced",
+        "venue": "Host country to be announced",
+        "url": "https://www.dakar.com/en",
+        "verified_on": "2026-10-27",
+        "season": "2027"
+      },
+      {
+        "date": "2027-01-15",
+        "name": "Dakar 2027 final stage — venue to be announced",
+        "venue": "Host country to be announced",
+        "url": "https://www.dakar.com/en",
+        "verified_on": "2026-10-27",
+        "season": "2027"
       }
     ]
   }
