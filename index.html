@@ -321,12 +321,48 @@ async function updateStandingsViewOptions(){
   standingsType.value=views.some(([value])=>value===previous)?previous:views[0][0];
   standingsType.disabled=views.length===1;
 }
+// Keep championships without current-season standings out of this section.
+async function filterStandingsChampionships(){
+  const year=standingsSeason.value;
+  const previouslySelected=standingsSelect.value;
+  try{
+    const response=await fetch('/data/standings/manifest.json',{cache:'no-store'});
+    if(!response.ok)throw Error('Manifest unavailable');
+    const manifest=await response.json();
+    const available=series.filter(([key])=>Boolean(manifest.series?.[key]?.seasons?.[year]));
+    standingsSelect.replaceChildren();
+    for(const [key] of available){
+      const option=document.createElement('option');
+      option.value=key;option.textContent=key;standingsSelect.append(option);
+    }
+    if(available.some(([key])=>key===previouslySelected))standingsSelect.value=previouslySelected;
+    else if(available.some(([key])=>key==='F1'))standingsSelect.value='F1';
+    if(!available.length){
+      standingsGrid.replaceChildren();
+      standingsStatus.textContent='No championship standings available for '+year+'.';
+      standingsSelect.disabled=true;
+      standingsType.disabled=true;
+      return false;
+    }
+    standingsSelect.disabled=false;
+    return true;
+  }catch(error){
+    standingsSelect.replaceChildren();
+    standingsSelect.disabled=true;
+    standingsType.disabled=true;
+    standingsGrid.replaceChildren();
+    standingsStatus.textContent='Unable to verify standings availability. Please try again later.';
+    return false;
+  }
+}
 let viewUpdateRequest=0;
 async function updateViewsAndStandings(){
   const request=++viewUpdateRequest;
   const selected=standingsSelect.value,year=standingsSeason.value;
+  const ready=await filterStandingsChampionships();
+  if(request!==viewUpdateRequest||year!==standingsSeason.value||!ready)return;
   await updateStandingsViewOptions();
-  if(request!==viewUpdateRequest||selected!==standingsSelect.value||year!==standingsSeason.value)return;
+  if(request!==viewUpdateRequest||year!==standingsSeason.value)return;
   loadStandings();
 }
 standingsSelect.addEventListener('change',updateViewsAndStandings);
