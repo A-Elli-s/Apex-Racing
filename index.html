@@ -293,9 +293,46 @@ standingsStatus.textContent=year+' F1 race classifications · '+races.length+' r
 }
 }catch(e){if(request===standingsRequest)standingsStatus.textContent='Unable to load verified F1 results right now. Please try again later.'}
 }
-standingsSelect.addEventListener('change',()=>{standingsType.value='drivers';loadStandings();});
-[standingsSeason,standingsType].forEach(el=>el.addEventListener('change',loadStandings));
-loadStandings();
+// Offer only views backed by data for the selected championship and season.
+async function updateStandingsViewOptions(){
+  const selected=standingsSelect.value,year=standingsSeason.value,previous=standingsType.value;
+  let views=[];
+  if(selected==='F1'){
+    views=[['drivers','Driver standings'],['constructors','Constructor standings'],['races','Race results']];
+  }else{
+    try{
+      const response=await fetch('/data/standings/manifest.json',{cache:'no-store'});
+      if(!response.ok)throw Error('Manifest unavailable');
+      const manifest=await response.json();
+      const entry=manifest.series?.[selected]||{};
+      if(entry.seasons?.[year])views.push(['drivers',selected==='WEC'?'Driver championship points':'Championship standings']);
+      if(manifest.series?.[selected+' Teams']?.seasons?.[year])views.push(['constructors','Team / manufacturer standings']);
+      if(entry.race_results_seasons?.[year])views.push(['races','Individual race results']);
+    }catch(error){
+      views=[['drivers','Championship information']];
+    }
+  }
+  if(!views.length)views=[['drivers','Official championship information']];
+  standingsType.replaceChildren();
+  views.forEach(([value,label])=>{
+    const option=document.createElement('option');option.value=value;option.textContent=label;
+    standingsType.append(option);
+  });
+  standingsType.value=views.some(([value])=>value===previous)?previous:views[0][0];
+  standingsType.disabled=views.length===1;
+}
+let viewUpdateRequest=0;
+async function updateViewsAndStandings(){
+  const request=++viewUpdateRequest;
+  const selected=standingsSelect.value,year=standingsSeason.value;
+  await updateStandingsViewOptions();
+  if(request!==viewUpdateRequest||selected!==standingsSelect.value||year!==standingsSeason.value)return;
+  loadStandings();
+}
+standingsSelect.addEventListener('change',updateViewsAndStandings);
+standingsSeason.addEventListener('change',updateViewsAndStandings);
+standingsType.addEventListener('change',loadStandings);
+updateViewsAndStandings();
 const guides=[['F1 gifts','Books, models and collectibles for Formula 1 fans.','formula 1 gifts'],['NASCAR fan essentials','Diecast cars, apparel and race-day accessories.','nascar fan gifts'],['Sim racing starter kit','Wheels, pedals and rigs for your first setup.','sim racing steering wheel pedals'],['Motocross gear','Protective equipment and accessories to research.','motocross riding gear'],['Racing diecast collecting','Model cars, displays and storage.','racing diecast cars'],['Race-day comfort','Ear protection, seating and bags.','race day hearing protection']];
 const shop=[['Sim racing wheels','sim racing steering wheel'],['Racing scanners','racing scanner nascar'],['F1 diecast models','formula 1 diecast model'],['NASCAR diecast','nascar diecast 1 24'],['Hearing protection','race hearing protection earmuffs'],['Racing books','formula 1 racing books'],['LEGO race cars','lego speed champions race car'],['Racing posters','vintage racing poster'],['Motocross accessories','motocross accessories'],['Karting gear','kart racing gear'],['RC race cars','remote control race car'],['Race-day bags','race day clear bag']];
 // Set your approved Amazon Associates ID here, e.g. mysite-20. Leave blank until approved.
