@@ -330,15 +330,13 @@ async function filterStandingsChampionships(){
     if(!response.ok)throw Error('Manifest unavailable');
     const manifest=await response.json();
     const available=series.filter(([key])=>Boolean(manifest.series?.[key]?.seasons?.[year]));
-    // Keep flagship MotoGP visible at the top whenever its points snapshot exists.
-    available.sort((a,b)=>a[0]==='MotoGP'?-1:b[0]==='MotoGP'?1:0);
     standingsSelect.replaceChildren();
     for(const [key] of available){
       const option=document.createElement('option');
       option.value=key;option.textContent=key;standingsSelect.append(option);
     }
     if(available.some(([key])=>key===previouslySelected))standingsSelect.value=previouslySelected;
-    else if(available.some(([key])=>key==='MotoGP'))standingsSelect.value='MotoGP';
+    else if(available.some(([key])=>key==='F1'))standingsSelect.value='F1';
     if(!available.length){
       standingsGrid.replaceChildren();
       standingsStatus.textContent='No championship standings available for '+year+'.';
@@ -670,8 +668,20 @@ async function activateChampionshipsWithData(){
     document.querySelector('#series .head .sub').textContent=series.length+' championships with data';
     document.querySelector('#series .sub')?.setAttribute('title','Only championships with current-season standings are listed');
     renderSeries();
+    // Calendar groups sometimes combine championships; keep a group if at least
+    // one supported series belongs to it, and label only the supported members.
+    const calendarGroups={
+      'Formula 1':['F1'],'Formula 2':['F2'],'Formula 3':['F3'],
+      'NASCAR Cup / O’Reilly / Trucks':['NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks'],
+      'MotoGP / Moto2 / Moto3':['MotoGP','Moto2','Moto3'],
+      'SCORE Off-road':['Off-road racing']
+    };
     document.querySelectorAll('#calendarAccordions .calendar-group').forEach(el=>{
-      if(!supported.has(el.dataset.series))el.remove();
+      const members=calendarGroups[el.dataset.series]||[el.dataset.series];
+      const active=members.filter(name=>supported.has(name));
+      if(!active.length){el.remove();return;}
+      const label=el.querySelector('summary strong');
+      if(label&&active.length!==members.length)label.textContent=active.join(' / ');
     });
     for(const option of [...document.querySelectorAll('#raceTickerFilter option')]){
       if(option.value!=='all'&&!supported.has(option.value))option.remove();
