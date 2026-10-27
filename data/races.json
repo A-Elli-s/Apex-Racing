@@ -2151,6 +2151,96 @@
         "verified_on": "2026-10-27",
         "season": "2027"
       }
+    ],
+    "Pro Motocross": [
+      {
+        "date": "2026-05-30",
+        "name": "Fox Raceway National",
+        "venue": "Pala, CA",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-06",
+        "name": "Hangtown Classic",
+        "venue": "Rancho Cordova, CA",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-13",
+        "name": "Thunder Valley National",
+        "venue": "Lakewood, CO",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-06-20",
+        "name": "High Point National",
+        "venue": "Mount Morris, PA",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-04",
+        "name": "RedBud National",
+        "venue": "Buchanan, MI",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-11",
+        "name": "Southwick National",
+        "venue": "Southwick, MA",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-18",
+        "name": "Spring Creek National",
+        "venue": "Millville, MN",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-07-25",
+        "name": "Washougal National",
+        "venue": "Washougal, WA",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-15",
+        "name": "Unadilla National",
+        "venue": "New Berlin, NY",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-22",
+        "name": "Budds Creek National",
+        "venue": "Mechanicsville, MD",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-08-29",
+        "name": "Ironman National finale",
+        "venue": "Crawfordsville, IN",
+        "url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "source_url": "https://promotocross.com/2025/09/30/2026-smx-world-championship-regular-season-schedule-announced",
+        "verified_on": "2026-10-27"
+      }
     ]
   }
 }
