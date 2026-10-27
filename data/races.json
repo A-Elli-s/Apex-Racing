@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T19:00:00+00:00",
+  "updated": "2026-10-27T19:30:00+00:00",
   "series": {
     "Formula 2": [
       {
@@ -76,15 +76,17 @@
       },
       {
         "date": "2026-11-29",
-        "name": "Qatar Grand Prix",
+        "name": "Qatar Grand Prix (Nov 27–29)",
         "venue": "Lusail International Circuit",
-        "url": "https://www.fiaformula2.com/Calendar"
+        "url": "https://www.fiaformula2.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-12-06",
-        "name": "Abu Dhabi Grand Prix",
+        "name": "Abu Dhabi Grand Prix (Dec 4–6)",
         "venue": "Yas Marina Circuit",
-        "url": "https://www.fiaformula2.com/Calendar"
+        "url": "https://www.fiaformula2.com/en/racing/2026",
+        "verified_on": "2026-10-27"
       }
     ],
     "Formula 3": [
@@ -1362,6 +1364,14 @@
         "name": "Rally Italia Sardegna",
         "venue": "Rally location: see official calendar",
         "url": "https://www.wrc.com/en/calendar"
+      },
+      {
+        "date": "2026-11-14",
+        "name": "Rally Saudi Arabia (Nov 11–14)",
+        "venue": "Saudi Arabia",
+        "url": "https://www.wrc.com/en/calendar/wrc-2026",
+        "source_url": "https://www.wrc.com/en/calendar/wrc-2026",
+        "verified_on": "2026-10-27"
       }
     ],
     "Formula 1": [
@@ -1516,6 +1526,42 @@
         "url": "https://www.formula1.com/en/racing/2026",
         "tickets": "https://tickets.formula1.com/en",
         "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "Supercars": [
+      {
+        "date": "2026-11-08",
+        "name": "Penrite Oil Sandown 500 (Nov 6–8)",
+        "venue": "Sandown Raceway, Melbourne",
+        "url": "https://www.supercars.com/calendar",
+        "source_url": "https://www.supercars.com/calendar",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-11-29",
+        "name": "bp Adelaide Grand Final (Nov 26–29)",
+        "venue": "Adelaide Street Circuit",
+        "url": "https://www.supercars.com/calendar",
+        "source_url": "https://www.supercars.com/calendar",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "NHRA": [
+      {
+        "date": "2026-11-01",
+        "name": "MOPAR NHRA Las Vegas Nationals (Oct 29–Nov 1)",
+        "venue": "The Strip at Las Vegas Motor Speedway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-11-15",
+        "name": "In-N-Out Burger NHRA Finals (Nov 12–15)",
+        "venue": "In-N-Out Burger Pomona Dragstrip",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
         "verified_on": "2026-10-27"
       }
     ]
