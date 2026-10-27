@@ -1,0 +1,70 @@
+name: Schedule racing data bots on development
+on:
+  schedule:
+    - cron: '35 11 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: racing-data-bots-dev-scheduler
+  cancel-in-progress: false
+jobs:
+  refresh-dev:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - name: Check out development branch, never main
+        uses: actions/checkout@v4
+        with:
+          ref: dev
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check if weekly or race-following refresh is due
+        id: decide
+        run: |
+          python scripts/should_refresh_racing.py > /tmp/racing-refresh.json
+          cat /tmp/racing-refresh.json
+          python - <<'PY'
+          import json,os
+          decision=json.load(open('/tmp/racing-refresh.json'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('run='+str(decision['run']).lower()+'\n')
+          PY
+      - name: Install dependencies
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          python -m pip install beautifulsoup4==4.12.3 playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      - name: F1 calendar and points bot
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_f1_api.py
+      - name: Official standings bot
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_standings.py
+      - name: Rendered standings bot
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_rendered_standings.py
+      - name: Audit source quality
+        if: steps.decide.outputs.run == 'true'
+        run: python scripts/audit_standings_sources.py
+      - name: Validate JSON outputs
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          python -m json.tool data/races.json > /dev/null
+          python -m json.tool data/standings/manifest.json > /dev/null
+      - name: Commit refreshed data exclusively to dev
+        if: steps.decide.outputs.run == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/races.json data/standings/ data/quality/
+          if ! git diff --cached --quiet; then
+            git commit -m "Automated development racing data refresh"
+            git pull --rebase origin dev
+            git push origin HEAD:dev
+          fi
