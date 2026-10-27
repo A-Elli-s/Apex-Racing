@@ -74,6 +74,18 @@ def points_valid(snapshot):
         return False
     return all(isinstance(r, list) and len(r) == len(headers) and numeric(r[idx]) is not None for r in rows)
 
+def results_valid(snapshot):
+    if not snapshot:
+        return False
+    data = snapshot.get("data")
+    if isinstance(data, dict):
+        data = data.get("results")
+    return isinstance(data, list) and len(data) >= 3 and all(
+        isinstance(row, dict) and row.get("winning_driver") and
+        (row.get("round") or row.get("event") or row.get("eprix"))
+        for row in data
+    )
+
 def reconcile_imsa(snapshot):
     """IMSA snapshot's per-event columns already include awarded event points.
 
@@ -120,19 +132,32 @@ def main():
             tag = NASCAR_TAG[name]
             events = [event for event in events if str(event.get("name", "")).upper().startswith(tag)]
         valid_events = [e for e in events if isinstance(e, dict) and str(e.get("date", "")).startswith(str(YEAR) + "-")
-                        and e.get("name") and e.get("url")]
+                        and e.get("name") and e.get("venue") and e.get("url")]
         points = snapshot_for(manifest, name, "seasons")
         results = snapshot_for(manifest, name, "race_results_seasons")
-        provider = manifest.get("series", {}).get(name, {}).get("provider", "")
+        entry = manifest.get("series", {}).get(name, {})
+        provider = entry.get("provider", "")
+        points_ok = points_valid(points)
+        calendar_ok = len(valid_events) >= 3
+        results_ok = results_valid(results)
+        rights_pending = bool(entry.get("reuse_review_required") or (points or {}).get("reuse_review_required"))
+        # Missing permission metadata does not mean commercial reuse is allowed.
+        rights_cleared = entry.get("commercial_reuse_cleared") is True
+        officially_checked = bool(points and points.get("points_audit", {}).get("status")
+                                 in ("officially_verified", "calculated_and_officially_verified"))
+        release_ready = (points_ok and calendar_ok and results_ok and
+                         officially_checked and rights_cleared and not rights_pending)
         report["series"][name] = {
             "calendar_events": len(valid_events),
-            "calendar_available": bool(valid_events),
-            "points_table_available": points_valid(points),
-            "race_results_snapshot_available": bool(results),
-            "points_source": points.get("source_url") if points_valid(points) else None,
+            "calendar_available": calendar_ok,
+            "points_table_available": points_ok,
+            "race_results_snapshot_available": results_ok,
+            "points_source": points.get("source_url") if points_ok else None,
             "provider": provider,
-            "officially_cross_checked": bool(points and points.get("points_audit", {}).get("status")
-                                         in ("officially_verified", "calculated_and_officially_verified")),
+            "officially_cross_checked": officially_checked,
+            "source_reuse_review_required": rights_pending,
+            "commercial_reuse_cleared": rights_cleared,
+            "ready_for_release": release_ready,
         }
     imsa = snapshot_for(manifest, "IMSA", "seasons")
     report["imsa_round_points_audit"] = reconcile_imsa(imsa)
@@ -144,6 +169,8 @@ def main():
         "complete_and_officially_cross_checked": sum(
             v["calendar_available"] and v["points_table_available"] and v["officially_cross_checked"]
             for v in report["series"].values()),
+        "fully_complete_and_cleared": sum(v["ready_for_release"] for v in report["series"].values()),
+        "source_reuse_review_pending": sum(v["source_reuse_review_required"] for v in report["series"].values()),
     }
     output = DATA / "coverage.json"
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
