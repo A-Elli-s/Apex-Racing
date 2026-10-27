@@ -1,0 +1,45 @@
+{
+  "series": "Moto3",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "source_url": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
+  "coverage_note": "Top-ranked competitors only, not full-field classification.",
+  "points_audit": {
+    "status": "published_source_snapshot",
+    "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Maximo Quiles",
+        351
+      ],
+      [
+        2,
+        "David Almansa",
+        217
+      ],
+      [
+        3,
+        "Brian Uriarte",
+        198
+      ],
+      [
+        4,
+        "Alvaro Carpe",
+        189
+      ],
+      [
+        5,
+        "Adrian Fernandez",
+        148
+      ]
+    ]
+  }
+}
