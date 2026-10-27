@@ -1,0 +1,60 @@
+{
+  "series": "Pro Motocross",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "source_url": "https://www.supercross.com/pages/standings",
+  "coverage_note": "450MX class only; 250MX standings are separate.",
+  "points_audit": {
+    "status": "published_source_snapshot",
+    "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Hunter Lawrence",
+        474
+      ],
+      [
+        2,
+        "Jett Lawrence",
+        472
+      ],
+      [
+        3,
+        "Haiden Deegan",
+        404
+      ],
+      [
+        4,
+        "Jorge Prado",
+        401
+      ],
+      [
+        5,
+        "R.J. Hampshire",
+        346
+      ],
+      [
+        6,
+        "Garrett Marchbanks",
+        296
+      ],
+      [
+        7,
+        "Dylan Ferrandis",
+        269
+      ],
+      [
+        8,
+        "Cooper Webb",
+        264
+      ]
+    ]
+  }
+}
