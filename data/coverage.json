@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-26T15:21:48.374918+00:00",
+  "generated_at": "2026-10-27T15:24:32.788195+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -10,7 +10,10 @@
       "race_results_snapshot_available": false,
       "points_source": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
       "provider": "Jolpica-F1",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "F2": {
       "calendar_events": 14,
@@ -18,17 +21,23 @@
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "points_source": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
-      "provider": "Wikipedia community standings (not official)",
-      "officially_cross_checked": false
+      "provider": "Official championship website",
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "F3": {
       "calendar_events": 9,
       "calendar_available": true,
       "points_table_available": true,
-      "race_results_snapshot_available": true,
+      "race_results_snapshot_available": false,
       "points_source": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
       "provider": "Wikipedia community standings (not official)",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "IndyCar": {
       "calendar_events": 18,
@@ -37,7 +46,10 @@
       "race_results_snapshot_available": false,
       "points_source": "https://www.indycar.com/standings/2026",
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "NASCAR Cup": {
       "calendar_events": 40,
@@ -46,7 +58,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "NASCAR O’Reilly": {
       "calendar_events": 33,
@@ -55,7 +70,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "WEC": {
       "calendar_events": 9,
@@ -64,7 +82,10 @@
       "race_results_snapshot_available": false,
       "points_source": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
       "provider": "FIA official standings (reuse review required)",
-      "officially_cross_checked": true
+      "officially_cross_checked": true,
+      "source_reuse_review_required": true,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "IMSA": {
       "calendar_events": 0,
@@ -73,7 +94,10 @@
       "race_results_snapshot_available": false,
       "points_source": "https://www.imsa.com/standings/",
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Formula E": {
       "calendar_events": 16,
@@ -81,8 +105,11 @@
       "points_table_available": true,
       "race_results_snapshot_available": true,
       "points_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
-      "provider": "FIA public standings (reuse review required)",
-      "officially_cross_checked": true
+      "provider": "MotoDB community dataset (not official)",
+      "officially_cross_checked": true,
+      "source_reuse_review_required": true,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "WRC": {
       "calendar_events": 13,
@@ -91,7 +118,10 @@
       "race_results_snapshot_available": true,
       "points_source": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
       "provider": "FIA official standings (reuse review required)",
-      "officially_cross_checked": true
+      "officially_cross_checked": true,
+      "source_reuse_review_required": true,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Supercars": {
       "calendar_events": 0,
@@ -100,7 +130,10 @@
       "race_results_snapshot_available": false,
       "points_source": "https://www.supercars.com/standings",
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "NHRA": {
       "calendar_events": 0,
@@ -109,7 +142,10 @@
       "race_results_snapshot_available": false,
       "points_source": "https://www.nhra.com/standings",
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "MotoGP": {
       "calendar_events": 22,
@@ -118,7 +154,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Moto2": {
       "calendar_events": 22,
@@ -127,7 +166,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Moto3": {
       "calendar_events": 22,
@@ -136,7 +178,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "WorldSBK": {
       "calendar_events": 0,
@@ -145,7 +190,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Supercross": {
       "calendar_events": 0,
@@ -154,7 +202,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Pro Motocross": {
       "calendar_events": 0,
@@ -163,7 +214,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "MXGP": {
       "calendar_events": 0,
@@ -172,7 +226,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "NASCAR Trucks": {
       "calendar_events": 25,
@@ -181,7 +238,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Dakar Rally": {
       "calendar_events": 0,
@@ -190,7 +250,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Off-road racing": {
       "calendar_events": 0,
@@ -199,7 +262,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     },
     "Monster Jam": {
       "calendar_events": 0,
@@ -208,7 +274,10 @@
       "race_results_snapshot_available": false,
       "points_source": null,
       "provider": "Official championship website",
-      "officially_cross_checked": false
+      "officially_cross_checked": false,
+      "source_reuse_review_required": false,
+      "commercial_reuse_cleared": false,
+      "ready_for_release": false
     }
   },
   "imsa_round_points_audit": {
@@ -221,7 +290,9 @@
     "total_championships": 23,
     "calendars_with_events": 13,
     "points_tables_with_numeric_totals": 10,
-    "race_results_snapshots": 3,
-    "complete_and_officially_cross_checked": 3
+    "race_results_snapshots": 2,
+    "complete_and_officially_cross_checked": 3,
+    "fully_complete_and_cleared": 0,
+    "source_reuse_review_pending": 3
   }
 }
