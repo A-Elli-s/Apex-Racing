@@ -1,0 +1,70 @@
+{
+  "series": "Monster Jam",
+  "season": 2026,
+  "retrieved_at": "2026-10-27T18:18:00+00:00",
+  "source_url": "https://www.monsterjam.com/en-us/points-standings/",
+  "coverage_note": "2026 Stadium Fall Series only; other Monster Jam tours have separate standings.",
+  "points_audit": {
+    "status": "published_source_snapshot",
+    "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+  },
+  "data": {
+    "headers": [
+      "Position",
+      "Competitor",
+      "Points"
+    ],
+    "rows": [
+      [
+        1,
+        "Tyler Menninga",
+        97
+      ],
+      [
+        2,
+        "Fernando Martinez / Armando Castro",
+        78
+      ],
+      [
+        3,
+        "Camden Murphy",
+        71
+      ],
+      [
+        4,
+        "Cynthia Gauthier",
+        63
+      ],
+      [
+        5,
+        "Jon Zimmer Jr",
+        62
+      ],
+      [
+        6,
+        "Tristan England",
+        58
+      ],
+      [
+        7,
+        "Austin Minton / Tim Hall Jr / Montana Robbins",
+        57
+      ],
+      [
+        8,
+        "Preston Collins / Jamey Garner / Jon Koehler / Mike Pagliarulo",
+        49
+      ],
+      [
+        9,
+        "Kayla Blood",
+        41
+      ],
+      [
+        10,
+        "Mike Christensen",
+        39
+      ]
+    ]
+  }
+}
