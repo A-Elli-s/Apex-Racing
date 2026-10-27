@@ -1,0 +1,50 @@
+name: Refresh non-F1 standings (development only)
+on:
+  push:
+    branches: [dev]
+    paths:
+      - 'scripts/update_standings.py'
+      - 'scripts/update_rendered_standings.py'
+      - 'scripts/audit_points.py'
+      - 'scripts/audit_coverage.py'
+      - '.github/workflows/update-dev-standings.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: dev-non-f1-standings
+  cancel-in-progress: false
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: dev
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install conservative public-page parsers
+        run: python -m pip install beautifulsoup4==4.12.3 playwright==1.55.0
+      - name: Install browser
+        run: python -m playwright install --with-deps chromium
+      - name: Refresh accessible championship tables without bypassing blocks
+        run: python scripts/update_standings.py
+      - name: Retry stale JavaScript-rendered standings
+        run: python scripts/update_rendered_standings.py
+      - name: Audit per-event awarded points without guessing totals
+        run: python scripts/audit_points.py --write
+      - name: Report all 23 championships and source-rights gaps
+        run: python scripts/audit_coverage.py
+      - name: Commit development snapshots and coverage report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/standings/ data/coverage.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh and audit staged non-F1 championship standings"
+            git push origin HEAD:dev
+          fi
