@@ -655,6 +655,46 @@ const img=new Image();img.onload=()=>els.forEach(el=>{const bg=el.querySelector(
 }));
 }
 
-// Initialize championship cards after all photo definitions are ready.
+// Only publish championships with current-season points data. Other series stay
+// in the repository for future activation, but are hidden across the homepage.
+async function activateChampionshipsWithData(){
+  try{
+    const response=await fetch('/data/standings/manifest.json',{cache:'no-store'});
+    if(!response.ok)throw Error('Data catalog unavailable');
+    const manifest=await response.json();
+    const year=String(new Date().getFullYear());
+    const supported=new Set(series.filter(([name])=>Boolean(manifest.series?.[name]?.seasons?.[year])).map(([name])=>name));
+    for(let i=series.length-1;i>=0;i--)if(!supported.has(series[i][0]))series.splice(i,1);
+    document.querySelector('#series .head .sub').textContent=series.length+' championships with data';
+    document.querySelector('#series .sub')?.setAttribute('title','Only championships with current-season standings are listed');
+    renderSeries();
+    document.querySelectorAll('#calendarAccordions .calendar-group').forEach(el=>{
+      if(!supported.has(el.dataset.series))el.remove();
+    });
+    for(const option of [...document.querySelectorAll('#raceTickerFilter option')]){
+      if(option.value!=='all'&&!supported.has(option.value))option.remove();
+    }
+    for(const option of [...watchSelect.options]){
+      if(option.value!=='all'&&!supported.has(option.value))option.remove();
+    }
+    watchSelect.value='all';
+    renderTicketWatch();
+    document.querySelectorAll('#raceTicker [data-series]').forEach(el=>{
+      if(!supported.has(el.dataset.series))el.remove();
+    });
+    const sectionNote=document.querySelector('#series .head .sub');
+    if(sectionNote)sectionNote.textContent=series.length+' championships';
+  }catch(error){
+    // Fail closed: do not display unsupported championships when the catalog is unavailable.
+    series.splice(0,series.length);
+    renderSeries();
+    document.querySelector('#calendarAccordions').replaceChildren();
+    watchSelect.replaceChildren();
+    watchResults.replaceChildren();
+    document.querySelector('#series .head .sub').textContent='Data temporarily unavailable';
+  }
+}
+// Initialize cards and then apply the current-season data catalog.
 renderSeries();
+activateChampionshipsWithData();
 </script></body></html>
