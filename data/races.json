@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T15:30:00+00:00",
+  "updated": "2026-10-27T19:00:00+00:00",
   "series": {
     "Formula 2": [
       {
@@ -1477,31 +1477,46 @@
         "date": "2026-11-01",
         "name": "Mexico City Grand Prix",
         "venue": "Autódromo Hermanos Rodríguez",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://www.formula1.com/en/racing/2026",
+        "tickets": "https://tickets.formula1.com/en",
+        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-11-08",
-        "name": "Brazilian Grand Prix",
+        "name": "São Paulo Grand Prix",
         "venue": "Autódromo José Carlos Pace",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://www.formula1.com/en/racing/2026",
+        "tickets": "https://tickets.formula1.com/en",
+        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
+        "verified_on": "2026-10-27"
       },
       {
-        "date": "2026-11-22",
+        "date": "2026-11-21",
         "name": "Las Vegas Grand Prix",
-        "venue": "Las Vegas Strip Street Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "venue": "Las Vegas Strip Circuit",
+        "url": "https://www.formula1.com/en/racing/2026",
+        "tickets": "https://tickets.formula1.com/en",
+        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-11-29",
         "name": "Qatar Grand Prix",
         "venue": "Lusail International Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://www.formula1.com/en/racing/2026",
+        "tickets": "https://tickets.formula1.com/en",
+        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-12-06",
         "name": "Abu Dhabi Grand Prix",
         "venue": "Yas Marina Circuit",
-        "url": "https://www.formula1.com/en/racing/2026"
+        "url": "https://www.formula1.com/en/racing/2026",
+        "tickets": "https://tickets.formula1.com/en",
+        "source_url": "https://www.fia.com/news/2026-fia-sporting-calendars-approved-world-motor-sport-council",
+        "verified_on": "2026-10-27"
       }
     ]
   }
