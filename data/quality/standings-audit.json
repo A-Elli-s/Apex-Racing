@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-27T18:24:50.566610+00:00",
+  "generated_at": "2026-10-27T18:24:58.367721+00:00",
   "season": 2026,
   "method": "structural validation; independent cross-source verification pending",
   "summary": {
-    "missing": 13,
+    "missing": 10,
     "invalid_snapshot": 0,
     "not_a_points_table": 0,
-    "single_source_unverified": 10
+    "single_source_unverified": 13
   },
   "series": {
     "F1": {
@@ -50,16 +50,24 @@
       "retrieved_at": "2026-10-26T15:22:52.146142+00:00"
     },
     "NASCAR Cup": {
-      "status": "missing",
-      "source_count": 0,
+      "status": "single_source_unverified",
+      "source_count": 1,
       "independently_verified": false,
-      "official_url": "https://www.nascar.com/standings/nascar-cup-series/"
+      "official_url": "https://www.nascar.com/standings/nascar-cup-series/",
+      "competitors": 16,
+      "leader_points": 2441.0,
+      "source_url": "https://www.nascar.com/standings/nascar-cup-series/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
     },
     "NASCAR O’Reilly": {
-      "status": "missing",
-      "source_count": 0,
+      "status": "single_source_unverified",
+      "source_count": 1,
       "independently_verified": false,
-      "official_url": "https://www.nascar.com/standings/nascar-xfinity-series/"
+      "official_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+      "competitors": 12,
+      "leader_points": 2401.0,
+      "source_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
     },
     "WEC": {
       "status": "single_source_unverified",
@@ -164,10 +172,14 @@
       "official_url": "https://www.mxgp.com/standings"
     },
     "NASCAR Trucks": {
-      "status": "missing",
-      "source_count": 0,
+      "status": "single_source_unverified",
+      "source_count": 1,
       "independently_verified": false,
-      "official_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/"
+      "official_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
+      "competitors": 10,
+      "leader_points": 2371.0,
+      "source_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
     },
     "Dakar Rally": {
       "status": "missing",
