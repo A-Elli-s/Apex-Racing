@@ -7,6 +7,7 @@ on:
       - 'scripts/update_rendered_standings.py'
       - 'scripts/audit_points.py'
       - 'scripts/audit_coverage.py'
+      - 'scripts/update_motogp_community.py'
       - '.github/workflows/update-dev-standings.yml'
   workflow_dispatch:
 permissions:
@@ -35,6 +36,8 @@ jobs:
         run: python scripts/update_standings.py
       - name: Retry stale JavaScript-rendered standings
         run: python scripts/update_rendered_standings.py
+      - name: Stage CC BY-SA MotoGP, Moto2 and Moto3 points (reuse review pending)
+        run: python scripts/update_motogp_community.py
       - name: Audit per-event awarded points without guessing totals
         run: python scripts/audit_points.py --write
       - name: Report all 23 championships and source-rights gaps
