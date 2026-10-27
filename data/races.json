@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T19:30:00+00:00",
+  "updated": "2026-10-27T20:00:00+00:00",
   "series": {
     "Formula 2": [
       {
@@ -1284,6 +1284,15 @@
         "name": "London ePrix",
         "venue": "ExCeL London Circuit",
         "url": "https://www.fiaformulae.com/en/calendar"
+      },
+      {
+        "date": "2026-12-18",
+        "name": "2026/27 Season 13 opener — Jeddah E-Prix",
+        "venue": "Jeddah, Saudi Arabia",
+        "url": "https://www.fiaformulae.com/en/calendar",
+        "source_url": "https://www.fiaformulae.com/en/news/races/season-13-calendar-where-will-formula-e-be-racing-in-202627",
+        "verified_on": "2026-10-27",
+        "season": "2026/27"
       }
     ],
     "WRC": [
@@ -1562,6 +1571,58 @@
         "venue": "In-N-Out Burger Pomona Dragstrip",
         "url": "https://www.nhra.com/schedule/2026",
         "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "SCORE Off-road": [
+      {
+        "date": "2026-11-13",
+        "name": "59th SCORE Baja 1000 (event Nov 9–15)",
+        "venue": "San José del Cabo, Baja California Sur, Mexico",
+        "url": "https://score-raceinfo.com/event-schedule-baja-1000/",
+        "source_url": "https://score-raceinfo.com/wp-content/uploads/2026/04/2026-SCORE-Schedule-Rev.-4.22.26-Rev.pdf",
+        "verified_on": "2026-10-27"
+      }
+    ],
+    "Monster Jam": [
+      {
+        "date": "2026-11-01",
+        "name": "Glendale — Stadium Fall Series",
+        "venue": "State Farm Stadium, Glendale, AZ",
+        "url": "https://www.monsterjam.com/en-us/events/glendale-az/nov-01-2026-nov-01-2026/",
+        "source_url": "https://www.monsterjam.com/en-us/tickets/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-11-06",
+        "name": "Hampton (Nov 6–8)",
+        "venue": "Hampton Coliseum, Hampton, VA",
+        "url": "https://www.monsterjam.com/en-us/events/hampton-va/nov-06-2026-nov-08-2026/",
+        "source_url": "https://www.monsterjam.com/en-us/tickets/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-11-28",
+        "name": "Dayton (Nov 28–29)",
+        "venue": "Nutter Center, Dayton, OH",
+        "url": "https://www.monsterjam.com/en-us/events/dayton-oh/nov-28-2026-nov-29-2026/",
+        "source_url": "https://www.monsterjam.com/en-us/tickets/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-11-28",
+        "name": "Omaha (Nov 28–29)",
+        "venue": "CHI Health Center, Omaha, NE",
+        "url": "https://www.monsterjam.com/en-us/events/omaha-ne/nov-28-2026-nov-29-2026/",
+        "source_url": "https://www.monsterjam.com/en-us/tickets/",
+        "verified_on": "2026-10-27"
+      },
+      {
+        "date": "2026-12-19",
+        "name": "Anaheim Christmas Chaos (Dec 19–20)",
+        "venue": "Angel Stadium, Anaheim, CA",
+        "url": "https://www.monsterjam.com/en-us/events/anaheim-ca/dec-19-2026-dec-20-2026/",
+        "source_url": "https://www.monsterjam.com/en-us/tickets/",
         "verified_on": "2026-10-27"
       }
     ]
