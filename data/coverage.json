@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-27T15:24:32.788195+00:00",
+  "generated_at": "2026-10-27T15:26:12.804465+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -21,7 +21,7 @@
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "points_source": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
-      "provider": "Official championship website",
+      "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
@@ -81,7 +81,7 @@
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "points_source": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
-      "provider": "FIA official standings (reuse review required)",
+      "provider": "FIA official championship standings",
       "officially_cross_checked": true,
       "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
@@ -105,7 +105,7 @@
       "points_table_available": true,
       "race_results_snapshot_available": true,
       "points_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
-      "provider": "MotoDB community dataset (not official)",
+      "provider": "FIA public championship standings",
       "officially_cross_checked": true,
       "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
@@ -117,7 +117,7 @@
       "points_table_available": true,
       "race_results_snapshot_available": true,
       "points_source": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
-      "provider": "FIA official standings (reuse review required)",
+      "provider": "FIA official championship standings",
       "officially_cross_checked": true,
       "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
