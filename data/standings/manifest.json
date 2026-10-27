@@ -62,18 +62,30 @@
     },
     "MotoGP": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/RidersChampionship",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/motogp-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Moto2": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/moto2-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Moto3": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/RidersChampionship",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/moto3-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "NASCAR Cup": {
       "official_url": "https://www.nascar.com/standings/nascar-cup-series/",
@@ -125,23 +137,39 @@
     },
     "WorldSBK": {
       "official_url": "https://www.worldsbk.com/en/results%20statistics",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/worldsbk-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Supercross": {
       "official_url": "https://www.supercrosslive.com/standings/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/supercross-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Pro Motocross": {
       "official_url": "https://promotocross.com/standings",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/pro-motocross-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "MXGP": {
       "official_url": "https://www.mxgp.com/standings",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/mxgp-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "Dakar Rally": {
       "official_url": "https://www.dakar.com/en/rankings",
@@ -155,8 +183,12 @@
     },
     "Monster Jam": {
       "official_url": "https://www.monsterjam.com/en-us/standings/",
-      "provider": "Official championship website",
-      "seasons": {}
+      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "seasons": {
+        "2026": "/data/standings/monster-jam-2026.json"
+      },
+      "partial_field": true,
+      "reuse_review_required": true
     },
     "F1": {
       "official_url": "https://www.formula1.com/en/racing/2026",
