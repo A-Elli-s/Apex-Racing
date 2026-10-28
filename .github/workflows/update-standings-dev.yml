@@ -11,7 +11,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: standings-refresh-dev
+  group: dev-racing-data-refresh
   cancel-in-progress: false
 jobs:
   standings:
