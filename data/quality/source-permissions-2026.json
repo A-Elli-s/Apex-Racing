@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-10-28",
+  "season": 2026,
+  "purpose": "Source-rights research only. Not a blanket grant of rights for Apex Racing World.",
+  "sources": {
+    "Jolpica-F1": {
+      "terms_url": "https://github.com/jolpica/jolpica-f1/blob/main/TERMS.md",
+      "terms_updated": "2025-08-27",
+      "data_license": "CC BY-NC-SA 4.0",
+      "commercial_use": "permission_required",
+      "contact": "admin@jolpi.ca",
+      "note": "API explicitly permits non-commercial use and requests contact for commercial use. Apex Racing World has affiliate/monetization plans; do not mark commercial reuse cleared without permission or a separately licensed replacement."
+    },
+    "MotoDB": {
+      "repository": "https://github.com/vishwapramuditha/moto-db",
+      "license_url": "https://github.com/vishwapramuditha/moto-db/blob/main/LICENSE",
+      "repository_license": "CC0 1.0 Universal",
+      "commercial_use": "upstream_rights_review_required",
+      "note": "Repository declares CC0, but collects some source material from other racing sites and Wikipedia. CC0 by the repository author cannot automatically license third-party rights; review each upstream dataset and attribution obligations before commercial redistribution."
+    }
+  },
+  "outstanding": "Review organizer/third-party terms, data licensing, trademarks, source attribution and commercial reuse before setting any championship commercial_reuse_cleared=true."
+}
