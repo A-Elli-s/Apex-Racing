@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: racing-data-bots-dev-scheduler
+  group: dev-racing-data-refresh
   cancel-in-progress: false
 jobs:
   refresh-dev:
