@@ -29,7 +29,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/coverage.json
+          git add data/quality/championship-coverage.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh development championship coverage audit"
             git pull --rebase origin dev
