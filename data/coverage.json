@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-28T15:55:56.457906+00:00",
+  "generated_at": "2026-10-28T15:59:09.779404+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -69,7 +69,7 @@
       "points_source": "https://www.nascar.com/standings/nascar-cup-series/",
       "provider": "NASCAR standings, cross-referenced with independent published rankings",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -83,7 +83,7 @@
       "points_source": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
       "provider": "NASCAR standings, cross-referenced with independent published rankings",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -178,8 +178,8 @@
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://stats.motogp.com/en/world-standing",
-      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "points_source": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
+      "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
@@ -192,8 +192,8 @@
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
-      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "points_source": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
+      "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
@@ -206,8 +206,8 @@
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
-      "provider": "Published championship or independent standings snapshot; partial coverage",
+      "points_source": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
+      "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
@@ -237,7 +237,7 @@
       "points_source": "https://www.supercrosslive.com/championship-standings/",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -251,7 +251,7 @@
       "points_source": "https://www.supercross.com/pages/standings",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -265,7 +265,7 @@
       "points_source": "https://mxgpresults.com/mxgp/standings",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -279,7 +279,7 @@
       "points_source": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
       "provider": "NASCAR standings, cross-referenced with independent published rankings",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -321,7 +321,7 @@
       "points_source": "https://www.monsterjam.com/en-us/points-standings/",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "officially_cross_checked": false,
-      "source_reuse_review_required": true,
+      "source_reuse_review_required": false,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     }
@@ -340,6 +340,6 @@
     "full_race_classifications": 0,
     "complete_and_officially_cross_checked": 3,
     "fully_complete_and_cleared": 0,
-    "source_reuse_review_pending": 15
+    "source_reuse_review_pending": 8
   }
 }

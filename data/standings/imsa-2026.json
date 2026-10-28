@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://www.imsa.com/standings/",
   "official_url": "https://www.imsa.com/standings/",
-  "retrieved_at": "2026-10-28T15:56:45.850685+00:00",
+  "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
   "data": {
     "headers": [
       "Rank",
@@ -584,11 +584,19 @@
   },
   "points_audit": {
     "status": "verified_against_published_total",
-    "method": "Sum of every explicitly provided per-round points value; incomplete rows rejected",
+    "method": "sum of already-awarded event points; not finishing positions",
+    "event_columns": [
+      "Daytona Intl",
+      "Sebring",
+      "Long Beach",
+      "WeatherTech Raceway",
+      "Detroit Grand Prix",
+      "Watkins Glen",
+      "Road America",
+      "Indy",
+      "Road Atlanta"
+    ],
     "rows_checked": 40,
-    "rounds_checked": 9,
-    "calculated_totals": 0,
-    "checked_at": "2026-10-28T15:57:14.589360+00:00",
-    "scoring_scope": "Only the specific IMSA standings class represented in this table"
+    "checked_at": "2026-10-28T15:59:09.741231+00:00"
   }
 }
