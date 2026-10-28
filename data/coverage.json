@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-28T15:55:38.206102+00:00",
+  "generated_at": "2026-10-28T15:55:56.457906+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -13,7 +13,7 @@
       "points_source": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
       "provider": "Jolpica-F1",
       "officially_cross_checked": false,
-      "source_reuse_review_required": false,
+      "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -340,6 +340,6 @@
     "full_race_classifications": 0,
     "complete_and_officially_cross_checked": 3,
     "fully_complete_and_cleared": 0,
-    "source_reuse_review_pending": 14
+    "source_reuse_review_pending": 15
   }
 }
