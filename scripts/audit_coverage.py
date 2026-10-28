@@ -86,6 +86,30 @@ def results_valid(snapshot):
         for row in data
     )
 
+def full_classifications_valid(snapshot):
+    """Winner-only event summaries are not race classifications.
+
+    Each event needs an identified round and a ranked multi-competitor
+    classification. This structural test is NOT official verification or proof
+    that every round, sprint, adjustment or penalty is represented.
+    """
+    if not snapshot:
+        return False
+    data = snapshot.get("data")
+    events = data if isinstance(data, list) else data.get("results") if isinstance(data, dict) else None
+    if not isinstance(events, list) or len(events) < 3:
+        return False
+    for event in events:
+        if not isinstance(event, dict) or not (event.get("round") or event.get("event") or event.get("eprix")):
+            return False
+        rows = event.get("classification") or event.get("results")
+        if not isinstance(rows, list) or len(rows) < 3:
+            return False
+        if not all(isinstance(row, dict) and (row.get("position") is not None or row.get("rank") is not None) for row in rows):
+            return False
+    return True
+
+
 def reconcile_imsa(snapshot):
     """IMSA snapshot's per-event columns already include awarded event points.
 
@@ -140,18 +164,30 @@ def main():
         points_ok = points_valid(points)
         calendar_ok = len(valid_events) >= 3
         results_ok = results_valid(results)
+        classifications_ok = full_classifications_valid(results)
+        review = entry.get("verification", {})
+        reviewed = (
+            review.get("season") == YEAR
+            and review.get("points") == "cross_checked"
+            and review.get("calendar") == "cross_checked"
+            and review.get("race_results") == "complete_classifications_checked"
+            and review.get("rights") == "approved"
+        )
         rights_pending = bool(entry.get("reuse_review_required") or (points or {}).get("reuse_review_required"))
         # Missing permission metadata does not mean commercial reuse is allowed.
         rights_cleared = entry.get("commercial_reuse_cleared") is True
         officially_checked = bool(points and points.get("points_audit", {}).get("status")
                                  in ("officially_verified", "calculated_and_officially_verified"))
-        release_ready = (points_ok and calendar_ok and results_ok and
+        release_ready = (points_ok and calendar_ok and classifications_ok and
+                         not entry.get("partial_field") and reviewed and
                          officially_checked and rights_cleared and not rights_pending)
         report["series"][name] = {
             "calendar_events": len(valid_events),
             "calendar_available": calendar_ok,
             "points_table_available": points_ok,
             "race_results_snapshot_available": results_ok,
+            "full_race_classifications_available": classifications_ok,
+            "review_record_complete": reviewed,
             "points_source": points.get("source_url") if points_ok else None,
             "provider": provider,
             "officially_cross_checked": officially_checked,
@@ -166,6 +202,7 @@ def main():
         "calendars_with_events": sum(v["calendar_available"] for v in report["series"].values()),
         "points_tables_with_numeric_totals": sum(v["points_table_available"] for v in report["series"].values()),
         "race_results_snapshots": sum(v["race_results_snapshot_available"] for v in report["series"].values()),
+        "full_race_classifications": sum(v["full_race_classifications_available"] for v in report["series"].values()),
         "complete_and_officially_cross_checked": sum(
             v["calendar_available"] and v["points_table_available"] and v["officially_cross_checked"]
             for v in report["series"].values()),
