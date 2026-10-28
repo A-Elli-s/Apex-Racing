@@ -175,7 +175,7 @@ def main():
         'note':'Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.',
         'championships':coverage,
     }
-    out=ROOT/'data'/'coverage.json'
+    out=ROOT/'data'/'quality'/'championship-coverage.json'
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Coverage audit:',report['points_tables_available'],'points tables,',report['calendar_feeds_present'],'calendars,',report['race_winner_feeds_present'],'race-winner feeds of',len(SERIES),'championships.')
