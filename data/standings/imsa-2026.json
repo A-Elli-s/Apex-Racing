@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://www.imsa.com/standings/",
   "official_url": "https://www.imsa.com/standings/",
-  "retrieved_at": "2026-10-26T15:22:52.146142+00:00",
+  "retrieved_at": "2026-10-28T15:56:45.850685+00:00",
   "data": {
     "headers": [
       "Rank",
@@ -581,5 +581,14 @@
         "231"
       ]
     ]
+  },
+  "points_audit": {
+    "status": "verified_against_published_total",
+    "method": "Sum of every explicitly provided per-round points value; incomplete rows rejected",
+    "rows_checked": 40,
+    "rounds_checked": 9,
+    "calculated_totals": 0,
+    "checked_at": "2026-10-28T15:57:14.589360+00:00",
+    "scoring_scope": "Only the specific IMSA standings class represented in this table"
   }
 }

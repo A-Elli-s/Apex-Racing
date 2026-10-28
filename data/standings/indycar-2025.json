@@ -3,7 +3,7 @@
   "season": 2025,
   "source_url": "https://www.indycar.com/standings/2025",
   "official_url": "https://www.indycar.com/standings/2025",
-  "retrieved_at": "2026-10-26T15:22:52.146142+00:00",
+  "retrieved_at": "2026-10-28T15:56:45.850685+00:00",
   "data": {
     "headers": [
       "Rank",
@@ -86,19 +86,6 @@
       ],
       [
         "6",
-        "Colton Herta",
-        "Honda",
-        "372",
-        "339",
-        "17",
-        "0",
-        "2",
-        "5",
-        "8",
-        "24"
-      ],
-      [
-        "7",
         "Felix Rosenqvist",
         "Honda",
         "372",
@@ -109,6 +96,19 @@
         "4",
         "10",
         "8"
+      ],
+      [
+        "7",
+        "Colton Herta",
+        "Honda",
+        "372",
+        "339",
+        "17",
+        "0",
+        "2",
+        "5",
+        "8",
+        "24"
       ],
       [
         "8",

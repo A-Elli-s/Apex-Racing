@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T18:18:00+00:00",
+  "updated": "2026-10-28T15:57:01.976048+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
@@ -65,54 +65,42 @@
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/motogp-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "Moto2": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/moto2-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "Moto3": {
       "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/RidersChampionship",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/moto3-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "NASCAR Cup": {
       "official_url": "https://www.nascar.com/standings/nascar-cup-series/",
       "provider": "NASCAR standings, cross-referenced with independent published rankings",
       "seasons": {
         "2026": "/data/standings/nascar-cup-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "NASCAR O’Reilly": {
-      "official_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+      "official_url": "https://www.nascar.com/standings/nascar-xfinity-series/",
       "provider": "NASCAR standings, cross-referenced with independent published rankings",
       "seasons": {
         "2026": "/data/standings/nascar-oreilly-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "NASCAR Trucks": {
       "official_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
       "provider": "NASCAR standings, cross-referenced with independent published rankings",
       "seasons": {
         "2026": "/data/standings/nascar-trucks-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "IMSA": {
       "official_url": "https://www.imsa.com/standings/",
@@ -149,27 +137,21 @@
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/supercross-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "Pro Motocross": {
       "official_url": "https://promotocross.com/standings",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/pro-motocross-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "MXGP": {
       "official_url": "https://www.mxgp.com/standings",
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/mxgp-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "Dakar Rally": {
       "official_url": "https://www.dakar.com/en/rankings",
@@ -186,9 +168,7 @@
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "seasons": {
         "2026": "/data/standings/monster-jam-2026.json"
-      },
-      "partial_field": true,
-      "reuse_review_required": true
+      }
     },
     "F1": {
       "official_url": "https://www.formula1.com/en/racing/2026",
