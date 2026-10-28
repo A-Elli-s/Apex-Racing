@@ -18,7 +18,7 @@ jobs:
     # Scheduled workflows only execute from GitHub's default branch.
     # Do not copy this workflow to main without explicit approval.
     if: github.event_name == 'workflow_dispatch' || github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 35
     steps:
       - name: Check out development branch only
