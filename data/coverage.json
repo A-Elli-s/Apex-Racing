@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-29T15:37:44.765847+00:00",
+  "generated_at": "2026-10-29T15:38:35.799923+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -74,8 +74,8 @@
       "ready_for_release": false
     },
     "NASCAR O’Reilly": {
-      "calendar_events": 0,
-      "calendar_available": false,
+      "calendar_events": 33,
+      "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
@@ -334,7 +334,7 @@
   },
   "summary": {
     "total_championships": 23,
-    "calendars_with_events": 18,
+    "calendars_with_events": 19,
     "points_tables_with_numeric_totals": 21,
     "race_results_snapshots": 2,
     "full_race_classifications": 0,
