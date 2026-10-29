@@ -22,6 +22,11 @@ SERIES = (
 CALENDAR = {
     "F1": "Formula 1", "F2": "Formula 2", "F3": "Formula 3",
     "IndyCar": "IndyCar", "WEC": "WEC", "Formula E": "Formula E",
+    "IMSA": "IMSA", "Supercars": "Supercars", "NHRA": "NHRA",
+    "WorldSBK": "WorldSBK", "Supercross": "Supercross",
+    "Pro Motocross": "Pro Motocross", "MXGP": "MXGP",
+    "Dakar Rally": "Dakar Rally", "Off-road racing": "SCORE Off-road",
+    "Monster Jam": "Monster Jam",
     "WRC": "WRC", "MotoGP": "MotoGP / Moto2 / Moto3",
     "Moto2": "MotoGP / Moto2 / Moto3", "Moto3": "MotoGP / Moto2 / Moto3",
     "NASCAR Cup": "NASCAR Cup / O’Reilly / Trucks",
@@ -29,8 +34,8 @@ CALENDAR = {
     "NASCAR Trucks": "NASCAR Cup / O’Reilly / Trucks",
 }
 NASCAR_TAG = {
-    "NASCAR Cup": "CUP", "NASCAR O’Reilly": "O’REILLY",
-    "NASCAR Trucks": "TRUCK",
+    "NASCAR Cup": "CUP —", "NASCAR O’Reilly": "XFINITY —",
+    "NASCAR Trucks": "TRUCK —",
 }
 
 def read(path):
@@ -155,7 +160,9 @@ def main():
         if name in NASCAR_TAG:
             tag = NASCAR_TAG[name]
             events = [event for event in events if str(event.get("name", "")).upper().startswith(tag)]
-        valid_events = [e for e in events if isinstance(e, dict) and str(e.get("date", "")).startswith(str(YEAR) + "-")
+        valid_events = [e for e in events if isinstance(e, dict)
+                        and (str(e.get("date", "")).startswith(str(YEAR) + "-")
+                             or (name == "Formula E" and str(e.get("date", "")).startswith(str(YEAR - 1) + "-")))
                         and e.get("name") and e.get("venue") and e.get("url")]
         points = snapshot_for(manifest, name, "seasons")
         results = snapshot_for(manifest, name, "race_results_seasons")
