@@ -26,7 +26,7 @@ CALENDAR_KEYS = {
     'Moto3':'MotoGP / Moto2 / Moto3',
     'Off-road racing':'SCORE Off-road',
 }
-NASCAR_PREFIX = {'NASCAR Cup':'CUP —','NASCAR O’Reilly':'XFINITY —','NASCAR Trucks':'TRUCK —'}
+NASCAR_PREFIX = {'NASCAR Cup':'CUP —','NASCAR O’Reilly':'O’REILLY —','NASCAR Trucks':'TRUCK —'}
 
 def load(path):
     try:
