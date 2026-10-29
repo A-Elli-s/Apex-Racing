@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-28",
+  "checked_at": "2026-10-29",
   "season": 2026,
   "purpose": "Source-rights research only. Not a blanket grant of rights for Apex Racing World.",
   "sources": {
@@ -17,7 +17,20 @@
       "repository_license": "CC0 1.0 Universal",
       "commercial_use": "upstream_rights_review_required",
       "note": "Repository declares CC0, but collects some source material from other racing sites and Wikipedia. CC0 by the repository author cannot automatically license third-party rights; review each upstream dataset and attribution obligations before commercial redistribution."
+    },
+    "Wikipedia CC BY-SA 4.0": {
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "content_scope": "Wikipedia text and contributor-authored tables only; verify each page's notices and third-party inclusions",
+      "commercial_use": "conditionally_allowed",
+      "requirements": [
+        "attribution and source link",
+        "link to license",
+        "indicate modifications",
+        "share adapted material under compatible ShareAlike terms",
+        "review third-party content and database/organizer restrictions separately"
+      ],
+      "note": "Commercial reuse is permitted by CC BY-SA 4.0 subject to its conditions. Do not treat an entire racing dataset as cleared solely because a community snapshot cites Wikipedia."
     }
   },
-  "outstanding": "Review organizer/third-party terms, data licensing, trademarks, source attribution and commercial reuse before setting any championship commercial_reuse_cleared=true."
+  "outstanding": "Review organizer/third-party terms, data licensing, trademarks, source attribution and commercial reuse before setting any championship commercial_reuse_cleared=true. Wikipedia CC BY-SA can allow commercial use when its conditions and underlying rights are satisfied; Jolpica CC BY-NC-SA requires separate commercial permission."
 }
