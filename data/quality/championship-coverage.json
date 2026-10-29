@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-28T15:56:58.539466+00:00",
+  "generated_at": "2026-10-29T15:38:03.471726+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 21,
-  "calendar_feeds_present": 20,
+  "calendar_feeds_present": 21,
   "race_winner_feeds_present": 2,
   "fully_verified_championships": 0,
   "complete": false,
@@ -69,7 +69,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 33,
         "source_url": "https://www.indycar.com/standings/2026",
-        "retrieved_at": "2026-10-26T15:22:52.146142+00:00",
+        "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
@@ -149,8 +149,24 @@
         "status": "points_available_not_independently_verified",
         "rows": 40,
         "source_url": "https://www.imsa.com/standings/",
-        "retrieved_at": "2026-10-26T15:22:52.146142+00:00",
-        "calculation_audit": null
+        "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
+        "calculation_audit": {
+          "status": "verified_against_published_total",
+          "method": "sum of already-awarded event points; not finishing positions",
+          "event_columns": [
+            "Daytona Intl",
+            "Sebring",
+            "Long Beach",
+            "WeatherTech Raceway",
+            "Detroit Grand Prix",
+            "Watkins Glen",
+            "Road America",
+            "Indy",
+            "Road Atlanta"
+          ],
+          "rows_checked": 40,
+          "checked_at": "2026-10-28T15:59:09.741231+00:00"
+        }
       },
       "individual_race_results": {
         "status": "missing"
@@ -207,14 +223,14 @@
     },
     "Supercars": {
       "calendar": {
-        "status": "calendar_entries_present_not_independently_verified",
+        "status": "partial_calendar_entries_not_verified",
         "events": 2
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 32,
+        "rows": 33,
         "source_url": "https://www.supercars.com/standings",
-        "retrieved_at": "2026-10-16T18:22:38.036150+00:00",
+        "retrieved_at": "2026-10-28T15:57:01.976048+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
@@ -224,14 +240,14 @@
     },
     "NHRA": {
       "calendar": {
-        "status": "calendar_entries_present_not_independently_verified",
+        "status": "partial_calendar_entries_not_verified",
         "events": 2
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
         "rows": 36,
         "source_url": "https://www.nhra.com/standings",
-        "retrieved_at": "2026-10-26T15:22:52.146142+00:00",
+        "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
@@ -246,12 +262,12 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 5,
-        "source_url": "https://stats.motogp.com/en/world-standing",
-        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "rows": 32,
+        "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
+        "retrieved_at": "2026-10-28T15:59:08.805783+00:00",
         "calculation_audit": {
-          "status": "published_source_snapshot",
-          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+          "status": "community_points_not_officially_verified",
+          "method": "published community points, not inferred from race finishes"
         }
       },
       "individual_race_results": {
@@ -266,12 +282,12 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 6,
-        "source_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
-        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "rows": 34,
+        "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
+        "retrieved_at": "2026-10-28T15:59:09.210812+00:00",
         "calculation_audit": {
-          "status": "published_source_snapshot",
-          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+          "status": "community_points_not_officially_verified",
+          "method": "published community points, not inferred from race finishes"
         }
       },
       "individual_race_results": {
@@ -286,12 +302,12 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 5,
-        "source_url": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
-        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "rows": 32,
+        "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
+        "retrieved_at": "2026-10-28T15:59:09.678701+00:00",
         "calculation_audit": {
-          "status": "published_source_snapshot",
-          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+          "status": "community_points_not_officially_verified",
+          "method": "published community points, not inferred from race finishes"
         }
       },
       "individual_race_results": {
@@ -415,8 +431,8 @@
     },
     "Off-road racing": {
       "calendar": {
-        "status": "missing",
-        "events": 0
+        "status": "partial_calendar_entries_not_verified",
+        "events": 1
       },
       "championship_points": {
         "status": "missing",
