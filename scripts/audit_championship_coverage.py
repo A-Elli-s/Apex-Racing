@@ -24,6 +24,7 @@ CALENDAR_KEYS = {
     'NASCAR Trucks':'NASCAR Cup / O’Reilly / Trucks',
     'MotoGP':'MotoGP / Moto2 / Moto3','Moto2':'MotoGP / Moto2 / Moto3',
     'Moto3':'MotoGP / Moto2 / Moto3',
+    'Off-road racing':'SCORE Off-road',
 }
 NASCAR_PREFIX = {'NASCAR Cup':'CUP —','NASCAR O’Reilly':'XFINITY —','NASCAR Trucks':'TRUCK —'}
 
@@ -123,6 +124,8 @@ def calendar_audit(series,races):
             count+=1
     if not count:
         return {'status':'missing','events':0}
+    if count < 3:
+        return {'status':'partial_calendar_entries_not_verified','events':count}
     if series in ('MotoGP','Moto2','Moto3'):
         return {'status':'shared_calendar_not_class_verified','events':count}
     if series=='NASCAR O’Reilly':
