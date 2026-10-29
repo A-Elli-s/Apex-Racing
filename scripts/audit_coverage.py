@@ -34,7 +34,7 @@ CALENDAR = {
     "NASCAR Trucks": "NASCAR Cup / O’Reilly / Trucks",
 }
 NASCAR_TAG = {
-    "NASCAR Cup": "CUP —", "NASCAR O’Reilly": "XFINITY —",
+    "NASCAR Cup": "CUP —", "NASCAR O’Reilly": "O’REILLY —",
     "NASCAR Trucks": "TRUCK —",
 }
 
