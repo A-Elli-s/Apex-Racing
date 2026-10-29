@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-29T15:38:03.471726+00:00",
+  "generated_at": "2026-10-29T15:38:40.561230+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 21,
-  "calendar_feeds_present": 21,
+  "calendar_feeds_present": 22,
   "race_winner_feeds_present": 2,
   "fully_verified_championships": 0,
   "complete": false,
@@ -99,8 +99,8 @@
     },
     "NASCAR O’Reilly": {
       "calendar": {
-        "status": "missing",
-        "events": 0
+        "status": "legacy_xfinity_labels_need_validation",
+        "events": 33
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
