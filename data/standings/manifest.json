@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T15:39:34.368040+00:00",
+  "updated": "2026-10-30T15:57:37.991511+00:00",
   "series": {
     "WEC": {
       "official_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
@@ -43,6 +43,10 @@
       "provider": "Wikipedia community standings (not official)",
       "seasons": {
         "2026": "/data/standings/f3-standings-2026.json"
+      },
+      "race_results_seasons": {
+        "2026": "/data/standings/f3-2026.json",
+        "2025": "/data/standings/f3-2025.json"
       }
     },
     "F2": {
@@ -61,30 +65,30 @@
       }
     },
     "MotoGP": {
-      "official_url": "https://www.motogp.com/en/world-standing/2026/motogp/championship-standings",
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/RidersChampionship",
       "provider": "Wikipedia community standings (not official)",
       "seasons": {
-        "2026": "/data/standings/motogp-community-2026.json"
+        "2026": "/data/standings/motogp-2026.json"
       },
       "reuse_review_required": true,
       "attribution": "Wikipedia contributors",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     "Moto2": {
-      "official_url": "https://www.motogp.com/en/world-standing/2026/moto2/championship-standings",
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
       "provider": "Wikipedia community standings (not official)",
       "seasons": {
-        "2026": "/data/standings/moto2-community-2026.json"
+        "2026": "/data/standings/moto2-2026.json"
       },
       "reuse_review_required": true,
       "attribution": "Wikipedia contributors",
       "license_url": "https://creativecommons.org/licenses/by-sa/4.0/"
     },
     "Moto3": {
-      "official_url": "https://www.motogp.com/en/world-standing/2026/moto3/championship-standings",
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/RidersChampionship",
       "provider": "Wikipedia community standings (not official)",
       "seasons": {
-        "2026": "/data/standings/moto3-community-2026.json"
+        "2026": "/data/standings/moto3-2026.json"
       },
       "reuse_review_required": true,
       "attribution": "Wikipedia contributors",
