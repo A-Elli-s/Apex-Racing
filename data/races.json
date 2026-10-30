@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-27T20:00:00+00:00",
+  "updated": "2026-10-30T15:55:00+00:00",
   "series": {
     "Formula 2": [
       {
@@ -1559,38 +1559,312 @@
     ],
     "Supercars": [
       {
+        "date": "2026-02-22",
+        "name": "Sydney 500",
+        "venue": "Sydney Motorsport Park",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-03-08",
+        "name": "Melbourne SuperSprint",
+        "venue": "Albert Park Grand Prix Circuit",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-04-12",
+        "name": "ITM Taupō Super 440",
+        "venue": "Taupō International Motorsport Park",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-04-19",
+        "name": "Christchurch Super 440",
+        "venue": "Ruapuna Motorsport Park, Christchurch",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-05-24",
+        "name": "Tasmania Super 440",
+        "venue": "Symmons Plains Raceway",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-06-21",
+        "name": "betr Darwin Triple Crown",
+        "venue": "Hidden Valley Raceway",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-07-12",
+        "name": "NTI Townsville 500",
+        "venue": "Reid Park Street Circuit",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-08-02",
+        "name": "Perth Super 440",
+        "venue": "Wanneroo Raceway",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "Century Batteries Ipswich Super 440",
+        "venue": "Queensland Raceway",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-09-13",
+        "name": "AirTouch 500 at The Bend",
+        "venue": "The Bend Motorsport Park",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-10-11",
+        "name": "Repco Bathurst 1000",
+        "venue": "Mount Panorama Circuit",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-10-25",
+        "name": "Boost Mobile Gold Coast 500",
+        "venue": "Surfers Paradise Street Circuit",
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
         "date": "2026-11-08",
-        "name": "Penrite Oil Sandown 500 (Nov 6–8)",
+        "name": "Penrite Oil Sandown 500",
         "venue": "Sandown Raceway, Melbourne",
-        "url": "https://www.supercars.com/calendar",
-        "source_url": "https://www.supercars.com/calendar",
-        "verified_on": "2026-10-27"
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
       },
       {
         "date": "2026-11-29",
-        "name": "bp Adelaide Grand Final (Nov 26–29)",
+        "name": "bp Adelaide Grand Final",
         "venue": "Adelaide Street Circuit",
-        "url": "https://www.supercars.com/calendar",
-        "source_url": "https://www.supercars.com/calendar",
-        "verified_on": "2026-10-27"
+        "url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "source_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
       }
     ],
     "NHRA": [
       {
-        "date": "2026-11-01",
-        "name": "MOPAR NHRA Las Vegas Nationals (Oct 29–Nov 1)",
-        "venue": "The Strip at Las Vegas Motor Speedway",
+        "date": "2026-03-08",
+        "name": "AMALIE Motor Oil NHRA Gatornationals",
+        "venue": "Gainesville Raceway",
         "url": "https://www.nhra.com/schedule/2026",
         "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-27"
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
       },
       {
-        "date": "2026-11-15",
-        "name": "In-N-Out Burger NHRA Finals (Nov 12–15)",
+        "date": "2026-03-22",
+        "name": "FMP NHRA Arizona Nationals presented by NGK Spark Plugs",
+        "venue": "Firebird Motorsports Park",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-04-12",
+        "name": "Lucas Oil NHRA Winternationals",
         "venue": "In-N-Out Burger Pomona Dragstrip",
         "url": "https://www.nhra.com/schedule/2026",
         "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-27"
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-04-26",
+        "name": "NHRA 4-Wide Nationals",
+        "venue": "zMax Dragway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-05-03",
+        "name": "NHRA Southern Nationals",
+        "venue": "South Georgia Motorsports Park",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-05-17",
+        "name": "Gerber Collision & Glass Route 66 NHRA Nationals presented by PEAK",
+        "venue": "Route 66 Raceway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-05-31",
+        "name": "NHRA Potomac Nationals presented by JEGS",
+        "venue": "Maryland International Raceway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-06-07",
+        "name": "NHRA New England Nationals presented by bproauto",
+        "venue": "New England Dragway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-06-14",
+        "name": "Super Grip NHRA Thunder Valley Nationals",
+        "venue": "Bristol Dragway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-06-28",
+        "name": "Summit Racing Equipment NHRA Nationals",
+        "venue": "Summit Racing Equipment Motorsports Park",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-07-19",
+        "name": "DENSO NHRA Sonoma Nationals presented by PowerEdge",
+        "venue": "Sonoma Raceway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-07-26",
+        "name": "Muckleshoot Casino Resort NHRA Northwest Nationals",
+        "venue": "Pacific Raceways",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-08-23",
+        "name": "NHRA Brainerd Nationals",
+        "venue": "Brainerd International Raceway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-09-07",
+        "name": "Cornwell Quality Tools NHRA U.S. Nationals",
+        "venue": "Lucas Oil Indianapolis Raceway Park",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-09-20",
+        "name": "Dodge NHRA Great Lakes Nationals presented by MOPAR",
+        "venue": "US 131 Motorsports Park",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-09-27",
+        "name": "NHRA Nationals at The Rock",
+        "venue": "Rockingham Dragway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-10-04",
+        "name": "NAPA Auto Parts NHRA Midwest Nationals",
+        "venue": "World Wide Technology Raceway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-10-18",
+        "name": "Texas NHRA FallNationals",
+        "venue": "Texas Motorplex",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-11-01",
+        "name": "MOPAR NHRA Las Vegas Nationals powered by Dodge",
+        "venue": "The Strip at Las Vegas Motor Speedway",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
+      },
+      {
+        "date": "2026-11-15",
+        "name": "In-N-Out Burger NHRA Finals",
+        "venue": "In-N-Out Burger Pomona Dragstrip",
+        "url": "https://www.nhra.com/schedule/2026",
+        "source_url": "https://www.nhra.com/schedule/2026",
+        "verified_on": "2026-10-30",
+        "date_represents": "event_final_day"
       }
     ],
     "SCORE Off-road": [
