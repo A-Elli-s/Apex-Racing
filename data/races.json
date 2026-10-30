@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T15:55:00+00:00",
+  "updated": "2026-10-30T15:56:00+00:00",
   "series": {
     "Formula 2": [
       {
@@ -1687,184 +1687,20 @@
     ],
     "NHRA": [
       {
-        "date": "2026-03-08",
-        "name": "AMALIE Motor Oil NHRA Gatornationals",
-        "venue": "Gainesville Raceway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-03-22",
-        "name": "FMP NHRA Arizona Nationals presented by NGK Spark Plugs",
-        "venue": "Firebird Motorsports Park",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-04-12",
-        "name": "Lucas Oil NHRA Winternationals",
-        "venue": "In-N-Out Burger Pomona Dragstrip",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-04-26",
-        "name": "NHRA 4-Wide Nationals",
-        "venue": "zMax Dragway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-05-03",
-        "name": "NHRA Southern Nationals",
-        "venue": "South Georgia Motorsports Park",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-05-17",
-        "name": "Gerber Collision & Glass Route 66 NHRA Nationals presented by PEAK",
-        "venue": "Route 66 Raceway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-05-31",
-        "name": "NHRA Potomac Nationals presented by JEGS",
-        "venue": "Maryland International Raceway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-06-07",
-        "name": "NHRA New England Nationals presented by bproauto",
-        "venue": "New England Dragway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-06-14",
-        "name": "Super Grip NHRA Thunder Valley Nationals",
-        "venue": "Bristol Dragway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-06-28",
-        "name": "Summit Racing Equipment NHRA Nationals",
-        "venue": "Summit Racing Equipment Motorsports Park",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-07-19",
-        "name": "DENSO NHRA Sonoma Nationals presented by PowerEdge",
-        "venue": "Sonoma Raceway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-07-26",
-        "name": "Muckleshoot Casino Resort NHRA Northwest Nationals",
-        "venue": "Pacific Raceways",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-08-23",
-        "name": "NHRA Brainerd Nationals",
-        "venue": "Brainerd International Raceway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-09-07",
-        "name": "Cornwell Quality Tools NHRA U.S. Nationals",
-        "venue": "Lucas Oil Indianapolis Raceway Park",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-09-20",
-        "name": "Dodge NHRA Great Lakes Nationals presented by MOPAR",
-        "venue": "US 131 Motorsports Park",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-09-27",
-        "name": "NHRA Nationals at The Rock",
-        "venue": "Rockingham Dragway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-10-04",
-        "name": "NAPA Auto Parts NHRA Midwest Nationals",
-        "venue": "World Wide Technology Raceway",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
-        "date": "2026-10-18",
-        "name": "Texas NHRA FallNationals",
-        "venue": "Texas Motorplex",
-        "url": "https://www.nhra.com/schedule/2026",
-        "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
-      },
-      {
         "date": "2026-11-01",
-        "name": "MOPAR NHRA Las Vegas Nationals powered by Dodge",
+        "name": "MOPAR NHRA Las Vegas Nationals (Oct 29–Nov 1)",
         "venue": "The Strip at Las Vegas Motor Speedway",
         "url": "https://www.nhra.com/schedule/2026",
         "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
+        "verified_on": "2026-10-27"
       },
       {
         "date": "2026-11-15",
-        "name": "In-N-Out Burger NHRA Finals",
+        "name": "In-N-Out Burger NHRA Finals (Nov 12–15)",
         "venue": "In-N-Out Burger Pomona Dragstrip",
         "url": "https://www.nhra.com/schedule/2026",
         "source_url": "https://www.nhra.com/schedule/2026",
-        "verified_on": "2026-10-30",
-        "date_represents": "event_final_day"
+        "verified_on": "2026-10-27"
       }
     ],
     "SCORE Off-road": [
