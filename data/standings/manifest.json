@@ -123,14 +123,18 @@
       "provider": "Official championship website",
       "seasons": {
         "2026": "/data/standings/supercars-2026.json"
-      }
+      },
+      "reuse_review_required": true,
+      "commercial_reuse_cleared": false
     },
     "NHRA": {
       "official_url": "https://www.nhra.com/standings",
       "provider": "Official championship website",
       "seasons": {
         "2026": "/data/standings/nhra-2026.json"
-      }
+      },
+      "reuse_review_required": true,
+      "commercial_reuse_cleared": false
     },
     "WorldSBK": {
       "official_url": "https://www.worldsbk.com/en/results%20statistics",
