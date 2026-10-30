@@ -91,26 +91,41 @@ def results_valid(snapshot):
         for row in data
     )
 
-def full_classifications_valid(snapshot):
-    """Winner-only event summaries are not race classifications.
+def full_classifications_valid(snapshot, completed_calendar_events):
+    """Strict structural candidate only; never proof of official classifications.
 
-    Each event needs an identified round and a ranked multi-competitor
-    classification. This structural test is NOT official verification or proof
-    that every round, sprint, adjustment or penalty is represented.
+    Require at least one distinct ranked classification per elapsed scheduled
+    round, and keep official source review as a separate release requirement.
     """
-    if not snapshot:
+    if not snapshot or completed_calendar_events < 1:
         return False
     data = snapshot.get("data")
     events = data if isinstance(data, list) else data.get("results") if isinstance(data, dict) else None
-    if not isinstance(events, list) or len(events) < 3:
+    if not isinstance(events, list) or len(events) < completed_calendar_events:
         return False
+    identifiers = set()
     for event in events:
-        if not isinstance(event, dict) or not (event.get("round") or event.get("event") or event.get("eprix")):
+        if not isinstance(event, dict):
             return False
+        event_id = str(event.get("round") or event.get("event") or event.get("eprix") or "").strip()
+        if not event_id or event_id in identifiers:
+            return False
+        identifiers.add(event_id)
         rows = event.get("classification") or event.get("results")
         if not isinstance(rows, list) or len(rows) < 3:
             return False
-        if not all(isinstance(row, dict) and (row.get("position") is not None or row.get("rank") is not None) for row in rows):
+        positions = []
+        for row in rows:
+            if not isinstance(row, dict):
+                return False
+            try:
+                position = int(row.get("position", row.get("rank")))
+            except (ValueError, TypeError):
+                return False
+            if position < 1:
+                return False
+            positions.append(position)
+        if len(set(positions)) != len(positions):
             return False
     return True
 
@@ -168,10 +183,14 @@ def main():
         results = snapshot_for(manifest, name, "race_results_seasons")
         entry = manifest.get("series", {}).get(name, {})
         provider = (points or {}).get("provider") or entry.get("provider", "")
-        points_ok = points_valid(points)
+        points_ok = points_valid(points) and not entry.get("partial_field")
         calendar_ok = len(valid_events) >= 3
         results_ok = results_valid(results)
-        classifications_ok = full_classifications_valid(results)
+        today = dt.datetime.now(dt.timezone.utc).date()
+        completed_events = sum(
+            1 for e in valid_events if dt.date.fromisoformat(str(e["date"])) < today
+        )
+        classifications_ok = full_classifications_valid(results, completed_events)
         review = entry.get("verification", {})
         reviewed = (
             review.get("season") == YEAR
@@ -179,6 +198,7 @@ def main():
             and review.get("calendar") == "cross_checked"
             and review.get("race_results") == "complete_classifications_checked"
             and review.get("rights") == "approved"
+            and review.get("race_round_mapping") == "cross_checked"
         )
         rights_pending = bool(entry.get("reuse_review_required") or (points or {}).get("reuse_review_required"))
         # Missing permission metadata does not mean commercial reuse is allowed.
@@ -190,6 +210,7 @@ def main():
                          officially_checked and rights_cleared and not rights_pending)
         report["series"][name] = {
             "calendar_events": len(valid_events),
+            "completed_calendar_events": completed_events,
             "calendar_available": calendar_ok,
             "points_table_available": points_ok,
             "race_results_snapshot_available": results_ok,
