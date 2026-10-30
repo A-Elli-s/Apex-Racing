@@ -13,12 +13,12 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: dev-non-f1-standings
+  group: dev-racing-data-refresh
   cancel-in-progress: false
 jobs:
   refresh:
     if: github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
@@ -49,5 +49,14 @@ jobs:
           git add data/standings/ data/coverage.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh and audit staged non-F1 championship standings"
-            git push origin HEAD:dev
+            for attempt in 1 2 3 4; do
+              git fetch origin dev
+              git rebase origin/dev
+              if git push origin HEAD:dev; then
+                exit 0
+              fi
+              sleep $((attempt * 3))
+            done
+            echo "Could not publish dev standings after 4 attempts" >&2
+            exit 1
           fi

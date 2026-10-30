@@ -1,0 +1,185 @@
+{
+  "series": "MotoGP",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
+  "official_url": "https://www.motogp.com/en/world-standing/2026/motogp/championship-standings",
+  "retrieved_at": "2026-10-29T15:39:33.043803+00:00",
+  "provider": "Wikipedia community standings (not official)",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Marc Márquez",
+        "365"
+      ],
+      [
+        "2",
+        "Jorge Martín",
+        "355"
+      ],
+      [
+        "3",
+        "Marco Bezzecchi",
+        "315"
+      ],
+      [
+        "4",
+        "Pedro Acosta",
+        "263"
+      ],
+      [
+        "5",
+        "Ai Ogura",
+        "259"
+      ],
+      [
+        "6",
+        "Fabio Di Giannantonio",
+        "252"
+      ],
+      [
+        "7",
+        "Raúl Fernández",
+        "236"
+      ],
+      [
+        "8",
+        "Álex Márquez",
+        "181"
+      ],
+      [
+        "9",
+        "Francesco Bagnaia",
+        "166"
+      ],
+      [
+        "10",
+        "Fermín Aldeguer",
+        "125"
+      ],
+      [
+        "11",
+        "Enea Bastianini",
+        "122"
+      ],
+      [
+        "12",
+        "Luca Marini",
+        "108"
+      ],
+      [
+        "13",
+        "Brad Binder",
+        "108"
+      ],
+      [
+        "14",
+        "Diogo Moreira",
+        "76"
+      ],
+      [
+        "15",
+        "Fabio Quartararo",
+        "74"
+      ],
+      [
+        "16",
+        "Franco Morbidelli",
+        "59"
+      ],
+      [
+        "17",
+        "Johann Zarco",
+        "51"
+      ],
+      [
+        "18",
+        "Joan Mir",
+        "33"
+      ],
+      [
+        "19",
+        "Jack Miller",
+        "31"
+      ],
+      [
+        "20",
+        "Álex Rins",
+        "25"
+      ],
+      [
+        "21",
+        "Toprak Razgatlıoğlu",
+        "18"
+      ],
+      [
+        "22",
+        "Maverick Viñales",
+        "12"
+      ],
+      [
+        "23",
+        "Iker Lecuona",
+        "10"
+      ],
+      [
+        "24",
+        "Augusto Fernández",
+        "6"
+      ],
+      [
+        "25",
+        "Pol Espargaró",
+        "5"
+      ],
+      [
+        "26",
+        "Somkiat Chantra",
+        "3"
+      ],
+      [
+        "27",
+        "Takaaki Nakagami",
+        "3"
+      ],
+      [
+        "28",
+        "Cal Crutchlow",
+        "0"
+      ],
+      [
+        "29",
+        "Jonas Folger",
+        "0"
+      ],
+      [
+        "30",
+        "Lorenzo Savadori",
+        "0"
+      ],
+      [
+        "31",
+        "Michele Pirro",
+        "0"
+      ],
+      [
+        "32",
+        "Aleix Espargaró",
+        "0"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "community_points_not_officially_verified",
+    "method": "published community points, not inferred from race finishes"
+  }
+}

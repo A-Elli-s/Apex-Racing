@@ -1,0 +1,465 @@
+{
+  "generated_at": "2026-10-30T15:54:09.180987+00:00",
+  "season": 2026,
+  "target_championships": 23,
+  "points_tables_available": 20,
+  "calendar_feeds_present": 22,
+  "race_winner_feeds_present": 2,
+  "partial_classification_feeds_present": 0,
+  "fully_verified_championships": 0,
+  "complete": false,
+  "note": "Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.",
+  "championships": {
+    "F1": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 23
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 23,
+        "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
+        "retrieved_at": "2026-10-22T15:27:37.127236+00:00",
+        "calculation_audit": null
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "F2": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 14
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 23,
+        "source_url": "https://en.wikipedia.org/wiki/2026_Formula_2_Championship",
+        "retrieved_at": "2026-10-23T15:26:56.900474+00:00",
+        "calculation_audit": null
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "F3": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 9
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 35,
+        "source_url": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
+        "retrieved_at": "2026-10-23T15:26:56.900474+00:00",
+        "calculation_audit": null
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "IndyCar": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 17
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 33,
+        "source_url": "https://www.indycar.com/standings/2026",
+        "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
+        "calculation_audit": null
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "NASCAR Cup": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 40
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 16,
+        "source_url": "https://www.nascar.com/standings/nascar-cup-series/",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "partial_source_cross_check",
+          "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "NASCAR O’Reilly": {
+      "calendar": {
+        "status": "legacy_xfinity_labels_need_validation",
+        "events": 33
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 12,
+        "source_url": "https://www.nascar.com/standings/nascar-oreilly-auto-parts-series/",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "partial_source_cross_check",
+          "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "WEC": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 9
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 49,
+        "source_url": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+        "retrieved_at": "2026-10-25T16:12:50.085670+00:00",
+        "calculation_audit": {
+          "status": "officially_verified",
+          "method": "FIA per-round awarded points sum reconciled with FIA total",
+          "rows_checked": 49,
+          "verification_source": "https://www.fia.com/events/world-endurance-championship/season-2026/standings",
+          "verification_date": "2026-10-25"
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "IMSA": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 11
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 40,
+        "source_url": "https://www.imsa.com/standings/",
+        "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
+        "calculation_audit": {
+          "status": "verified_against_published_total",
+          "method": "sum of already-awarded event points; not finishing positions",
+          "event_columns": [
+            "Daytona Intl",
+            "Sebring",
+            "Long Beach",
+            "WeatherTech Raceway",
+            "Detroit Grand Prix",
+            "Watkins Glen",
+            "Road America",
+            "Indy",
+            "Road Atlanta"
+          ],
+          "rows_checked": 40,
+          "checked_at": "2026-10-29T15:39:34.425694+00:00"
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Formula E": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 18
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 20,
+        "source_url": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+        "retrieved_at": "2026-10-25T16:13:54.168863+00:00",
+        "calculation_audit": {
+          "status": "officially_verified",
+          "method": "FIA published championship points; per-event totals may include adjustments",
+          "rows_checked": 20,
+          "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
+          "verification_date": "2026-10-25"
+        }
+      },
+      "individual_race_results": {
+        "status": "winner_summaries_available_not_full_classifications",
+        "count": 17,
+        "completed_calendar_events": 17
+      },
+      "fully_verified": false
+    },
+    "WRC": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 14
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 36,
+        "source_url": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+        "retrieved_at": "2026-10-25T16:12:50.085670+00:00",
+        "calculation_audit": {
+          "status": "officially_verified",
+          "method": "published FIA points total; rally bonus and eligibility rules not independently recalculated",
+          "rows_checked": 36,
+          "verification_source": "https://www.fia.com/events/world-rally-championship/season-2026/standings",
+          "verification_date": "2026-10-25"
+        }
+      },
+      "individual_race_results": {
+        "status": "winner_summaries_available_not_full_classifications",
+        "count": 14,
+        "completed_calendar_events": 13
+      },
+      "fully_verified": false
+    },
+    "Supercars": {
+      "calendar": {
+        "status": "partial_calendar_entries_not_verified",
+        "events": 2
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 33,
+        "source_url": "https://www.supercars.com/standings",
+        "retrieved_at": "2026-10-28T15:57:01.976048+00:00",
+        "calculation_audit": null
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "NHRA": {
+      "calendar": {
+        "status": "partial_calendar_entries_not_verified",
+        "events": 2
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 36,
+        "source_url": "https://www.nhra.com/standings",
+        "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
+        "calculation_audit": null
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "MotoGP": {
+      "calendar": {
+        "status": "shared_calendar_not_class_verified",
+        "events": 22
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 32,
+        "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
+        "retrieved_at": "2026-10-29T15:39:33.043803+00:00",
+        "calculation_audit": {
+          "status": "community_points_not_officially_verified",
+          "method": "published community points, not inferred from race finishes"
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Moto2": {
+      "calendar": {
+        "status": "shared_calendar_not_class_verified",
+        "events": 22
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 34,
+        "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
+        "retrieved_at": "2026-10-29T15:39:33.687641+00:00",
+        "calculation_audit": {
+          "status": "community_points_not_officially_verified",
+          "method": "published community points, not inferred from race finishes"
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Moto3": {
+      "calendar": {
+        "status": "shared_calendar_not_class_verified",
+        "events": 22
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 32,
+        "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
+        "retrieved_at": "2026-10-29T15:39:34.367534+00:00",
+        "calculation_audit": {
+          "status": "community_points_not_officially_verified",
+          "method": "published community points, not inferred from race finishes"
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "WorldSBK": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 12
+      },
+      "championship_points": {
+        "status": "partial_points_table_not_complete",
+        "rows": 10,
+        "reason": "Manifest explicitly marks this championship field partial"
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Supercross": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 17
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 10,
+        "source_url": "https://www.supercrosslive.com/championship-standings/",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Pro Motocross": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 11
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 8,
+        "source_url": "https://www.supercross.com/pages/standings",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "MXGP": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 19
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 10,
+        "source_url": "https://mxgpresults.com/mxgp/standings",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "NASCAR Trucks": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 25
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 10,
+        "source_url": "https://www.nascar.com/standings/nascar-craftsman-truck-series/",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "partial_source_cross_check",
+          "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Dakar Rally": {
+      "calendar": {
+        "status": "missing",
+        "events": 0
+      },
+      "championship_points": {
+        "status": "missing",
+        "reason": "No current-season points snapshot"
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Off-road racing": {
+      "calendar": {
+        "status": "partial_calendar_entries_not_verified",
+        "events": 1
+      },
+      "championship_points": {
+        "status": "missing",
+        "reason": "No current-season points snapshot"
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    },
+    "Monster Jam": {
+      "calendar": {
+        "status": "calendar_entries_present_not_independently_verified",
+        "events": 5
+      },
+      "championship_points": {
+        "status": "points_available_not_independently_verified",
+        "rows": 10,
+        "source_url": "https://www.monsterjam.com/en-us/points-standings/",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
+        "calculation_audit": {
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
+        }
+      },
+      "individual_race_results": {
+        "status": "missing"
+      },
+      "fully_verified": false
+    }
+  }
+}

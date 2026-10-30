@@ -22,6 +22,11 @@ SERIES = (
 CALENDAR = {
     "F1": "Formula 1", "F2": "Formula 2", "F3": "Formula 3",
     "IndyCar": "IndyCar", "WEC": "WEC", "Formula E": "Formula E",
+    "IMSA": "IMSA", "Supercars": "Supercars", "NHRA": "NHRA",
+    "WorldSBK": "WorldSBK", "Supercross": "Supercross",
+    "Pro Motocross": "Pro Motocross", "MXGP": "MXGP",
+    "Dakar Rally": "Dakar Rally", "Off-road racing": "SCORE Off-road",
+    "Monster Jam": "Monster Jam",
     "WRC": "WRC", "MotoGP": "MotoGP / Moto2 / Moto3",
     "Moto2": "MotoGP / Moto2 / Moto3", "Moto3": "MotoGP / Moto2 / Moto3",
     "NASCAR Cup": "NASCAR Cup / O’Reilly / Trucks",
@@ -29,8 +34,8 @@ CALENDAR = {
     "NASCAR Trucks": "NASCAR Cup / O’Reilly / Trucks",
 }
 NASCAR_TAG = {
-    "NASCAR Cup": "CUP", "NASCAR O’Reilly": "O’REILLY",
-    "NASCAR Trucks": "TRUCK",
+    "NASCAR Cup": "CUP —", "NASCAR O’Reilly": "O’REILLY —",
+    "NASCAR Trucks": "TRUCK —",
 }
 
 def read(path):
@@ -86,6 +91,45 @@ def results_valid(snapshot):
         for row in data
     )
 
+def full_classifications_valid(snapshot, completed_calendar_events):
+    """Strict structural candidate only; never proof of official classifications.
+
+    Require at least one distinct ranked classification per elapsed scheduled
+    round, and keep official source review as a separate release requirement.
+    """
+    if not snapshot or completed_calendar_events < 1:
+        return False
+    data = snapshot.get("data")
+    events = data if isinstance(data, list) else data.get("results") if isinstance(data, dict) else None
+    if not isinstance(events, list) or len(events) < completed_calendar_events:
+        return False
+    identifiers = set()
+    for event in events:
+        if not isinstance(event, dict):
+            return False
+        event_id = str(event.get("round") or event.get("event") or event.get("eprix") or "").strip()
+        if not event_id or event_id in identifiers:
+            return False
+        identifiers.add(event_id)
+        rows = event.get("classification") or event.get("results")
+        if not isinstance(rows, list) or len(rows) < 3:
+            return False
+        positions = []
+        for row in rows:
+            if not isinstance(row, dict):
+                return False
+            try:
+                position = int(row.get("position", row.get("rank")))
+            except (ValueError, TypeError):
+                return False
+            if position < 1:
+                return False
+            positions.append(position)
+        if len(set(positions)) != len(positions):
+            return False
+    return True
+
+
 def reconcile_imsa(snapshot):
     """IMSA snapshot's per-event columns already include awarded event points.
 
@@ -131,27 +175,47 @@ def main():
         if name in NASCAR_TAG:
             tag = NASCAR_TAG[name]
             events = [event for event in events if str(event.get("name", "")).upper().startswith(tag)]
-        valid_events = [e for e in events if isinstance(e, dict) and str(e.get("date", "")).startswith(str(YEAR) + "-")
+        valid_events = [e for e in events if isinstance(e, dict)
+                        and (str(e.get("date", "")).startswith(str(YEAR) + "-")
+                             or (name == "Formula E" and str(e.get("date", "")).startswith(str(YEAR - 1) + "-")))
                         and e.get("name") and e.get("venue") and e.get("url")]
         points = snapshot_for(manifest, name, "seasons")
         results = snapshot_for(manifest, name, "race_results_seasons")
         entry = manifest.get("series", {}).get(name, {})
         provider = (points or {}).get("provider") or entry.get("provider", "")
-        points_ok = points_valid(points)
+        points_ok = points_valid(points) and not entry.get("partial_field")
         calendar_ok = len(valid_events) >= 3
         results_ok = results_valid(results)
+        today = dt.datetime.now(dt.timezone.utc).date()
+        completed_events = sum(
+            1 for e in valid_events if dt.date.fromisoformat(str(e["date"])) < today
+        )
+        classifications_ok = full_classifications_valid(results, completed_events)
+        review = entry.get("verification", {})
+        reviewed = (
+            review.get("season") == YEAR
+            and review.get("points") == "cross_checked"
+            and review.get("calendar") == "cross_checked"
+            and review.get("race_results") == "complete_classifications_checked"
+            and review.get("rights") == "approved"
+            and review.get("race_round_mapping") == "cross_checked"
+        )
         rights_pending = bool(entry.get("reuse_review_required") or (points or {}).get("reuse_review_required"))
         # Missing permission metadata does not mean commercial reuse is allowed.
         rights_cleared = entry.get("commercial_reuse_cleared") is True
         officially_checked = bool(points and points.get("points_audit", {}).get("status")
                                  in ("officially_verified", "calculated_and_officially_verified"))
-        release_ready = (points_ok and calendar_ok and results_ok and
+        release_ready = (points_ok and calendar_ok and classifications_ok and
+                         not entry.get("partial_field") and reviewed and
                          officially_checked and rights_cleared and not rights_pending)
         report["series"][name] = {
             "calendar_events": len(valid_events),
+            "completed_calendar_events": completed_events,
             "calendar_available": calendar_ok,
             "points_table_available": points_ok,
             "race_results_snapshot_available": results_ok,
+            "full_race_classifications_available": classifications_ok,
+            "review_record_complete": reviewed,
             "points_source": points.get("source_url") if points_ok else None,
             "provider": provider,
             "officially_cross_checked": officially_checked,
@@ -166,6 +230,7 @@ def main():
         "calendars_with_events": sum(v["calendar_available"] for v in report["series"].values()),
         "points_tables_with_numeric_totals": sum(v["points_table_available"] for v in report["series"].values()),
         "race_results_snapshots": sum(v["race_results_snapshot_available"] for v in report["series"].values()),
+        "full_race_classifications": sum(v["full_race_classifications_available"] for v in report["series"].values()),
         "complete_and_officially_cross_checked": sum(
             v["calendar_available"] and v["points_table_available"] and v["officially_cross_checked"]
             for v in report["series"].values()),

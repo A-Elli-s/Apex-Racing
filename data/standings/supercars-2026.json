@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://www.supercars.com/standings",
   "official_url": "https://www.supercars.com/standings",
-  "retrieved_at": "2026-10-16T18:22:38.036150+00:00",
+  "retrieved_at": "2026-10-28T15:57:01.976048+00:00",
   "data": {
     "headers": [
       "Pos",
@@ -21,44 +21,44 @@
         "Penrite Racing",
         "5",
         "7",
-        "3150",
-        "+102"
+        "4150",
+        "+72"
       ],
       [
         "2",
         "88 Broc Feeney SC",
         "Red Bull Ampol Racing",
+        "7",
         "6",
-        "4",
-        "3145",
-        "+97"
+        "4120",
+        "+42"
       ],
       [
         "3",
-        "888 Will Brown EC",
-        "Red Bull Ampol Racing",
-        "1",
-        "2",
-        "3103",
-        "+55"
-      ],
-      [
-        "4",
         "17 Brodie Kostecki",
         "Shell V-Power Racing Team",
         "8",
         "7",
-        "3096",
-        "+48"
+        "4096",
+        "+18"
+      ],
+      [
+        "4",
+        "01 Chaz Mostert",
+        "Mobil1 Optus Racing",
+        "3",
+        "1",
+        "4078",
+        "0"
       ],
       [
         "5",
-        "26 Kai Allen",
-        "Penrite Racing",
+        "888 Will Brown EC",
+        "Red Bull Ampol Racing",
+        "1",
         "2",
-        "0",
-        "3066",
-        "+18"
+        "4066",
+        "-12"
       ],
       [
         "6",
@@ -66,8 +66,8 @@
         "Monster Castrol Racing",
         "2",
         "3",
-        "3057",
-        "+9"
+        "4057",
+        "-21"
       ],
       [
         "7",
@@ -75,17 +75,17 @@
         "DEWALT Racing",
         "2",
         "1",
-        "3048",
-        "0"
+        "4048",
+        "-30"
       ],
       [
         "8",
-        "01 Chaz Mostert",
-        "Mobil1 Optus Racing",
+        "26 Kai Allen",
+        "Penrite Racing",
         "2",
-        "1",
-        "3039",
-        "-9"
+        "0",
+        "2208",
+        "-1870"
       ],
       [
         "9",
@@ -93,44 +93,44 @@
         "Mobil1 Truck Assist Racing",
         "1",
         "2",
-        "3030",
-        "-18"
+        "1806",
+        "-2272"
       ],
       [
         "10",
-        "04 Jack Le Brocq",
-        "Sherrin Rentals Racing",
-        "0",
-        "0",
-        "3021",
-        "-27"
-      ],
-      [
-        "11",
         "08 Andre Heimgartner",
         "R&J Batteries Racing",
         "1",
         "1",
-        "1433",
-        "-1615"
+        "1647",
+        "-2431"
+      ],
+      [
+        "11",
+        "04 Jack Le Brocq",
+        "Sherrin Rentals Racing",
+        "0",
+        "0",
+        "1601",
+        "-2477"
       ],
       [
         "12",
-        "55 Thomas Randle",
-        "Monster Castrol Racing",
-        "0",
-        "0",
-        "1404",
-        "-1644"
-      ],
-      [
-        "13",
         "07 James Golding",
         "CoolDrive Racing",
         "0",
         "1",
-        "1393",
-        "-1655"
+        "1532",
+        "-2546"
+      ],
+      [
+        "13",
+        "55 Thomas Randle",
+        "Monster Castrol Racing",
+        "0",
+        "0",
+        "1499",
+        "-2579"
       ],
       [
         "14",
@@ -138,8 +138,8 @@
         "PremiAir Racing",
         "0",
         "0",
-        "1363",
-        "-1685"
+        "1467",
+        "-2611"
       ],
       [
         "15",
@@ -147,8 +147,8 @@
         "Snowy River Caravans Racing",
         "0",
         "0",
-        "1114",
-        "-1934"
+        "1278",
+        "-2800"
       ],
       [
         "16",
@@ -156,8 +156,8 @@
         "Bendix Racing",
         "0",
         "1",
-        "1069",
-        "-1979"
+        "1165",
+        "-2913"
       ],
       [
         "17",
@@ -165,17 +165,17 @@
         "Brad Jones Racing",
         "0",
         "0",
-        "1045",
-        "-2003"
+        "1158",
+        "-2920"
       ],
       [
         "18",
-        "99 Cooper Murray",
-        "Erebus Motorsport",
+        "36 Cooper Murray",
+        "PremiAir Racing",
         "0",
         "0",
-        "972",
-        "-2076"
+        "1077",
+        "-3001"
       ],
       [
         "19",
@@ -183,8 +183,8 @@
         "Shell V-Power Racing Team",
         "0",
         "0",
-        "968",
-        "-2080"
+        "1055",
+        "-3023"
       ],
       [
         "20",
@@ -192,44 +192,44 @@
         "LIQUI MOLY BLAHST Racing",
         "0",
         "0",
-        "873",
-        "-2175"
+        "964",
+        "-3114"
       ],
       [
         "21",
+        "96 Macauley Jones",
+        "Brad Jones Racing",
+        "0",
+        "0",
+        "834",
+        "-3244"
+      ],
+      [
+        "22",
+        "11 Jackson Walls",
+        "Objective Racing",
+        "0",
+        "0",
+        "789",
+        "-3289"
+      ],
+      [
+        "23",
         "777 Declan Fraser",
         "PremiAir Racing",
         "0",
         "0",
         "788",
-        "-2260"
+        "-3290"
       ],
       [
-        "22",
-        "96 Macauley Jones",
-        "Brad Jones Racing",
-        "0",
-        "0",
-        "767",
-        "-2281"
-      ],
-      [
-        "23",
+        "24",
         "09 Jobe Stewart",
         "Erebus Motorsport",
         "0",
         "0",
-        "725",
-        "-2323"
-      ],
-      [
-        "24",
-        "11 Jackson Walls",
-        "Objective Racing",
-        "0",
-        "0",
-        "711",
-        "-2337"
+        "753",
+        "-3325"
       ],
       [
         "25",
@@ -238,7 +238,7 @@
         "1",
         "0",
         "441",
-        "-2607"
+        "-3637"
       ],
       [
         "26",
@@ -247,7 +247,7 @@
         "0",
         "0",
         "438",
-        "-2610"
+        "-3640"
       ],
       [
         "27",
@@ -256,7 +256,7 @@
         "0",
         "0",
         "328",
-        "-2720"
+        "-3750"
       ],
       [
         "28",
@@ -265,43 +265,52 @@
         "0",
         "0",
         "309",
-        "-2739"
+        "-3769"
       ],
       [
         "29",
+        "99 Jarrod Hughes",
+        "Erebus Motorsport",
+        "0",
+        "0",
+        "263",
+        "-3815"
+      ],
+      [
+        "30",
         "15 Craig Lowndes",
         "Supercheap Auto Racing",
         "0",
         "0",
         "262",
-        "-2786"
+        "-3816"
       ],
       [
-        "30",
+        "31",
         "06 Mark Winterbottom",
         "Monster Castrol Racing",
         "0",
         "0",
         "224",
-        "-2824"
+        "-3854"
       ],
       [
-        "31",
+        "32",
         "05 Ben Gomersall",
         "Tickford Autosport",
         "0",
         "0",
         "105",
-        "-2943"
+        "-3973"
       ],
       [
-        "32",
+        "33",
         "34 James Moffat",
         "Garry Rogers Motorsport",
         "0",
         "0",
         "67",
-        "-2981"
+        "-4011"
       ]
     ]
   },

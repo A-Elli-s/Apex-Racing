@@ -1,0 +1,185 @@
+{
+  "series": "Moto3",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
+  "official_url": "https://www.motogp.com/en/world-standing/2026/moto3/championship-standings",
+  "retrieved_at": "2026-10-29T15:39:34.367534+00:00",
+  "provider": "Wikipedia community standings (not official)",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Máximo Quiles",
+        "351"
+      ],
+      [
+        "2",
+        "David Almansa",
+        "217"
+      ],
+      [
+        "3",
+        "Brian Uriarte",
+        "198"
+      ],
+      [
+        "4",
+        "Álvaro Carpe",
+        "189"
+      ],
+      [
+        "5",
+        "Adrián Fernández",
+        "148"
+      ],
+      [
+        "6",
+        "Marco Morelli",
+        "140"
+      ],
+      [
+        "7",
+        "Valentín Perrone",
+        "120"
+      ],
+      [
+        "8",
+        "Veda Pratama",
+        "111"
+      ],
+      [
+        "9",
+        "Hakim Danish",
+        "103"
+      ],
+      [
+        "10",
+        "Matteo Bertelle",
+        "103"
+      ],
+      [
+        "11",
+        "Rico Salmela",
+        "89"
+      ],
+      [
+        "12",
+        "Adrián Cruces",
+        "78"
+      ],
+      [
+        "13",
+        "Guido Pini",
+        "77"
+      ],
+      [
+        "14",
+        "Joel Esteban",
+        "68"
+      ],
+      [
+        "15",
+        "Casey O'Gorman",
+        "66"
+      ],
+      [
+        "16",
+        "Joel Kelso",
+        "64"
+      ],
+      [
+        "17",
+        "Eddie O'Shea",
+        "60"
+      ],
+      [
+        "18",
+        "David Muñoz",
+        "56"
+      ],
+      [
+        "19",
+        "Jesús Ríos",
+        "48"
+      ],
+      [
+        "20",
+        "Ryusei Yamanaka",
+        "41"
+      ],
+      [
+        "21",
+        "Scott Ogden",
+        "33"
+      ],
+      [
+        "22",
+        "David González",
+        "7"
+      ],
+      [
+        "23",
+        "Marcos Uriarte",
+        "5"
+      ],
+      [
+        "24",
+        "Cormac Buchanan",
+        "5"
+      ],
+      [
+        "25",
+        "Leo Rammerstorfer",
+        "2"
+      ],
+      [
+        "26",
+        "Kiattisak Singhapong",
+        "1"
+      ],
+      [
+        "27",
+        "Zen Mitani",
+        "0"
+      ],
+      [
+        "28",
+        "Ruché Moodley",
+        "0"
+      ],
+      [
+        "29",
+        "Ryota Ogiwara",
+        "0"
+      ],
+      [
+        "30",
+        "Nicola Carraro",
+        "0"
+      ],
+      [
+        "31",
+        "Leonardo Abruzzo",
+        "0"
+      ],
+      [
+        "32",
+        "Eduardo Gutiérrez",
+        "0"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "community_points_not_officially_verified",
+    "method": "published community points, not inferred from race finishes"
+  }
+}
