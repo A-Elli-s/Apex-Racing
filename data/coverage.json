@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-30T15:55:26.408393+00:00",
+  "generated_at": "2026-10-30T15:56:01.000920+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -164,7 +164,7 @@
       "points_source": "https://www.supercars.com/standings",
       "provider": "Official championship website",
       "officially_cross_checked": false,
-      "source_reuse_review_required": false,
+      "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -179,7 +179,7 @@
       "points_source": "https://www.nhra.com/standings",
       "provider": "Official championship website",
       "officially_cross_checked": false,
-      "source_reuse_review_required": false,
+      "source_reuse_review_required": true,
       "commercial_reuse_cleared": false,
       "ready_for_release": false
     },
@@ -363,6 +363,6 @@
     "full_race_classifications": 0,
     "complete_and_officially_cross_checked": 3,
     "fully_complete_and_cleared": 0,
-    "source_reuse_review_pending": 8
+    "source_reuse_review_pending": 10
   }
 }
