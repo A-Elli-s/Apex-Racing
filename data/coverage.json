@@ -1,10 +1,11 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-29T15:39:34.463349+00:00",
+  "generated_at": "2026-10-30T15:54:21.139974+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
       "calendar_events": 23,
+      "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -19,6 +20,7 @@
     },
     "F2": {
       "calendar_events": 14,
+      "completed_calendar_events": 12,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -33,6 +35,7 @@
     },
     "F3": {
       "calendar_events": 9,
+      "completed_calendar_events": 9,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -47,6 +50,7 @@
     },
     "IndyCar": {
       "calendar_events": 17,
+      "completed_calendar_events": 17,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -61,6 +65,7 @@
     },
     "NASCAR Cup": {
       "calendar_events": 40,
+      "completed_calendar_events": 38,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -75,6 +80,7 @@
     },
     "NASCAR O’Reilly": {
       "calendar_events": 33,
+      "completed_calendar_events": 31,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -89,6 +95,7 @@
     },
     "WEC": {
       "calendar_events": 9,
+      "completed_calendar_events": 8,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -103,6 +110,7 @@
     },
     "IMSA": {
       "calendar_events": 11,
+      "completed_calendar_events": 11,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -117,6 +125,7 @@
     },
     "Formula E": {
       "calendar_events": 18,
+      "completed_calendar_events": 17,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": true,
@@ -131,6 +140,7 @@
     },
     "WRC": {
       "calendar_events": 14,
+      "completed_calendar_events": 13,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": true,
@@ -145,6 +155,7 @@
     },
     "Supercars": {
       "calendar_events": 2,
+      "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -159,6 +170,7 @@
     },
     "NHRA": {
       "calendar_events": 2,
+      "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -173,6 +185,7 @@
     },
     "MotoGP": {
       "calendar_events": 22,
+      "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -187,6 +200,7 @@
     },
     "Moto2": {
       "calendar_events": 22,
+      "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -201,6 +215,7 @@
     },
     "Moto3": {
       "calendar_events": 22,
+      "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -215,12 +230,13 @@
     },
     "WorldSBK": {
       "calendar_events": 12,
+      "completed_calendar_events": 12,
       "calendar_available": true,
-      "points_table_available": true,
+      "points_table_available": false,
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://www.worldsbk.com/en/news/2026/05/31/classifica-finale-campionato-worldsbk-2026/1014570",
+      "points_source": null,
       "provider": "Published championship or independent standings snapshot; partial coverage",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -229,6 +245,7 @@
     },
     "Supercross": {
       "calendar_events": 17,
+      "completed_calendar_events": 17,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -243,6 +260,7 @@
     },
     "Pro Motocross": {
       "calendar_events": 11,
+      "completed_calendar_events": 11,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -257,6 +275,7 @@
     },
     "MXGP": {
       "calendar_events": 19,
+      "completed_calendar_events": 19,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -271,6 +290,7 @@
     },
     "NASCAR Trucks": {
       "calendar_events": 25,
+      "completed_calendar_events": 23,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -285,6 +305,7 @@
     },
     "Dakar Rally": {
       "calendar_events": 0,
+      "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": false,
       "race_results_snapshot_available": false,
@@ -299,6 +320,7 @@
     },
     "Off-road racing": {
       "calendar_events": 1,
+      "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": false,
       "race_results_snapshot_available": false,
@@ -313,6 +335,7 @@
     },
     "Monster Jam": {
       "calendar_events": 5,
+      "completed_calendar_events": 0,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -335,7 +358,7 @@
   "summary": {
     "total_championships": 23,
     "calendars_with_events": 19,
-    "points_tables_with_numeric_totals": 21,
+    "points_tables_with_numeric_totals": 20,
     "race_results_snapshots": 2,
     "full_race_classifications": 0,
     "complete_and_officially_cross_checked": 3,
