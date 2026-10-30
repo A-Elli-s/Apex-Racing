@@ -96,13 +96,18 @@ def official_table(soup,series):
 
 def refresh_official(now,manifest):
     for series,(template,slug) in OFFICIAL.items():
-        # WorldSBK official timing PDFs explicitly prohibit electronic republication
-        # without prior permission; leave a source link rather than ingesting rows.
-        if series=='WorldSBK':
-            print('WorldSBK: rights clearance required; no standings copied')
+        # NHRA prohibits automated collection and commercial statistics databases;
+        # Supercars and WorldSBK reuse remains unapproved. Link instead of scraping.
+        if series in ('NHRA', 'Supercars', 'WorldSBK'):
+            print(series+': source rights pending; no automated standings collection')
             continue
         previous=manifest['series'].get(series,{'seasons':{}})
-        manifest['series'][series]={'official_url':template.replace('{year}',str(now.year)),'provider':previous.get('provider','Official championship website'),'seasons':dict(previous.get('seasons',{}))}
+        # Preserve rights flags, partial-field markers, and manual verification.
+        # Replacing the entire entry previously erased these release safeguards.
+        manifest['series'][series]={**previous,
+            'official_url':template.replace('{year}',str(now.year)),
+            'provider':previous.get('provider','Official championship website'),
+            'seasons':dict(previous.get('seasons',{}))}
         for year in (now.year,now.year-1):
             path=OUT/(slug+'-'+str(year)+'.json')
             url=template.replace('{year}',str(year))
