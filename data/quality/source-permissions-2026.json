@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29",
+  "checked_at": "2026-10-30",
   "season": 2026,
   "purpose": "Source-rights research only. Not a blanket grant of rights for Apex Racing World.",
   "sources": {
@@ -30,7 +30,21 @@
         "review third-party content and database/organizer restrictions separately"
       ],
       "note": "Commercial reuse is permitted by CC BY-SA 4.0 subject to its conditions. Do not treat an entire racing dataset as cleared solely because a community snapshot cites Wikipedia."
+    },
+    "NHRA": {
+      "terms_url": "https://www.nhra.com/terms-use",
+      "terms_last_updated": "2024-03-19",
+      "commercial_use": "written_permission_required_for_comprehensive_statistics_or_database",
+      "automated_collection": "prohibited_by_published_terms_without_authorization",
+      "note": "Sections 2, 7 and 9 restrict commercial reproduction, database compilation, automated extraction, and comprehensive regularly updated racing statistics. The 2026 official schedule was reviewed on 2026-10-30, but its full 20-event list was not retained on dev; use an external official schedule link until a rights-compatible feed or written approval is obtained. Do not ingest NHRA results or standings by bot without authorization."
+    },
+    "Supercars": {
+      "calendar_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
+      "published_schedule": "2025-10-29",
+      "rights_context_url": "https://travel.supercars.com/legal-notices",
+      "commercial_use": "pending_organizer_review",
+      "note": "The 14-round 2026 schedule is staged as factual date/name/venue entries on dev with organizer source attribution. The organizer's travel-site legal notices reserve copyright in site content and compilations; they do not grant a general data-reuse license. Confirm rights and event changes before production use; do not ingest results, photos or standings without permission."
     }
   },
-  "outstanding": "Review organizer/third-party terms, data licensing, trademarks, source attribution and commercial reuse before setting any championship commercial_reuse_cleared=true. Wikipedia CC BY-SA can allow commercial use when its conditions and underlying rights are satisfied; Jolpica CC BY-NC-SA requires separate commercial permission."
+  "outstanding": "NHRA explicitly restricts commercial statistical database compilation and automated extraction without prior written permission. Jolpica's CC BY-NC-SA requires separate commercial permission. Supercars and other organizer terms require individual review. Keep staging data on dev; do not mark commercial_reuse_cleared until the actual intended use is authorized or independently established as lawful."
 }
