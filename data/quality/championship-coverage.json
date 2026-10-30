@@ -1,10 +1,11 @@
 {
-  "generated_at": "2026-10-29T15:38:40.561230+00:00",
+  "generated_at": "2026-10-30T15:54:09.180987+00:00",
   "season": 2026,
   "target_championships": 23,
-  "points_tables_available": 21,
+  "points_tables_available": 20,
   "calendar_feeds_present": 22,
   "race_winner_feeds_present": 2,
+  "partial_classification_feeds_present": 0,
   "fully_verified_championships": 0,
   "complete": false,
   "note": "Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.",
@@ -69,7 +70,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 33,
         "source_url": "https://www.indycar.com/standings/2026",
-        "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
+        "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
@@ -149,7 +150,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 40,
         "source_url": "https://www.imsa.com/standings/",
-        "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
+        "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
         "calculation_audit": {
           "status": "verified_against_published_total",
           "method": "sum of already-awarded event points; not finishing positions",
@@ -165,7 +166,7 @@
             "Road Atlanta"
           ],
           "rows_checked": 40,
-          "checked_at": "2026-10-28T15:59:09.741231+00:00"
+          "checked_at": "2026-10-29T15:39:34.425694+00:00"
         }
       },
       "individual_race_results": {
@@ -193,7 +194,8 @@
       },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
-        "count": 17
+        "count": 17,
+        "completed_calendar_events": 17
       },
       "fully_verified": false
     },
@@ -217,7 +219,8 @@
       },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
-        "count": 14
+        "count": 14,
+        "completed_calendar_events": 13
       },
       "fully_verified": false
     },
@@ -247,7 +250,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 36,
         "source_url": "https://www.nhra.com/standings",
-        "retrieved_at": "2026-10-28T15:58:46.254149+00:00",
+        "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
         "calculation_audit": null
       },
       "individual_race_results": {
@@ -264,7 +267,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 32,
         "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
-        "retrieved_at": "2026-10-28T15:59:08.805783+00:00",
+        "retrieved_at": "2026-10-29T15:39:33.043803+00:00",
         "calculation_audit": {
           "status": "community_points_not_officially_verified",
           "method": "published community points, not inferred from race finishes"
@@ -284,7 +287,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 34,
         "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
-        "retrieved_at": "2026-10-28T15:59:09.210812+00:00",
+        "retrieved_at": "2026-10-29T15:39:33.687641+00:00",
         "calculation_audit": {
           "status": "community_points_not_officially_verified",
           "method": "published community points, not inferred from race finishes"
@@ -304,7 +307,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 32,
         "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
-        "retrieved_at": "2026-10-28T15:59:09.678701+00:00",
+        "retrieved_at": "2026-10-29T15:39:34.367534+00:00",
         "calculation_audit": {
           "status": "community_points_not_officially_verified",
           "method": "published community points, not inferred from race finishes"
@@ -321,14 +324,9 @@
         "events": 12
       },
       "championship_points": {
-        "status": "points_available_not_independently_verified",
+        "status": "partial_points_table_not_complete",
         "rows": 10,
-        "source_url": "https://www.worldsbk.com/en/news/2026/05/31/classifica-finale-campionato-worldsbk-2026/1014570",
-        "retrieved_at": "2026-10-27T18:18:00+00:00",
-        "calculation_audit": {
-          "status": "published_source_snapshot",
-          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
-        }
+        "reason": "Manifest explicitly marks this championship field partial"
       },
       "individual_race_results": {
         "status": "missing"
