@@ -187,9 +187,14 @@ def main():
         calendar_ok = len(valid_events) >= 3
         results_ok = results_valid(results)
         today = dt.datetime.now(dt.timezone.utc).date()
-        completed_events = sum(
-            1 for e in valid_events if dt.date.fromisoformat(str(e["date"])) < today
-        )
+        completed_events = 0
+        for event in valid_events:
+            try:
+                if dt.date.fromisoformat(str(event["date"])) < today:
+                    completed_events += 1
+            except (ValueError, TypeError):
+                # Invalid date strings are never evidence of a completed round.
+                continue
         classifications_ok = full_classifications_valid(results, completed_events)
         review = entry.get("verification", {})
         reviewed = (
