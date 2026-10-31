@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-30T15:57:21.732958+00:00",
+  "generated_at": "2026-10-31T15:14:20.323876+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
@@ -38,7 +38,7 @@
       "completed_calendar_events": 9,
       "calendar_available": true,
       "points_table_available": true,
-      "race_results_snapshot_available": false,
+      "race_results_snapshot_available": true,
       "full_race_classifications_available": false,
       "review_record_complete": false,
       "points_source": "https://en.wikipedia.org/wiki/2026_FIA_Formula_3_Championship",
@@ -191,7 +191,7 @@
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
+      "points_source": "https://stats.motogp.com/en/world-standing",
       "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -206,7 +206,7 @@
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
+      "points_source": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
       "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -221,7 +221,7 @@
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
+      "points_source": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
       "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -290,7 +290,7 @@
     },
     "NASCAR Trucks": {
       "calendar_events": 25,
-      "completed_calendar_events": 23,
+      "completed_calendar_events": 24,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -359,9 +359,11 @@
     "total_championships": 23,
     "calendars_with_events": 20,
     "points_tables_with_numeric_totals": 20,
-    "race_results_snapshots": 2,
+    "race_results_snapshots": 3,
     "full_race_classifications": 0,
-    "complete_and_officially_cross_checked": 3,
+    "points_officially_cross_checked": 3,
+    "calendar_and_points_present_with_official_points_audit": 3,
+    "complete_and_officially_cross_checked": 0,
     "fully_complete_and_cleared": 0,
     "source_reuse_review_pending": 10
   }
