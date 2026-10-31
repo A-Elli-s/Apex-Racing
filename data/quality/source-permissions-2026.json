@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30",
+  "checked_at": "2026-10-31",
   "season": 2026,
   "purpose": "Source-rights research only. Not a blanket grant of rights for Apex Racing World.",
   "sources": {
@@ -9,7 +9,13 @@
       "data_license": "CC BY-NC-SA 4.0",
       "commercial_use": "permission_required",
       "contact": "admin@jolpi.ca",
-      "note": "API explicitly permits non-commercial use and requests contact for commercial use. Apex Racing World has affiliate/monetization plans; do not mark commercial reuse cleared without permission or a separately licensed replacement."
+      "note": "API explicitly permits non-commercial use and requests contact for commercial use. Apex Racing World has affiliate/monetization plans; do not mark commercial reuse cleared without permission or a separately licensed replacement.",
+      "rechecked_at": "2026-10-31",
+      "commercial_dump_alternative": {
+        "documentation_url": "https://github.com/jolpica/jolpica-f1/blob/main/docs/database_dumps.md",
+        "status": "commercial_supporter_tier_described_not_acquired",
+        "note": "Jolpica documents a commercial-use supporter tier for database dumps, distinct from its non-commercial public API. Verify current access, contractual scope and actual authorization before using it in Apex; it does not automatically license API responses."
+      }
     },
     "MotoDB": {
       "repository": "https://github.com/vishwapramuditha/moto-db",
@@ -36,7 +42,9 @@
       "terms_last_updated": "2024-03-19",
       "commercial_use": "written_permission_required_for_comprehensive_statistics_or_database",
       "automated_collection": "prohibited_by_published_terms_without_authorization",
-      "note": "Sections 2, 7 and 9 restrict commercial reproduction, database compilation, automated extraction, and comprehensive regularly updated racing statistics. The 2026 official schedule was reviewed on 2026-10-30, but its full 20-event list was not retained on dev; use an external official schedule link until a rights-compatible feed or written approval is obtained. Do not ingest NHRA results or standings by bot without authorization."
+      "note": "Sections 2, 7 and 9 restrict commercial reproduction, database compilation, automated extraction, and comprehensive regularly updated racing statistics. The 2026 official schedule was reviewed on 2026-10-30, but its full 20-event list was not retained on dev; use an external official schedule link until a rights-compatible feed or written approval is obtained. Do not ingest NHRA results or standings by bot without authorization.",
+      "rechecked_at": "2026-10-31",
+      "next_action": "Seek written NHRA permission for automated extraction and a commercial regularly updated statistics database; otherwise keep only external organizer links and do not run NHRA collectors."
     },
     "Supercars": {
       "calendar_url": "https://www.supercars.com/news/supercars-2026-calendar-announcement-release-date-rounds-printable-ticket-information-news",
@@ -46,5 +54,5 @@
       "note": "The 14-round 2026 schedule is staged as factual date/name/venue entries on dev with organizer source attribution. The organizer's travel-site legal notices reserve copyright in site content and compilations; they do not grant a general data-reuse license. Confirm rights and event changes before production use; do not ingest results, photos or standings without permission."
     }
   },
-  "outstanding": "NHRA explicitly restricts commercial statistical database compilation and automated extraction without prior written permission. Jolpica's CC BY-NC-SA requires separate commercial permission. Supercars and other organizer terms require individual review. Keep staging data on dev; do not mark commercial_reuse_cleared until the actual intended use is authorized or independently established as lawful."
+  "outstanding": "NHRA explicitly restricts commercial statistical database compilation and automated extraction without prior written permission. Jolpica's CC BY-NC-SA requires separate commercial permission. Supercars and other organizer terms require individual review. Keep staging data on dev; do not mark commercial_reuse_cleared until the actual intended use is authorized or independently established as lawful. Rechecked 2026-10-31: Jolpica offers a separate commercial-supporter dump tier but no authorization has been obtained; the public API remains non-commercial. NHRA terms still require prior written consent for the intended comprehensive commercial statistics use."
 }
