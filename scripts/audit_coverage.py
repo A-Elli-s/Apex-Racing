@@ -236,8 +236,17 @@ def main():
         "points_tables_with_numeric_totals": sum(v["points_table_available"] for v in report["series"].values()),
         "race_results_snapshots": sum(v["race_results_snapshot_available"] for v in report["series"].values()),
         "full_race_classifications": sum(v["full_race_classifications_available"] for v in report["series"].values()),
-        "complete_and_officially_cross_checked": sum(
+        # Do not label a points-only audit as a complete verified championship.
+        "points_officially_cross_checked": sum(
+            v["points_table_available"] and v["officially_cross_checked"]
+            for v in report["series"].values()),
+        "calendar_and_points_present_with_official_points_audit": sum(
             v["calendar_available"] and v["points_table_available"] and v["officially_cross_checked"]
+            for v in report["series"].values()),
+        "complete_and_officially_cross_checked": sum(
+            v["calendar_available"] and v["points_table_available"]
+            and v["full_race_classifications_available"] and v["officially_cross_checked"]
+            and v["review_record_complete"]
             for v in report["series"].values()),
         "fully_complete_and_cleared": sum(v["ready_for_release"] for v in report["series"].values()),
         "source_reuse_review_pending": sum(v["source_reuse_review_required"] for v in report["series"].values()),
