@@ -47,8 +47,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/standings/
-          # The dedicated coverage-audit workflow owns data/coverage.json.
-          # Do not commit a stale report here: concurrent audits cause rebase conflicts.
+          # This job generates coverage.json for diagnostics only. It belongs to
+          # the dedicated audit workflow, so discard its unstaged local change
+          # before rebasing our standings-only commit onto the latest dev.
+          git restore -- data/coverage.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh and audit staged non-F1 championship standings"
             for attempt in 1 2 3 4; do
