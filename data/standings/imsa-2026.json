@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://www.imsa.com/standings/",
   "official_url": "https://www.imsa.com/standings/",
-  "retrieved_at": "2026-10-31T15:13:59.034311+00:00",
+  "retrieved_at": "2026-10-31T15:14:58.249062+00:00",
   "data": {
     "headers": [
       "Rank",
@@ -597,6 +597,6 @@
       "Road Atlanta"
     ],
     "rows_checked": 40,
-    "checked_at": "2026-10-31T15:14:27.802632+00:00"
+    "checked_at": "2026-10-31T15:15:19.665524+00:00"
   }
 }
