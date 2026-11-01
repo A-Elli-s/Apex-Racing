@@ -1,10 +1,11 @@
 {
   "season": 2026,
-  "generated_at": "2026-10-31T15:14:20.323876+00:00",
+  "generated_at": "2026-11-01T16:30:40.165446+00:00",
   "status": "audit_only_not_official_verification",
   "series": {
     "F1": {
       "calendar_events": 23,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
@@ -20,6 +21,7 @@
     },
     "F2": {
       "calendar_events": 14,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 12,
       "calendar_available": true,
       "points_table_available": true,
@@ -35,6 +37,7 @@
     },
     "F3": {
       "calendar_events": 9,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 9,
       "calendar_available": true,
       "points_table_available": true,
@@ -50,6 +53,7 @@
     },
     "IndyCar": {
       "calendar_events": 17,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 17,
       "calendar_available": true,
       "points_table_available": true,
@@ -64,8 +68,9 @@
       "ready_for_release": false
     },
     "NASCAR Cup": {
-      "calendar_events": 40,
-      "completed_calendar_events": 38,
+      "calendar_events": 36,
+      "non_championship_calendar_entries_excluded": 4,
+      "completed_calendar_events": 34,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -80,7 +85,8 @@
     },
     "NASCAR O’Reilly": {
       "calendar_events": 33,
-      "completed_calendar_events": 31,
+      "non_championship_calendar_entries_excluded": 0,
+      "completed_calendar_events": 32,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
@@ -95,6 +101,7 @@
     },
     "WEC": {
       "calendar_events": 9,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 8,
       "calendar_available": true,
       "points_table_available": true,
@@ -110,6 +117,7 @@
     },
     "IMSA": {
       "calendar_events": 11,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 11,
       "calendar_available": true,
       "points_table_available": true,
@@ -124,7 +132,8 @@
       "ready_for_release": false
     },
     "Formula E": {
-      "calendar_events": 18,
+      "calendar_events": 17,
+      "non_championship_calendar_entries_excluded": 1,
       "completed_calendar_events": 17,
       "calendar_available": true,
       "points_table_available": true,
@@ -140,6 +149,7 @@
     },
     "WRC": {
       "calendar_events": 14,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 13,
       "calendar_available": true,
       "points_table_available": true,
@@ -155,6 +165,7 @@
     },
     "Supercars": {
       "calendar_events": 14,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 12,
       "calendar_available": true,
       "points_table_available": true,
@@ -170,6 +181,7 @@
     },
     "NHRA": {
       "calendar_events": 2,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": true,
@@ -185,13 +197,14 @@
     },
     "MotoGP": {
       "calendar_events": 22,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://stats.motogp.com/en/world-standing",
+      "points_source": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
       "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -200,13 +213,14 @@
     },
     "Moto2": {
       "calendar_events": 22,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+      "points_source": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
       "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -215,13 +229,14 @@
     },
     "Moto3": {
       "calendar_events": 22,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 18,
       "calendar_available": true,
       "points_table_available": true,
       "race_results_snapshot_available": false,
       "full_race_classifications_available": false,
       "review_record_complete": false,
-      "points_source": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
+      "points_source": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
       "provider": "Wikipedia community standings (not official)",
       "officially_cross_checked": false,
       "source_reuse_review_required": true,
@@ -230,6 +245,7 @@
     },
     "WorldSBK": {
       "calendar_events": 12,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 12,
       "calendar_available": true,
       "points_table_available": false,
@@ -245,6 +261,7 @@
     },
     "Supercross": {
       "calendar_events": 17,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 17,
       "calendar_available": true,
       "points_table_available": true,
@@ -260,6 +277,7 @@
     },
     "Pro Motocross": {
       "calendar_events": 11,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 11,
       "calendar_available": true,
       "points_table_available": true,
@@ -275,6 +293,7 @@
     },
     "MXGP": {
       "calendar_events": 19,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 19,
       "calendar_available": true,
       "points_table_available": true,
@@ -290,6 +309,7 @@
     },
     "NASCAR Trucks": {
       "calendar_events": 25,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 24,
       "calendar_available": true,
       "points_table_available": true,
@@ -305,6 +325,7 @@
     },
     "Dakar Rally": {
       "calendar_events": 0,
+      "non_championship_calendar_entries_excluded": 3,
       "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": false,
@@ -320,6 +341,7 @@
     },
     "Off-road racing": {
       "calendar_events": 1,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 0,
       "calendar_available": false,
       "points_table_available": false,
@@ -335,6 +357,7 @@
     },
     "Monster Jam": {
       "calendar_events": 5,
+      "non_championship_calendar_entries_excluded": 0,
       "completed_calendar_events": 0,
       "calendar_available": true,
       "points_table_available": true,
