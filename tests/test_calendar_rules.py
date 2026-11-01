@@ -1,5 +1,7 @@
 """Regression tests for championship-season calendar accounting."""
 import unittest
+import json
+import pathlib
 from scripts.calendar_rules import championship_events, championship_round
 
 
@@ -21,6 +23,14 @@ class CalendarRulesTests(unittest.TestCase):
             {"date": "2026-02-15", "name": "CUP — DAYTONA 500"},
         ]
         self.assertEqual([e["name"] for e in championship_events("NASCAR Cup", events, 2026)], ["CUP — DAYTONA 500"])
+
+    def test_repository_2026_championship_round_counts(self):
+        races = json.loads((pathlib.Path(__file__).resolve().parents[1] /
+                            "data" / "races.json").read_text(encoding="utf-8"))["series"]
+        cup = [e for e in races["NASCAR Cup / O’Reilly / Trucks"]
+               if str(e.get("name", "")).startswith("CUP —")]
+        self.assertEqual(len(championship_events("NASCAR Cup", cup, 2026)), 36)
+        self.assertEqual(len(championship_events("Formula E", races["Formula E"], 2026)), 17)
 
     def test_dakar_2027_not_in_2026(self):
         self.assertFalse(championship_round("Dakar Rally", {"date": "2027-01-01", "season": "2027"}, 2026))
