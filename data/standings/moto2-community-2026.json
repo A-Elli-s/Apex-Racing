@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
   "official_url": "https://www.motogp.com/en/world-standing/2026/moto2/championship-standings",
-  "retrieved_at": "2026-10-31T15:15:19.075218+00:00",
+  "retrieved_at": "2026-11-01T16:31:23.040728+00:00",
   "provider": "Wikipedia community standings (not official)",
   "attribution": "Wikipedia contributors",
   "license": "CC BY-SA 4.0",
@@ -19,67 +19,67 @@
       [
         "1",
         "Manuel González",
-        "265.5"
+        "276.5"
       ],
       [
         "2",
         "Izan Guevara",
-        "260"
+        "273"
       ],
       [
         "3",
         "Iván Ortolá",
-        "191.5"
+        "199.5"
       ],
       [
         "4",
-        "Daniel Holgado",
-        "170"
+        "David Alonso",
+        "191"
       ],
       [
         "5",
-        "David Alonso",
-        "166"
+        "Daniel Holgado",
+        "190"
       ],
       [
         "6",
         "Senna Agius",
-        "165"
+        "166"
       ],
       [
         "7",
         "Filip Salač",
-        "153"
+        "155"
       ],
       [
         "8",
         "Celestino Vietti",
-        "133"
+        "140"
       ],
       [
         "9",
         "Alonso López",
-        "125.5"
+        "129.5"
       ],
       [
         "10",
-        "Daniel Muñoz",
-        "83"
+        "Collin Veijer",
+        "89.5"
       ],
       [
         "11",
+        "Daniel Muñoz",
+        "86"
+      ],
+      [
+        "12",
         "Tony Arbolino",
         "82.5"
       ],
       [
-        "12",
-        "Collin Veijer",
-        "80.5"
-      ],
-      [
         "13",
         "Álex Escrig",
-        "63"
+        "69"
       ],
       [
         "14",
@@ -88,23 +88,23 @@
       ],
       [
         "15",
+        "Adrián Huertas",
+        "52"
+      ],
+      [
+        "16",
+        "José Antonio Rueda",
+        "48"
+      ],
+      [
+        "17",
         "Deniz Öncü",
         "47.5"
       ],
       [
-        "16",
+        "18",
         "Joe Roberts",
         "44"
-      ],
-      [
-        "17",
-        "José Antonio Rueda",
-        "43"
-      ],
-      [
-        "18",
-        "Adrián Huertas",
-        "42"
       ],
       [
         "19",
@@ -118,33 +118,33 @@
       ],
       [
         "21",
+        "Ángel Piqueras",
+        "20"
+      ],
+      [
+        "22",
         "Alberto Ferrández",
         "17.5"
       ],
       [
-        "22",
+        "23",
         "Arón Canet",
         "17.5"
       ],
       [
-        "23",
+        "24",
         "Taiyo Furusato",
         "17"
       ],
       [
-        "24",
+        "25",
         "Zonta van den Goorbergh",
         "14"
       ],
       [
-        "25",
+        "26",
         "Sergio García",
         "11"
-      ],
-      [
-        "26",
-        "Ángel Piqueras",
-        "4"
       ],
       [
         "27",
@@ -178,11 +178,16 @@
       ],
       [
         "33",
-        "Jacob Roulstone",
+        "Matteo Ferrari",
         "0"
       ],
       [
         "34",
+        "Jacob Roulstone",
+        "0"
+      ],
+      [
+        "35",
         "Milan Pawelec",
         "0"
       ]
