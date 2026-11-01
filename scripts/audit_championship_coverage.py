@@ -9,6 +9,8 @@ import datetime as dt
 import json
 import pathlib
 
+from calendar_rules import championship_events
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 YEAR = dt.datetime.now(dt.timezone.utc).year
 SERIES = [
@@ -108,14 +110,12 @@ def race_audit(series, entry, races):
         calendar = [x for x in calendar if isinstance(x, dict) and
                     str(x.get('name', '')).startswith(NASCAR_PREFIX[series])]
     completed_calendar_events = 0
-    for event in calendar:
-        if not isinstance(event, dict):
-            continue
+    for event in championship_events(series, calendar, YEAR):
         try:
             day = dt.date.fromisoformat(str(event.get('date')))
         except (ValueError, TypeError):
             continue
-        if day < today and day.year in ((YEAR - 1, YEAR) if series == 'Formula E' else (YEAR,)):
+        if day < today:
             completed_calendar_events += 1
 
     classified = 0
@@ -163,15 +163,14 @@ def calendar_audit(series,races):
     if series in NASCAR_PREFIX:
         items=[x for x in items if isinstance(x,dict) and str(x.get('name','')).startswith(NASCAR_PREFIX[series])]
     count=0
-    for x in items:
-        if not isinstance(x,dict) or not x.get('name') or not x.get('url'):
+    for x in championship_events(series, items, YEAR):
+        if not x.get('name') or not x.get('url'):
             continue
         try:
             when=dt.date.fromisoformat(str(x.get('date')))
         except (TypeError,ValueError):
             continue
-        if when.year in (YEAR,YEAR-1 if series=='Formula E' else YEAR):
-            count+=1
+        count+=1
     if not count:
         return {'status':'missing','events':0}
     if count < 3:
