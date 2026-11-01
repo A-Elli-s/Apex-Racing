@@ -8,6 +8,8 @@ import datetime as dt
 import json
 import pathlib
 
+from calendar_rules import championship_events
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 YEAR = dt.datetime.now(dt.timezone.utc).year
 DATA = ROOT / "data"
@@ -175,10 +177,11 @@ def main():
         if name in NASCAR_TAG:
             tag = NASCAR_TAG[name]
             events = [event for event in events if str(event.get("name", "")).upper().startswith(tag)]
-        valid_events = [e for e in events if isinstance(e, dict)
-                        and (str(e.get("date", "")).startswith(str(YEAR) + "-")
-                             or (name == "Formula E" and str(e.get("date", "")).startswith(str(YEAR - 1) + "-")))
-                        and e.get("name") and e.get("venue") and e.get("url")]
+        # Only points-championship rounds count toward the season's required
+        # classifications. Public calendars can include exhibitions and a
+        # following season's opener (Formula E).
+        valid_events = [e for e in championship_events(name, events, YEAR)
+                        if e.get("name") and e.get("venue") and e.get("url")]
         points = snapshot_for(manifest, name, "seasons")
         results = snapshot_for(manifest, name, "race_results_seasons")
         entry = manifest.get("series", {}).get(name, {})
@@ -215,6 +218,7 @@ def main():
                          officially_checked and rights_cleared and not rights_pending)
         report["series"][name] = {
             "calendar_events": len(valid_events),
+            "non_championship_calendar_entries_excluded": len(events) - len(championship_events(name, events, YEAR)),
             "completed_calendar_events": completed_events,
             "calendar_available": calendar_ok,
             "points_table_available": points_ok,
