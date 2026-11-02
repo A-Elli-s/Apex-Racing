@@ -10,6 +10,7 @@ import json
 import pathlib
 
 from calendar_rules import championship_events
+from snapshot_freshness import snapshot_freshness
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 YEAR = dt.datetime.now(dt.timezone.utc).year
@@ -181,6 +182,21 @@ def calendar_audit(series,races):
         return {'status':'legacy_xfinity_labels_need_validation','events':count}
     return {'status':'calendar_entries_present_not_independently_verified','events':count}
 
+def points_freshness(series, entry, races):
+    """Flag potentially stale standings without assuming a scheduled race ran."""
+    url = entry.get('seasons', {}).get(str(YEAR))
+    path = file_for_url(url)
+    snapshot = load(path) if path else None
+    key = CALENDAR_KEYS.get(series, series)
+    events = races.get(key, [])
+    if not isinstance(events, list):
+        events = []
+    if series in NASCAR_PREFIX:
+        events = [e for e in events if isinstance(e, dict) and
+                  str(e.get('name', '')).startswith(NASCAR_PREFIX[series])]
+    return snapshot_freshness(snapshot, championship_events(series, events, YEAR))
+
+
 def main():
     manifest=load(ROOT/'data'/'standings'/'manifest.json') or {}
     races=load(ROOT/'data'/'races.json') or {}
@@ -192,6 +208,7 @@ def main():
         coverage[series]={
             'calendar':calendar_audit(series,calendar),
             'championship_points':points_audit(series,entry),
+            'points_freshness':points_freshness(series,entry,calendar),
             'individual_race_results':race_audit(series,entry,calendar),
         }
     # A source cannot become "verified" merely because a JSON file exists.
@@ -214,6 +231,7 @@ def main():
             present['championship_points']['status']=='points_available_not_independently_verified'
             and present['calendar']['status']=='calendar_entries_present_not_independently_verified'
             and present['individual_race_results']['status']=='candidate_classifications_require_round_and_official_review'
+            and present['points_freshness']['status']=='no_later_scheduled_round'
         )
         verified=bool(reviewed and available)
         coverage[series]['fully_verified']=verified
@@ -226,9 +244,10 @@ def main():
         'calendar_feeds_present':sum(v['calendar']['status']!='missing' for v in coverage.values()),
         'race_winner_feeds_present':sum(v['individual_race_results']['status']=='winner_summaries_available_not_full_classifications' for v in coverage.values()),
         'partial_classification_feeds_present':sum(v['individual_race_results']['status'] in ('partial_classifications_not_complete','candidate_classifications_require_round_and_official_review') for v in coverage.values()),
+        'standings_potentially_stale':sum(v['points_freshness']['status']=='potentially_stale_after_scheduled_round' for v in coverage.values()),
         'fully_verified_championships':verified_count,
         'complete':verified_count==len(SERIES),
-        'note':'Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.',
+        'note':'Presence and snapshot currency are not verification. Calendar dates do not prove races ran. Complete classifications, scoring/penalties, organizer cross-check and source permissions remain required.',
         'championships':coverage,
     }
     out=ROOT/'data'/'quality'/'championship-coverage.json'
