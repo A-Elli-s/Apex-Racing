@@ -7,6 +7,8 @@ on:
       - 'data/races.json'
       - 'scripts/calendar_rules.py'
       - 'tests/test_calendar_rules.py'
+      - 'scripts/snapshot_freshness.py'
+      - 'tests/test_snapshot_freshness.py'
       - 'data/standings/**'
       - 'scripts/audit_championship_coverage.py'
       - '.github/workflows/audit-championship-coverage.yml'
@@ -28,6 +30,8 @@ jobs:
           python-version: '3.12'
       - name: Test season and non-points event filtering
         run: python -m unittest discover -s tests -p 'test_calendar_rules.py' -v
+      - name: Test standings snapshot currency logic
+        run: python -m unittest discover -s tests -p 'test_snapshot_freshness.py' -v
       - name: Audit all 23 championships
         run: python scripts/audit_championship_coverage.py
       - name: Commit audit report to development only
