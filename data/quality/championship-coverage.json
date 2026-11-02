@@ -1,14 +1,15 @@
 {
-  "generated_at": "2026-11-01T16:31:19.182130+00:00",
+  "generated_at": "2026-11-02T16:30:36.948894+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 20,
   "calendar_feeds_present": 22,
   "race_winner_feeds_present": 3,
   "partial_classification_feeds_present": 0,
+  "standings_potentially_stale": 6,
   "fully_verified_championships": 0,
   "complete": false,
-  "note": "Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.",
+  "note": "Presence and snapshot currency are not verification. Calendar dates do not prove races ran. Complete classifications, scoring/penalties, organizer cross-check and source permissions remain required.",
   "championships": {
     "F1": {
       "calendar": {
@@ -21,6 +22,12 @@
         "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
         "retrieved_at": "2026-10-22T15:27:37.127236+00:00",
         "calculation_audit": null
+      },
+      "points_freshness": {
+        "status": "potentially_stale_after_scheduled_round",
+        "retrieved_utc_date": "2026-10-22",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -39,6 +46,12 @@
         "retrieved_at": "2026-10-23T15:26:56.900474+00:00",
         "calculation_audit": null
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-23",
+        "latest_scheduled_round_date": "2026-09-27",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -56,6 +69,12 @@
         "retrieved_at": "2026-10-23T15:26:56.900474+00:00",
         "calculation_audit": null
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-23",
+        "latest_scheduled_round_date": "2026-09-13",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
         "count": 19,
@@ -72,8 +91,14 @@
         "status": "points_available_not_independently_verified",
         "rows": 33,
         "source_url": "https://www.indycar.com/standings/2026",
-        "retrieved_at": "2026-10-31T15:14:58.249062+00:00",
+        "retrieved_at": "2026-11-01T16:30:55.510358+00:00",
         "calculation_audit": null
+      },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-11-01",
+        "latest_scheduled_round_date": "2026-09-06",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -95,6 +120,12 @@
           "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
         }
       },
+      "points_freshness": {
+        "status": "potentially_stale_after_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -114,6 +145,12 @@
           "status": "partial_source_cross_check",
           "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
         }
+      },
+      "points_freshness": {
+        "status": "potentially_stale_after_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-10-31",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -138,6 +175,12 @@
           "verification_date": "2026-10-25"
         }
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-25",
+        "latest_scheduled_round_date": "2026-10-18",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -152,7 +195,7 @@
         "status": "points_available_not_independently_verified",
         "rows": 40,
         "source_url": "https://www.imsa.com/standings/",
-        "retrieved_at": "2026-10-31T15:14:58.249062+00:00",
+        "retrieved_at": "2026-11-01T16:30:55.510358+00:00",
         "calculation_audit": {
           "status": "verified_against_published_total",
           "method": "sum of already-awarded event points; not finishing positions",
@@ -168,8 +211,14 @@
             "Road Atlanta"
           ],
           "rows_checked": 40,
-          "checked_at": "2026-10-31T15:15:19.665524+00:00"
+          "checked_at": "2026-11-01T16:31:23.485828+00:00"
         }
+      },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-11-01",
+        "latest_scheduled_round_date": "2026-10-03",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -193,6 +242,12 @@
           "verification_source": "https://www.fia.com/events/abb-fia-formula-e-world-championship/season-2025-2026/standings",
           "verification_date": "2026-10-25"
         }
+      },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-25",
+        "latest_scheduled_round_date": "2026-08-16",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
@@ -219,6 +274,12 @@
           "verification_date": "2026-10-25"
         }
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-25",
+        "latest_scheduled_round_date": "2026-10-04",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "winner_summaries_available_not_full_classifications",
         "count": 14,
@@ -238,6 +299,12 @@
         "retrieved_at": "2026-10-28T15:57:01.976048+00:00",
         "calculation_audit": null
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-28",
+        "latest_scheduled_round_date": "2026-10-25",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -255,6 +322,12 @@
         "retrieved_at": "2026-10-29T15:39:07.546979+00:00",
         "calculation_audit": null
       },
+      "points_freshness": {
+        "status": "potentially_stale_after_scheduled_round",
+        "retrieved_utc_date": "2026-10-29",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -269,11 +342,17 @@
         "status": "points_available_not_independently_verified",
         "rows": 32,
         "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
-        "retrieved_at": "2026-10-31T15:15:18.547256+00:00",
+        "retrieved_at": "2026-11-01T16:31:22.699604+00:00",
         "calculation_audit": {
           "status": "community_points_not_officially_verified",
           "method": "published community points, not inferred from race finishes"
         }
+      },
+      "points_freshness": {
+        "status": "same_day_timing_requires_review",
+        "retrieved_utc_date": "2026-11-01",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -287,13 +366,19 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 34,
+        "rows": 35,
         "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
-        "retrieved_at": "2026-10-31T15:15:19.075218+00:00",
+        "retrieved_at": "2026-11-01T16:31:23.040728+00:00",
         "calculation_audit": {
           "status": "community_points_not_officially_verified",
           "method": "published community points, not inferred from race finishes"
         }
+      },
+      "points_freshness": {
+        "status": "same_day_timing_requires_review",
+        "retrieved_utc_date": "2026-11-01",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -309,11 +394,17 @@
         "status": "points_available_not_independently_verified",
         "rows": 32,
         "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
-        "retrieved_at": "2026-10-31T15:15:19.600133+00:00",
+        "retrieved_at": "2026-11-01T16:31:23.430332+00:00",
         "calculation_audit": {
           "status": "community_points_not_officially_verified",
           "method": "published community points, not inferred from race finishes"
         }
+      },
+      "points_freshness": {
+        "status": "same_day_timing_requires_review",
+        "retrieved_utc_date": "2026-11-01",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -329,6 +420,12 @@
         "status": "partial_points_table_not_complete",
         "rows": 10,
         "reason": "Manifest explicitly marks this championship field partial"
+      },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-10-18",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -350,6 +447,12 @@
           "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-05-09",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -369,6 +472,12 @@
           "status": "published_source_snapshot",
           "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
+      },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-08-29",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
@@ -390,6 +499,12 @@
           "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
       },
+      "points_freshness": {
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-09-20",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -410,6 +525,12 @@
           "note": "Ranked points cross-checked against independent published standings; snapshot requires scheduled refresh."
         }
       },
+      "points_freshness": {
+        "status": "potentially_stale_after_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-10-30",
+        "note": "Calendar dates do not confirm an event ran or results were published."
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -424,6 +545,9 @@
         "status": "missing",
         "reason": "No current-season points snapshot"
       },
+      "points_freshness": {
+        "status": "missing_snapshot"
+      },
       "individual_race_results": {
         "status": "missing"
       },
@@ -437,6 +561,9 @@
       "championship_points": {
         "status": "missing",
         "reason": "No current-season points snapshot"
+      },
+      "points_freshness": {
+        "status": "missing_snapshot"
       },
       "individual_race_results": {
         "status": "missing"
@@ -457,6 +584,12 @@
           "status": "published_source_snapshot",
           "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
+      },
+      "points_freshness": {
+        "status": "potentially_stale_after_scheduled_round",
+        "retrieved_utc_date": "2026-10-27",
+        "latest_scheduled_round_date": "2026-11-01",
+        "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
         "status": "missing"
