@@ -11,6 +11,8 @@ on:
       - 'tests/test_snapshot_freshness.py'
       - 'data/standings/**'
       - 'scripts/audit_championship_coverage.py'
+      - 'scripts/verify_23_championship_release.py'
+      - 'data/coverage.json'
       - '.github/workflows/audit-championship-coverage.yml'
 permissions:
   contents: write
@@ -34,6 +36,9 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_snapshot_freshness.py' -v
       - name: Audit all 23 championships
         run: python scripts/audit_championship_coverage.py
+      - name: Check independent release data gate (expected to fail until complete)
+        continue-on-error: true
+        run: python scripts/verify_23_championship_release.py
       - name: Commit audit report to development only
         run: |
           git config user.name "github-actions[bot]"
