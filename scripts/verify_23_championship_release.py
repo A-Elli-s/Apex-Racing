@@ -1,43 +1,58 @@
 #!/usr/bin/env python3
-"""Fail-closed release gate for Apex Racing World 2026 data.
-
-This is an independent check; it does not change public site content.
-Run: python3 scripts/verify_23_championship_release.py
-"""
+"""Fail-closed data readiness gate. Does not certify preview accessibility."""
 import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-COVERAGE = ROOT / "data/quality/championship-coverage.json"
 DETAIL = ROOT / "data/coverage.json"
+SUMMARY = ROOT / "data/quality/championship-coverage.json"
 EXPECTED = 23
+REQUIRED = (
+    "calendar_available", "points_table_available",
+    "full_race_classifications_available", "review_record_complete",
+    "officially_cross_checked", "commercial_reuse_cleared", "ready_for_release",
+)
+
+def verify(detail, summary):
+    failures = []
+    series = detail.get("series")
+    championships = summary.get("championships")
+    if not isinstance(series, dict):
+        series = {}
+        failures.append("Detailed coverage has no series mapping")
+    if not isinstance(championships, dict):
+        championships = {}
+        failures.append("Summary has no championships mapping")
+    if len(series) != EXPECTED or len(championships) != EXPECTED:
+        failures.append(f"Expected {EXPECTED} entries in both reports; found {len(series)} detailed and {len(championships)} summary")
+    if set(series) != set(championships):
+        failures.append("Championship names differ between reports")
+    if detail.get("season") != summary.get("season"):
+        failures.append("Season mismatch between reports")
+    for name, record in sorted(series.items()):
+        if not isinstance(record, dict):
+            failures.append(f"{name}: invalid record")
+            continue
+        missing = [field for field in REQUIRED if record.get(field) is not True]
+        if missing:
+            failures.append(f"{name}: missing {', '.join(missing)}")
+        if championships.get(name, {}).get("fully_verified") is not True:
+            failures.append(f"{name}: not fully verified in summary")
+    if summary.get("fully_verified_championships") != EXPECTED or summary.get("complete") is not True:
+        failures.append("Summary does not certify 23 verified championships")
+    return failures
 
 def main():
-    detailed = json.loads(COVERAGE.read_text(encoding="utf-8"))
-    summary = json.loads(DETAIL.read_text(encoding="utf-8"))
-    series = detailed.get("series", {})
-    failures = []
-    if len(series) != EXPECTED:
-        failures.append(f"Expected {EXPECTED} championships; found {len(series)}")
-    for name, record in sorted(series.items()):
-        missing = [field for field in (
-            "calendar_available", "points_table_available",
-            "full_race_classifications_available", "review_record_complete",
-            "officially_cross_checked", "commercial_reuse_cleared",
-            "ready_for_release"
-        ) if record.get(field) is not True]
-        if missing:
-            failures.append(f"{name}: {', '.join(missing)}")
-    if summary.get("fully_verified_championships") != EXPECTED:
-        failures.append("Summary does not certify 23 verified championships")
-    if summary.get("complete") is not True:
-        failures.append("Summary complete flag is not true")
+    failures = verify(
+        json.loads(DETAIL.read_text(encoding="utf-8")),
+        json.loads(SUMMARY.read_text(encoding="utf-8")),
+    )
     if failures:
         print("NOT RELEASE READY:")
         for failure in failures:
             print(" -", failure)
         return 1
-    print("Data flags pass; independently verify preview accessibility before release.")
+    print("Data readiness flags pass; independently verify development preview accessibility.")
     return 0
 
 if __name__ == "__main__":
