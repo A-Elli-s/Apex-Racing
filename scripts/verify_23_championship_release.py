@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fail-closed data readiness gate. Does not certify preview accessibility."""
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,8 +28,16 @@ def verify(detail, summary):
         failures.append(f"Expected {EXPECTED} entries in both reports; found {len(series)} detailed and {len(championships)} summary")
     if set(series) != set(championships):
         failures.append("Championship names differ between reports")
-    if detail.get("season") != summary.get("season"):
+    if detail.get("season") != summary.get("season") or detail.get("season") != 2026:
         failures.append("Season mismatch between reports")
+    for label, report in (("detailed", detail), ("summary", summary)):
+        try:
+            stamp = datetime.fromisoformat(report["generated_at"].replace("Z", "+00:00"))
+            age = datetime.now(timezone.utc) - stamp
+            if stamp.tzinfo is None or age.total_seconds() < 0 or age.total_seconds() > 172800:
+                failures.append(f"{label} report timestamp is stale, future-dated or timezone-naive")
+        except (KeyError, ValueError, TypeError):
+            failures.append(f"{label} report has invalid generated_at")
     for name, record in sorted(series.items()):
         if not isinstance(record, dict):
             failures.append(f"{name}: invalid record")
@@ -36,7 +45,10 @@ def verify(detail, summary):
         missing = [field for field in REQUIRED if record.get(field) is not True]
         if missing:
             failures.append(f"{name}: missing {', '.join(missing)}")
-        if championships.get(name, {}).get("fully_verified") is not True:
+        if not isinstance(championships.get(name), dict):
+            failures.append(f"{name}: invalid summary record")
+            continue
+        if championships[name].get("fully_verified") is not True:
             failures.append(f"{name}: not fully verified in summary")
     if summary.get("fully_verified_championships") != EXPECTED or summary.get("complete") is not True:
         failures.append("Summary does not certify 23 verified championships")
