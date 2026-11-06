@@ -50,6 +50,20 @@ def verify(detail, summary):
             continue
         if championships[name].get("fully_verified") is not True:
             failures.append(f"{name}: not fully verified in summary")
+    # Cross-check the summary's underlying evidence, not only its readiness booleans.
+    # These records must be populated by independently audited source checks.
+    for name, record in sorted(championships.items()):
+        if not isinstance(record, dict):
+            continue
+        calendar = record.get("calendar")
+        points = record.get("championship_points")
+        results = record.get("individual_race_results")
+        if not isinstance(calendar, dict) or not isinstance(calendar.get("events"), int) or isinstance(calendar.get("events"), bool) or calendar["events"] < 1:
+            failures.append(f"{name}: no valid calendar event count in summary")
+        if not isinstance(points, dict) or not isinstance(points.get("rows"), int) or isinstance(points.get("rows"), bool) or points["rows"] < 1:
+            failures.append(f"{name}: no valid standings rows in summary")
+        if not isinstance(results, dict) or results.get("status") in (None, "missing", "winner_summaries_available_not_full_classifications"):
+            failures.append(f"{name}: no complete race classifications evidenced in summary")
     if summary.get("fully_verified_championships") != EXPECTED or summary.get("complete") is not True:
         failures.append("Summary does not certify 23 verified championships")
     return failures
