@@ -62,8 +62,17 @@ def verify(detail, summary):
             failures.append(f"{name}: no valid calendar event count in summary")
         if not isinstance(points, dict) or not isinstance(points.get("rows"), int) or isinstance(points.get("rows"), bool) or points["rows"] < 1:
             failures.append(f"{name}: no valid standings rows in summary")
-        if not isinstance(results, dict) or results.get("status") in (None, "missing", "winner_summaries_available_not_full_classifications"):
-            failures.append(f"{name}: no complete race classifications evidenced in summary")
+        if not isinstance(results, dict) or results.get("status") != "candidate_classifications_require_round_and_official_review":
+            failures.append(f"{name}: no complete race-classification candidate evidenced in summary")
+        else:
+            classified = results.get("classified_events")
+            completed = results.get("completed_calendar_events")
+            if (type(classified) is not int or type(completed) is not int
+                    or completed < 1 or classified < completed):
+                failures.append(f"{name}: classifications do not cover completed calendar events")
+        freshness = record.get("points_freshness")
+        if not isinstance(freshness, dict) or freshness.get("status") != "no_later_scheduled_round":
+            failures.append(f"{name}: standings freshness requires review")
     if summary.get("fully_verified_championships") != EXPECTED or summary.get("complete") is not True:
         failures.append("Summary does not certify 23 verified championships")
     return failures
