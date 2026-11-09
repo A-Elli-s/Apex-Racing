@@ -70,7 +70,12 @@ def verify(detail, summary):
             if (type(classified) is not int or type(completed) is not int
                     or completed < 1 or classified != completed):
                 failures.append(f"{name}: classified-event count does not exactly match completed calendar events")
-        # A candidate feed is not an independently verified final classification.\n        # Require explicit review evidence and a rights decision before treating it as release-ready.\n        evidence = results.get("verification") if isinstance(results, dict) else None\n        if not isinstance(evidence, dict) or evidence.get("officially_cross_checked") is not True or evidence.get("season_scoring_and_adjustments_checked") is not True or evidence.get("source_reuse_cleared") is not True:\n            failures.append(f"{name}: race classification verification, scoring, or source rights evidence missing")\n        freshness = record.get("points_freshness")
+        # A candidate feed is not an independently verified final classification. 
+        # Require explicit review evidence and a rights decision before treating it as release-ready. 
+        evidence = results.get("verification") if isinstance(results, dict) else None 
+        if not isinstance(evidence, dict) or evidence.get("officially_cross_checked") is not True or evidence.get("season_scoring_and_adjustments_checked") is not True or evidence.get("source_reuse_cleared") is not True: 
+            failures.append(f"{name}: race classification verification, scoring, or source rights evidence missing") 
+        freshness = record.get("points_freshness")
         if not isinstance(freshness, dict) or freshness.get("status") != "no_later_scheduled_round":
             failures.append(f"{name}: standings freshness requires review")
     if summary.get("fully_verified_championships") != EXPECTED or summary.get("complete") is not True:
