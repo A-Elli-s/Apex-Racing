@@ -11,12 +11,12 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: standings-refresh-dev
+  group: dev-racing-data-refresh
   cancel-in-progress: false
 jobs:
   standings:
     if: github.ref == 'refs/heads/dev'
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4

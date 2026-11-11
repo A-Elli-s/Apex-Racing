@@ -9,6 +9,9 @@ import datetime as dt
 import json
 import pathlib
 
+from calendar_rules import championship_events
+from snapshot_freshness import snapshot_freshness
+
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 YEAR = dt.datetime.now(dt.timezone.utc).year
 SERIES = [
@@ -24,8 +27,9 @@ CALENDAR_KEYS = {
     'NASCAR Trucks':'NASCAR Cup / O’Reilly / Trucks',
     'MotoGP':'MotoGP / Moto2 / Moto3','Moto2':'MotoGP / Moto2 / Moto3',
     'Moto3':'MotoGP / Moto2 / Moto3',
+    'Off-road racing':'SCORE Off-road',
 }
-NASCAR_PREFIX = {'NASCAR Cup':'CUP —','NASCAR O’Reilly':'XFINITY —','NASCAR Trucks':'TRUCK —'}
+NASCAR_PREFIX = {'NASCAR Cup':'CUP —','NASCAR O’Reilly':'O’REILLY —','NASCAR Trucks':'TRUCK —'}
 
 def load(path):
     try:
@@ -71,38 +75,86 @@ def points_audit(series, entry):
             pass
     if valid<3 or valid<len(rows):
         return {'status':'invalid','reason':f'Numeric totals in only {valid}/{len(rows)} rows'}
+    if entry.get('partial_field'):
+        return {'status':'partial_points_table_not_complete','rows':valid,
+                'reason':'Manifest explicitly marks this championship field partial'}
     return {'status':'points_available_not_independently_verified',
             'rows':valid,'source_url':snapshot.get('source_url'),
             'retrieved_at':snapshot.get('retrieved_at'),
             'calculation_audit':snapshot.get('points_audit')}
 
-def race_audit(series,entry):
-    url=entry.get('race_results_seasons',{}).get(str(YEAR))
-    if not url and series in ('Formula E','WRC'):
-        url=entry.get('seasons',{}).get(str(YEAR))
-    path=file_for_url(url)
-    snapshot=load(path) if path else None
-    if not isinstance(snapshot,dict):
-        return {'status':'missing'}
-    data=snapshot.get('data')
-    items=data if isinstance(data,list) else (data.get('results') if isinstance(data,dict) else None)
-    if not isinstance(items,list):
-        return {'status':'missing'}
-    # Full classifications must list multiple ranked competitors for each race;
-    # a winner-only summary is not enough to calculate championship points.
-    classified=0
+def race_audit(series, entry, races):
+    """Count classifications conservatively; three ranked entries do not prove a season.
+
+    All completed scheduled events must be represented before a structural
+    completeness claim. Organizer verification, penalties, sprints, and source
+    rights remain separate mandatory release gates.
+    """
+    url = entry.get('race_results_seasons', {}).get(str(YEAR))
+    if not url and series in ('Formula E', 'WRC'):
+        url = entry.get('seasons', {}).get(str(YEAR))
+    path = file_for_url(url)
+    snapshot = load(path) if path else None
+    if not isinstance(snapshot, dict) or snapshot.get('series') != series or str(snapshot.get('season')) != str(YEAR):
+        return {'status': 'missing'}
+    data = snapshot.get('data')
+    items = data if isinstance(data, list) else (data.get('results') if isinstance(data, dict) else None)
+    if not isinstance(items, list):
+        return {'status': 'missing'}
+
+    today = dt.datetime.now(dt.timezone.utc).date()
+    key = CALENDAR_KEYS.get(series, series)
+    calendar = races.get(key, [])
+    if not isinstance(calendar, list):
+        calendar = []
+    if series in NASCAR_PREFIX:
+        calendar = [x for x in calendar if isinstance(x, dict) and
+                    str(x.get('name', '')).startswith(NASCAR_PREFIX[series])]
+    completed_calendar_events = 0
+    for event in championship_events(series, calendar, YEAR):
+        try:
+            day = dt.date.fromisoformat(str(event.get('date')))
+        except (ValueError, TypeError):
+            continue
+        if day < today:
+            completed_calendar_events += 1
+
+    classified = 0
+    seen_events = set()
     for event in items:
-        if not isinstance(event,dict):
+        if not isinstance(event, dict):
             continue
-        competitors=event.get('classification') or event.get('results')
-        if not isinstance(competitors,list) or len(competitors)<3:
+        event_id = str(event.get('round') or event.get('event') or event.get('eprix') or '').strip()
+        competitors = event.get('classification') or event.get('results')
+        if not event_id or event_id in seen_events or not isinstance(competitors, list) or len(competitors) < 3:
             continue
-        if all(isinstance(x,dict) and (x.get('position') is not None or x.get('rank') is not None) for x in competitors):
-            classified+=1
-    if classified>=3:
-        return {'status':'full_classifications_available','events':classified}
-    count=sum(isinstance(x,dict) and bool(x.get('winning_driver')) for x in items)
-    return {'status':'winner_summaries_available_not_full_classifications' if count else 'missing','count':count}
+        positions = []
+        for competitor in competitors:
+            if not isinstance(competitor, dict):
+                break
+            try:
+                position = int(competitor.get('position', competitor.get('rank')))
+                if position < 1:
+                    break
+                positions.append(position)
+            except (ValueError, TypeError):
+                break
+        if len(positions) != len(competitors) or len(set(positions)) != len(positions):
+            continue
+        seen_events.add(event_id)
+        classified += 1
+
+    if classified:
+        # No calendar, fewer classified events than completed rounds, or an
+        # unverified race-by-race mapping is not a complete season.
+        status = ('candidate_classifications_require_round_and_official_review'
+                  if completed_calendar_events and classified >= completed_calendar_events
+                  else 'partial_classifications_not_complete')
+        return {'status': status, 'classified_events': classified,
+                'completed_calendar_events': completed_calendar_events}
+    count = sum(isinstance(x, dict) and bool(x.get('winning_driver')) for x in items)
+    return {'status': 'winner_summaries_available_not_full_classifications' if count else 'missing',
+            'count': count, 'completed_calendar_events': completed_calendar_events}
 
 def calendar_audit(series,races):
     key=CALENDAR_KEYS.get(series,series)
@@ -112,22 +164,38 @@ def calendar_audit(series,races):
     if series in NASCAR_PREFIX:
         items=[x for x in items if isinstance(x,dict) and str(x.get('name','')).startswith(NASCAR_PREFIX[series])]
     count=0
-    for x in items:
-        if not isinstance(x,dict) or not x.get('name') or not x.get('url'):
+    for x in championship_events(series, items, YEAR):
+        if not x.get('name') or not x.get('url'):
             continue
         try:
             when=dt.date.fromisoformat(str(x.get('date')))
         except (TypeError,ValueError):
             continue
-        if when.year in (YEAR,YEAR-1 if series=='Formula E' else YEAR):
-            count+=1
+        count+=1
     if not count:
         return {'status':'missing','events':0}
+    if count < 3:
+        return {'status':'partial_calendar_entries_not_verified','events':count}
     if series in ('MotoGP','Moto2','Moto3'):
         return {'status':'shared_calendar_not_class_verified','events':count}
     if series=='NASCAR O’Reilly':
         return {'status':'legacy_xfinity_labels_need_validation','events':count}
     return {'status':'calendar_entries_present_not_independently_verified','events':count}
+
+def points_freshness(series, entry, races):
+    """Flag potentially stale standings without assuming a scheduled race ran."""
+    url = entry.get('seasons', {}).get(str(YEAR))
+    path = file_for_url(url)
+    snapshot = load(path) if path else None
+    key = CALENDAR_KEYS.get(series, series)
+    events = races.get(key, [])
+    if not isinstance(events, list):
+        events = []
+    if series in NASCAR_PREFIX:
+        events = [e for e in events if isinstance(e, dict) and
+                  str(e.get('name', '')).startswith(NASCAR_PREFIX[series])]
+    return snapshot_freshness(snapshot, championship_events(series, events, YEAR))
+
 
 def main():
     manifest=load(ROOT/'data'/'standings'/'manifest.json') or {}
@@ -140,7 +208,8 @@ def main():
         coverage[series]={
             'calendar':calendar_audit(series,calendar),
             'championship_points':points_audit(series,entry),
-            'individual_race_results':race_audit(series,entry),
+            'points_freshness':points_freshness(series,entry,calendar),
+            'individual_race_results':race_audit(series,entry,calendar),
         }
     # A source cannot become "verified" merely because a JSON file exists.
     # Independent reviews must be recorded explicitly in the manifest entry.
@@ -154,11 +223,15 @@ def main():
             and review.get('calendar')=='cross_checked'
             and review.get('race_results')=='complete_classifications_checked'
             and review.get('rights')=='approved'
+            and review.get('race_round_mapping')=='cross_checked'
+            and entries.get(series,{}).get('commercial_reuse_cleared') is True
+            and not entries.get(series,{}).get('reuse_review_required')
         )
         available=(
             present['championship_points']['status']=='points_available_not_independently_verified'
             and present['calendar']['status']=='calendar_entries_present_not_independently_verified'
-            and present['individual_race_results']['status']=='full_classifications_available'
+            and present['individual_race_results']['status']=='candidate_classifications_require_round_and_official_review'
+            and present['points_freshness']['status']=='no_later_scheduled_round'
         )
         verified=bool(reviewed and available)
         coverage[series]['fully_verified']=verified
@@ -169,13 +242,15 @@ def main():
         'season':YEAR,'target_championships':len(SERIES),
         'points_tables_available':sum(v['championship_points']['status']=='points_available_not_independently_verified' for v in coverage.values()),
         'calendar_feeds_present':sum(v['calendar']['status']!='missing' for v in coverage.values()),
-        'race_winner_feeds_present':sum(v['individual_race_results']['status']!='missing' for v in coverage.values()),
+        'race_winner_feeds_present':sum(v['individual_race_results']['status']=='winner_summaries_available_not_full_classifications' for v in coverage.values()),
+        'partial_classification_feeds_present':sum(v['individual_race_results']['status'] in ('partial_classifications_not_complete','candidate_classifications_require_round_and_official_review') for v in coverage.values()),
+        'standings_potentially_stale':sum(v['points_freshness']['status']=='potentially_stale_after_scheduled_round' for v in coverage.values()),
         'fully_verified_championships':verified_count,
         'complete':verified_count==len(SERIES),
-        'note':'Presence is not verification. Complete classification data, season-specific scoring/penalties, organizer cross-check and source permissions must be recorded in each series verification manifest before completion.',
+        'note':'Presence and snapshot currency are not verification. Calendar dates do not prove races ran. Complete classifications, scoring/penalties, organizer cross-check and source permissions remain required.',
         'championships':coverage,
     }
-    out=ROOT/'data'/'coverage.json'
+    out=ROOT/'data'/'quality'/'championship-coverage.json'
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     print('Coverage audit:',report['points_tables_available'],'points tables,',report['calendar_feeds_present'],'calendars,',report['race_winner_feeds_present'],'race-winner feeds of',len(SERIES),'championships.')

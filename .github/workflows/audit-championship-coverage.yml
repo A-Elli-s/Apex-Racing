@@ -5,8 +5,15 @@ on:
     branches: [dev]
     paths:
       - 'data/races.json'
+      - 'scripts/calendar_rules.py'
+      - 'tests/test_calendar_rules.py'
+      - 'scripts/snapshot_freshness.py'
+      - 'tests/test_snapshot_freshness.py'
       - 'data/standings/**'
       - 'scripts/audit_championship_coverage.py'
+      - 'scripts/verify_23_championship_release.py'
+      - 'data/coverage.json'
+      - '.github/workflows/audit-championship-coverage.yml'
 permissions:
   contents: write
 concurrency:
@@ -23,15 +30,33 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Test season and non-points event filtering
+        run: python -m unittest discover -s tests -p 'test_calendar_rules.py' -v
+      - name: Test standings snapshot currency logic
+        run: python -m unittest discover -s tests -p 'test_snapshot_freshness.py' -v
       - name: Audit all 23 championships
         run: python scripts/audit_championship_coverage.py
+      - name: Check independent release data gate (expected to fail until complete)
+        continue-on-error: true
+        run: python scripts/verify_23_championship_release.py
       - name: Commit audit report to development only
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/coverage.json
-          if ! git diff --cached --quiet; then
-            git commit -m "Refresh development championship coverage audit"
-            git pull --rebase origin dev
-            git push origin HEAD:dev
-          fi
+          # Recompute from the newest dev tree to avoid stale push races.
+          for attempt in 1 2 3 4; do
+            git fetch origin dev
+            git reset --hard origin/dev
+            python scripts/audit_championship_coverage.py
+            git add data/quality/championship-coverage.json
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "Audit dev data: data/quality/championship-coverage.json"
+            if git push origin HEAD:dev; then
+              exit 0
+            fi
+            sleep $((attempt * 3))
+          done
+          echo "Could not publish audit report after 4 attempts" >&2
+          exit 1

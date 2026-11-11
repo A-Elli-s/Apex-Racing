@@ -1,5 +1,9 @@
 name: Refresh racing schedules
 on:
+  push:
+    branches: [dev]
+    paths:
+      - 'scripts/refresh-now.txt'
   schedule:
     - cron: '17 8,20 * * *'
   workflow_dispatch:
@@ -10,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: dev
+          persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -22,5 +29,5 @@ jobs:
           git add data/races.json
           if ! git diff --cached --quiet; then
             git commit -m "Auto-refresh racing calendar feeds"
-            git push
+            git push origin HEAD:dev
           fi

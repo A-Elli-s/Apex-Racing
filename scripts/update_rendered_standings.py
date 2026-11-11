@@ -15,7 +15,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as BrowserTimeout
 
 from update_standings import OFFICIAL, collect_tables, format_standings, OUT
 
-SKIP_BLOCKED={'NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','Monster Jam','WorldSBK'}
+SKIP_BLOCKED={'NASCAR Cup','NASCAR O’Reilly','NASCAR Trucks','Monster Jam','WorldSBK','NHRA','Supercars'}
 MAX_PAGES=20
 
 def extract_ranked_cards(soup,series):

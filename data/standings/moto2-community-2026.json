@@ -1,0 +1,200 @@
+{
+  "series": "Moto2",
+  "season": 2026,
+  "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
+  "official_url": "https://www.motogp.com/en/world-standing/2026/moto2/championship-standings",
+  "retrieved_at": "2026-11-01T16:31:23.040728+00:00",
+  "provider": "Wikipedia community standings (not official)",
+  "attribution": "Wikipedia contributors",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+  "reuse_review_required": true,
+  "data": {
+    "headers": [
+      "Position",
+      "Rider",
+      "Points"
+    ],
+    "rows": [
+      [
+        "1",
+        "Manuel González",
+        "276.5"
+      ],
+      [
+        "2",
+        "Izan Guevara",
+        "273"
+      ],
+      [
+        "3",
+        "Iván Ortolá",
+        "199.5"
+      ],
+      [
+        "4",
+        "David Alonso",
+        "191"
+      ],
+      [
+        "5",
+        "Daniel Holgado",
+        "190"
+      ],
+      [
+        "6",
+        "Senna Agius",
+        "166"
+      ],
+      [
+        "7",
+        "Filip Salač",
+        "155"
+      ],
+      [
+        "8",
+        "Celestino Vietti",
+        "140"
+      ],
+      [
+        "9",
+        "Alonso López",
+        "129.5"
+      ],
+      [
+        "10",
+        "Collin Veijer",
+        "89.5"
+      ],
+      [
+        "11",
+        "Daniel Muñoz",
+        "86"
+      ],
+      [
+        "12",
+        "Tony Arbolino",
+        "82.5"
+      ],
+      [
+        "13",
+        "Álex Escrig",
+        "69"
+      ],
+      [
+        "14",
+        "Barry Baltus",
+        "60"
+      ],
+      [
+        "15",
+        "Adrián Huertas",
+        "52"
+      ],
+      [
+        "16",
+        "José Antonio Rueda",
+        "48"
+      ],
+      [
+        "17",
+        "Deniz Öncü",
+        "47.5"
+      ],
+      [
+        "18",
+        "Joe Roberts",
+        "44"
+      ],
+      [
+        "19",
+        "Luca Lunetta",
+        "27"
+      ],
+      [
+        "20",
+        "Ayumu Sasaki",
+        "24"
+      ],
+      [
+        "21",
+        "Ángel Piqueras",
+        "20"
+      ],
+      [
+        "22",
+        "Alberto Ferrández",
+        "17.5"
+      ],
+      [
+        "23",
+        "Arón Canet",
+        "17.5"
+      ],
+      [
+        "24",
+        "Taiyo Furusato",
+        "17"
+      ],
+      [
+        "25",
+        "Zonta van den Goorbergh",
+        "14"
+      ],
+      [
+        "26",
+        "Sergio García",
+        "11"
+      ],
+      [
+        "27",
+        "Mario Aji",
+        "3"
+      ],
+      [
+        "28",
+        "Marcos Ramírez",
+        "0"
+      ],
+      [
+        "29",
+        "Xabi Zurutuza",
+        "0"
+      ],
+      [
+        "30",
+        "Unai Orradre",
+        "0"
+      ],
+      [
+        "31",
+        "Jorge Navarro",
+        "0"
+      ],
+      [
+        "32",
+        "Dennis Foggia",
+        "0"
+      ],
+      [
+        "33",
+        "Matteo Ferrari",
+        "0"
+      ],
+      [
+        "34",
+        "Jacob Roulstone",
+        "0"
+      ],
+      [
+        "35",
+        "Milan Pawelec",
+        "0"
+      ]
+    ]
+  },
+  "points_audit": {
+    "status": "community_points_not_officially_verified",
+    "method": "published community points, not inferred from race finishes"
+  }
+}
