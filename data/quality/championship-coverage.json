@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-09T16:18:43.473154+00:00",
+  "generated_at": "2026-11-11T16:48:18.474837+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 20,
-  "calendar_feeds_present": 22,
+  "calendar_feeds_present": 21,
   "race_winner_feeds_present": 3,
   "partial_classification_feeds_present": 0,
-  "standings_potentially_stale": 11,
+  "standings_potentially_stale": 10,
   "fully_verified_championships": 0,
   "complete": false,
   "note": "Presence and snapshot currency are not verification. Calendar dates do not prove races ran. Complete classifications, scoring/penalties, organizer cross-check and source permissions remain required.",
@@ -72,7 +72,7 @@
       "points_freshness": {
         "status": "no_later_scheduled_round",
         "retrieved_utc_date": "2026-10-23",
-        "latest_scheduled_round_date": "2026-09-13",
+        "latest_scheduled_round_date": "2026-09-12",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
@@ -85,7 +85,7 @@
     "IndyCar": {
       "calendar": {
         "status": "calendar_entries_present_not_independently_verified",
-        "events": 17
+        "events": 18
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
@@ -133,8 +133,8 @@
     },
     "NASCAR O’Reilly": {
       "calendar": {
-        "status": "legacy_xfinity_labels_need_validation",
-        "events": 33
+        "status": "missing",
+        "events": 0
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
@@ -147,10 +147,8 @@
         }
       },
       "points_freshness": {
-        "status": "potentially_stale_after_scheduled_round",
-        "retrieved_utc_date": "2026-10-27",
-        "latest_scheduled_round_date": "2026-11-07",
-        "note": "Calendar dates do not confirm an event ran or results were published."
+        "status": "no_elapsed_calendar_round_to_compare",
+        "retrieved_utc_date": "2026-10-27"
       },
       "individual_race_results": {
         "status": "missing"
@@ -259,7 +257,7 @@
     "WRC": {
       "calendar": {
         "status": "calendar_entries_present_not_independently_verified",
-        "events": 14
+        "events": 13
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
