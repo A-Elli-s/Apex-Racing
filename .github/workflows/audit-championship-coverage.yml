@@ -12,6 +12,7 @@ on:
       - 'data/standings/**'
       - 'scripts/audit_championship_coverage.py'
       - 'scripts/verify_23_championship_release.py'
+      - 'scripts/test_verify_23_championship_release.py'
       - 'data/coverage.json'
       - '.github/workflows/audit-championship-coverage.yml'
 permissions:
@@ -34,6 +35,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_calendar_rules.py' -v
       - name: Test standings snapshot currency logic
         run: python -m unittest discover -s tests -p 'test_snapshot_freshness.py' -v
+      - name: Test fail-closed release verification
+        run: python -m unittest discover -s scripts -p 'test_verify_23_championship_release.py' -v
       - name: Audit all 23 championships
         run: python scripts/audit_championship_coverage.py
       - name: Check independent release data gate (expected to fail until complete)
