@@ -48,6 +48,16 @@ def verify(detail, summary):
         if not isinstance(championships.get(name), dict):
             failures.append(f"{name}: invalid summary record")
             continue
+        # Calendar counts must reconcile across the independently generated audits.
+        calendar_count = record.get("calendar_events")
+        summary_calendar = championships[name].get("calendar")
+        summary_count = summary_calendar.get("events") if isinstance(summary_calendar, dict) else None
+        if type(calendar_count) is not int or type(summary_count) is not int or calendar_count != summary_count:
+            failures.append(f"{name}: calendar event counts disagree between audits")
+        completed_count = record.get("completed_calendar_events")
+        if (type(completed_count) is not int or type(calendar_count) is not int
+                or completed_count < 0 or completed_count > calendar_count):
+            failures.append(f"{name}: invalid completed calendar event count")
         if championships[name].get("fully_verified") is not True:
             failures.append(f"{name}: not fully verified in summary")
     # Cross-check the summary's underlying evidence, not only its readiness booleans.
