@@ -58,6 +58,12 @@ def verify(detail, summary):
         if (type(completed_count) is not int or type(calendar_count) is not int
                 or completed_count < 0 or completed_count > calendar_count):
             failures.append(f"{name}: invalid completed calendar event count")
+        # Independently reported completed-round counts must agree when present.
+        summary_results = championships[name].get("individual_race_results")
+        if isinstance(summary_results, dict) and "completed_calendar_events" in summary_results:
+            reported_completed = summary_results["completed_calendar_events"]
+            if type(reported_completed) is not int or reported_completed != completed_count:
+                failures.append(f"{name}: completed-event counts disagree between audits")
         if championships[name].get("fully_verified") is not True:
             failures.append(f"{name}: not fully verified in summary")
     # Cross-check the summary's underlying evidence, not only its readiness booleans.
