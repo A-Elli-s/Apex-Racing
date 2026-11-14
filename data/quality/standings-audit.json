@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-30T15:55:47.454903+00:00",
+  "generated_at": "2026-11-14T17:17:31.052702+00:00",
   "season": 2026,
   "method": "structural validation; independent cross-source verification pending",
   "summary": {
@@ -14,10 +14,10 @@
       "source_count": 1,
       "independently_verified": false,
       "official_url": "https://www.formula1.com/en/racing/2026",
-      "competitors": 23,
-      "leader_points": 340.0,
+      "competitors": 25,
+      "leader_points": 390.0,
       "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
-      "retrieved_at": "2026-10-22T15:27:37.127236+00:00"
+      "retrieved_at": "2026-11-14T17:17:00.618189+00:00"
     },
     "F2": {
       "status": "single_source_unverified",
@@ -47,7 +47,7 @@
       "competitors": 33,
       "leader_points": 631.0,
       "source_url": "https://www.indycar.com/standings/2026",
-      "retrieved_at": "2026-10-29T15:39:07.546979+00:00"
+      "retrieved_at": "2026-11-14T17:17:01.743833+00:00"
     },
     "NASCAR Cup": {
       "status": "single_source_unverified",
@@ -87,7 +87,7 @@
       "competitors": 40,
       "leader_points": 3020.0,
       "source_url": "https://www.imsa.com/standings/",
-      "retrieved_at": "2026-10-29T15:39:07.546979+00:00"
+      "retrieved_at": "2026-11-01T16:30:55.510358+00:00"
     },
     "Formula E": {
       "status": "single_source_unverified",
@@ -133,31 +133,31 @@
       "status": "single_source_unverified",
       "source_count": 1,
       "independently_verified": false,
-      "official_url": "https://www.motogp.com/en/world-standing/2026/motogp/championship-standings",
-      "competitors": 32,
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/MotoGP/RidersChampionship",
+      "competitors": 5,
       "leader_points": 365.0,
-      "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
-      "retrieved_at": "2026-10-29T15:39:33.043803+00:00"
+      "source_url": "https://stats.motogp.com/en/world-standing",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
     },
     "Moto2": {
       "status": "single_source_unverified",
       "source_count": 1,
       "independently_verified": false,
-      "official_url": "https://www.motogp.com/en/world-standing/2026/moto2/championship-standings",
-      "competitors": 34,
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+      "competitors": 6,
       "leader_points": 265.5,
-      "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
-      "retrieved_at": "2026-10-29T15:39:33.687641+00:00"
+      "source_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
     },
     "Moto3": {
       "status": "single_source_unverified",
       "source_count": 1,
       "independently_verified": false,
-      "official_url": "https://www.motogp.com/en/world-standing/2026/moto3/championship-standings",
-      "competitors": 32,
+      "official_url": "https://stats.motogp.com/en/world-standing/2026/Moto3/RidersChampionship",
+      "competitors": 5,
       "leader_points": 351.0,
-      "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
-      "retrieved_at": "2026-10-29T15:39:34.367534+00:00"
+      "source_url": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
+      "retrieved_at": "2026-10-27T18:18:00+00:00"
     },
     "WorldSBK": {
       "status": "single_source_unverified",

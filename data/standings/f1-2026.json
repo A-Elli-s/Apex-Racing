@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
   "official_url": "https://www.formula1.com/en/racing/2026",
-  "retrieved_at": "2026-10-22T15:27:37.127236+00:00",
+  "retrieved_at": "2026-11-14T17:17:00.618189+00:00",
   "data": {
     "headers": [
       "Position",
@@ -14,52 +14,52 @@
       [
         "1",
         "Andrea Kimi Antonelli",
-        "340"
+        "390"
       ],
       [
         "2",
-        "George Russell",
-        "238"
+        "Max Verstappen",
+        "279"
       ],
       [
         "3",
-        "Lewis Hamilton",
-        "229"
+        "George Russell",
+        "262"
       ],
       [
         "4",
-        "Max Verstappen",
-        "221"
+        "Lewis Hamilton",
+        "261"
       ],
       [
         "5",
         "Charles Leclerc",
-        "215"
+        "249"
       ],
       [
         "6",
         "Lando Norris",
-        "201"
+        "246"
       ],
       [
         "7",
         "Oscar Piastri",
-        "138"
+        "152"
       ],
       [
         "8",
         "Isack Hadjar",
-        "97"
+        "122"
       ],
       [
         "9",
         "Liam Lawson",
-        "75"
+        "89"
       ],
       [
         "10",
         "Pierre Gasly",
-        "41"
+        "42"
       ],
       [
         "11",
@@ -78,13 +78,13 @@
       ],
       [
         "14",
-        "Nico Hülkenberg",
-        "13"
+        "Gabriel Bortoleto",
+        "14"
       ],
       [
         "15",
-        "Gabriel Bortoleto",
-        "10"
+        "Nico Hülkenberg",
+        "14"
       ],
       [
         "16",
@@ -113,17 +113,27 @@
       ],
       [
         "21",
+        "Ryo Hirakawa",
+        "1"
+      ],
+      [
+        "22",
         "Lance Stroll",
         "0"
       ],
       [
-        "22",
+        "23",
         "Valtteri Bottas",
         "0"
       ],
       [
-        "23",
+        "24",
         "Sergio Pérez",
+        "0"
+      ],
+      [
+        "25",
+        "Rafael Camara",
         "0"
       ]
     ]

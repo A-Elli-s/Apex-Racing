@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://api.jolpi.ca/ergast/f1/2026/constructorStandings.json",
   "official_url": "https://www.formula1.com/en/racing/2026",
-  "retrieved_at": "2026-10-22T15:27:37.127236+00:00",
+  "retrieved_at": "2026-11-14T17:17:00.618189+00:00",
   "data": {
     "headers": [
       "Position",
@@ -14,42 +14,42 @@
       [
         "1",
         "Mercedes",
-        "578"
+        "652"
       ],
       [
         "2",
         "Ferrari",
-        "444"
+        "510"
       ],
       [
         "3",
-        "McLaren",
-        "339"
+        "Red Bull",
+        "415"
       ],
       [
         "4",
-        "Red Bull",
-        "332"
+        "McLaren",
+        "398"
       ],
       [
         "5",
         "RB F1 Team",
-        "100"
+        "114"
       ],
       [
         "6",
         "Alpine F1 Team",
-        "68"
+        "69"
       ],
       [
         "7",
         "Haas F1 Team",
-        "30"
+        "31"
       ],
       [
         "8",
         "Audi",
-        "23"
+        "28"
       ],
       [
         "9",
