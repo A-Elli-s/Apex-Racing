@@ -3,8 +3,21 @@ on:
   schedule:
     - cron: '35 11 * * *'
   workflow_dispatch:
+    inputs:
+      ref:
+        description: Branch to run against (a ref other than dev is always a dry run)
+        default: dev
+      dry_run:
+        description: Collect and report but do not commit or open issues
+        type: boolean
+        default: false
+      force:
+        description: Run the collectors even if nothing is due
+        type: boolean
+        default: false
 permissions:
   contents: write
+  issues: write
 concurrency:
   group: dev-racing-data-refresh
   cancel-in-progress: false
@@ -12,16 +25,21 @@ jobs:
   refresh-dev:
     runs-on: ubuntu-24.04
     timeout-minutes: 40
+    env:
+      TARGET_REF: ${{ inputs.ref || 'dev' }}
+      # Only the real dev branch is ever written to, and only when not a dry run.
+      PUBLISH: ${{ (inputs.ref == '' || inputs.ref == 'dev' || inputs.ref == null) && inputs.dry_run != true }}
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Check out development branch, never main
         uses: actions/checkout@v4
         with:
-          ref: dev
+          ref: ${{ inputs.ref || 'dev' }}
           persist-credentials: true
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Check if weekly or race-following refresh is due
+      - name: Decide whether a refresh is due
         id: decide
         run: |
           python scripts/should_refresh_racing.py > /tmp/racing-refresh.json
@@ -29,42 +47,138 @@ jobs:
           python - <<'PY'
           import json,os
           decision=json.load(open('/tmp/racing-refresh.json'))
+          run=decision['run'] or os.environ.get('FORCE')=='true'
           with open(os.environ['GITHUB_OUTPUT'],'a') as f:
-              f.write('run='+str(decision['run']).lower()+'\n')
+              f.write('run='+str(run).lower()+'\n')
           PY
-      - name: Install dependencies
+        env:
+          FORCE: ${{ inputs.force }}
+      # Parser is tiny and required; the browser is optional. A failed browser
+      # install must never stop the API and HTML collectors from running.
+      - name: Install HTML parser
+        if: steps.decide.outputs.run == 'true'
+        run: python -m pip install beautifulsoup4==4.12.3
+      - name: Install headless browser (optional)
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: |
+          python -m pip install playwright==1.55.0
+          python -m playwright install --with-deps chromium
+      # The validators are the safety net: if they fail, nothing is published.
+      - name: Run validator tests
         if: steps.decide.outputs.run == 'true'
         run: |
-          python -m pip install beautifulsoup4==4.12.3 playwright==1.55.0
-          python -m playwright install --with-deps chromium
-      - name: F1 calendar and points bot
+          for t in test_wikipedia_ladders test_f3_teams test_f2_teams test_calendar_rules test_snapshot_freshness test_points_audit test_refresh_gate test_check_freshness; do
+            if ls tests/$t.py >/dev/null 2>&1; then
+              python -m unittest discover -s tests -p "$t.py" -v || exit 1
+            fi
+          done
+      # Each collector is isolated: one failing source never blocks the rest, and
+      # every script preserves the last valid snapshot when its source fails.
+      - name: F1 calendar and points
         if: steps.decide.outputs.run == 'true'
         continue-on-error: true
         run: python scripts/update_f1_api.py
-      - name: Official standings bot
+      - name: Official HTML standings
         if: steps.decide.outputs.run == 'true'
         continue-on-error: true
         run: python scripts/update_standings.py
-      - name: Rendered standings bot
+      - name: Rendered-page standings (needs browser)
         if: steps.decide.outputs.run == 'true'
         continue-on-error: true
         run: python scripts/update_rendered_standings.py
-      - name: Audit source quality
+      - name: FIA WEC and WRC points
         if: steps.decide.outputs.run == 'true'
-        run: python scripts/audit_standings_sources.py
+        continue-on-error: true
+        run: python scripts/update_fia_wrc_wec.py
+      - name: Formula E points
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_fia_formula_e.py
+      - name: F2 and F3 community standings
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: |
+          python scripts/update_wikipedia_ladders.py
+          python scripts/calculate_f3_teams.py
+          python scripts/audit_f2_teams.py
+      - name: MotoGP, Moto2 and Moto3 community standings
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: python scripts/update_motogp_community.py
+      - name: Audit points and sources
+        if: steps.decide.outputs.run == 'true'
+        continue-on-error: true
+        run: |
+          python scripts/audit_points.py --write
+          python scripts/reconcile_points.py
+          python scripts/audit_standings_sources.py
+      - name: Check every snapshot against the calendar
+        if: steps.decide.outputs.run == 'true' && hashFiles('scripts/check_freshness.py') != ''
+        run: |
+          python scripts/check_freshness.py --write | tee /tmp/freshness.txt
+          {
+            echo '### Snapshot currency'
+            echo '```'
+            cat /tmp/freshness.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
       - name: Validate JSON outputs
         if: steps.decide.outputs.run == 'true'
         run: |
-          python -m json.tool data/races.json > /dev/null
-          python -m json.tool data/standings/manifest.json > /dev/null
-      - name: Commit refreshed data exclusively to dev
+          python - <<'PY'
+          import json,pathlib
+          bad=[]
+          for p in list(pathlib.Path('data').rglob('*.json')):
+              try: json.loads(p.read_text(encoding='utf-8'))
+              except Exception as e: bad.append(f'{p}: {e}')
+          if bad:
+              raise SystemExit('Invalid JSON:\n'+'\n'.join(bad))
+          print('all data JSON valid')
+          PY
+      - name: Show what changed
         if: steps.decide.outputs.run == 'true'
+        run: |
+          git add -N data/ || true
+          { echo '### Data changes'; echo '```'; git diff --stat -- data/ | tail -40; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - name: Commit refreshed data exclusively to dev
+        if: steps.decide.outputs.run == 'true' && env.PUBLISH == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/races.json data/standings/ data/quality/
-          if ! git diff --cached --quiet; then
-            git commit -m "Automated development racing data refresh"
-            git pull --rebase origin dev
-            git push origin HEAD:dev
+          if git diff --cached --quiet; then
+            echo "No data changes to commit"
+            exit 0
+          fi
+          git commit -m "Automated development racing data refresh"
+          for attempt in 1 2 3 4; do
+            git fetch origin dev
+            if ! git rebase origin/dev; then
+              echo "dev changed concurrently; aborting without overwriting it" >&2
+              git rebase --abort || true
+              exit 1
+            fi
+            if git push origin HEAD:dev; then exit 0; fi
+            sleep $((attempt * 3))
+          done
+          echo "Could not publish to dev after 4 attempts" >&2
+          exit 1
+      # Series a bot cannot fetch are listed in one open issue (GitHub emails you).
+      # The issue closes itself once every series is current again.
+      - name: Open, update or close the "needs update" issue
+        if: steps.decide.outputs.run == 'true' && env.PUBLISH == 'true' && hashFiles('scripts/report_stale_series.py') != ''
+        continue-on-error: true
+        run: |
+          python scripts/report_stale_series.py > /tmp/stale.md
+          gh label create racing-data --color 0e8a16 --description "Standings or calendar data needs attention" 2>/dev/null || true
+          existing=$(gh issue list --label racing-data --state open --json number --jq '.[0].number // empty')
+          if [ -s /tmp/stale.md ]; then
+            if [ -n "$existing" ]; then
+              gh issue edit "$existing" --body-file /tmp/stale.md
+            else
+              gh issue create --label racing-data --title "Racing standings need updating" --body-file /tmp/stale.md
+            fi
+          elif [ -n "$existing" ]; then
+            gh issue close "$existing" --comment "All standings snapshots are current as of $(date -u +%F)."
           fi
