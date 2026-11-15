@@ -70,6 +70,15 @@ class ReleaseGateTests(unittest.TestCase):
         detail, summary = fixtures()
         detail["generated_at"] = "2026-01-01T00:00:00+00:00"
         self.assertTrue(verify(detail, summary))
+    def test_timezone_naive_report_fails_cleanly(self):
+        detail, summary = fixtures()
+        detail["generated_at"] = "2026-11-15T12:00:00"
+        self.assertTrue(any("timezone-naive" in x for x in verify(detail, summary)))
+    def test_negative_calendar_count(self):
+        detail, summary = fixtures()
+        detail["series"]["Test Series 00"]["calendar_events"] = -1
+        summary["championships"]["Test Series 00"]["calendar"]["events"] = -1
+        self.assertTrue(verify(detail, summary))
     def test_unverified_standings_freshness(self):
         detail, summary = fixtures()
         summary["championships"]["Test Series 00"]["points_freshness"]["status"] = "potentially_stale_after_scheduled_round"
