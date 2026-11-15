@@ -33,8 +33,11 @@ def verify(detail, summary):
     for label, report in (("detailed", detail), ("summary", summary)):
         try:
             stamp = datetime.fromisoformat(report["generated_at"].replace("Z", "+00:00"))
+            if stamp.tzinfo is None:
+                failures.append(f"{label} report timestamp is timezone-naive")
+                continue
             age = datetime.now(timezone.utc) - stamp
-            if stamp.tzinfo is None or age.total_seconds() < 0 or age.total_seconds() > 172800:
+            if age.total_seconds() < 0 or age.total_seconds() > 172800:
                 failures.append(f"{label} report timestamp is stale, future-dated or timezone-naive")
         except (KeyError, ValueError, TypeError):
             failures.append(f"{label} report has invalid generated_at")
@@ -52,7 +55,8 @@ def verify(detail, summary):
         calendar_count = record.get("calendar_events")
         summary_calendar = championships[name].get("calendar")
         summary_count = summary_calendar.get("events") if isinstance(summary_calendar, dict) else None
-        if type(calendar_count) is not int or type(summary_count) is not int or calendar_count != summary_count:
+        if (type(calendar_count) is not int or type(summary_count) is not int
+                or calendar_count < 1 or summary_count < 1 or calendar_count != summary_count):
             failures.append(f"{name}: calendar event counts disagree between audits")
         completed_count = record.get("completed_calendar_events")
         if (type(completed_count) is not int or type(calendar_count) is not int
