@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-14T16:55:12.078202+00:00",
+  "generated_at": "2026-11-15T16:39:37.368342+00:00",
   "season": 2026,
   "target_championships": 23,
   "points_tables_available": 20,
   "calendar_feeds_present": 21,
   "race_winner_feeds_present": 3,
   "partial_classification_feeds_present": 0,
-  "standings_potentially_stale": 10,
+  "standings_potentially_stale": 9,
   "fully_verified_championships": 0,
   "complete": false,
   "note": "Presence and snapshot currency are not verification. Calendar dates do not prove races ran. Complete classifications, scoring/penalties, organizer cross-check and source permissions remain required.",
@@ -18,14 +18,14 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 23,
+        "rows": 25,
         "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
-        "retrieved_at": "2026-10-22T15:27:37.127236+00:00",
+        "retrieved_at": "2026-11-14T17:17:00.618189+00:00",
         "calculation_audit": null
       },
       "points_freshness": {
-        "status": "potentially_stale_after_scheduled_round",
-        "retrieved_utc_date": "2026-10-22",
+        "status": "no_later_scheduled_round",
+        "retrieved_utc_date": "2026-11-14",
         "latest_scheduled_round_date": "2026-11-08",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
@@ -91,12 +91,12 @@
         "status": "points_available_not_independently_verified",
         "rows": 33,
         "source_url": "https://www.indycar.com/standings/2026",
-        "retrieved_at": "2026-11-01T16:30:55.510358+00:00",
+        "retrieved_at": "2026-11-14T17:17:01.743833+00:00",
         "calculation_audit": null
       },
       "points_freshness": {
         "status": "no_later_scheduled_round",
-        "retrieved_utc_date": "2026-11-01",
+        "retrieved_utc_date": "2026-11-14",
         "latest_scheduled_round_date": "2026-09-06",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
@@ -323,7 +323,7 @@
       "points_freshness": {
         "status": "potentially_stale_after_scheduled_round",
         "retrieved_utc_date": "2026-10-29",
-        "latest_scheduled_round_date": "2026-11-01",
+        "latest_scheduled_round_date": "2026-11-15",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
       "individual_race_results": {
@@ -338,17 +338,17 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 32,
-        "source_url": "https://en.wikipedia.org/wiki/2026_MotoGP_World_Championship",
-        "retrieved_at": "2026-11-01T16:31:22.699604+00:00",
+        "rows": 5,
+        "source_url": "https://stats.motogp.com/en/world-standing",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
         "calculation_audit": {
-          "status": "community_points_not_officially_verified",
-          "method": "published community points, not inferred from race finishes"
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
       },
       "points_freshness": {
         "status": "potentially_stale_after_scheduled_round",
-        "retrieved_utc_date": "2026-11-01",
+        "retrieved_utc_date": "2026-10-27",
         "latest_scheduled_round_date": "2026-11-08",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
@@ -364,17 +364,17 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 35,
-        "source_url": "https://en.wikipedia.org/wiki/2026_Moto2_World_Championship",
-        "retrieved_at": "2026-11-01T16:31:23.040728+00:00",
+        "rows": 6,
+        "source_url": "https://stats.motogp.com/en/world-standing/2026/Moto2/RidersChampionship",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
         "calculation_audit": {
-          "status": "community_points_not_officially_verified",
-          "method": "published community points, not inferred from race finishes"
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
       },
       "points_freshness": {
         "status": "potentially_stale_after_scheduled_round",
-        "retrieved_utc_date": "2026-11-01",
+        "retrieved_utc_date": "2026-10-27",
         "latest_scheduled_round_date": "2026-11-08",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
@@ -390,17 +390,17 @@
       },
       "championship_points": {
         "status": "points_available_not_independently_verified",
-        "rows": 32,
-        "source_url": "https://en.wikipedia.org/wiki/2026_Moto3_World_Championship",
-        "retrieved_at": "2026-11-01T16:31:23.430332+00:00",
+        "rows": 5,
+        "source_url": "https://ajo.fi/2026/10/moto3-australian-grand-prix-cancelled/",
+        "retrieved_at": "2026-10-27T18:18:00+00:00",
         "calculation_audit": {
-          "status": "community_points_not_officially_verified",
-          "method": "published community points, not inferred from race finishes"
+          "status": "published_source_snapshot",
+          "note": "Requires ongoing refresh and licensing review before unrestricted publication."
         }
       },
       "points_freshness": {
         "status": "potentially_stale_after_scheduled_round",
-        "retrieved_utc_date": "2026-11-01",
+        "retrieved_utc_date": "2026-10-27",
         "latest_scheduled_round_date": "2026-11-08",
         "note": "Calendar dates do not confirm an event ran or results were published."
       },
