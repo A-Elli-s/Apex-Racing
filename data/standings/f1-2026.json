@@ -3,7 +3,7 @@
   "season": 2026,
   "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
   "official_url": "https://www.formula1.com/en/racing/2026",
-  "retrieved_at": "2026-11-14T17:17:00.618189+00:00",
+  "retrieved_at": "2026-11-16T21:14:16.168200+00:00",
   "data": {
     "headers": [
       "Position",
