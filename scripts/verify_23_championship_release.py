@@ -64,7 +64,9 @@ def verify(detail, summary):
             failures.append(f"{name}: invalid completed calendar event count")
         # Independently reported completed-round counts must agree when present.
         summary_results = championships[name].get("individual_race_results")
-        if isinstance(summary_results, dict) and "completed_calendar_events" in summary_results:
+        if not isinstance(summary_results, dict) or "completed_calendar_events" not in summary_results:
+            failures.append(f"{name}: missing independently reported completed-event count")
+        else:
             reported_completed = summary_results["completed_calendar_events"]
             if type(reported_completed) is not int or reported_completed != completed_count:
                 failures.append(f"{name}: completed-event counts disagree between audits")
