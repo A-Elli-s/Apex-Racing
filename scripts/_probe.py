@@ -32,8 +32,30 @@ def show(title):
             c=cells(tr); print("    ROW(%d):"%len(c),c[:3],"...",c[-3:])
         if n>=3: break
     if n==0: print("  (no points tables)")
-for t in ["2026 NASCAR Cup Series","2026 AMA Pro Motocross Championship","2026 Pro Motocross Championship",
-          "2026 Motocross World Championship","2026 FIM Motocross World Championship",
-          "2026 NHRA Drag Racing Series","2026 NHRA Camping World Drag Racing Series","NHRA Drag Racing Series",
-          "2026 Monster Jam season","Monster Jam World Finals","Monster Jam"]:
+
+for t in ["2026 NHRA Mission Foods Drag Racing Series","2026 Supercars Championship"]:
     show(t)
+import re
+def get(u):
+    try:
+        r=urllib.request.urlopen(urllib.request.Request(u,headers={"User-Agent":"ApexRacingWorld/1.0 (+https://apexracingworld.com)"}),timeout=25)
+        return r.status,r.read(400000).decode("utf-8","replace")
+    except urllib.error.HTTPError as e: return e.code,""
+    except Exception as e: return 0,str(e)[:80]
+print("\n===== robots / terms evidence")
+for u in ["https://www.nascar.com/robots.txt","https://cf.nascar.com/robots.txt","https://www.monsterjam.com/robots.txt",
+          "https://www.supercars.com/robots.txt","https://www.nhra.com/robots.txt"]:
+    st,b=get(u); print("\n",u,st,len(b))
+    for l in b.splitlines():
+        if re.search(r"(?i)^(user-agent|disallow|allow|crawl-delay).*(\*|stand|point|api|json|feed|cacher|\bdisallow: /$)",l): print("   ",l[:110])
+print("\n===== terms keyword scan")
+for u in ["https://www.nascar.com/terms-of-use/","https://www.monsterjam.com/en-us/terms-use","https://www.monsterjam.com/en-us/terms-of-use",
+          "https://www.supercars.com/terms-and-conditions","https://www.nhra.com/terms-use"]:
+    st,b=get(u); print("\n",u,st,len(b))
+    t=re.sub(r"<[^>]+>"," ",b)
+    for m in re.finditer(r"(?i)[^.]{0,140}(robot|spider|scrap|automated|data mining|harvest)[^.]{0,160}\.",t):
+        print("   >",re.sub(r"\s+"," ",m.group(0))[:300])
+        break
+print("\n===== single honest GET of NASCAR public JSON feeds")
+for u in ["https://cf.nascar.com/cacher/2026/race_list_basic.json","https://cf.nascar.com/live/feeds/live-points.json"]:
+    st,b=get(u); print(u,st,len(b),b[:120].replace("\n"," "))
