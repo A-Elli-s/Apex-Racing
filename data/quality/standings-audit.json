@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T21:14:55.141162+00:00",
+  "generated_at": "2026-11-23T23:01:42.935447+00:00",
   "season": 2026,
   "method": "structural validation; independent cross-source verification pending",
   "summary": {
@@ -15,9 +15,9 @@
       "independently_verified": false,
       "official_url": "https://www.formula1.com/en/racing/2026",
       "competitors": 25,
-      "leader_points": 390.0,
+      "leader_points": 402.0,
       "source_url": "https://api.jolpi.ca/ergast/f1/2026/driverStandings.json",
-      "retrieved_at": "2026-11-16T21:14:16.168200+00:00"
+      "retrieved_at": "2026-11-23T23:01:12.579008+00:00"
     },
     "F2": {
       "status": "single_source_unverified",
@@ -47,7 +47,7 @@
       "competitors": 33,
       "leader_points": 631.0,
       "source_url": "https://www.indycar.com/standings/2026",
-      "retrieved_at": "2026-11-16T21:14:17.427713+00:00"
+      "retrieved_at": "2026-11-23T23:01:13.587530+00:00"
     },
     "NASCAR Cup": {
       "status": "single_source_unverified",
